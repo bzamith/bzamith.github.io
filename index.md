@@ -6,20 +6,21 @@ Topics that I am currently studying or plan to study in the future:
 
 - [x] 2019/1 - Distributed Systems
 ```markdown
-''Distributed Systems''
+*Distributed Systems*
  Maarten Van Steen, Andrew S Tanenbaum
  3rd Edition
 ```
 - [x] 2019/1 - Design Patterns 
 ```markdown
-Dive Into Design Patterns
+*Dive Into Design Patterns*
 Alexander Shvets
 Ebook
 ```
 - [ ] Natural Computing 
 ```markdown
-''Fundamentals of Natural Computing''
+*Fundamentals of Natural Computing*
 Leandro Nunes de Castr
+1st Edition
 ```
 - [ ] Deep Learning
 
