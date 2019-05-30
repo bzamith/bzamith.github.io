@@ -4,13 +4,10 @@
 
 Topics that I am currently studying or plan to study in the future:
 
-```markdown
 - [x] Distributed Systems
-- [ ] Natural Computing (''Fundamentals of Natural Computing'' - Leandro Nunes de Castro)
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+- [ ] Natural Computing 
+```markdown
+''Fundamentals of Natural Computing'' - Leandro Nunes de Castro
 ```
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
