@@ -1,4 +1,4 @@
-## My Portifolio
+## My Portfolio
 
 ### Studies
 Topics that I am currently studying or plan to study:
