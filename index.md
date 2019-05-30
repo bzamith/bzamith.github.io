@@ -5,10 +5,12 @@
 Topics that I am currently studying or plan to study in the future:
 
 - [x] Distributed Systems
+- [x] Design Patterns 
 - [ ] Natural Computing 
 ```markdown
 ''Fundamentals of Natural Computing'' - Leandro Nunes de Castro
 ```
+- [ ] Deep Learning
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
