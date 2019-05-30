@@ -8,7 +8,8 @@ Topics that I am currently studying or plan to study in the future:
 - [x] Design Patterns 
 - [ ] Natural Computing 
 ```markdown
-''Fundamentals of Natural Computing'' - Leandro Nunes de Castro
+''Fundamentals of Natural Computing''
+Leandro Nunes de Castro
 ```
 - [ ] Deep Learning
 
