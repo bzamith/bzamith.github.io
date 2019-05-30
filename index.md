@@ -2,7 +2,7 @@
 
 ### Studies
 
-Topics that I am currently studying or plan to study in the future:
+Topics that I am currently studying or plan to study:
 
 - [x] 2019/1 - Distributed Systems
 ```markdown
@@ -29,6 +29,8 @@ Leandro Nunes de Castro
 ```
 - [ ] Deep Learning
 - [ ] Bussiness Intelligence
+- [ ] Spanish
+- [ ] Psychoanalysis
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
