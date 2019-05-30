@@ -11,27 +11,23 @@ Maarten Van Steen, Andrew S Tanenbaum
 3rd Edition
 ```
 - [x] 2019/1 - Design Patterns 
-
-*Dive Into Design Patterns*
-
+```markdown
+Dive Into Design Patterns
 Alexander Shvets
-
 Ebook
-
+```
+- [x] 2018/2 - Git
 - [x] 2017/2 - Predictive Clustering Trees
-
-[*Clus-HMC*](https://dtai.cs.kuleuven.be/clus/)
-
+```markdown
+Clus-HMC framework
+```
 - [ ] Natural Computing 
-
-*Fundamentals of Natural Computing*
-
-Leandro Nunes de Castr
-
+```markdown
+Fundamentals of Natural Computing
+Leandro Nunes de Castro
 1st Edition
-
+```
 - [ ] Deep Learning
-
 - [ ] Bussiness Intelligence
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
