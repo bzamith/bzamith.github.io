@@ -41,6 +41,6 @@ Leandro Nunes de Castro
 4. [*Decisions Trees for Hierarchical Classification of Transposable Elements*](https://www.kuleuven-kulak.be/benelearn/papers/Benelearn_2016_paper_57.pdf) - Zamith B., Gomes Mantovani R., Schietgat L., Vens C., Cerri R. (2016). Proceedings of the 25th Belgian-Dutch Machine Learning Conference (Benelearn).
 
 ### More about me
-I am passionate about developing research and learning different things. I have a natural inclination to **Data Science**, **Machine Learning** and **Databases**, due to the fact that I love extracting information from data and coming up with useful solutions. Still, I am really looking forward to learning more about **Software Engineering** and **Computer Networks**. 
+I am passionate about developing research and learning different things. I have a natural inclination to **Data Science**, **Machine Learning** and **Bioinformatics**, due to the fact that I love extracting information from data and coming up with useful solutions. Still, I am really looking forward to learning more about **Software Engineering** and **Computer Networks**. 
 
 In my free time, you can find me drinking coffee, reading a book, riding my bicycle or (hopefully!) travelling.  
