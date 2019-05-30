@@ -16,6 +16,10 @@ Topics that I am currently studying or plan to study in the future:
 Alexander Shvets
 Ebook
 ```
+- [x] 2017/2 - Predictive Clustering Trees
+```markdown
+[*Clus-HMC*](https://dtai.cs.kuleuven.be/clus/)
+```
 - [ ] Natural Computing 
 ```markdown
 *Fundamentals of Natural Computing*
@@ -23,6 +27,7 @@ Leandro Nunes de Castr
 1st Edition
 ```
 - [ ] Deep Learning
+- [ ] Bussiness Intelligence
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
