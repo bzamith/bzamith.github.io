@@ -17,10 +17,10 @@ Ebook
 ```
 - [x] 2018/2 - Git
 - [x] 2017/2 - Predictive Clustering Trees
-- [x] 2016/1 - Latex
 ```markdown
 Clus-HMC framework
 ```
+- [x] 2016/1 - Latex
 - [ ] Natural Computing 
 ```markdown
 Fundamentals of Natural Computing
