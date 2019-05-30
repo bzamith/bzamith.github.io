@@ -30,7 +30,7 @@ Leandro Nunes de Castro
 - [ ] Deep Learning
 - [ ] Bussiness Intelligence
 - [ ] SQL Injection
-- [ ] Software Engineering
+- [ ] Streaming data
 - [ ] Spanish
 - [ ] Psychoanalysis
 
