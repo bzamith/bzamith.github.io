@@ -30,7 +30,8 @@ Leandro Nunes de Castro
 - [ ] Deep Learning
 - [ ] Bussiness Intelligence
 - [ ] SQL Injection
-- [ ] Streaming data
+- [ ] Data streams
+- [ ] Blockchain
 - [ ] Spanish
 - [ ] Psychoanalysis
 
