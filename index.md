@@ -2,7 +2,11 @@
 
 ### Studies
 Topics that I am currently studying or plan to study:
-
+- [x] 2019/1 - OpenMP and Parallelism
+```markdown
+Tim Mattson classes:
+A  Hands-on  Introduction  to  OpenMP
+```
 - [x] 2019/1 - Distributed Systems
 ```markdown
 Distributed Systems
