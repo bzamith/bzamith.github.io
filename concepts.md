@@ -19,49 +19,49 @@
 
 *What Is Data Science?, Mike Loukides (2010)*
 
-<u>3. What is Data Analysis?</u>
+<u>4. What is Data Analysis?</u>
 > Data analysis is an art [apart from Data Science]. It is not something yet that we can teach to a computer. Data analysts have many tools at their disposal, from linear regression to classification trees and even deep learning, and these tools have all been carefully taught to computers. But ultimately, a data analyst must find a way to assemble all of the tools and apply them to data to answer a relevant question—a question of interest to people. [...] While a study includes developing and executing a plan for collecting data, a data analysis presumes the data have already been collected. More specifically, a study includes the development of a hypothesis or question, the designing of the data collection process (or study protocol), the collection of the data, and the analysis and interpretation of the data. Because a data analysis presumes that the data have already been collected, it includes development and refinement of a question and the process of analyzing and interpreting the data.
 
 *[The Art of Data Science, Roger D. Peng and Elizabeth Matsui (2017)](https://bookdown.org/rdpeng/artofdatascience/)*
 
-<u>4. What are the Epicycles of Analysis?</u>
+<u>5. What are the Epicycles of Analysis?</u>
 > Develop Expectations -> Collect Data -> Match Expectations with Data
 
 > Starting The Question -> Exploratory Data Analisys -> Model Building -> Interpret -> Communicate
 
 *The Art of Data Science, Roger D. Peng and Elizabeth Matsui (2017)*
 
-<u>5. What is QMV? </u>
+<u>6. What is QMV? </u>
 > It is an iterative process of questioning, modeling, and validation to data analysis and model building.
 
 *Model Building and Validation by AT&T, Online Course - Advanced Techniques for Analyzing Data*
 
-<u>6. How is Moore's law applied to data?</u>
+<u>7. How is Moore's law applied to data?</u>
 > Since the early '80s, processor speed has increased from 10 MHz to 3.6 GHz — an increase of 360 (not counting increases in word length and number of cores). But we've seen much bigger increases in storage capacity, on every level. RAM has moved from $1,000/MB to roughly $25/GB — a price reduction of about 40000, to say nothing of the reduction in size and increase in speed. Hitachi made the first gigabyte disk drives in 1982, weighing in at roughly 250 pounds; now terabyte drives are consumer equipment, and a 32 GB microSD card weighs about half a gram. Whether you look at bits per gram, bits per dollar, or raw capacity, storage has more than kept pace with the increase of CPU speed. The importance of Moore's law as applied to data isn't just geek pyrotechnics. Data expands to fill the space you have to store it. The more storage is available, the more data you will find to put into it. [...] Increased storage capacity demands increased sophistication in the analysis and use of that data. That's the foundation of data science.
 
 *What Is Data Science?, Mike Loukides (2010)*
 
-<u>7. What is Data Conditioning?</u>
+<u>8. What is Data Conditioning?</u>
 > [It is] the first step of any data analysis project [and means] getting data into a state where it's usable. Data conditioning can involve cleaning up messy HTML with tools [...], natural language processing to parse plain text in English and other languages, or even getting humans to do the dirty work.
 
 *What Is Data Science?, Mike Loukides (2010)*
 
-<u>8. What is Big Data?</u>
+<u>9. What is Big Data?</u>
 > Big data is when the size of the data itself becomes part of the problem. We're discussing data problems ranging from gigabytes to petabytes of data. At some point, traditional techniques for working with data run out of steam.
 
 *What Is Data Science?, Mike Loukides (2010)*
 
-<u>9. How to store data in Data Science scenario?</u>
+<u>10. How to store data in Data Science scenario?</u>
 > Relational databases are designed for consistency, to support complex transactions that can easily be rolled back if any one of a complex set of operations fails. While rock-solid consistency is crucial to many applications, it's not really necessary for the kind of analysis we're discussing here. [...] Precision has an allure, but in most data-driven applications outside of finance, that allure is deceptive. Most data analysis is comparative [...]. To store huge datasets effectively, we've seen a new breed of databases appear. These are frequently called NoSQL databases, or Non-Relational databases [...]. They group together fundamentally dissimilar products by telling you what they aren't. Many of these databases are [..] designed to be distributed across many nodes, to provide ''eventual consistency'' but not absolute consistency, and to have very flexible schema.
 
 *What Is Data Science?, Mike Loukides (2010)*
 
-<u>10. What is the MapReduce approach?</u>
+<u>11. What is the MapReduce approach?</u>
 > Data is only useful if you can do something with it, and enormous datasets present computational problems. Google popularized the MapReduce approach, which is basically a divide-and-conquer strategy for distributing an extremely large problem across an extremely large computing cluster. In the “map” stage, a programming task is divided into a number of identical subtasks, which are then distributed across many processors; the intermediate results are then combined by a single reduce task. In hindsight, MapReduce seems like an obvious solution to Google's biggest problem, creating large searches. It's easy to distribute a search across thousands of processors, and then combine the results into a single set of answers. What's less obvious is that MapReduce has proven to be widely applicable to many large data problems, ranging from search to machine learning. The most popular open source implementation of MapReduce is the Hadoop project.
 
 *What Is Data Science?, Mike Loukides (2010)*
 
-<u>X. What is Hadoop?</u>
+<u>12. What is Hadoop?</u>
 > Hadoop goes far beyond a simple MapReduce implementation (of which there are several); it's the key component of a data platform. It incorporates HDFS, a distributed filesystem designed for the performance and reliability requirements of huge datasets; the HBase database; Hive, which lets developers explore Hadoop datasets using SQL-like queries; a high-level dataflow language called Pig; and other components. If anything can be called a one-stop information platform, Hadoop is it. Hadoop has been instrumental in enabling ''agile'' data analysis. [...] Hadoop (and particularly Elastic MapReduce) make it easy to build clusters that can perform computations on long datasets quickly. Hadoop is essentially a batch system, but Hadoop Online Prototype (HOP) is an experimental project that enables stream processing. Hadoop processes data as it arrives, and delivers intermediate results in (near) real-time. Near real-time data analysis enables features like trending topics on sites like Twitter. 
 
 *What Is Data Science?, Mike Loukides (2010)*
