@@ -75,6 +75,14 @@ Leandro Nunes de Castro
 
 <u>X. What is Hadoop?</u>
 
+<u>X. What is Artificial Intelligence?</u>
+
+<u>X. What is Machine Learning?</u>
+
+<u>X. What is Bioinformatics?</u>
+
+<u>X. How does Google's PageRank Algorithm works?</u>
+
 <u>X. What are the differences between Dynamic Programming and Greedy Algorithms?</u>
 
 <u>X. What are the differences between Dynamic Programming and Divide-and-Conquer Algorithms?</u>
