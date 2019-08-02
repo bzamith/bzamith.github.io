@@ -54,18 +54,19 @@ In my free time, you can find me drinking coffee, reading a book, riding my bicy
 ### Data Science Concepts and Others
 <u>1. What is the difference between art and science?</u>
 > Science is knowledge which we understand so well that we can teach it to a computer.
+
 *Computer Programming as an Art, Donald Knuth, 1974*
 
-**2. What is Data Science?**
+<u>2. What is Data Science?</u>
 
-**3. What is Data Mining?**
+<u>3. What is Data Mining?</u>
 
-**4. What is Data Warehousing?**
+<u>4. What is Data Warehousing?</u>
 
-**5. What is Big Data?**
+<u>5. What is Big Data?</u>
 
-**6. What is Hadoop?**
+<u>6. What is Hadoop?</u>
 
-**7. What are the differences between Dynamic Programming and Greedy Algorithms?**
+<u>7. What are the differences between Dynamic Programming and Greedy Algorithms?</u>
 
-**8. What are the differences between Dynamic Programming and Divide-and-Conquer Algorithms?**
+<u>8. What are the differences between Dynamic Programming and Divide-and-Conquer Algorithms?</u>
