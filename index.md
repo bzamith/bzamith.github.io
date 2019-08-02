@@ -1,44 +1,7 @@
 ## My Portfolio
 
-### Studies
-Topics that I am currently studying or plan to study:
-- [x] 2019/2 - Getting Deeper on Data Science
-- [x] 2019/1 - OpenMP and Parallel Computing
-```markdown
-Tim Mattson classes:
-A  Hands-on  Introduction  to  OpenMP
-```
-- [x] 2019/1 - Distributed Systems
-```markdown
-Distributed Systems
-Maarten Van Steen, Andrew S Tanenbaum
-3rd Edition
-```
-- [x] 2019/1 - Design Patterns 
-```markdown
-Dive Into Design Patterns
-Alexander Shvets
-Ebook
-```
-- [x] 2018/2 - Git
-- [x] 2017/2 - Predictive Clustering Trees
-```markdown
-Clus-HMC framework
-```
-- [x] 2016/1 - Latex
-- [ ] Natural Computing 
-```markdown
-Fundamentals of Natural Computing
-Leandro Nunes de Castro
-1st Edition
-```
-- [ ] Deep Learning
-- [ ] Bussiness Intelligence
-- [ ] SQL Injection
-- [ ] Data streams
-- [ ] Blockchain
-- [ ] Spanish
-- [ ] Psychoanalysis
+### [Studies](studies.md)
+Topics that I am currently studying or plan to study.
 
 ### [Data Science Concepts and Others](concepts.md)
 A compilation of Q&A related to Data Science topics and others.
