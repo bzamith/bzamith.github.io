@@ -34,6 +34,11 @@
 
 *Model Building and Validation by AT&T, Online Course - Advanced Techniques for Analyzing Data*
 
+<u>6. How is Moore's law applied to data?</u>
+> Since the early '80s, processor speed has increased from 10 MHz to 3.6 GHz — an increase of 360 (not counting increases in word length and number of cores). But we've seen much bigger increases in storage capacity, on every level. RAM has moved from $1,000/MB to roughly $25/GB — a price reduction of about 40000, to say nothing of the reduction in size and increase in speed. Hitachi made the first gigabyte disk drives in 1982, weighing in at roughly 250 pounds; now terabyte drives are consumer equipment, and a 32 GB microSD card weighs about half a gram. Whether you look at bits per gram, bits per dollar, or raw capacity, storage has more than kept pace with the increase of CPU speed. The importance of Moore's law as applied to data isn't just geek pyrotechnics. Data expands to fill the space you have to store it. The more storage is available, the more data you will find to put into it. [...] Increased storage capacity demands increased sophistication in the analysis and use of that data. That's the foundation of data science.
+
+*What Is Data Science?, Mike Loukides (2010)*
+
 <u>X. What is Data Mining?</u>
 
 <u>X. What is Data Warehousing?</u>
