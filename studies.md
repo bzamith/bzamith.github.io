@@ -1,3 +1,5 @@
+## Studies
+
 - [x] 2019/2 - Getting Deeper on Data Science
 - [x] 2019/1 - OpenMP and Parallel Computing
 ```markdown
