@@ -53,10 +53,10 @@ In my free time, you can find me drinking coffee, reading a book, riding my bicy
 
 ### Data Science Concepts and Others
 **1. What is the difference between art and science?**
-Science is knowledge which we understand so well that we can teach it to a computer.
 ```markdown
-Computer Programming as an Art, Donald Knuth, 1974
+Science is knowledge which we understand so well that we can teach it to a computer.
 ```
+*Computer Programming as an Art, Donald Knuth, 1974*
 
 **2. What is Data Science?**
 
