@@ -57,6 +57,7 @@ Leandro Nunes de Castro
 
 <u>4. What are the Epicycles of Analysis?</u>
 > Develop Expectations -> Collect Data -> Match Expectations with Data
+
 > Starting The Question -> Exploratory Data Analisys -> Model Building -> Interpret -> Communicate
 
 *The Art of Data Science, Roger D. Peng and Elizabeth Matsui (2017)*
