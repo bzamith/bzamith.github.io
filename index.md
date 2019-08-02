@@ -55,18 +55,28 @@ In my free time, you can find me drinking coffee, reading a book, riding my bicy
 <u>1. What is the difference between art and science?</u>
 > Science is knowledge which we understand so well that we can teach it to a computer.
 
-*Computer Programming as an Art, Donald Knuth, 1974*
+*Computer Programming as an Art, Donald Knuth (1974)*
 
 <u>2. What is Data Science?</u>
 
 <u>3. What is Data Mining?</u>
 
-<u>4. What is Data Warehousing?</u>
+<u>4. What is QMV? </u>
+> It is an iterative process of questioning, modeling, and validation to data analysis and model building.
 
-<u>5. What is Big Data?</u>
+*Model Building and Validation by AT&T, Online Course - Advanced Techniques for Analyzing Data*
 
-<u>6. What is Hadoop?</u>
+<u>5. What are the Epicycles of Analysis?</u>
+> Develop Expectations -> Collect Data -> Starting The Question -> Exploratory Data Analisys -> Model Building -> Interpret -> Communicate -> Match Expectations with Data
 
-<u>7. What are the differences between Dynamic Programming and Greedy Algorithms?</u>
+*The Art of Data Science, Roger D. Peng and Elizabeth Matsui (2017)*
 
-<u>8. What are the differences between Dynamic Programming and Divide-and-Conquer Algorithms?</u>
+<u>6. What is Data Warehousing?</u>
+
+<u>7. What is Big Data?</u>
+
+<u>8. What is Hadoop?</u>
+
+<u>X. What are the differences between Dynamic Programming and Greedy Algorithms?</u>
+
+<u>X. What are the differences between Dynamic Programming and Divide-and-Conquer Algorithms?</u>
