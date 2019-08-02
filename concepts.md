@@ -1,4 +1,5 @@
 ## Data Science Concepts
+
 <u>1. What is the difference between Art and Science?</u>
 > Science is knowledge which we understand so well that we can teach it to a computer.
 
