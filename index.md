@@ -52,30 +52,35 @@ I am passionate about developing research and learning different things. I have 
 In my free time, you can find me drinking coffee, reading a book, riding my bicycle or (hopefully!) travelling.  
 
 ### Data Science Concepts and Others
-<u>1. What is the difference between art and science?</u>
+<u>1. What is the difference between Art and Science?</u>
 > Science is knowledge which we understand so well that we can teach it to a computer.
 
 *Computer Programming as an Art, Donald Knuth (1974)*
 
 <u>2. What is Data Science?</u>
 
-<u>3. What is Data Mining?</u>
+<u>3. What is Data Analysis?</u>
+> While a study includes developing and executing a plan for collecting data, a data analysis presumes the data have already been collected. More specifically, a study includes the development of a hypothesis or question, the designing of the data collection process (or study protocol), the collection of the data, and the analysis and interpretation of the data. Because a data analysis presumes that the data have already been collected, it includes development and refinement of a question and the process of analyzing and interpreting the data.
 
-<u>4. What is QMV? </u>
-> It is an iterative process of questioning, modeling, and validation to data analysis and model building.
+*The Art of Data Science, Roger D. Peng and Elizabeth Matsui (2017)*
 
-*Model Building and Validation by AT&T, Online Course - Advanced Techniques for Analyzing Data*
-
-<u>5. What are the Epicycles of Analysis?</u>
+<u>4. What are the Epicycles of Analysis?</u>
 > Develop Expectations -> Collect Data -> Starting The Question -> Exploratory Data Analisys -> Model Building -> Interpret -> Communicate -> Match Expectations with Data
 
 *The Art of Data Science, Roger D. Peng and Elizabeth Matsui (2017)*
 
-<u>6. What is Data Warehousing?</u>
+<u>5. What is QMV? </u>
+> It is an iterative process of questioning, modeling, and validation to data analysis and model building.
 
-<u>7. What is Big Data?</u>
+*Model Building and Validation by AT&T, Online Course - Advanced Techniques for Analyzing Data*
 
-<u>8. What is Hadoop?</u>
+<u>X. What is Data Mining?</u>
+
+<u>X. What is Data Warehousing?</u>
+
+<u>X. What is Big Data?</u>
+
+<u>X. What is Hadoop?</u>
 
 <u>X. What are the differences between Dynamic Programming and Greedy Algorithms?</u>
 
