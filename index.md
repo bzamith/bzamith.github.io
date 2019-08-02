@@ -60,9 +60,11 @@ In my free time, you can find me drinking coffee, reading a book, riding my bicy
 <u>2. What is Data Science?</u>
 
 <u>3. What is Data Analysis?</u>
+> Data analysis is an art [apart from Data Science]. It is not something yet that we can teach to a computer. Data analysts have many tools at their disposal, from linear regression to classification trees and even deep learning, and these tools have all been carefully taught to computers. But ultimately, a data analyst must find a way to assemble all of the tools and apply them to data to answer a relevant question—a question of interest to people.
+
 > While a study includes developing and executing a plan for collecting data, a data analysis presumes the data have already been collected. More specifically, a study includes the development of a hypothesis or question, the designing of the data collection process (or study protocol), the collection of the data, and the analysis and interpretation of the data. Because a data analysis presumes that the data have already been collected, it includes development and refinement of a question and the process of analyzing and interpreting the data.
 
-*The Art of Data Science, Roger D. Peng and Elizabeth Matsui (2017)*
+*[The Art of Data Science, Roger D. Peng and Elizabeth Matsui (2017)](https://bookdown.org/rdpeng/artofdatascience/)*
 
 <u>4. What are the Epicycles of Analysis?</u>
 > Develop Expectations -> Collect Data -> Starting The Question -> Exploratory Data Analisys -> Model Building -> Interpret -> Communicate -> Match Expectations with Data
