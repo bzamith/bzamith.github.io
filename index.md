@@ -40,7 +40,7 @@ Leandro Nunes de Castro
 - [ ] Spanish
 - [ ] Psychoanalysis
 
-### Data Science Concepts and Others
+### [Data Science Concepts and Others](concepts.md)
 <u>1. What is the difference between Art and Science?</u>
 > Science is knowledge which we understand so well that we can teach it to a computer.
 
