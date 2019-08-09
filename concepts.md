@@ -66,9 +66,12 @@
 
 *What Is Data Science?, Mike Loukides (2010)*
 
-<u>X. What is Data Mining?</u>
+<u>13. What is Data Warehouse?</u>
+> A "data warehouse" may be a basic operational reporting environment built from a single transactional system or it may be a cutting-edge solution uniting transactional, machine and social data to support deep and complex analysis in real time. It may provide information for daily (or monthly, or quarterly) reports or it may feed complex analysis into live business processes several times a second. [...] Vincent Rainardi outlines five basic requirements that a data warehouse typically must meet: 1. An integrated view of the organization's data for strategic analysis; 2. A consistent view of the organization's data resources with data that has been cleared of anomalies which can lead to a false impression of the business' function; 3. A consolidation of the organization's data  history beyond what is retained by current operations for deep analysis of the business' functions over time; 4. A tested and verified environment for doing data analysis to access data so that each new draw of data doesn't become a "science experiment" in and of itself; 5. A high-performance environment for doing data analysis that does not interfere with day-to-day activity of the business. 
 
-<u>X. What is Data Warehouses?</u>
+*The Modern Data Warehouse: A New Approach for a New Era, Tom Traubitz (2018)*
+
+<u>X. What is Data Mining?</u>
 
 <u>X. What is the difference between Data, Information and Knowledge?</u>
 
