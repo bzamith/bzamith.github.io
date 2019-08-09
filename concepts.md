@@ -66,8 +66,17 @@
 
 *What Is Data Science?, Mike Loukides (2010)*
 
+> The Hadoop platform was designed to solve problems where you have a lot of data - perhaps a mixture of complex and structured data - and it doesn't fit nicely into tables. It's for situations where you want to run analytics that are deep and computationally extensive, like clustering and targeting.
+
+*The Modern Data Warehouse: A New Approach for a New Era, Tom Traubitz (2018)*
+
 <u>13. What is Data Warehouse?</u>
 > A "data warehouse" may be a basic operational reporting environment built from a single transactional system or it may be a cutting-edge solution uniting transactional, machine and social data to support deep and complex analysis in real time. It may provide information for daily (or monthly, or quarterly) reports or it may feed complex analysis into live business processes several times a second. [...] Vincent Rainardi outlines five basic requirements that a data warehouse typically must meet: 1. An integrated view of the organization's data for strategic analysis; 2. A consistent view of the organization's data resources with data that has been cleared of anomalies which can lead to a false impression of the business' function; 3. A consolidation of the organization's data  history beyond what is retained by current operations for deep analysis of the business' functions over time; 4. A tested and verified environment for doing data analysis to access data so that each new draw of data doesn't become a "science experiment" in and of itself; 5. A high-performance environment for doing data analysis that does not interfere with day-to-day activity of the business. 
+
+*The Modern Data Warehouse: A New Approach for a New Era, Tom Traubitz (2018)*
+
+<u>14. What are the challenges of the modern Data Warehouse?</u>
+> Today your business faces an unprecedented sets of challenges. Bigger data volumes. New data types. A deluge of machine data from the Internet of Things. Digital business models that require real-time performance all the time drive the need for zero-latency reporting. Data-driven businesses need more complex, more extensive, and yet paradoxically faster and more easily accessed analytics. To suceed, you need a deeper understanding of the Why bnehind what your customers, your competitors, and the market as a whole is up to. These are the challenges of the modern Data Warehouse. And to meet these challenges, you need something more than just a database. 
 
 *The Modern Data Warehouse: A New Approach for a New Era, Tom Traubitz (2018)*
 
