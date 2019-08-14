@@ -50,6 +50,10 @@
 
 *What Is Data Science?, Mike Loukides (2010)*
 
+> Gordon Moore (a cofounder of Intel) observed that the number of transistors in computer chips doubles roughly every two years. More transistors per chip translates to faster speeds in computer processors and more random access memory in computers, which leads to more powerful computers. This extraordinary rate of technological improvement - output doubling every two years - is likely the fastest growth in technology humanity has ever seen. Yet, since 2011, the amount of sequencing data stored in the Short Read Archive has outpaced even this incredible growth, having doubled every year. 
+
+*Bioinformatics Data Skills, Vince Buffalo (2015)*
+
 <u>9. What is Data Conditioning?</u>
 > [It is] the first step of any data analysis project [and means] getting data into a state where it's usable. Data conditioning can involve cleaning up messy HTML with tools [...], natural language processing to parse plain text in English and other languages, or even getting humans to do the dirty work.
 
@@ -102,6 +106,10 @@
 > Restorative Science: In Bioinformatics, Data Science alongside Genome data is helping scientists and specialists to examine genetic structures and see how specific medications can follow up on sicknesses.
 
 *Data Science From Scratch: How to Become a Data Scientist, David Park (2019)*
+
+> Bioinformaticians are concerned with deriving biological understanding from large amounts of data with specialized skills and tools. Early in biology's history, the datasets were small and manageable. [...] However, this is all rapidly changing. Large sequencing datasets are widespread, and will only become more common in the future. Analyzing this data takes different tools, new skills, and many computers with large amounts of memory, processing power, and disk space.
+
+*Bioinformatics Data Skills, Vince Buffalo (2015)*
 
 <u>18. Should I use R programming language for Data Science? </u>
 > R in data science is considered as the best programming language. It is a programming language and programming condition for illustrations and measurable registering. It is space explicit and has fantastic top notch run. R comprises of open source bundles for measurable and quantitative applications. This incorporates progressed plotting, non-direct relapse, neural systems, phylogenetics, and some more. For analysing data, Data Scientists and Data Miners use R broadly.
