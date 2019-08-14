@@ -121,6 +121,46 @@
 
 *Data Science From Scratch: How to Become a Data Scientist, David Park (2019)*
 
+<u>20. What is a model?</u>
+> In a very general sense, a model is something we construct to help us understand the real world. [...]  The process of building a model involves imposing a specific structure on the data and creating a summary of the data. [...] A statistical model serves two key purposes in a data analysis, which are to provide a quantitative summary of your data and to impose a specific structure on the population from which the data were sampled. [...] At its core, a statistical model provides a description of how the world works and how the data were generated. The model is essentially an expectation of the relationships between various factors in the real world and in your dataset. What makes a model a statistical model is that it allows for some randomness in generating the data.
+
+*The Art of Data Science, Roger D. Peng and Elizabeth Matsui (2017)*
+
+<u>21. What is statistic?</u>
+> The first key element of a statistical model is data reduction. The basic idea is you want to take the original set of numbers consisting of your dataset and transform them into a smaller set of numbers. [...] The process of data reduction typically ends up with a statistic. Generally speaking, a statistic is any summary of the data. The sample mean, or average, is a statistic. So is the median, the standard deviation, the maximum, the minimum, and the range. Some statistics are more or less useful than others but they are all summaries of the data.
+
+*The Art of Data Science, Roger D. Peng and Elizabeth Matsui (2017)*
+
+<u>22. What are the Normal Distribution and the Gamma Distribution?</u>
+> [Normal model] says that the randomness in a set of data can be explained by the Normal distribution, or a bell-shaped curve. The Normal distribution is fully specified by two parameters — the mean and the standard deviation. [The Gamma distribution] has the feature that it only allows positive values, so it eliminates the problem we had with negative values with the Normal distribution.
+
+*The Art of Data Science, Roger D. Peng and Elizabeth Matsui (2017)*
+
+<u>23. What is inference?</u>
+> Inference is one of many possible goals in data analysis. [...] In general, the goal of inference is to be able to make a statement about something that is not observed, and ideally to be able to characterize any uncertainty you have about that statement. Inference is difficult because of the difference between what you are able to observe and what you ultimately want to know. [..] The language of inference can change depending on the application, but most commonly, we refer to the things we cannot observe (but want to know about) as the population or as features of the population and the data that we observe as the sample. The goal is to use the sample to somehow make a statement about the population.
+
+*The Art of Data Science, Roger D. Peng and Elizabeth Matsui (2017)*
+
+<u>24. What is Associational Analyses?</u>
+> Associational analyses are ones where we are looking at an association between two or more features in the presence of other potentially confounding factors. There are three classes of variables that are important to think about in an associational analysis: Outcome (the feature of your dataset that is thought to change along with your key predictor); Key predictor (often for associational analyses there is one key predictor of interest); Potential confounders (this is a large class of predictors that are both related to the key predictor and the outcome).
+
+*The Art of Data Science, Roger D. Peng and Elizabeth Matsui (2017)*
+
+<u>25. What is Prediction Analyses?</u>
+> In the previous section we described associational analyses, where the goal is to see if a key predictor x and an outcome y are associated. But sometimes the goal is to use all of the information available to you to predict y. Furthermore, it doesn't matter if the variables would be considered unrelated in a causal way to the outcome you want to predict because the objective is prediction, not developing an understanding about the relationships between features. With prediction models, we have outcome variables–features about which we would like to make predictions–but we typically do not make a distinction between “key predictors” and other predictors. In most cases, any predictor that might be of use in predicting the outcome would be considered in an analysis and might, a priori, be given equal weight in terms of its importance in predicting the outcome. Prediction analyses will often leave it to the prediction algorithm to determine the importance of each predictor and to determine the functional form of the model.
+
+*The Art of Data Science, Roger D. Peng and Elizabeth Matsui (2017)*
+
+<u>26. Why is model tuning relevant?</u>
+> Model tuning. A hallmark of prediction algorithms is their many tuning parameters. Sometimes these parameters can have large effects on prediction quality if they are changed and so it is important to be informed of the impact of tuning parameters for whatever algorithm you use. There is no prediction algorithm for which a single set of tuning parameters works well for all problems. Most likely, for the initial model fit, you will use “default” parameters, but these defaults may not be sufficient for your purposes. Fiddling with the tuning parameters may greatly change the quality of your predictions. It's very important that you document the values of these tuning parameters so that the analysis can be reproduced in the future.
+
+*The Art of Data Science, Roger D. Peng and Elizabeth Matsui (2017)*
+
+<u>27. When to use Inference or Prediction?</u>
+> For inferential questions the goal is typically to estimate an association between a predictor of interest and the outcome. There is usually only a handful of predictors of interest (or even just one), however there are typically many potential confounding variables to consider. They key goal of modeling is to estimate an association while making sure you appropriately adjust for any potential confounders. Often, sensitivity analyses are conducted to see if associations of interest are robust to different sets of confounders. For prediction questions the goal is to identify a model that best predicts the outcome. Typically we do not place any a priori importance on the predictors, so long as they are good at predicting the outcome. There is no notion of “confounder” or “predictors of interest” because all predictors are potentially useful for predicting the outcome. Also, we often do not care about “how the model works” or telling a detailed story about the predictors. The key goal is to develop a model with good prediction skill and to estimate a reasonable error rate from the data.
+
+*The Art of Data Science, Roger D. Peng and Elizabeth Matsui (2017)*
+
 <u>X. What is Data Mining?</u>
 
 <u>X. What is the difference between Data, Information and Knowledge?</u>
@@ -128,6 +168,8 @@
 <u>X. What is Artificial Intelligence?</u>
 
 <u>X. What is Machine Learning?</u>
+
+<u>X. What is bias?</u>
 
 ## Others
 
