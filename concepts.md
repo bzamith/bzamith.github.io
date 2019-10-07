@@ -162,7 +162,9 @@
 *The Art of Data Science, Roger D. Peng and Elizabeth Matsui (2017)*
 
 <u>28. What is Linear Regression?</u>
-Linear regression is a basic and commonly used type of predictive analysis.  The overall idea of regression is to examine two things: (1) does a set of predictor variables do a good job in predicting an outcome (dependent) variable?  (2) Which variables in particular are significant predictors of the outcome variable, and in what way do they–indicated by the magnitude and sign of the beta estimates–impact the outcome variable?  These regression estimates are used to explain the relationship between one dependent variable and one or more independent variables. 
+> Linear regression is a basic and commonly used type of predictive analysis.  The overall idea of regression is to examine two things: (1) does a set of predictor variables do a good job in predicting an outcome (dependent) variable?  (2) Which variables in particular are significant predictors of the outcome variable, and in what way do they–indicated by the magnitude and sign of the beta estimates–impact the outcome variable?  These regression estimates are used to explain the relationship between one dependent variable and one or more independent variables. 
+
+*[What is Linear Regression?, Statistics Solutions (2013)](https://www.statisticssolutions.com/what-is-linear-regression/)
 
 <u>X. What is Data Mining?</u>
 
