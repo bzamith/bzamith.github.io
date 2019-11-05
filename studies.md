@@ -1,5 +1,10 @@
 ## Studies
-
+- [x] 2019/2 - Software Engineering
+```markdown
+Clean Code: A Handbook of Agile Software Craftsmanship
+Robert C. Martin
+1st Edition
+```
 - [x] 2019/2 - Getting Deeper on Data Science
 - [x] 2019/1 - OpenMP and Parallel Computing
 ```markdown
