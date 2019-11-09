@@ -4,10 +4,10 @@
 Topics that I am currently studying or plan to study.
 
 ### [Data Science Concepts and Others](DSconcepts.md)
-A compilation of Q&A related to Data Science topics and others.
+A compilation of Q&A related to Data Science topics.
 
-### [Software Engineering Concepts and Others](ESconcepts.md)
-A compilation of Q&A related to Software Engineering topics and others.
+### [Software Engineering Concepts and Others](SEconcepts.md)
+A compilation of Q&A related to Software Engineering topics.
 
 ### [Publications](publications.md)
 Presentations, Proceedings, and Papers which I authored.
