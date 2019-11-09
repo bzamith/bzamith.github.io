@@ -3,10 +3,10 @@
 ### [Studies](studies.md)
 Topics that I am currently studying or plan to study.
 
-### [Data Science Concepts and Others](DSconcepts.md)
+### [Data Science Concepts](DSconcepts.md)
 A compilation of Q&A related to Data Science topics.
 
-### [Software Engineering Concepts and Others](SEconcepts.md)
+### [Software Engineering Concepts](SEconcepts.md)
 A compilation of Q&A related to Software Engineering topics.
 
 ### [Publications](publications.md)
