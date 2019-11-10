@@ -138,7 +138,7 @@
 
 <u>23. What is inference?</u>
 > Inference is one of many possible goals in data analysis. [...] In general, the goal of inference is to be able to make a statement about something that is not observed, and ideally to be able to characterize any uncertainty you have about that statement. Inference is difficult because of the difference between what you are able to observe and what you ultimately want to know. [..] The language of inference can change depending on the application, but most commonly, we refer to the things we cannot observe (but want to know about) as the population or as features of the population and the data that we observe as the sample. The goal is to use the sample to somehow make a statement about the population.
-https://www.artegic.com/blog/difference-data-information-knowledge/
+
 *The Art of Data Science; Roger D. Peng and Elizabeth Matsui (2017)*
 
 <u>24. What is Associational Analyses?</u>
