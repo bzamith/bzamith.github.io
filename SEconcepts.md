@@ -46,7 +46,13 @@ The development of a dynamic-programming algorithm can be broken into a sequence
 
 ### Others
 
-<u>X. How does Google's PageRank Algorithm works?</u>
+<u>1. How does Google's PageRank Algorithm works?</u>
+> PageRank is a predictor of how relevant a web page will be for any given search. It is similar to popularity, which could be said to be a predictor of how muach a person will be liked by any other given person. Every web page on the Internet is assigned a PageRank, which is a number from 0 to 10. The higher the PageRank, the more relevant Google considers the page to be, and the better its chance of showing up at the top of the search results. [...] PagenRank is based on how many other sites like you - that is, link to you. More important, if the sites that link to you are very popular - that is, well-linked - themselves, you get an even higher PageRank.
 
+*Outsmarting Google; Evan Bailyn, Bradley Bailyn (2011)*
+
+> Google's PageRank algorithm assigns your site a number from 0 to 10. Your site's assigned number is based on several important criteria, including inbound links to your site, how trustworthy the sites that link to you are deemed by Google, and so on. When other sites post links to your site they are, in effect, casting a vote for your site. Google tabulates those votes and cross-references them with the other criteria to come up with your rank. 
+
+*Return on Engagement; Tim Frick (2010)*
 
 [Back to Home Page](https://bzamith.github.io/)
