@@ -18,7 +18,11 @@
         
         <p>{{ site.description | default: site.github.project_tagline }}</p>        
         
-        {% if site.show_downloads %}
+        {% if site.logo %}
+          <img src="{{site.logo | relative_url}}" alt="Logo" />
+        {% endif %}
+       
+         {% if site.show_downloads %}
         <ul class="downloads">
           <li><a href="https://www.linkedin.com/in/bruna-zamith/"><strong>LinkedIn</strong></a></li>
           <li><a href="{{ site.github.owner_url }}"><strong>Github</strong></a></li>
@@ -26,9 +30,6 @@
         </ul>
         {% endif %}
         
-        {% if site.logo %}
-          <img src="{{site.logo | relative_url}}" alt="Logo" />
-        {% endif %}
       </header>
       <section>
 
