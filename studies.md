@@ -1,11 +1,4 @@
 ## Studies
-- [x] 2019/2 - Software Development Processes and Methodologies
-```markdown
-Part 1 of Online Course: Software Development Lifecycle Specialization
-University of Minnesota
-Praveen Mittal and Kevin Wendt
-Coursera
-```
 - [x] 2019/2 - Software Engineering Practices
 ```markdown
 Clean Code: A Handbook of Agile Software Craftsmanship
