@@ -24,7 +24,7 @@ The development of a dynamic-programming algorithm can be broken into a sequence
 
 *Clean Code: A Handbook of Agile Software Craftsmanship; Robert C. Martin (2008)*
 
-<u>5. What is the differance between objects and data structures?</u>
+<u>5. What is the difference between objects and data structures?</u>
 > Objects hide their data behind abstractions and expose functions that operate on that data. Data structure expose their data and have no meaningful functions. [...] Procedural code (code using data structures) makes it easy to add new functions without changing the existing data structures. OO code, on the other hand, makes it easy to add new classes without changing existing functions. The complement is also true: Procedural code makes it hard to add new data structures because all functions must change. OO code makes it hard to add new functions because all classes must change. 
 
 *Clean Code: A Handbook of Agile Software Craftsmanship; Robert C. Martin (2008)*
@@ -57,6 +57,74 @@ The development of a dynamic-programming algorithm can be broken into a sequence
 >[...] back in the dawn of the computer age, there was no distinction between dev and ops. If you developed, you operated. You monted the tapes, you flipped the switches on the fornt panel, you rebooted when things crashed, and possibly even replaced the burned out vacuum tubes. [...] Deve and ops started to separate in the '60s. [...] As companies and computing facilities grew larger, the fire-fighting mentality of many system administrators didn't scale. The response of the operations community to the problem of scale isn't surprising. If you're going to do operations reliably, you need to make it reproducible and programmatic. Hence virtual machines to shield software from configuration issues. Hence Puppet and Chef to automate configuration, so you know every machine has an identical software configuration and is running the right services. Hence Vagrant to ensure that all your virtual machines are constructed identically from the start. Hence automated monitoring tools to ensure that your clusters are running properly. It doesn't matter whether the nodes are in your own data center, in a hosting facility, or in a public cloud. If you're not writing software to manage them, you're not surviving.
 
 *What is DevOps?; Mike Loukides (2012)*
+
+<u>11. What is the difference between Requirements and Specifications?</u>
+> Requirements and Specifications are closely related concepts in defining your solution. Requirements are for the user, specifications are for the developer. Write your requirements in the user language. Write your specifications in the system language. Be sure that your specifications meet the requirements.
+
+*"Software Development Processes and Methodologies" Online Course; Praveen Mittal and Kevin Wendt (2019)*
+
+<u>12. What is the WRSPM Model?</u>
+> The purpose of the WRSPM model is to ensure that specifications meet the requirements. We have five different elements in this model. W is the world. These are all the world assumptions, these are things that we know are true [...], we are more specific about the world assumptions that have an impact on our system and on our problem domain. There are things that everyone takes for granted and they're one of the more difficult parts to capture. R then is the requirements. This is the user's language understanding of what the user wants from the solution. S is the specification. The specification lies in that interface area. It's the interface between how the system will meet those requirements. So it's still written in system language that is from a user or natural language perspective. [...] P then is the program, it is what the software developers will write, the program that will meet the specifications to provide the user goal for the requirements. The program has all the code, underlying frameworks, anything like that that we would use from a software perspective, which leaves M all the way on the side. The M is the machine. It's the hardware behind the system. So you have this world understanding, the requirements which sit within the environment that deal with the user requirements, the specification that defines how the two will meet, the program that meets that specification in order to meet the requirements, and the machine that it all runs on.
+
+*"Software Development Processes and Methodologies" Online Course; Praveen Mittal and Kevin Wendt (2019)*
+
+<u> 13. What is Software Architecture?</u>
+> Software architecture is the structure of the components of a program/system, their interrelationships, and principles and guidelines governing their design and evolution over time.
+
+*Introduction to the Special Issue on Software Architecture; David Garlan and Dewayne Perry (1995)*
+
+> The software architecture of a program or computing system is the structure or structures of the system, which comprise software elements, the externally visible properties of those elements, and the relationships among them.
+
+*Software Architecture in Practice; Len Bass, Paul Clements and Rick Kazman (2003)*
+
+> Software architecture is the fundamental organization of a system, embodied in its components, their relationships to one another and the environment, and the principles governing its design and evolution.
+
+*IEEE 1471*
+
+> Software architecture is primarily concerned with partitioning large systems into smallers ones that can be created separately, that individually have business value, and that can be straightforwardly integrated with one another and with existing systems.
+
+*SENG 5861: Introduction to Software Architecture; Michael Whalen (2019)*
+
+<u> 14. How does the Pipe-and-Filter software architectural model work?</u>
+> The pipe-and-filter architectural style is used in systems that involve a series of independent transformations on ordered data, usually taking place in a sequential fashion. The pipe-and-filter architectural style views a system as a series of data flows called pipes, and a series of transformations called filters. The system is viewed as a composition of filters, with data flowing between the filters. Systems that have a pipe-and-filter architecture lend themselves to batch processing. In addition, due to their data flow orientation, systems that have a pipe-and-filter architecture do not easily support user interaction.
+
+*IEEE Computer Society Real-World Software Engineering Problems: A Self-Study Guide for Today's Software Professional; J. Fernando Naveda and Stephen B. Seidman (2007)*
+
+<u> 15. How does the Blackboard software architectural model work?</u>
+> A blackboard architecture is a form of global store architecture. Modules within a blackboard system communicate with each other through the manipulation of data elements stored on a central data store called blackboard. This manipulation is achieved through expert systems that are responsible for performing particular tasks. For example, and expert system responsible for vision may read images from the blackboard. When it has analyzed them, it writes the observed visual features to the blackboard. This design ensures that the other components are able to gather the information required by accessing it from the global data store without having to communicate directly with each other. 
+
+*Software Architectures for Humanoid Robotics; Lorenzo Natale, Tamim Asfour, Fumio Kanehiro and Nikolaus Vahrenkamp (2018)*
+
+<u> 16. How does the Layered software architectural model work?</u>
+> While capturing a complex system's functionality, we typically divide the functionality into several layers of abstraction. Layering means grouping of functionality in an ordered fashion. In other words, layered architecture partitions the functionality into separate layers stacked vertically, each layer interacting with layers underneath. In most layered architectures you will find the following layers: Application layer, business layer, middleware layer and database layer. 
+
+*Software Architecture: A Case Based Approach; Vasudeva Varma (2012)*
+
+<u> 17. How does the Client-Server software architectural model work?</u>
+> Client/server architecture is based on diving effort into a client application, which requests data or a service and a server application, which fulfills those requests. The client and the server can be on the same or different machines. 
+
+*A Practical Guide to Enterprise Architecture; James McGovern, Scott W. Ambler, Michael E. Stevens, James Linn, Elias K. Jo, Vikas Sharan (2003)*
+
+<u> 18. How does the Event-based software architectural model work?</u>
+> An event-based architectural model uses a form of implicit invocation in which components interact thorugh event broadcasts that are processed as appropriate by other components, which either register an interest in a particular event or class of events, or listen in on all events and act on those which apply to the component. The main feature of this type of architecture is that, unlike the object-oriented model, componentes don't need to be aware of other components that will be affected by the events. This advantage over the object-oriented model is, however, also a disadvantage since a component can never really know which other components will react to an event, and in which way they will react. 
+
+*Cryptographic Security Architecture: Design and Verification; Peter Gutmann (2003)*
+
+<u>19. What is the difference between Subsystems and Modules?</u>
+> A subsystem is an independent system which holds business value. A module is a component of a subsystem which cannot function as standalone systems.
+
+*"Software Development Processes and Methodologies" Online Course; Praveen Mittal and Kevin Wendt (2019)*
+
+<u>20. What are the main Software Quality Attributes?</u>
+> Performance, reliability, testability, security and usability.
+
+*"Software Development Processes and Methodologies" Online Course; Praveen Mittal and Kevin Wendt (2019)*
+
+<u>21. What is Software Architecture Process?</u>
+> Software architecture process concerns itself primarily with those three things. Estimation; estimating the work and total,
+deciding how much it's going to take, how long it's going to take, who's going to do it. Focusing on quality; how do we ensure things like reliability and performance especially at this architectural level since those are primarily hardware and developer-focused concerns. And then partitioning; actually dividing the work into subsystems or modules that can then be passed off on to the design stage because then, design stage goes into the actual building of the individual modules. 
+
+*"Software Development Processes and Methodologies" Online Course; Praveen Mittal and Kevin Wendt (2019)*
 
 ### Others
 
