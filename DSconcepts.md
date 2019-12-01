@@ -21,7 +21,7 @@
 <u>3. What is the difference between Data Science and Statistics?</u>
 > What differentiates data science from statistics is that data sicence is a holistic approach. We're increasingly finding data in the wild, and data scientists are involved with gathering data, massaging it into a tractable form, making it tell its story, and presenting that story to others.
 
-*What Is Data Science?; Mike Loukides (2010)*
+*[What Is Data Science?; Mike Loukides (2010)](https://www.oreilly.com/ideas/what-is-data-science)*
 
 <u>4. What is a Data Scientist?</u>
 > A data researcher is somebody who decodes large measures of data and extracts importance to support an association or organization to improve its activities. They utilize various tools, philosophies, insights, systems, calculations, etc. to examine data additionally. [...] The job of the data researcher fundamentally is to the pursuit and perused the data, preparing and speaking to it and bringing a feeling of the data for down to earth use. [Besides that,] in request to check the present status of an organization or where it stands, a Business [Intelligent] Analyst utilizes data and searches for examples, business patterns, connections and concocts a representation and report. [...] A Machine Learning Engineer works with various calculations identified with machine learning like grouping, choice tress, characterization, arbitrary backwoods, etc. 
@@ -38,7 +38,7 @@
 
 > Starting The Question -> Exploratory Data Analisys -> Model Building -> Interpret -> Communicate
 
-*The Art of Data Science; Roger D. Peng and Elizabeth Matsui (2017)*
+*[The Art of Data Science; Roger D. Peng and Elizabeth Matsui (2017)](https://bookdown.org/rdpeng/artofdatascience/)*
 
 <u>7. What is QMV? </u>
 > It is an iterative process of questioning, modeling, and validation to data analysis and model building.
@@ -48,7 +48,7 @@
 <u>8. How is Moore's law applied to data?</u>
 > Since the early '80s, processor speed has increased from 10 MHz to 3.6 GHz — an increase of 360 (not counting increases in word length and number of cores). But we've seen much bigger increases in storage capacity, on every level. RAM has moved from $1,000/MB to roughly $25/GB — a price reduction of about 40000, to say nothing of the reduction in size and increase in speed. Hitachi made the first gigabyte disk drives in 1982, weighing in at roughly 250 pounds; now terabyte drives are consumer equipment, and a 32 GB microSD card weighs about half a gram. Whether you look at bits per gram, bits per dollar, or raw capacity, storage has more than kept pace with the increase of CPU speed. The importance of Moore's law as applied to data isn't just geek pyrotechnics. Data expands to fill the space you have to store it. The more storage is available, the more data you will find to put into it. [...] Increased storage capacity demands increased sophistication in the analysis and use of that data. That's the foundation of data science.
 
-*What Is Data Science?; Mike Loukides (2010)*
+*[What Is Data Science?; Mike Loukides (2010)](https://www.oreilly.com/ideas/what-is-data-science)*
 
 > Gordon Moore (a cofounder of Intel) observed that the number of transistors in computer chips doubles roughly every two years. More transistors per chip translates to faster speeds in computer processors and more random access memory in computers, which leads to more powerful computers. This extraordinary rate of technological improvement - output doubling every two years - is likely the fastest growth in technology humanity has ever seen. Yet, since 2011, the amount of sequencing data stored in the Short Read Archive has outpaced even this incredible growth, having doubled every year. 
 
@@ -57,12 +57,12 @@
 <u>9. What is Data Conditioning?</u>
 > [It is] the first step of any data analysis project [and means] getting data into a state where it's usable. Data conditioning can involve cleaning up messy HTML with tools [...], natural language processing to parse plain text in English and other languages, or even getting humans to do the dirty work.
 
-*What Is Data Science?; Mike Loukides (2010)*
+*[What Is Data Science?; Mike Loukides (2010)](https://www.oreilly.com/ideas/what-is-data-science)*
 
 <u>10. What is Big Data?</u>
 > Big data is when the size of the data itself becomes part of the problem. We're discussing data problems ranging from gigabytes to petabytes of data. At some point, traditional techniques for working with data run out of steam.
 
-*What Is Data Science?; Mike Loukides (2010)*
+*[What Is Data Science?; Mike Loukides (2010)](https://www.oreilly.com/ideas/what-is-data-science)*
 
 > That is a considerable measure of data, so much data, and it turned out to be challenging to deal with by utilizing conventional innovations. Along these lines, we called it Big Data.
 
@@ -71,17 +71,17 @@
 <u>11. How to store data in Data Science scenario?</u>
 > Relational databases are designed for consistency, to support complex transactions that can easily be rolled back if any one of a complex set of operations fails. While rock-solid consistency is crucial to many applications, it's not really necessary for the kind of analysis we're discussing here. [...] Precision has an allure, but in most data-driven applications outside of finance, that allure is deceptive. Most data analysis is comparative [...]. To store huge datasets effectively, we've seen a new breed of databases appear. These are frequently called NoSQL databases, or Non-Relational databases [...]. They group together fundamentally dissimilar products by telling you what they aren't. Many of these databases are [..] designed to be distributed across many nodes, to provide ''eventual consistency'' but not absolute consistency, and to have very flexible schema.
 
-*What Is Data Science?; Mike Loukides (2010)*
+*[What Is Data Science?; Mike Loukides (2010)](https://www.oreilly.com/ideas/what-is-data-science)*
 
 <u>12. What is the MapReduce approach?</u>
 > Data is only useful if you can do something with it, and enormous datasets present computational problems. Google popularized the MapReduce approach, which is basically a divide-and-conquer strategy for distributing an extremely large problem across an extremely large computing cluster. In the “map” stage, a programming task is divided into a number of identical subtasks, which are then distributed across many processors; the intermediate results are then combined by a single reduce task. In hindsight, MapReduce seems like an obvious solution to Google's biggest problem, creating large searches. It's easy to distribute a search across thousands of processors, and then combine the results into a single set of answers. What's less obvious is that MapReduce has proven to be widely applicable to many large data problems, ranging from search to machine learning. The most popular open source implementation of MapReduce is the Hadoop project.
 
-*What Is Data Science?; Mike Loukides (2010)*
+*[What Is Data Science?; Mike Loukides (2010)](https://www.oreilly.com/ideas/what-is-data-science)*
 
 <u>13. What is Hadoop?</u>
 > Hadoop goes far beyond a simple MapReduce implementation (of which there are several); it's the key component of a data platform. It incorporates HDFS, a distributed filesystem designed for the performance and reliability requirements of huge datasets; the HBase database; Hive, which lets developers explore Hadoop datasets using SQL-like queries; a high-level dataflow language called Pig; and other components. If anything can be called a one-stop information platform, Hadoop is it. Hadoop has been instrumental in enabling ''agile'' data analysis. [...] Hadoop (and particularly Elastic MapReduce) make it easy to build clusters that can perform computations on long datasets quickly. Hadoop is essentially a batch system, but Hadoop Online Prototype (HOP) is an experimental project that enables stream processing. Hadoop processes data as it arrives, and delivers intermediate results in (near) real-time. Near real-time data analysis enables features like trending topics on sites like Twitter. 
 
-*What Is Data Science?; Mike Loukides (2010)*
+*[What Is Data Science?; Mike Loukides (2010)](https://www.oreilly.com/ideas/what-is-data-science)*
 
 > The Hadoop platform was designed to solve problems where you have a lot of data - perhaps a mixture of complex and structured data - and it doesn't fit nicely into tables. It's for situations where you want to run analytics that are deep and computationally extensive, like clustering and targeting.
 
@@ -124,42 +124,42 @@
 <u>20. What is a model?</u>
 > In a very general sense, a model is something we construct to help us understand the real world. [...]  The process of building a model involves imposing a specific structure on the data and creating a summary of the data. [...] A statistical model serves two key purposes in a data analysis, which are to provide a quantitative summary of your data and to impose a specific structure on the population from which the data were sampled. [...] At its core, a statistical model provides a description of how the world works and how the data were generated. The model is essentially an expectation of the relationships between various factors in the real world and in your dataset. What makes a model a statistical model is that it allows for some randomness in generating the data.
 
-*The Art of Data Science; Roger D. Peng and Elizabeth Matsui (2017)*
+*[The Art of Data Science; Roger D. Peng and Elizabeth Matsui (2017)](https://bookdown.org/rdpeng/artofdatascience/)*
 
 <u>21. What is statistic?</u>
 > The first key element of a statistical model is data reduction. The basic idea is you want to take the original set of numbers consisting of your dataset and transform them into a smaller set of numbers. [...] The process of data reduction typically ends up with a statistic. Generally speaking, a statistic is any summary of the data. The sample mean, or average, is a statistic. So is the median, the standard deviation, the maximum, the minimum, and the range. Some statistics are more or less useful than others but they are all summaries of the data.
 
-*The Art of Data Science; Roger D. Peng and Elizabeth Matsui (2017)*
+*[The Art of Data Science; Roger D. Peng and Elizabeth Matsui (2017)](https://bookdown.org/rdpeng/artofdatascience/)*
 
 <u>22. What are the Normal Distribution and the Gamma Distribution?</u>
 > [Normal model] says that the randomness in a set of data can be explained by the Normal distribution, or a bell-shaped curve. The Normal distribution is fully specified by two parameters — the mean and the standard deviation. [The Gamma distribution] has the feature that it only allows positive values, so it eliminates the problem we had with negative values with the Normal distribution.
 
-*The Art of Data Science; Roger D. Peng and Elizabeth Matsui (2017)*
+*[The Art of Data Science; Roger D. Peng and Elizabeth Matsui (2017)](https://bookdown.org/rdpeng/artofdatascience/)*
 
 <u>23. What is inference?</u>
 > Inference is one of many possible goals in data analysis. [...] In general, the goal of inference is to be able to make a statement about something that is not observed, and ideally to be able to characterize any uncertainty you have about that statement. Inference is difficult because of the difference between what you are able to observe and what you ultimately want to know. [..] The language of inference can change depending on the application, but most commonly, we refer to the things we cannot observe (but want to know about) as the population or as features of the population and the data that we observe as the sample. The goal is to use the sample to somehow make a statement about the population.
 
-*The Art of Data Science; Roger D. Peng and Elizabeth Matsui (2017)*
+*[The Art of Data Science; Roger D. Peng and Elizabeth Matsui (2017)](https://bookdown.org/rdpeng/artofdatascience/)*
 
 <u>24. What is Associational Analyses?</u>
 > Associational analyses are ones where we are looking at an association between two or more features in the presence of other potentially confounding factors. There are three classes of variables that are important to think about in an associational analysis: Outcome (the feature of your dataset that is thought to change along with your key predictor); Key predictor (often for associational analyses there is one key predictor of interest); Potential confounders (this is a large class of predictors that are both related to the key predictor and the outcome).
 
-*The Art of Data Science; Roger D. Peng and Elizabeth Matsui (2017)*
+*[The Art of Data Science; Roger D. Peng and Elizabeth Matsui (2017)](https://bookdown.org/rdpeng/artofdatascience/)*
 
 <u>25. What is Prediction Analyses?</u>
 > In the previous section we described associational analyses, where the goal is to see if a key predictor x and an outcome y are associated. But sometimes the goal is to use all of the information available to you to predict y. Furthermore, it doesn't matter if the variables would be considered unrelated in a causal way to the outcome you want to predict because the objective is prediction, not developing an understanding about the relationships between features. With prediction models, we have outcome variables–features about which we would like to make predictions–but we typically do not make a distinction between “key predictors” and other predictors. In most cases, any predictor that might be of use in predicting the outcome would be considered in an analysis and might, a priori, be given equal weight in terms of its importance in predicting the outcome. Prediction analyses will often leave it to the prediction algorithm to determine the importance of each predictor and to determine the functional form of the model.
 
-*The Art of Data Science; Roger D. Peng and Elizabeth Matsui (2017)*
+*[The Art of Data Science; Roger D. Peng and Elizabeth Matsui (2017)](https://bookdown.org/rdpeng/artofdatascience/)*
 
 <u>26. Why is model tuning relevant?</u>
 > Model tuning. A hallmark of prediction algorithms is their many tuning parameters. Sometimes these parameters can have large effects on prediction quality if they are changed and so it is important to be informed of the impact of tuning parameters for whatever algorithm you use. There is no prediction algorithm for which a single set of tuning parameters works well for all problems. Most likely, for the initial model fit, you will use “default” parameters, but these defaults may not be sufficient for your purposes. Fiddling with the tuning parameters may greatly change the quality of your predictions. It's very important that you document the values of these tuning parameters so that the analysis can be reproduced in the future.
 
-*The Art of Data Science; Roger D. Peng and Elizabeth Matsui (2017)*
+*[The Art of Data Science; Roger D. Peng and Elizabeth Matsui (2017)](https://bookdown.org/rdpeng/artofdatascience/)*
 
 <u>27. When to use Inference or Prediction?</u>
 > For inferential questions the goal is typically to estimate an association between a predictor of interest and the outcome. There is usually only a handful of predictors of interest (or even just one), however there are typically many potential confounding variables to consider. They key goal of modeling is to estimate an association while making sure you appropriately adjust for any potential confounders. Often, sensitivity analyses are conducted to see if associations of interest are robust to different sets of confounders. For prediction questions the goal is to identify a model that best predicts the outcome. Typically we do not place any a priori importance on the predictors, so long as they are good at predicting the outcome. There is no notion of “confounder” or “predictors of interest” because all predictors are potentially useful for predicting the outcome. Also, we often do not care about “how the model works” or telling a detailed story about the predictors. The key goal is to develop a model with good prediction skill and to estimate a reasonable error rate from the data.
 
-*The Art of Data Science; Roger D. Peng and Elizabeth Matsui (2017)*
+*[The Art of Data Science; Roger D. Peng and Elizabeth Matsui (2017)](https://bookdown.org/rdpeng/artofdatascience/)*
 
 <u>28. What is Linear Regression?</u>
 > Linear regression is a basic and commonly used type of predictive analysis.  The overall idea of regression is to examine two things: (1) does a set of predictor variables do a good job in predicting an outcome (dependent) variable?  (2) Which variables in particular are significant predictors of the outcome variable, and in what way do they–indicated by the magnitude and sign of the beta estimates–impact the outcome variable?  These regression estimates are used to explain the relationship between one dependent variable and one or more independent variables. 
