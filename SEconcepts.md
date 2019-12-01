@@ -161,7 +161,7 @@ away information and knowledge in a way that allows us to complete complex work 
 
 *["Software Development Processes and Methodologies" Online Course; Praveen Mittal and Kevin Wendt (2019)](https://www.coursera.org/learn/software-processes/)*
 
-<u>27. What are the types of lLoose Coupling?</u>
+<u>27. What are the types of Loose Coupling?</u>
 > Data coupling, message coupling and no coupling. Data coupling is when only parameters are shared. These includes elementary pieces of data like when you pass an integer to a function to compute the square root. Message coupling is then the loosest type of coupling. It's primarily achieved through state decentralization and component communications, only accomplished either through parameters or message passing. Now of course, you can have no coupling. But this is usually the trivial case and isn't really of that much interest to us. In any sufficiently complex design, there's going to be multiple modules. And we care mostly about how tightly coupled are the modules that do communicate and not really about the modules that don't and shouldn't communicate anyway. But we really don't care about that. The ones that do communicate, those are the ones we're going to focus on. 
 
 *["Software Development Processes and Methodologies" Online Course; Praveen Mittal and Kevin Wendt (2019)](https://www.coursera.org/learn/software-processes/)*
