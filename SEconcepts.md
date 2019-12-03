@@ -331,6 +331,16 @@ validate a concept, or validate the feasibility of it and you're doing some kind
 
 *[Agile Manifesto Org; Multiple Authors (2001)](http://agilemanifesto.org/)*
 
+<u>54. Which are the F.I.R.S.T rules for Testing?</u>
+> (F)ast: Tests run quickly. When tests run slow, you won't want to run them frequently. If you don't run them frequently, you won't find problems early enough to fix them easily. (I)ndependent: Test should not depend on each other. You should be able to run each test independently and run the tests in any order you like. (R)epeatable: Tests should be repeatable in any environment. You should be able to run the tests in the production environment, in the QA environment, and on your laptop while riding home on the train without network. (S)elf-Validating: The tests should have a boolean output. Either they pass or fail. You should not have to read through a log file to tell whether the tests pass. (T)imely: The tests need to be written in a timely fashion. Unity tests should be written just before the production code that makes them pass.
+
+*Clean Code: A Handbook of Agile Software Craftsmanship; Robert C. Martin (2008)*
+
+<u>55. Why are the Unit Tests important?</u>
+> It is the unit tests that keep out code flexible, maintainable, and reusable. The reason is simple. If you have tests, you do not fear making changes to the code! Without tests every change is a possible bug. No matter how flexible your architecture is, no matter how nicely partitioned your design, without tests you will be reluctant to make changes beacuse of the fear that you will introduce undetected bugs. And test code is just as important as production code. It is not a second-class citizen. It requires thought, design, and care. It must be kept as clean as production code. 
+
+*Clean Code: A Handbook of Agile Software Craftsmanship; Robert C. Martin (2008)*
+
 ### Others
 <u>1. How does Google's PageRank Algorithm works?</u>
 > PageRank is a predictor of how relevant a web page will be for any given search. It is similar to popularity, which could be said to be a predictor of how muach a person will be liked by any other given person. Every web page on the Internet is assigned a PageRank, which is a number from 0 to 10. The higher the PageRank, the more relevant Google considers the page to be, and the better its chance of showing up at the top of the search results. [...] PagenRank is based on how many other sites like you - that is, link to you. More important, if the sites that link to you are very popular - that is, well-linked - themselves, you get an even higher PageRank.
