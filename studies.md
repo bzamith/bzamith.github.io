@@ -1,4 +1,10 @@
 ## Studies
+- [x] [2019/2 - Software Development Processes and Methodologies](https://www.coursera.org/learn/software-processes/)
+```markdown
+University of Minnesota
+Coursera - Online Course
+1st part of the [Software Development Lifecycle](https://www.coursera.org/specializations/software-development-lifecycle) specialization
+```
 - [x] 2019/2 - Software Engineering Practices
 ```markdown
 Clean Code: A Handbook of Agile Software Craftsmanship
@@ -34,6 +40,12 @@ Clus-HMC framework
 Fundamentals of Natural Computing
 Leandro Nunes de Castro
 1st Edition
+```
+- [ ] [Design Patterns](https://www.coursera.org/learn/object-oriented-design) 
+```markdown
+University of Alberta
+Coursera - Online Course
+1st part of the [Software Design and Architecture](https://www.coursera.org/specializations/software-design-architecture) specialization
 ```
 - [ ] Deep Learning
 - [ ] Bussiness Intelligence
