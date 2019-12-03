@@ -44,12 +44,7 @@ The development of a dynamic-programming algorithm can be broken into a sequence
 
 *Clean Code: A Handbook of Agile Software Craftsmanship; Robert C. Martin (2008)*
 
-<u>9. What is the waterfall method?</u>
-> [...] waterfall method, where you go from phase to phase to phase. Requirements, design, implementation. As industries started to use this method, they ran into several issues. For example, they found that it's very difficult to predict the requirements one year or two a year ahead, as the market changes, or sometimes it's just really difficult to predict what a user will like or not like. And, since the cycle is a year or two year, it is possible that the developers or the architects misinterpreted the requirements. And so, that misinterpretation will go undetected all the way to design, implementation, and the verification. And similarly, the integration issues between the different components, go undetected for a year while the software is being developed.
-
-*["Software Development Processes and Methodologies" Online Course; Praveen Mittal and Kevin Wendt (2019)](https://www.coursera.org/learn/software-processes/)*
-
-<u>10. What is DevOps?</u>
+<u>9. What is DevOps?</u>
 > DevOps is a set of practices intended to reduce time bewteen committing a change to a system and the change being replaced into normal production, while ensuring high quality. [...] We have identified five different categories of DevOps practices: 1. Treat Ops as first-class citizens from the point of view of requirements. For example, logging messages should be understandable and usable by an operator. 2. Make Dev more responsible for relevant incident handling. Theses practices are inteded to shorten the time between the observation of an error and the repair of that error. 3. Enforce the deployment process used by all, including Dev and Ops personnel. This avoid errors caused by ad hoc deployments and the resulting misconfiguration. 4. Use continuous deployment. Practices associated with continuous deployment are intended to shorten the time between a developer committing code to a repository and the code being deployed. Continous deployment also emphasizes automated tests to increase the quality of code making its way into production. 5. Develop infrastructure code, such as deployment scripts, with the same set of practices as application code. Applying quality control practices used in normal software development when developing operations scripts and processes will help control the quality of theses specifications.
 
 *DevOps: A Software Architect's Perspective; Len Bass, Ingo Weber and Liming Zhu (2015)*
@@ -58,17 +53,17 @@ The development of a dynamic-programming algorithm can be broken into a sequence
 
 *What is DevOps?; Mike Loukides (2012)*
 
-<u>11. What is the difference between Requirements and Specifications?</u>
+<u>10. What is the difference between Requirements and Specifications?</u>
 > Requirements and Specifications are closely related concepts in defining your solution. Requirements are for the user, specifications are for the developer. Write your requirements in the user language. Write your specifications in the system language. Be sure that your specifications meet the requirements.
 
 *["Software Development Processes and Methodologies" Online Course; Praveen Mittal and Kevin Wendt (2019)](https://www.coursera.org/learn/software-processes/)*
 
-<u>12. What is the WRSPM Model?</u>
+<u>11. What is the WRSPM Model?</u>
 > The purpose of the WRSPM model is to ensure that specifications meet the requirements. We have five different elements in this model. W is the world. These are all the world assumptions, these are things that we know are true [...], we are more specific about the world assumptions that have an impact on our system and on our problem domain. There are things that everyone takes for granted and they're one of the more difficult parts to capture. R then is the requirements. This is the user's language understanding of what the user wants from the solution. S is the specification. The specification lies in that interface area. It's the interface between how the system will meet those requirements. So it's still written in system language that is from a user or natural language perspective. [...] P then is the program, it is what the software developers will write, the program that will meet the specifications to provide the user goal for the requirements. The program has all the code, underlying frameworks, anything like that that we would use from a software perspective, which leaves M all the way on the side. The M is the machine. It's the hardware behind the system. So you have this world understanding, the requirements which sit within the environment that deal with the user requirements, the specification that defines how the two will meet, the program that meets that specification in order to meet the requirements, and the machine that it all runs on.
 
 *["Software Development Processes and Methodologies" Online Course; Praveen Mittal and Kevin Wendt (2019)](https://www.coursera.org/learn/software-processes/)*
 
-<u> 13. What is Software Architecture?</u>
+<u> 12. What is Software Architecture?</u>
 > Software architecture is the structure of the components of a program/system, their interrelationships, and principles and guidelines governing their design and evolution over time.
 
 *Introduction to the Special Issue on Software Architecture; David Garlan and Dewayne Perry (1995)*
@@ -85,64 +80,64 @@ The development of a dynamic-programming algorithm can be broken into a sequence
 
 *SENG 5861: Introduction to Software Architecture; Michael Whalen (2019)*
 
-<u> 14. How does the Pipe-and-Filter software architectural model work?</u>
+<u> 13. How does the Pipe-and-Filter software architectural model work?</u>
 > The pipe-and-filter architectural style is used in systems that involve a series of independent transformations on ordered data, usually taking place in a sequential fashion. The pipe-and-filter architectural style views a system as a series of data flows called pipes, and a series of transformations called filters. The system is viewed as a composition of filters, with data flowing between the filters. Systems that have a pipe-and-filter architecture lend themselves to batch processing. In addition, due to their data flow orientation, systems that have a pipe-and-filter architecture do not easily support user interaction.
 
 *IEEE Computer Society Real-World Software Engineering Problems: A Self-Study Guide for Today's Software Professional; J. Fernando Naveda and Stephen B. Seidman (2007)*
 
-<u> 15. How does the Blackboard software architectural model work?</u>
+<u> 14. How does the Blackboard software architectural model work?</u>
 > A blackboard architecture is a form of global store architecture. Modules within a blackboard system communicate with each other through the manipulation of data elements stored on a central data store called blackboard. This manipulation is achieved through expert systems that are responsible for performing particular tasks. For example, and expert system responsible for vision may read images from the blackboard. When it has analyzed them, it writes the observed visual features to the blackboard. This design ensures that the other components are able to gather the information required by accessing it from the global data store without having to communicate directly with each other. 
 
 *Software Architectures for Humanoid Robotics; Lorenzo Natale, Tamim Asfour, Fumio Kanehiro and Nikolaus Vahrenkamp (2018)*
 
-<u> 16. How does the Layered software architectural model work?</u>
+<u> 15. How does the Layered software architectural model work?</u>
 > While capturing a complex system's functionality, we typically divide the functionality into several layers of abstraction. Layering means grouping of functionality in an ordered fashion. In other words, layered architecture partitions the functionality into separate layers stacked vertically, each layer interacting with layers underneath. In most layered architectures you will find the following layers: Application layer, business layer, middleware layer and database layer. 
 
 *Software Architecture: A Case Based Approach; Vasudeva Varma (2012)*
 
-<u> 17. How does the Client-Server software architectural model work?</u>
+<u> 16. How does the Client-Server software architectural model work?</u>
 > Client/server architecture is based on diving effort into a client application, which requests data or a service and a server application, which fulfills those requests. The client and the server can be on the same or different machines. 
 
 *A Practical Guide to Enterprise Architecture; James McGovern, Scott W. Ambler, Michael E. Stevens, James Linn, Elias K. Jo, Vikas Sharan (2003)*
 
-<u> 18. How does the Event-based software architectural model work?</u>
+<u> 17. How does the Event-based software architectural model work?</u>
 > An event-based architectural model uses a form of implicit invocation in which components interact thorugh event broadcasts that are processed as appropriate by other components, which either register an interest in a particular event or class of events, or listen in on all events and act on those which apply to the component. The main feature of this type of architecture is that, unlike the object-oriented model, componentes don't need to be aware of other components that will be affected by the events. This advantage over the object-oriented model is, however, also a disadvantage since a component can never really know which other components will react to an event, and in which way they will react. 
 
 *Cryptographic Security Architecture: Design and Verification; Peter Gutmann (2003)*
 
-<u>19. What is the difference between Subsystems and Modules?</u>
+<u>18. What is the difference between Subsystems and Modules?</u>
 > A subsystem is an independent system which holds business value. A module is a component of a subsystem which cannot function as standalone systems.
 
 *["Software Development Processes and Methodologies" Online Course; Praveen Mittal and Kevin Wendt (2019)](https://www.coursera.org/learn/software-processes/)*
 
-<u>20. What are the main Software Quality Attributes?</u>
+<u>19. What are the main Software Quality Attributes?</u>
 > Performance, reliability, testability, security and usability.
 
 *["Software Development Processes and Methodologies" Online Course; Praveen Mittal and Kevin Wendt (2019)](https://www.coursera.org/learn/software-processes/)*
 
-<u>21. What is Software Architecture Process?</u>
+<u>20. What is Software Architecture Process?</u>
 > Software architecture process concerns itself primarily with those three things. Estimation; estimating the work and total,
 deciding how much it's going to take, how long it's going to take, who's going to do it. Focusing on quality; how do we ensure things like reliability and performance especially at this architectural level since those are primarily hardware and developer-focused concerns. And then partitioning; actually dividing the work into subsystems or modules that can then be passed off on to the design stage because then, design stage goes into the actual building of the individual modules. 
 
 *["Software Development Processes and Methodologies" Online Course; Praveen Mittal and Kevin Wendt (2019)](https://www.coursera.org/learn/software-processes/)*
 
-<u>22. What is Software Design?</u>
+<u>21. What is Software Design?</u>
 > Software design is what we call the deliverable, design, the noun, and what we call the process to make that design. Design, the verb, is the creative process of transforming the problem into a solution. In our case, transforming a requirement specification into a detailed description of the software that's code-ready. The noun then is the documented description of that solution and the constraints and explanations used to arrive at it. We develop the software design. Software design takes abstract requirements and then you build the detail and until you are satisfied that you can hand it off and it will be developed properly. So, you are going to decide things like classes, methods, data types, that kind of thing but not the individual language-specific optimizations that will go into the eventual code. So, you are going to provide detail, which is implementation-ready but it does not include implementation detail. Software design is all about designing a solution, creating the deliverables and documentation necessary to allow the developing team to build something that meets the needs of the user or the client.
 
 *["Software Development Processes and Methodologies" Online Course; Praveen Mittal and Kevin Wendt (2019)](https://www.coursera.org/learn/software-processes/)*
 
-<u>23. What are the stages of Software Design?</u>
+<u>22. What are the stages of Software Design?</u>
 > The stages of Software Design are: 1. Problem understanding. 2. Identify one or more solutions. 3. Describe solution abstractions. 4. Repeat the process for each identified abstraction until the design is expressed in primitive terms. When we say solution abstractions, we essentially mean any documentation of the solution that is not technological. Mostly, that means anything that's not code or hardware. Graphical including mock-ups or wireframes, formal descriptions including unified modeling language or UML diagrams like class diagrams and sequence diagrams, and other descriptive notations should be used to capture your description of the solution that you intend to build or have built for you.
 
 *["Software Development Processes and Methodologies" Online Course; Praveen Mittal and Kevin Wendt (2019)](https://www.coursera.org/learn/software-processes/)*
 
-<u>24. What are the aspects of modularity?</u>
+<u>23. What are the aspects of modularity?</u>
 > When we talk about modularity, we're primarily talking about these four things: Coupling, cohesion, information hiding and data encapsulation. Coupling and cohesion are measures of how well modules work together and how well each individual module meets a certain single well-defined task and they tend to go together. Information hiding describes our ability to abstract
 away information and knowledge in a way that allows us to complete complex work in parallel without having to know all the implementation details concerning how the task will be completed eventually. And then data encapsulation refers to the idea that we can contain constructs and concepts within a module, allowing us to much more easily understand and manipulate the concept when we're looking at it in relative isolation. The principle of modularity is that complex systems must be broken down into smaller parts. There are three primary goals: Decomposability, "Composability" and ease of understanding.
 
 *["Software Development Processes and Methodologies" Online Course; Praveen Mittal and Kevin Wendt (2019)](https://www.coursera.org/learn/software-processes/)*
 
-<u>25. What is Coupling?</u>
+<u>24. What is Coupling?</u>
 > In software engineering, the coupling is the degree of interdependence between software modules. Two modules that are tightly coupled are strongly dependent on each other. However, two modules that are loosely coupled are not dependent on each other. Uncoupled modules have no interdependence at all within them.
 
 *[Coupling and Cohesion; Java Point (2019)](https://www.javatpoint.com/software-engineering-coupling-and-cohesion)*
@@ -151,7 +146,7 @@ away information and knowledge in a way that allows us to complete complex work 
 
 *["Software Development Processes and Methodologies" Online Course; Praveen Mittal and Kevin Wendt (2019)](https://www.coursera.org/learn/software-processes/)*
 
-<u>26. What are the types of Tight Coupling?</u>
+<u>25. What are the types of Tight Coupling?</u>
 > Content coupling, common coupling and external coupling. Both content and common coupling occur when two modules rely on the same underlying information. Content coupling happens when module a directly relies on the local data members of module b, rather than relying on some access or a method. While common coupling happens when module a and module b both rely on some global data, or global variable. External coupling is a reliance on an externally imposed format, protocol, or interface. In some cases, this can't be avoided. But it does represent tight coupling, which means that changes here could affect a large number of modules, which is probably not ideal. You might consider, for example, creating some abstraction to deal with the externally imposed format. Allowing the various modules to maintain their own format, and delegating the format to the external, into a single entity. Depending on whether or not the external format or the internal data will change more often. 
 
 *["Software Development Processes and Methodologies" Online Course; Praveen Mittal and Kevin Wendt (2019)](https://www.coursera.org/learn/software-processes/)*
@@ -295,6 +290,39 @@ of modules not actual working modules usually, that's why it's a Stub. Templates
 
 <u>47. What are the Stages of Testing?</u>
 > Unit testing, module testing, sub-system testing, system testing and acceptance testing.
+
+*["Software Development Processes and Methodologies" Online Course; Praveen Mittal and Kevin Wendt (2019)](https://www.coursera.org/learn/software-processes/)*
+
+<u>48. What is the Waterfall model?</u>
+> [...] waterfall method, where you go from phase to phase to phase. Requirements, design, implementation, testing, deployment and maintenance. As industries started to use this method, they ran into several issues. For example, they found that it's very difficult to predict the requirements one year or two a year ahead, as the market changes, or sometimes it's just really difficult to predict what a user will like or not like. And, since the cycle is a year or two year, it is possible that the developers or the architects misinterpreted the requirements. And so, that misinterpretation will go undetected all the way to design, implementation, and the verification. And similarly, the integration issues between the different components, go undetected for a year while the software is being developed. It is good when you know the requirements very well; the team has experience building similar software; and translation from requirements to product is going to be perfect. The pros are that it is simple, predictable and efficient. The cons are that it is not flexible for changes and the first release takes a longo time.
+
+*["Software Development Processes and Methodologies" Online Course; Praveen Mittal and Kevin Wendt (2019)](https://www.coursera.org/learn/software-processes/)*
+
+<u>49. What is the V model?</u>
+> The V-Model focuses on a fairly typical waterfall-esque method that follows strict, step-by-step stages. While initial stages are broad design stages, progress proceeds down through more and more granular stages, leading into implementation and coding, and finally back through all testing stages prior to completion of the project.
+
+*[V-Model: What Is It And How Do You Use It?; Andrew Powell-Morse (2016)](https://airbrake.io/blog/sdlc/v-model)
+
+> So if you look at the V-model, it looks very similar to the waterfall method, but it's just bent into a shape of a V.
+But if you look closely, the left side of the model is about project definition or the product definition, where it's getting finer and finer. So from the concept, you go to the requirement, and to the design, and to the implementation.
+And then the right side is showing all the validation steps that are corresponding to the steps on the left. On the y-axis,
+it's increasing in the abstraction when you go from bottom to the top. And then if you go from the left to right, it kind of shows the project completion. It has an emphasis on validation earlier in the process, so it has eralier detection of potential defects/issues. However, it implies more upfront work.
+
+*["Software Development Processes and Methodologies" Online Course; Praveen Mittal and Kevin Wendt (2019)](https://www.coursera.org/learn/software-processes/)*
+
+<u>50. What is the Sashimi model?</u>
+> In Sashimi Model the idea is that we allow to overlap the different phases of software development lifecycle. For example, while you're working on the requirements, instead of waiting for the requirement phase to complete, you will start with your design while the requirements are being created. So, a phase can start before previous phase ends. The pros are the shorten development time, the fact that people with different skills can start working without wiating and that you can do a learning spike early. The con is that it may result in rework.
+
+*["Software Development Processes and Methodologies" Online Course; Praveen Mittal and Kevin Wendt (2019)](https://www.coursera.org/learn/software-processes/)*
+
+<u>51. What is the Incremental model?</u>
+> In this model, the software is built in parts. Multiple mini waterfalls, that may overlap. You can use different models for each increment. The pros are that it delivers value earlier and you get feedback and make necessary changes between increments. The cons are that it may result in rework and may cost more.
+
+*["Software Development Processes and Methodologies" Online Course; Praveen Mittal and Kevin Wendt (2019)](https://www.coursera.org/learn/software-processes/)*
+
+<u>52. What is the Spiral model?</u>
+> It's a risk-driven approach, a cyclic process but each of those cycle actually has four basic steps: 1. Determine objectives; 2. Identify and resolve risks; 3. Development and Test; 4. Plan the next iteration. But not every acitivity need to be perfomed every time. But, basically, you do these steps of one, two, three, four and then you go in a cyclic manner and you try to reduce your risks as you do more and more cycles. As you can see, that this model gives a lot and lot of emphasis on the risks. So you identify and resolve risk as primary step of this process. The next characteristic is that the effort and the detail are driven by the risk. So, let's say, if you're in this step, the main goal is to validate something,
+validate a concept, or validate the feasibility of it and you're doing some kind of prototype or some kind of software development activity. So you don't need to go through a rigorous requirements documents or a very detailed document. You just do enough so that the goal or objective is achieved. The pros are that it is adaptative, the risk focus increases chances of success, it is flexible for using any model and minimizes waste. The cons are that it is complicated, costs more to manage and needs stakeholder engagement. 
 
 *["Software Development Processes and Methodologies" Online Course; Praveen Mittal and Kevin Wendt (2019)](https://www.coursera.org/learn/software-processes/)*
 
