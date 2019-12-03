@@ -1,5 +1,5 @@
 ## Studies
-- [x] [2019/2 - Software Development Processes and Methodologies](https://www.coursera.org/learn/software-processes/)
+- [x] 2019/2 - [Software Development Processes and Methodologies](https://www.coursera.org/learn/software-processes/)
 ```markdown
 University of Minnesota
 Coursera - Online Course
