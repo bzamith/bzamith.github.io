@@ -3,7 +3,7 @@
 ```markdown
 University of Minnesota
 Coursera - Online Course
-1st part of the [Software Development Lifecycle](https://www.coursera.org/specializations/software-development-lifecycle) specialization
+1st part of the Software Development Lifecycle specialization
 ```
 - [x] 2019/2 - Software Engineering Practices
 ```markdown
@@ -45,7 +45,7 @@ Leandro Nunes de Castro
 ```markdown
 University of Alberta
 Coursera - Online Course
-1st part of the [Software Design and Architecture](https://www.coursera.org/specializations/software-design-architecture) specialization
+1st part of the Software Design and Architecture specialization
 ```
 - [ ] Fundamentals of Algorithms
 ```markdown
