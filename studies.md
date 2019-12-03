@@ -29,7 +29,6 @@ Dive Into Design Patterns
 Alexander Shvets
 Ebook
 ```
-- [x] 2018/2 - Git
 - [x] 2017/2 - Predictive Clustering Trees
 ```markdown
 Clus-HMC framework
@@ -52,6 +51,11 @@ Coursera - Online Course
 The Art of Computer Programming - Vol 1
 Donald E. Knuth
 3rd Edition
+```
+- [ ] [Version Control with Git](https://www.coursera.org/learn/version-control-with-git/)
+```markdown
+Atlassian
+Coursera - Online Course
 ```
 - [ ] Deep Learning
 - [ ] Bussiness Intelligence
