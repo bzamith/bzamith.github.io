@@ -47,6 +47,12 @@ University of Alberta
 Coursera - Online Course
 1st part of the [Software Design and Architecture](https://www.coursera.org/specializations/software-design-architecture) specialization
 ```
+- [ ] Fundamentals of Algorithms
+```markdown
+The Art of Computer Programming - Vol 1
+Donald E. Knuth
+3rd Edition
+```
 - [ ] Deep Learning
 - [ ] Bussiness Intelligence
 - [ ] SQL Injection
