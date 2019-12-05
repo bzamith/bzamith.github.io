@@ -341,6 +341,16 @@ validate a concept, or validate the feasibility of it and you're doing some kind
 
 *Clean Code: A Handbook of Agile Software Craftsmanship; Robert C. Martin (2008)*
 
+<u>56. What is Git?</u>
+> Git is a distributed version control system. [...] this means each user has a local copy of the repository and that repositories can easily be synchronized. Git is a free and open source software project meaning that the code that implements Git is publically available. No single company owns Git, and anyone can make contributions to improve it. Git has a vibrant community of support and an ecosystem in which many other technologies are integrated with it. Git adapts well to many types of projects and work flows. This means that whatever your project is or however your team likes to work together, Git can be adapted as a useful tool for your team.
+
+*["Version Control with Git" Online Course; Steve Byrnes (2019)](https://www.coursera.org/learn/version-control-with-git/)*
+
+<u>57. What is a Git Repository?</u>
+> A Git repository contains a series of snapshots of the project over time which are known as commits. Each commit contains all of the directories and files of the project at the time the snapshot was taken. You can go back and view the project at earlier points by viewing the older commits.
+
+*["Version Control with Git" Online Course; Steve Byrnes (2019)](https://www.coursera.org/learn/version-control-with-git/)*
+
 ### Others
 <u>1. How does Google's PageRank Algorithm works?</u>
 > PageRank is a predictor of how relevant a web page will be for any given search. It is similar to popularity, which could be said to be a predictor of how muach a person will be liked by any other given person. Every web page on the Internet is assigned a PageRank, which is a number from 0 to 10. The higher the PageRank, the more relevant Google considers the page to be, and the better its chance of showing up at the top of the search results. [...] PagenRank is based on how many other sites like you - that is, link to you. More important, if the sites that link to you are very popular - that is, well-linked - themselves, you get an even higher PageRank.
