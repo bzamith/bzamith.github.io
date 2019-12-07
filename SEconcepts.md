@@ -351,6 +351,21 @@ validate a concept, or validate the feasibility of it and you're doing some kind
 
 *["Version Control with Git" Online Course; Steve Byrnes (2019)](https://www.coursera.org/learn/version-control-with-git/)*
 
+<u>58. Which are the main Git Objects?</u>
+> Commit object (a small text file); Annotated tag (a reference to a specifiic commit); Tree (directories and filenames in the project); Blob (the content of a file in the project).
+
+*["Version Control with Git" Online Course; Steve Byrnes (2019)](https://www.coursera.org/learn/version-control-with-git/)*
+
+<u>59. What is a Git Branch?</u>
+> All commits of a project belong to a branch. By default, commit belong to the master branch. A branch is a set of commits starting with the most recent commit in the branch and tracing back to the project's first commit.
+
+*["Version Control with Git" Online Course; Steve Byrnes (2019)](https://www.coursera.org/learn/version-control-with-git/)*
+
+<u>60. What are the 4 types of Merging?</u>
+> 1. Fast-forward merge (moves the base branch label to the tip of the topic branch, which is only possible if no other commits have been made to the base branch since branching); 2. Merge commit (combines the commits at the tipos of the merged branches and places the result in the merge commit); 3. Squash merge; 4. Rebase.
+
+*["Version Control with Git" Online Course; Steve Byrnes (2019)](https://www.coursera.org/learn/version-control-with-git/)*
+
 ### Others
 <u>1. How does Google's PageRank Algorithm works?</u>
 > PageRank is a predictor of how relevant a web page will be for any given search. It is similar to popularity, which could be said to be a predictor of how muach a person will be liked by any other given person. Every web page on the Internet is assigned a PageRank, which is a number from 0 to 10. The higher the PageRank, the more relevant Google considers the page to be, and the better its chance of showing up at the top of the search results. [...] PagenRank is based on how many other sites like you - that is, link to you. More important, if the sites that link to you are very popular - that is, well-linked - themselves, you get an even higher PageRank.
