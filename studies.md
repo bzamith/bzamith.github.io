@@ -1,39 +1,44 @@
 ## Studies
-- [x] 2019/2 - [Software Development Processes and Methodologies](https://www.coursera.org/learn/software-processes/)
+- [x] 2019/2nd - [Version Control with Git](https://www.coursera.org/learn/version-control-with-git/)
+```markdown
+Atlassian
+Coursera - Online Course
+```
+- [x] 2019/2nd - [Software Development Processes and Methodologies](https://www.coursera.org/learn/software-processes/)
 ```markdown
 University of Minnesota
 Coursera - Online Course
 1st part of the Software Development Lifecycle specialization
 ```
-- [x] 2019/2 - Software Engineering Practices
+- [x] 2019/2nd - Software Engineering Practices
 ```markdown
 Clean Code: A Handbook of Agile Software Craftsmanship
 Robert C. Martin
 1st Edition
 ```
-- [x] 2019/2 - Getting Deeper on Data Science
-- [x] 2019/1 - OpenMP and Parallel Computing
+- [x] 2019/2nd - Getting Deeper on Data Science
+- [x] 2019/1st - OpenMP and Parallel Computing
 ```markdown
 Tim Mattson classes:
 A  Hands-on  Introduction  to  OpenMP
 ```
-- [x] 2019/1 - Distributed Systems
+- [x] 2019/1st - Distributed Systems
 ```markdown
 Distributed Systems
 Maarten Van Steen, Andrew S Tanenbaum
 3rd Edition
 ```
-- [x] 2019/1 - Design Patterns 
+- [x] 2019/1st - Design Patterns 
 ```markdown
 Dive Into Design Patterns
 Alexander Shvets
 Ebook
 ```
-- [x] 2017/2 - Predictive Clustering Trees
+- [x] 2017/2nd - Predictive Clustering Trees
 ```markdown
 Clus-HMC framework
 ```
-- [x] 2016/1 - Latex
+- [x] 2016/1st - Latex
 - [ ] Natural Computing 
 ```markdown
 Fundamentals of Natural Computing
@@ -51,11 +56,6 @@ Coursera - Online Course
 The Art of Computer Programming - Vol 1
 Donald E. Knuth
 3rd Edition
-```
-- [ ] [Version Control with Git](https://www.coursera.org/learn/version-control-with-git/)
-```markdown
-Atlassian
-Coursera - Online Course
 ```
 - [ ] Deep Learning
 - [ ] Bussiness Intelligence
