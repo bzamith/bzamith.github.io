@@ -361,8 +361,13 @@ validate a concept, or validate the feasibility of it and you're doing some kind
 
 *["Version Control with Git" Online Course; Steve Byrnes (2019)](https://www.coursera.org/learn/version-control-with-git/)*
 
-<u>60. What are the 4 types of Merging?</u>
-> 1. Fast-forward merge (moves the base branch label to the tip of the topic branch, which is only possible if no other commits have been made to the base branch since branching); 2. Merge commit (combines the commits at the tipos of the merged branches and places the result in the merge commit); 3. Squash merge; 4. Rebase.
+<u>60. Which are the 4 types of Merging?</u>
+> Fast-forward merge (moves the base branch label to the tip of the topic branch, which is only possible if no other commits have been made to the base branch since branching); Merge commit (combines the commits at the tipos of the merged branches and places the result in the merge commit); Squash merge; Rebase.
+
+*["Version Control with Git" Online Course; Steve Byrnes (2019)](https://www.coursera.org/learn/version-control-with-git/)*
+
+<u>61. Which are the 4 Network Commands on Git?</u>
+> Clone (copies a remote repository); Fetch (retrieves new objects and references from the remote repository); Pull (fetches and merges commits locally); Push (adds new objects and references to the remote repository).
 
 *["Version Control with Git" Online Course; Steve Byrnes (2019)](https://www.coursera.org/learn/version-control-with-git/)*
 
