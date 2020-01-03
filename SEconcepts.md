@@ -146,6 +146,10 @@ away information and knowledge in a way that allows us to complete complex work 
 
 *["Software Development Processes and Methodologies" Online Course; Praveen Mittal and Kevin Wendt (2019)](https://www.coursera.org/learn/software-processes/)*
 
+> Describing of the complexity of connections between modules. tightly coupled modules are highly dependent on each other and difficult to reuse in other contexts. loosely coupled modules are less dependent and easier to reuse.
+
+*["Object Oriented Design" Online Course; Kenny Wong (2020)](https://www.coursera.org/learn/object-oriented-design/)*
+
 <u>25. What are the types of Tight Coupling?</u>
 > Content coupling, common coupling and external coupling. Both content and common coupling occur when two modules rely on the same underlying information. Content coupling happens when module a directly relies on the local data members of module b, rather than relying on some access or a method. While common coupling happens when module a and module b both rely on some global data, or global variable. External coupling is a reliance on an externally imposed format, protocol, or interface. In some cases, this can't be avoided. But it does represent tight coupling, which means that changes here could affect a large number of modules, which is probably not ideal. You might consider, for example, creating some abstraction to deal with the externally imposed format. Allowing the various modules to maintain their own format, and delegating the format to the external, into a single entity. Depending on whether or not the external format or the internal data will change more often. 
 
@@ -171,7 +175,12 @@ away information and knowledge in a way that allows us to complete complex work 
 *["Software Development Processes and Methodologies" Online Course; Praveen Mittal and Kevin Wendt (2019)](https://www.coursera.org/learn/software-processes/)*
 
 > Classes should have a small number of instance variables. Each of the methods of a class should manipulate one or more of those variables. In general the more variables a method manipulates the more cohesive that method is to its class. A class which each variable is used by each method is maximally cohesive. In general it is neither advisable nor possible to create such maximally cohesive classes; on the other hand, we would like cohesion to be high. When cohesion is high, it means that the methods and variables of the class are co-dependent and hang together as a logical whole. 
+
 *Clean Code: A Handbook of Agile Software Craftsmanship; Robert C. Martin (2008)*
+
+> Describing the complexity within a module, e.g. a class or a method. high cohesion describes a module that has a clear purpose and is no more complex than it needs to be. low cohesion describes a module which has an unclear purpose or which is overly complex.
+
+*["Object Oriented Design" Online Course; Kenny Wong (2020)](https://www.coursera.org/learn/object-oriented-design/)*
 
 <u>29. What are the types of Weak Cohesion?</u>
 > Coincidental cohesion, temporal cohesion, procedural cohesion and logical association. Coincidental cohesion is effectively the idea that parts of the module are together just because they are in the same file. Temporal cohesion means that the code is activated at the same time, but that's it. That's really the only connection. Procedural cohesion is similarly time based and not very strong cohesion. Just because one comes after the other doesn't really tie them together,
@@ -383,6 +392,35 @@ validate a concept, or validate the feasibility of it and you're doing some kind
 > Typically, the software designer role would be responsible for outlining a software solution to a specific problem by designing the details of individual components and their responsibilities. A software architect role would be responsible for looking at the entire system and choosing appropriate frameworks, data storage, solutions and determining how components interact with each other. That brings us to the primary difference between software design and software architecture.
 
 *["Object Oriented Design" Online Course; Kenny Wong (2020)](https://www.coursera.org/learn/object-oriented-design/)*
+
+<u>64. What is an Entity Object?</u>
+> Entity objects are the most familiar, because they correspond to some real-world entity in the problem space. If you have an object representing a chair in your software, then this is an entity object. If you have an object representing a building or a customer, these are all entity objects. Generally, these objects will know attributes about themselves. They will also be able to modify themselves, and have some rules for how to do so. When you are identifying objects to include in your software and breaking down those objects into smaller objects, you will initially get entity objects. The other categories of objects will come later, as you start to think about the technical design of the software.
+
+*["Object Oriented Design" Online Course; Kenny Wong (2020)](https://www.coursera.org/learn/object-oriented-design/)*
+
+<u>65. What is a Boundary Object?</u>
+> Boundary objects are objects which sit at the boundary between systems. This could be an object that deals with another software system - like an object that obtains information from the Internet. It could also be an object with the responsibility of showing information to the user and getting their input. If you program a user interface - the visual aspect of software - you are probably mostly working with boundary objects. Any object that deals with another system - a user, another software system, the Internet - can be considered a boundary object.
+
+*["Object Oriented Design" Online Course; Kenny Wong (2020)](https://www.coursera.org/learn/object-oriented-design/)*
+
+<u>66. What is a Control Object?</u>
+> Control objects are objects which are responsible for coordination. You will discover control objects when you attempt to break down a large object, and find that it would be useful to have an object that controls the other objects. You will see many examples of these objects in real usage in the next course in the specialization: Design Patterns. A great example is a Mediator: it simply coordinates the activities of many different objects so that they can stay loosely coupled.
+
+*["Object Oriented Design" Online Course; Kenny Wong (2020)](https://www.coursera.org/learn/object-oriented-design/)*
+
+<u>67. What is Aggregation?</u>
+> A relationship in which an object contains one or more other subordinate objects as part of its state. The subordinate objects typically have no independent existence separate from their containing object. When the containing object has no further useful existence, neither do the subordinate objects. For instance, a gas station object might contain several pump objects. These pumps will only exist as long as the station does. Aggregation is also referred to as the has-a relationship, to distinguish it from the is-a relationship, which refers to inheritance. 
+
+*[Glossary of Java and Related Terms; David J. Barnes (2006)](https://www.cs.kent.ac.uk/people/staff/djb/oop/glossary.html)
+
+<u>68. What is Polymorphism?</u>
+> The ability of an object reference to be used as if it referred to an object with different forms. Polymorphism in Java results from both class inheritance and interface inheritance. The apparently different forms often result from the static type of the variable in which the reference is stored. Given the following class header. Example: class Rectangle extends Polygon implements Comparable. That is, an object whose dynamic type is Rectangle can behave as all of the following types: Rectangle, Polygon, Comparable, Object. 
+
+*[Glossary of Java and Related Terms; David J. Barnes (2006)](https://www.cs.kent.ac.uk/people/staff/djb/oop/glossary.html)
+
+> This refers to the ability of an object to take on many forms. The most common use of polymorphism in Object Oriented Programming occurs when a parent class reference is used to refer to a child class object. Polymorphism in java occur in the form of method overriding and method overloading. In Java, it is possible to define two or more methods of same name in a class, provided that there argument list or parameters are different. This concept is known as Method Overloading. An example is the area method, which takes in different parameters but does the same function. In Java, a child class has the same method as of base class. In such cases child class overrides the parent class method without even touching the source code of the base class. This feature is known as method overriding.
+
+*[Overview of Inheritance, Interfaces and Abstract Classes in Java; Isaac Jumba (2015)](https://medium.com/@isaacjumba/overview-of-inheritance-interfaces-and-abstract-classes-in-java-3fe22404baf8)
 
 ### Others
 <u>1. How does Google's PageRank Algorithm works?</u>
