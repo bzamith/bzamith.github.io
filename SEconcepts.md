@@ -170,6 +170,9 @@ away information and knowledge in a way that allows us to complete complex work 
 
 *["Software Development Processes and Methodologies" Online Course; Praveen Mittal and Kevin Wendt (2019)](https://www.coursera.org/learn/software-processes/)*
 
+> Classes should have a small number of instance variables. Each of the methods of a class should manipulate one or more of those variables. In general the more variables a method manipulates the more cohesive that method is to its class. A class which each variable is used by each method is maximally cohesive. In general it is neither advisable nor possible to create such maximally cohesive classes; on the other hand, we would like cohesion to be high. When cohesion is high, it means that the methods and variables of the class are co-dependent and hang together as a logical whole. 
+*Clean Code: A Handbook of Agile Software Craftsmanship; Robert C. Martin (2008)*
+
 <u>29. What are the types of Weak Cohesion?</u>
 > Coincidental cohesion, temporal cohesion, procedural cohesion and logical association. Coincidental cohesion is effectively the idea that parts of the module are together just because they are in the same file. Temporal cohesion means that the code is activated at the same time, but that's it. That's really the only connection. Procedural cohesion is similarly time based and not very strong cohesion. Just because one comes after the other doesn't really tie them together,
 not necessarily. What if the process flow changes? Again, that's not good. They don't necessarily need to be cohesive in that way. Logical association then is the idea that components which perform similar functions are grouped. We're getting less weak, but it's still not good enough.
@@ -370,6 +373,16 @@ validate a concept, or validate the feasibility of it and you're doing some kind
 > Clone (copies a remote repository); Fetch (retrieves new objects and references from the remote repository); Pull (fetches and merges commits locally); Push (adds new objects and references to the remote repository).
 
 *["Version Control with Git" Online Course; Steve Byrnes (2019)](https://www.coursera.org/learn/version-control-with-git/)*
+
+<u>62. What is the Single Responsability Principle (SRP)?</u>
+> The Single Responsability Principle (SRP) states that a class or module should have one, and only one, reason to change. This priciple gives us both a defition of responsability, and a guidelines for class size. Classes should have one responsability - one reason to change.
+
+*Clean Code: A Handbook of Agile Software Craftsmanship; Robert C. Martin (2008)*
+
+<u>63. What is the difference between Sofware Design and Software Architecture?</u>
+> Typically, the software designer role would be responsible for outlining a software solution to a specific problem by designing the details of individual components and their responsibilities. A software architect role would be responsible for looking at the entire system and choosing appropriate frameworks, data storage, solutions and determining how components interact with each other. That brings us to the primary difference between software design and software architecture.
+
+*["Object Oriented Design" Online Course; Kenny Wong (2020)](https://www.coursera.org/learn/object-oriented-design/)*
 
 ### Others
 <u>1. How does Google's PageRank Algorithm works?</u>
