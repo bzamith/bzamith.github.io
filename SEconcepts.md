@@ -411,16 +411,26 @@ validate a concept, or validate the feasibility of it and you're doing some kind
 <u>67. What is Aggregation?</u>
 > A relationship in which an object contains one or more other subordinate objects as part of its state. The subordinate objects typically have no independent existence separate from their containing object. When the containing object has no further useful existence, neither do the subordinate objects. For instance, a gas station object might contain several pump objects. These pumps will only exist as long as the station does. Aggregation is also referred to as the has-a relationship, to distinguish it from the is-a relationship, which refers to inheritance. 
 
-*[Glossary of Java and Related Terms; David J. Barnes (2006)](https://www.cs.kent.ac.uk/people/staff/djb/oop/glossary.html)
+*[Glossary of Java and Related Terms; David J. Barnes (2006)](https://www.cs.kent.ac.uk/people/staff/djb/oop/glossary.html)*
 
 <u>68. What is Polymorphism?</u>
 > The ability of an object reference to be used as if it referred to an object with different forms. Polymorphism in Java results from both class inheritance and interface inheritance. The apparently different forms often result from the static type of the variable in which the reference is stored. Given the following class header. Example: class Rectangle extends Polygon implements Comparable. That is, an object whose dynamic type is Rectangle can behave as all of the following types: Rectangle, Polygon, Comparable, Object. 
 
-*[Glossary of Java and Related Terms; David J. Barnes (2006)](https://www.cs.kent.ac.uk/people/staff/djb/oop/glossary.html)
+[*Glossary of Java and Related Terms; David J. Barnes (2006)*](https://www.cs.kent.ac.uk/people/staff/djb/oop/glossary.html)
 
 > This refers to the ability of an object to take on many forms. The most common use of polymorphism in Object Oriented Programming occurs when a parent class reference is used to refer to a child class object. Polymorphism in java occur in the form of method overriding and method overloading. In Java, it is possible to define two or more methods of same name in a class, provided that there argument list or parameters are different. This concept is known as Method Overloading. An example is the area method, which takes in different parameters but does the same function. In Java, a child class has the same method as of base class. In such cases child class overrides the parent class method without even touching the source code of the base class. This feature is known as method overriding.
 
-*[Overview of Inheritance, Interfaces and Abstract Classes in Java; Isaac Jumba (2015)](https://medium.com/@isaacjumba/overview-of-inheritance-interfaces-and-abstract-classes-in-java-3fe22404baf8)
+[*Overview of Inheritance, Interfaces and Abstract Classes in Java; Isaac Jumba (2015)*](https://medium.com/@isaacjumba/overview-of-inheritance-interfaces-and-abstract-classes-in-java-3fe22404baf8)
+
+<u>69. What is Mocking?</u>
+> Mocking is primarily used in unit testing. An object under test may have dependencies on other (complex) objects. To isolate the behavior of the object you want to replace the other objects by mocks that simulate the behavior of the real objects. This is useful if the real objects are impractical to incorporate into the unit test. In short, mocking is creating objects that simulate the behavior of real objects.
+
+*[Martin Liversage on Stackoverflow (2020)](https://stackoverflow.com/questions/2665812/what-is-mocking)*
+
+<u>70. What is the difference between Mock and Stub?</u>
+> At times you may want to distinguish between mocking as opposed to stubbing. There may be some disagreement about this subject but my definition of a stub is a "minimal" simulated object. The stub implements just enough behavior to allow the object under test to execute the test. A mock is like a stub but the test will also verify that the object under test calls the mock as expected. Part of the test is verifying that the mock was used correctly. To give an example: You can stub a database by implementing a simple in-memory structure for storing records. The object under test can then read and write records to the database stub to allow it to execute the test. This could test some behavior of the object not related to the database and the database stub would be included just to let the test run. If you instead want to verify that the object under test writes some specific data to the database you will have to mock the database. Your test would then incorporate assertions about what was written to the database mock.
+
+*[Martin Liversage on Stackoverflow (2020)](https://stackoverflow.com/questions/2665812/what-is-mocking)*
 
 ### Others
 <u>1. How does Google's PageRank Algorithm works?</u>
