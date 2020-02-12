@@ -39,11 +39,23 @@ Ebook
 Clus-HMC framework
 ```
 - [x] 2016/1st - Latex
-- [ ] Natural Computing 
+- [ ] Java
 ```markdown
-Fundamentals of Natural Computing
-Leandro Nunes de Castro
+Effective Java
+Joshua Bloch
+3rd Edition
+```
+- [ ] OOP
+```markdown
+99 Bottles of OOP
+Sandi Metz
 1st Edition
+```
+- [ ] Fundamentals of Algorithms
+```markdown
+The Art of Computer Programming - Vol 1
+Donald E. Knuth
+3rd Edition
 ```
 - [ ] [Design Patterns](https://www.coursera.org/learn/object-oriented-design) 
 ```markdown
@@ -51,11 +63,11 @@ University of Alberta
 Coursera - Online Course
 1st part of the Software Design and Architecture specialization
 ```
-- [ ] Fundamentals of Algorithms
+- [ ] Natural Computing 
 ```markdown
-The Art of Computer Programming - Vol 1
-Donald E. Knuth
-3rd Edition
+Fundamentals of Natural Computing
+Leandro Nunes de Castro
+1st Edition
 ```
 - [ ] Deep Learning
 - [ ] Bussiness Intelligence
