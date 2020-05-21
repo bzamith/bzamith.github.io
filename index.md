@@ -3,7 +3,7 @@
 ### [Studies](studies.md)
 Topics that I am currently studying or plan to study.
 
-### [Coding Interview Questions](https://github.com/bzamith/CodingInterviewQuestions/blob/master/README.md)
+### [Coding Interview Questions](codingInterview.md)
 Coding Interview Questions solved by me while studying for SDE Interview @ Amazon.
 
 ### [Data Science Concepts](DSconcepts.md)
