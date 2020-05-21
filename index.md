@@ -3,6 +3,9 @@
 ### [Studies](studies.md)
 Topics that I am currently studying or plan to study.
 
+### [Coding Interview Questions](codingInterview.md)
+Coding Interview Questions solved by me while studying for SDE Interview @ Amazon.
+
 ### [Data Science Concepts](DSconcepts.md)
 A compilation of Q&A related to Data Science topics.
 
