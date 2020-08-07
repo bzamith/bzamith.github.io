@@ -1,4 +1,10 @@
 ## Studies
+- [x] 2020/2nd - Amazon Web Services
+```markdown
+Amazon Web Services in Action
+Andreas Wittig and Michael Wittig
+2nd Edition
+```
 - [x] 2019/2nd - [Version Control with Git](https://www.coursera.org/learn/version-control-with-git/)
 ```markdown
 Atlassian
