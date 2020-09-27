@@ -443,7 +443,7 @@ validate a concept, or validate the feasibility of it and you're doing some kind
 *Amazon Web Services in Action; Andreas Wittig and Michael Wittig (2018)*
 
 ### Others
-<u>1. How does Google's PageRank Algorithm works?</u>
+<u>1. How does Google's PageRank Algorithm work?</u>
 > PageRank is a predictor of how relevant a web page will be for any given search. It is similar to popularity, which could be said to be a predictor of how muach a person will be liked by any other given person. Every web page on the Internet is assigned a PageRank, which is a number from 0 to 10. The higher the PageRank, the more relevant Google considers the page to be, and the better its chance of showing up at the top of the search results. [...] PagenRank is based on how many other sites like you - that is, link to you. More important, if the sites that link to you are very popular - that is, well-linked - themselves, you get an even higher PageRank.
 
 *Outsmarting Google; Evan Bailyn, Bradley Bailyn (2011)*
