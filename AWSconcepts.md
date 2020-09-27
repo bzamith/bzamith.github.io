@@ -20,3 +20,5 @@
 > Amazon CloudFront is best suited when there is a need of speed in serving static and dynanic web contents of a web application. If the content is already in that edge location, CloudFront delivers it immediately. If the content is not currently in that edge location, CloudFront retrieves it from an Amazon S3 bucket or an HTTP server. Amazon CloudFront is not appropriate in case users can tolerate some delays or servers are present near to the location of user. It also Integrates through the W3 Total Cache plugin. Amazon CloudFront Pricing based on bandwidth usage that's the best part of it.
 
 *[Ashish Agarwal review in TrustRadius](https://www.trustradius.com/compare-products/amazon-cloudfront-vs-amazon-route-53)*
+
+[Back to Home Page](https://bzamith.github.io/)
