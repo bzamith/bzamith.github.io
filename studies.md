@@ -1,9 +1,9 @@
 ## Studies
-- [x] 2020/2nd - Amazon Web Services
+- [x] 2020/2nd - Software Engineering 1
 ```markdown
-Amazon Web Services in Action
-Andreas Wittig and Michael Wittig
-2nd Edition
+The Pragmatic Programmmer
+David Thomas and Andrew Hunt
+20th Anniversary Edition
 ```
 - [x] 2019/2nd - [Version Control with Git](https://www.coursera.org/learn/version-control-with-git/)
 ```markdown
@@ -74,6 +74,12 @@ Coursera - Online Course
 Fundamentals of Natural Computing
 Leandro Nunes de Castro
 1st Edition
+```
+- [ ] Amazon Web Services
+```markdown
+Amazon Web Services in Action
+Andreas Wittig and Michael Wittig
+2nd Edition
 ```
 - [ ] Deep Learning
 - [ ] Bussiness Intelligence
