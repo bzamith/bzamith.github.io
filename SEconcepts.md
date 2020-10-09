@@ -442,6 +442,11 @@ validate a concept, or validate the feasibility of it and you're doing some kind
 
 *Amazon Web Services in Action; Andreas Wittig and Michael Wittig (2018)*
 
+<u>72. What is OpenAPI?</u>
+> A standard, language-agnostic interface to REST APIs which allows both humans and computers to discover and understand the capabilities of the service without access to source code, documentation, or through network traffic inspection. Swagger is now called OpenAPI. You can write OpenAPI definitions in YAML or JSON. 
+
+*[Everything You Need to Know About OpenAPI 3.0; Erin McKean (2018)](youtube.com/watch?v=NFI5GTBEb0k)*
+
 ### Others
 <u>1. How does Google's PageRank Algorithm work?</u>
 > PageRank is a predictor of how relevant a web page will be for any given search. It is similar to popularity, which could be said to be a predictor of how muach a person will be liked by any other given person. Every web page on the Internet is assigned a PageRank, which is a number from 0 to 10. The higher the PageRank, the more relevant Google considers the page to be, and the better its chance of showing up at the top of the search results. [...] PagenRank is based on how many other sites like you - that is, link to you. More important, if the sites that link to you are very popular - that is, well-linked - themselves, you get an even higher PageRank.
