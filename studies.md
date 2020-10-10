@@ -5,6 +5,12 @@ The Pragmatic Programmmer
 David Thomas and Andrew Hunt
 20th Anniversary Edition
 ```
+- [x] 2020/2nd - Western Philosophy
+```markdown
+A History of Western Philosophy
+Bertrand Russell
+2015
+```
 - [x] 2019/2nd - [Version Control with Git](https://www.coursera.org/learn/version-control-with-git/)
 ```markdown
 Atlassian
