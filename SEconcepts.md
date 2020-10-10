@@ -447,6 +447,11 @@ validate a concept, or validate the feasibility of it and you're doing some kind
 
 *[Everything You Need to Know About OpenAPI 3.0; Erin McKean (2018)](youtube.com/watch?v=NFI5GTBEb0k)*
 
+<u>73. What is Orthogonality?</u>
+> In computing, the term has come to signify a kind of independence or decoupling. Two or more things are orthogonal if changes in one do not affect any of the others. In a well-designed system, the database code will be orthogonal to the user interface: you can change the interface without affecting the database, and swap databases without changing the interface. [...] Most developers are familiar with the need to design orthogonal systems, altough they may use words such as modular, component-based, and layered to describe the process. Systems should be composed of a set of cooperating modules, each of which implements functionality independent of the others. Sometimes these components are organized into layers, each providing a level of abstraction. 
+
+*The Pragmatic Programmer; David Thomas and Andrew Hunt (2020)*
+
 ### Others
 <u>1. How does Google's PageRank Algorithm work?</u>
 > PageRank is a predictor of how relevant a web page will be for any given search. It is similar to popularity, which could be said to be a predictor of how muach a person will be liked by any other given person. Every web page on the Internet is assigned a PageRank, which is a number from 0 to 10. The higher the PageRank, the more relevant Google considers the page to be, and the better its chance of showing up at the top of the search results. [...] PagenRank is based on how many other sites like you - that is, link to you. More important, if the sites that link to you are very popular - that is, well-linked - themselves, you get an even higher PageRank.
