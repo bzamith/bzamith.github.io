@@ -8,7 +8,7 @@ layout: default
 
 Hi! My name is Bruna, I am Brazilian and I have a bachelor degree in Computer Engineering from Federal University of Sao Carlos.
 
-I am currently working as a Software Engineer @ Amazon computer. But I am also passionate and continuously learning about Data Science and Bioinformatics. Still, I am really looking forward to learning more about Computer Networks and Natural Computing.
+I am currently working as a Software Engineer @ Amazon. But I am also passionate and continuously learning about Data Science and Bioinformatics. Still, I am really looking forward to learning more about Computer Networks and Natural Computing.
 
 In my spare time, you can find me reading a good book, riding my bicycle, enjoying a cup of coffee or (hopefully!) traveling.
 
