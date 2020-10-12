@@ -4,7 +4,7 @@ layout: default
 
 ## AWS Concepts
 
-<u>1. Amazon Cloudfront</u>
+### 1. Amazon Cloudfront
 > Amazon CloudFront is a fast content delivery network (CDN) service that securely delivers data, videos, applications, and APIs to customers globally with low latency, high transfer speeds, all within a developer-friendly environment. 
 
 *[AWS Cloudfront (2020)](https://aws.amazon.com/cloudfront/)*
@@ -25,4 +25,5 @@ layout: default
 
 *[Ashish Agarwal review in TrustRadius](https://www.trustradius.com/compare-products/amazon-cloudfront-vs-amazon-route-53)*
 
-[Back to Home Page](https://bzamith.github.io/)
+
+[**Back to Home Page**](https://bzamith.github.io/)

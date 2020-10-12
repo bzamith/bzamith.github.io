@@ -22,11 +22,11 @@ In my spare time, you can find me reading a good book, riding my bicycle, enjoyi
 
 ## Studies & Concepts
 
-- [**Studies**](studies): Topics that I am currently studying or plan to study.
-- [**My SDE Interview Studies**](https://github.com/bzamith/MySDEInterviewStudies): Coding Interview Questions solved by me while studying for SDE Interview. And a pdf with the topics I've studied while preparing for the interview.
-- [**Data Science Concepts**](DSconcepts): A compilation of Q&A related to Data Science topics.
-- [**Software Engineering Concepts**](SEconcepts): A compilation of Q&A related to Software Engineering topics and others.
-- [**AWS Concepts**](AWSconcepts): A compilation of Q&A related to Amazon Web Services topics.
+- [<u>Studies</u>](studies): Topics that I am currently studying or plan to study.
+- [<u>My SDE Interview Studies</u>](https://github.com/bzamith/MySDEInterviewStudies): Coding Interview Questions solved by me while studying for SDE Interview. And a pdf with the topics I've studied while preparing for the interview.
+- [<u>Data Science Concepts</u>](DSconcepts): A compilation of Q&A related to Data Science topics.
+- [<u>Software Engineering Concepts</u>](SEconcepts): A compilation of Q&A related to Software Engineering topics and others.
+- [<u>AWS Concepts</u>](AWSconcepts): A compilation of Q&A related to Amazon Web Services topics.
 
 ## Publications
 
