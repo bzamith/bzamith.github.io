@@ -1,7 +1,3 @@
----
-layout: default
----
-
 ## AWS Concepts
 
 <u>1. Amazon Cloudfront</u>

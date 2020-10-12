@@ -1,7 +1,3 @@
----
-layout: default
----
-
 ## Data Science Concepts
 
 <u>1. What is the difference between Art and Science?</u>

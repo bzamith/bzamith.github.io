@@ -1,6 +1,24 @@
 title: Bruna Zamith
-logo: /assets/img/femalecodertocat.png
-description: Software Engineer @ Amazon.
-show_downloads: true
-google_analytics: true
-theme: jekyll-theme-minimal
+url: "https://bzamith.github.io/"
+baseurl: ""
+
+markdown: kramdown
+#ins_logo: "./bits-logo.png"
+
+tracking_id: #
+
+footer: yes
+footer_url: "https://github.com/ankitsultana"
+footer_text: "Page design by Ankit Sultana"
+
+sass:
+    style: compressed
+    sass_dir: _sass
+
+nav:
+ - name: "Home"
+   link: "https://bzamith.github.io/"
+ - name: "Studies"
+   link: "studies"
+ - name: "Concepts"
+   link: "concepts"
