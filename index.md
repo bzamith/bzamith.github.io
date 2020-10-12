@@ -6,7 +6,7 @@ layout: default
 
 <img class="profile-picture" src="profile.png">
 
-Hi! My name is Bruna I am Brazilian and I have a bachelor degree in Computer Engineering from Federal University of Sao Carlos.
+Hi! My name is Bruna, I am Brazilian and I have a bachelor degree in Computer Engineering from Federal University of Sao Carlos.
 
 I am currently working as a Software Engineer @ Amazon computer. But I am also passionate and continuously learning about Data Science and Bioinformatics. Still, I am really looking forward to learning more about Computer Networks and Natural Computing.
 
