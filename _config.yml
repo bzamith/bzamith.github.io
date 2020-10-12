@@ -3,7 +3,6 @@ url: "https://bzamith.github.io/"
 baseurl: ""
 
 markdown: kramdown
-#ins_logo: "./bits-logo.png"
 
 tracking_id: #
 
