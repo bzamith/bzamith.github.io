@@ -468,6 +468,6 @@ validate a concept, or validate the feasibility of it and you're doing some kind
 
 > Advantages of AOP: Cross cutting concerns; Reuse; Quick development; Focus on one aspect at a time; Enabled/Disabled
 
-*[What is AOP; Bharath Thippireddy (2020)](https://www.youtube.com/watch?v=DuFPj8MlAVo)
+*[What is AOP; Bharath Thippireddy (2020)](https://www.youtube.com/watch?v=DuFPj8MlAVo)*
 
 [Back to Home Page](https://bzamith.github.io/)
