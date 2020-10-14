@@ -456,14 +456,18 @@ validate a concept, or validate the feasibility of it and you're doing some kind
 
 *The Pragmatic Programmer; David Thomas and Andrew Hunt (2020)*
 
-### Others
-### 1. How does Google's PageRank Algorithm work?
-> PageRank is a predictor of how relevant a web page will be for any given search. It is similar to popularity, which could be said to be a predictor of how muach a person will be liked by any other given person. Every web page on the Internet is assigned a PageRank, which is a number from 0 to 10. The higher the PageRank, the more relevant Google considers the page to be, and the better its chance of showing up at the top of the search results. [...] PagenRank is based on how many other sites like you - that is, link to you. More important, if the sites that link to you are very popular - that is, well-linked - themselves, you get an even higher PageRank.
+### 74. What are concerns and cross cutting concerns?
+> A concern is a part of a system divided on the basis of functionality. It can be as general as the details of the database interaction or as specific as performing a primitive calculation. Usually, code can be separated into logical sections, each addressing separate concerns. [...] Cross cutting concerns are concerns shared across multiple application modules. They represent functionalities for secondary requirements. for example logging, security, and data transfer are concerns that are needed in almost every module of an application, hence also called system-wide concerns. 
 
-*Outsmarting Google; Evan Bailyn, Bradley Bailyn (2011)*
+*[Cross-cutting Concern; Deepanshu Mishra (2020)](https://medium.com/anatta-design/cross-cutting-concern-aadf4f51a5c1)*
 
-> Google's PageRank algorithm assigns your site a number from 0 to 10. Your site's assigned number is based on several important criteria, including inbound links to your site, how trustworthy the sites that link to you are deemed by Google, and so on. When other sites post links to your site they are, in effect, casting a vote for your site. Google tabulates those votes and cross-references them with the other criteria to come up with your rank. 
+### 75. What is Aspect Oriented Programming?
+> An aspect is a common feature that's typically scattered across methods, classes, object hierarchies, or even entire object models. It is behavior that looks and smells like it should have structure, but you can't find a way to express this structure in code with traditional object-oriented techniques. For example, metrics is one common aspect. To generate useful logs from your application, you have to (often liberally) sprinkle informative messages throughout your code. However, metrics is something that your class or object model really shouldn't be concerned about. After all, metrics is irrelevant to your actual application: it doesn't represent a customer or an account, and it doesn't realize a business rule. It's simply orthogonal. In AOP, a feature like metrics is called a crosscutting concern, as it's a behavior that "cuts" across multiple points in your object models, yet is distinctly different. As a development methodology, AOP recommends that you abstract and encapsulate crosscutting concerns.
 
-*Return on Engagement; Tim Frick (2010)*
+*[Chapter 1. What Is Aspect-Oriented Programming?; Jboss Doc (2020)](https://docs.jboss.org/aop/1.0/aspect-framework/userguide/en/html/what.html)*
+
+> Advantages of AOP: Cross cutting concerns; Reuse; Quick development; Focus on one aspect at a time; Enabled/Disabled
+
+*[What is AOP; Bharath Thippireddy (2020)](https://www.youtube.com/watch?v=DuFPj8MlAVo)
 
 [Back to Home Page](https://bzamith.github.io/)
