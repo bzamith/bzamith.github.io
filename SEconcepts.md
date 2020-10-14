@@ -470,4 +470,18 @@ validate a concept, or validate the feasibility of it and you're doing some kind
 
 *[What is AOP; Bharath Thippireddy (2020)](https://www.youtube.com/watch?v=DuFPj8MlAVo)*
 
+### 76. What are Aspect Class, Advice, Join point and Pointcut?
+> 1. An Aspect Class is a plain Java class that can contain a number of advisors and pointcuts. This class is where we address a particular cross-cutting concern for our application. 2. An Advice is a method that addresses a part of the concern. 3. A Join point is a point in the Java program where a advice needs to be applied - this could be a method, a field or a constructor. 4. A Pointcut provides an expression language to match a particular a join point. It is a collection of join points. 
+
+*[Aspect Oriented Programming (AOP) Terminology; Bharath Thippireddy (2020)](https://www.youtube.com/watch?v=TBT8VVnVjq4)*
+
+> 1. Aspect: a modularization of a concern that cuts across multiple classes. Transaction management is a good example of a crosscutting concern in J2EE applications. 2. Join point: a point during the execution of a program, such as the execution of a method or the handling of an exception. In Spring AOP, a join point always represents a method execution. 3. Advice: action taken by an aspect at a particular join point. Different types of advice include "around," "before" and "after" advice. (Advice types are discussed below.) Many AOP frameworks, including Spring, model an advice as an interceptor, maintaining a chain of interceptors around the join point. 4. Pointcut: a predicate that matches join points. Advice is associated with a pointcut expression and runs at any join point matched by the pointcut (for example, the execution of a method with a certain name). The concept of join points as matched by pointcut expressions is central to AOP, and Spring uses the AspectJ pointcut expression language by default.
+
+*[Chapter 6. Aspect Oriented Programming with Spring; Spring 2.5.5 Doc (2020)](https://docs.spring.io/spring-framework/docs/2.5.5/reference/aop.html)*
+
+### 77. What are the types of Advice in AOP?
+> 1. Before advice: Advice that executes before a join point, but which does not have the ability to prevent execution flow proceeding to the join point (unless it throws an exception). 2. After returning advice: Advice to be executed after a join point completes normally: for example, if a method returns without throwing an exception. 3. After throwing advice: Advice to be executed if a method exits by throwing an exception. 4. After (finally) advice: Advice to be executed regardless of the means by which a join point exits (normal or exceptional return). 5. Around advice: Advice that surrounds a join point such as a method invocation. This is the most powerful kind of advice. Around advice can perform custom behavior before and after the method invocation. It is also responsible for choosing whether to proceed to the join point or to shortcut the advised method execution by returning its own return value or throwing an exception.
+
+*[Chapter 6. Aspect Oriented Programming with Spring; Spring 2.5.5 Doc (2020)](https://docs.spring.io/spring-framework/docs/2.5.5/reference/aop.html)*
+
 [Back to Home Page](https://bzamith.github.io/)
