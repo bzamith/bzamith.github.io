@@ -3,8 +3,13 @@ layout: default
 ---
 
 ## AWS Concepts
+### 1. AWS Basics
+#### Regions and Availability Zones
+> Amazon has all of the hardware data center resources which support their services spread over geographically isolated areas called AWS regions. There are AWS regions in North America, Europe, Asia, and South America, with more regions being implemented soon. Each one of these regions is independent and isolated from the others. Resources are not replicated from one region to the other unless you specify that preference, which comes at an additional charge. This, of course, achieves fault tolerance and stability as, in the event that a whole region fails, it wouldn’t affect the services provided by another region. Now, each region is composed of multiple isolated Availability Zones (AZ). There are 66 Availability Zones within 21 geographic regions. Each Availability Zone is a fully isolated partition of the AWS regional infrastructure. A single AZ may be housed in more than one data center facility with each individual data center having redundant power, networking, and connectivity, plus redundant network links between each data center. Each AZ is located away from any other AZ in the same region by a considerable geographical distance. These Availability Zones communicate with each other over low-latency, high-bandwidth, redundant metro fiber links. This is all built to eliminate the AZ as a single point of failure and increase reliability.
 
-### 1. Amazon Cloudfront
+*[AWS High Availability Best Practices: Placement Groups, Single Vs. Multi-AZ, and More; Aviv Degani (2020)](https://cloud.netapp.com/blog/aws-availability-using-single-or-multiple-availability-zones)*
+
+### 2. Amazon Cloudfront
 > Amazon CloudFront is a fast content delivery network (CDN) service that securely delivers data, videos, applications, and APIs to customers globally with low latency, high transfer speeds, all within a developer-friendly environment. 
 
 *[AWS Cloudfront (2020)](https://aws.amazon.com/cloudfront/)*
