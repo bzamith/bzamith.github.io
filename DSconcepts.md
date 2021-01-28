@@ -204,5 +204,56 @@ layout: default
 
 *[What is AI bias?; Cassie Kozyrkov (2019)](https://towardsdatascience.com/what-is-ai-bias-6606a3bcb814)*
 
+### 35. What is ETL?
+> The step where the data is pulled processed and loaded into a data warehouse, this is generally done through an ETL pipeline. ETL stands for Extract, Transform and Load. ETL is a 3 steps process: (1) Extracting data from single or multiple Data Sources. (2) Transforming data as per business logic. Transformation is in itself a two steps process - data cleansing and data manipulation. (3) Loading the previously transformed data into the target data source or data warehouse.
+
+*[The “Generic” Data Science Life-Cycle; Sivakar Siva (2020)](https://towardsdatascience.com/stoend-to-end-data-science-life-cycle-6387523b5afc)*
+
+### 36. How to deal with missing values?
+> Frequently data contains missing values or null values which lead to lower the potential of the model. So we try to impute the missing values. 1. For continuous values, we fill in the null values using the mean, mode or the median depending on the need. 2. For categorical values, we use the most frequently occurred categorical value.
+
+*[The “Generic” Data Science Life-Cycle; Sivakar Siva (2020)]*
+
+### 37. What is feature engineering?
+> Feature engineering is the process of using domain knowledge to extract features from raw data via data mining techniques. These features can be used to strengthen the performance of machine learning models. Feature engineering can be considered as applied machine learning itself.
+
+*[The “Generic” Data Science Life-Cycle; Sivakar Siva (2020)]*
+
+> Outlier detection, one hot encoding, handling missing data are few basic examples of Feature Engineering.
+
+*[What is feature engineering; CodeBasics (2020)](https://www.youtube.com/watch?v=pYVScuY-GPk)*
+
+### 38. What are the differences between Descriptive Analysis and Inferential Statistics?
+> Descriptive statistics describe a sample. That’s pretty straightforward. You simply take a group that you’re interested in, record data about the group members, and then use summary statistics and graphs to present the group properties. With descriptive statistics, there is no uncertainty because you are describing only the people or items that you actually measure. You’re not trying to infer properties about a larger population.[...] Inferential statistics takes data from a sample and makes inferences about the larger population from which the sample was drawn. Because the goal of inferential statistics is to draw conclusions from a sample and generalize them to a population, we need to have confidence that our sample accurately reflects the population. This requirement affects our process.
+
+*[Difference between Descriptive and Inferential Statistics; Jim Frost (2020)](https://statisticsbyjim.com/basics/descriptive-inferential-statistics/)*
+
+### 39. What is the basic difference between inferential statistics and machine learning?
+> Inferential statistics is a way to learn from data, and one of the tool of Machine Learning. Both use a set of observations to discover underlying processes or patterns, then be able to predict. If you have all the houses characteristics and prices in a given area , you can find out what is determining the price, then predict the price for a new house. Simple statistical analysis. Now if you want to build an app to predict houses prices, it’s another story. You need a lot more work, on data pre-processing, multiple algorithms, other models of regression, etc … That’s machine learning territory. Inferential statistics is only one of the tool. Machine Learning also wants to learn from “big data”, high dimensional data, unstructured, streaming data, find connexions in a social network, group press releases by similar topics, recognize images, compress pictures etc. No nice excel-like data set for this. It requires a different set of tools (whose goal is basically to turn everything the messy world is throwing at us into a nice excel-like data set with matrices that compute fast). The techniques that deal with high dimensional and streaming data have all the attention today, but a lot of the implementations of Machine Learning are still classic regression. You hear a lot that a business can be “moneyballed”, referring to base ball statistics. The idea is that you can take something that is “obviously” not data driven (“I have been doing this business for 30 years and let me tell you it’s all about connecting with people”), and prove that it can be run more effectively with data. Most of that is indeed inferential statistics, plus additional techniques. It’s all “learning from data”.
+
+*[Quora Answer; Philippe Hocquet (2017)](https://www.quora.com/What-is-the-basic-difference-between-inferential-statistics-and-machine-learning)*
+
+### 40. What are the different types of data?
+> Nominal, Ordinal, Interval and Ratio.
+
+### 41. What is one hot encoding?
+> One hot encoding is a process by which categorical variables are converted into a form that could be provided to ML algorithms to do a better job in prediction. [...] It is used to perform “binarization” of the category and include it as a feature to train the model.
+
+*[What is One Hot Encoding? Why and When Do You Have to Use it? (2017)](https://hackernoon.com/what-is-one-hot-encoding-why-and-when-do-you-have-to-use-it-e3c6186d008f)*
+
+### 42. What is the bias-variance trade-off?
+> Bias is the difference between the average prediction of our model and the correct value which we are trying to predict. Model with high bias pays very little attention to the training data and oversimplifies the model. It always leads to high error on training and test data. Variance is the variability of model prediction for a given data point or a value which tells us spread of our data. Model with high variance pays a lot of attention to training data and does not generalize on the data which it hasn’t seen before. As a result, such models perform very well on training data but has high error rates on test data. If our model is too simple and has very few parameters then it may have high bias and low variance. On the other hand if our model has large number of parameters then it’s going to have high variance and low bias. So we need to find the right/good balance without overfitting and underfitting the data. This tradeoff in complexity is why there is a tradeoff between bias and variance. An algorithm can’t be more complex and less complex at the same time.
+
+*[Understanding the Bias-Variance Tradeoff; Seema Singh (2018)](https://towardsdatascience.com/understanding-the-bias-variance-tradeoff-165e6942b229)*
+
+### 43. What is underfitting?
+> In supervised learning, underfitting happens when a model unable to capture the underlying pattern of the data. These models usually have high bias and low variance. It happens when we have very less amount of data to build an accurate model or when we try to build a linear model with a nonlinear data. Also, these kind of models are very simple to capture the complex patterns in data like Linear and logistic regression.
+
+*[Understanding the Bias-Variance Tradeoff; Seema Singh (2018)]*
+
+### 44. What is overfitting?
+> In supervised learning, overfitting happens when our model captures the noise along with the underlying pattern in data. It happens when we train our model a lot over noisy dataset. These models have low bias and high variance. These models are very complex like Decision trees which are prone to overfitting.
+
+*[Understanding the Bias-Variance Tradeoff; Seema Singh (2018)]*
 
 [**Back to Home Page**](https://bzamith.github.io/)
