@@ -256,4 +256,7 @@ layout: default
 
 *[Understanding the Bias-Variance Tradeoff; Seema Singh (2018)]*
 
+### 45. What are the 5 V's of Big Data?
+> Volume, velocity, variety, value and veracity.
+
 [**Back to Home Page**](https://bzamith.github.io/)
