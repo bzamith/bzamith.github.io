@@ -228,7 +228,7 @@ It's more of a gate. It's an event in between the testing and maintenance stages
 
 *["Software Development Processes and Methodologies" Online Course; Praveen Mittal and Kevin Wendt (2019)](https://www.coursera.org/learn/software-processes/)*
 
-### 37. What is a bug? What are the differences between fault, error and failure?### 
+### 37. What is a bug? What are the differences between fault, error and failure? 
 > So, what exactly is a bug? Well, a system failure occurs when the delivered service deviates from the specified service.
 Okay. That means that something didn't happen the way it was supposed to. The specification is an agreed description of the expected service. The failure occurred because the system was erroneous. In error, is that part of the system state which is liable to lead to a failure. It's whatever is wrong that leads to delivery of a surface that doesn't comply with how it's specified to work. The cause and it's phenomenological sense is an error, is a fault. A fault is what actually happened. Upon occurrence, a fault, a mistake, creates a latent error. That latent error sits in the code and becomes effective when it's activated. That is when the code actually reaches that point and it becomes different. When the error then affects the delivered service. That is when the error actually causes a change in behavior that the user did not expect to see, that is a failure. So, the error is a manifestation of a fault. And a failure is the manifestation of an error on the servers. Let me give you an example. A maintenance, or operator's manual writers mistake is a fault. So, they put it in the manual improperly. The consequences an error in the corresponding manual erroneous directives on how to use the software, which will remain latent as long as the directors aren't acted on or, for example, when no one reads the manual. But when someone does read the manual and tries to use that manual to instruct how they run the code, and then the code doesn't work the way they think it should, that's still an error and therefore a failure. 
   
@@ -317,7 +317,7 @@ of modules not actual working modules usually, that's why it's a Stub. Templates
 ### 49. What is the V model?
 > The V-Model focuses on a fairly typical waterfall-esque method that follows strict, step-by-step stages. While initial stages are broad design stages, progress proceeds down through more and more granular stages, leading into implementation and coding, and finally back through all testing stages prior to completion of the project.
 
-*[V-Model: What Is It And How Do You Use It?; Andrew Powell-Morse (2016)](https://airbrake.io/blog/sdlc/v-model)
+*["V-Model: What Is It And How Do You Use It?"; Andrew Powell-Morse (2016)](https://airbrake.io/blog/sdlc/v-model)*
 
 > So if you look at the V-model, it looks very similar to the waterfall method, but it's just bent into a shape of a V.
 But if you look closely, the left side of the model is about project definition or the product definition, where it's getting finer and finer. So from the concept, you go to the requirement, and to the design, and to the implementation.
