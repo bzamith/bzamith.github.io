@@ -484,4 +484,24 @@ validate a concept, or validate the feasibility of it and you're doing some kind
 
 *[Chapter 6. Aspect Oriented Programming with Spring; Spring 2.5.5 Doc (2020)](https://docs.spring.io/spring-framework/docs/2.5.5/reference/aop.html)*
 
+### 78. What is a Java Applet?
+> An applet is a Java program that can be embedded into a web page. It runs inside the web browser and works at client side. An applet is embedded in an HTML page using the APPLET or OBJECT tag and hosted on a web server. Applets are used to make the web site more dynamic and entertaining. [...] Applets are not stand-alone programs. Instead, they run within either a web browser or an applet viewer. JDK provides a standard applet viewer tool called applet viewer.
+
+*[Java Applet Basics; Geeks for Geeks (2019)](https://www.geeksforgeeks.org/java-applet-basics/)*
+
+> Java applets are loaded on a client when the user visits a page containing an applet. The security model behind Java applets has been designed with the goal of protecting the user from malicious applets. Applets are either sandbox applets or privileged applets. Sandbox applets are run in a security sandbox that allows only a set of safe operations. Privileged applets can run outside the security sandbox and have extensive capabilities to access the client. Applets that are not signed are restricted to the security sandbox, and run only if the user accepts the applet. Applets that are signed by a certificate from a recognized certificate authority can either run only in the sandbox, or can request permission to run outside the sandbox. In either case, the user must accept the applet's security certificate, otherwise the applet is blocked from running.
+
+*[What Applets Can and Cannot Do; The Java™ Tutorials (2021)](https://docs.oracle.com/javase/tutorial/deployment/applet/security.html)*
+
+### 79. What is a Java Servlet?
+> A servlet is a Java programming language class that is used to extend the capabilities of servers that host applications accessed by means of a request-response programming model. Although servlets can respond to any type of request, they are commonly used to extend the applications hosted by web servers. For such applications, Java Servlet technology defines HTTP-specific servlet classes.
+
+*[What is a Servlet?; The Java™ Tutorials (2021)](https://docs.oracle.com/javaee/5/tutorial/doc/bnafe.html)*
+
+### 80. What are APIs?
+> Application Programming Interface (API) is a term that describes a collection of classes that are designed to serve a common purpose.
+
+*[Oracle Java SE 11 Programming complete Course (2021)](https://learn.oracle.com/ols/course/java-se-11-programming-complete/82508/85200/108207)*
+
+
 [Back to Home Page](https://bzamith.github.io/)
