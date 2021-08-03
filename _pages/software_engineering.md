@@ -1,5 +1,7 @@
 ---
-layout: default
+layout: page
+title: Software Engineering Concepts
+permalink: /software_engineering_concepts/
 ---
 
 ## Software Engineering Concepts

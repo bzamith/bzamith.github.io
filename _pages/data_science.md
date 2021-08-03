@@ -1,5 +1,7 @@
 ---
-layout: default
+layout: page
+title: Data Science Concepts
+permalink: /data_science_concepts/
 ---
 
 ## Data Science Concepts

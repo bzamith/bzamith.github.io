@@ -1,5 +1,7 @@
 ---
-layout: default
+layout: page
+title: AWS Concepts
+permalink: /aws_concepts/
 ---
 
 ## AWS Concepts

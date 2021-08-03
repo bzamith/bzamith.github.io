@@ -1,6 +1,8 @@
 ---
-layout: default
---- 
+layout: page
+title: Studies
+permalink: /studies/
+---
 
 ## Studies
 - [x] 2020/2nd - Software Engineering 1

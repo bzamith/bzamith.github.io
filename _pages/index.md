@@ -1,10 +1,10 @@
 ---
-layout: default
+layout: page
+title: Home
+permalink: /home/
 ---
 
 ## About Me
-
-<img class="profile-picture" src="profile.png">
 
 Hi! My name is Bruna, I am Brazilian and I have a bachelor degree in Computer Engineering from Federal University of Sao Carlos.
 
@@ -14,11 +14,11 @@ In my spare time, you can find me reading a good book, riding my bicycle, enjoyi
 
 ### Find me:
 
-[<img class="logo-picture" src="linkedinLogo.png"> **LinkedIn**](https://www.linkedin.com/in/bruna-zamith/) 
+[**LinkedIn**](https://www.linkedin.com/in/bruna-zamith/) 
 
-[<img class="logo-picture" src="githubLogo.png"> **Github**](https://github.com/bzamith) 
+[**Github**](https://github.com/bzamith) 
 
-[<img class="logo-picture" src="goodreadsLogo.png">**GoodReads**](https://www.goodreads.com/user/show/93100732-bruna-zamith)
+[**GoodReads**](https://www.goodreads.com/user/show/93100732-bruna-zamith)
 
 ## Studies & Concepts
 
