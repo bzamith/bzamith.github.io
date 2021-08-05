@@ -1,62 +1,23 @@
-# Site settings
 title: Bruna Zamith
-baseurl: "/ap"
-url: "https://bzamith.github.io"
-google_analytics: # Tracking ID, e.g. "UA-000000-01"
+url: "https://bzamith.github.io/"
+baseurl: ""
 
-# Author
-author:
-  name: Bruna Zamith
-  desc: Bruna Zamith's Portfolio
-  email: bruna.zamith@hotmail.com
-  selfie: assets/img/profile.jpg
-
-# social
-social:
-  email: true
-  behance:
-  bitbucket:
-  dribbble:
-  facebook: 
-  flickr:
-  github: bzamith
-  google_plus:
-  instagram:
-  keybase:
-  linkedin: https://www.linkedin.com/in/bruna-zamith/ 
-  pinterest:
-  reddit:
-  soundcloud:
-  stack_exchange:
-  steam:
-  tumblr:
-  gitlab:
-  twitter: 
-  vimeo:
-  wordpress:
-  youtube:
-  default_txt: "Follow On"
-
-# Build settings
 markdown: kramdown
 
-# Assets
+tracking_id: #
+
+footer: yes
+footer_url: "https://github.com/ankitsultana"
+footer_text: "Page design by Ankit Sultana"
+
 sass:
-  sass_dir: _sass
-  style: compressed
+    style: compressed
+    sass_dir: _sass
 
-# Gems
-plugins:
-  - jekyll-paginate
-
-# Permalinks
-permalink: /:year-:month-:day/:title
-paginate_path: "/portfolio/page:num/"
-paginate: 5
-exclude:
-  - "Gemfile"
-  - "Gemfile.lock"
-  - "*.gem"
-  - "LICENSE"
-  - "READE.md"
-  - "screenshot.png"
+nav:
+ - name: "Home"
+   link: "https://bzamith.github.io/"
+ - name: "Studies"
+   link: "studies"
+ - name: "Concepts"
+   link: "concepts"
