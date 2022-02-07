@@ -248,14 +248,32 @@ title: Data Science Concepts
 ### 43. What is underfitting?
 > In supervised learning, underfitting happens when a model unable to capture the underlying pattern of the data. These models usually have high bias and low variance. It happens when we have very less amount of data to build an accurate model or when we try to build a linear model with a nonlinear data. Also, these kind of models are very simple to capture the complex patterns in data like Linear and logistic regression.
 
-*[Understanding the Bias-Variance Tradeoff; Seema Singh (2018)]*
+*Understanding the Bias-Variance Tradeoff; Seema Singh (2018)*
 
 ### 44. What is overfitting?
 > In supervised learning, overfitting happens when our model captures the noise along with the underlying pattern in data. It happens when we train our model a lot over noisy dataset. These models have low bias and high variance. These models are very complex like Decision trees which are prone to overfitting.
 
-*[Understanding the Bias-Variance Tradeoff; Seema Singh (2018)]*
+*Understanding the Bias-Variance Tradeoff; Seema Singh (2018)*
 
 ### 45. What are the 5 V's of Big Data?
 > Volume, velocity, variety, value and veracity.
+
+### 46. What is the High Accuracy Paradox?
+> Accuracy is not useful when trying to predict things that are not common. Accuracy is simply the proportion of correctly classified instances. It is usually the first metric you look at when evaluating a model. However, when the data is imbalanced (where most of the instances belong to one of the classes), or you are more interested in the performance on either one of the classes, accuracy doesn’t really capture the effectiveness of a classifier. Normally in classification problems, we're typically more concerned about the errors that we make. Because the target class is usually the area of interest that we're trying to focus on.  This is called accuracy paradox.
+
+*[Machine Learning - Accuracy Paradox; Randy Lao (2017)](https://www.linkedin.com/pulse/machine-learning-accuracy-paradox-randy-lao/)*
+
+> Accuracy is not a reliable metric to determine a model performance. That’s why it’s called a Paradox because, intuitively, you’d expect a Model with a higher Accuracy to have been the best Model but Accuracy Paradox tells us that this, sometimes, isn’t the case.
+
+*[Accuracy Paradox in Classification Models; Amit Ranjan (2020)](https://medium.com/analytics-vidhya/accuracy-paradox-in-classification-models-d55a2884410)*
+
+### 47. What is PAC Learning?
+> PAC - probability for approximately correct - learning theory helps to analyze whether and under what conditions a learning algorithm will probably output an approximately correct classifier. 
+
+*[The Hundred-Page Machine Learning Book; Andriy Burkov (2019)](https://medium.com/analytics-vidhya/accuracy-paradox-in-classification-models-d55a2884410)*
+
+> A Concept Class (C) is PAC-learnable by a Learner (L) using a Hypothesis Space (H), if L will, with probability 1 - delta (with 'delta' being the certainty goal), output a hypothesis h (belonging to H) such that the error of h is less than epsilon (with 'epsilon' being the error goal) in time and samples polynomial in 1/epsilon, 1/delta.
+
+*[PAC Learning - Georgia Tech - Machine Learning video (2015)](https://www.youtube.com/watch?v=e37nlms7Zi0)
 
 [**Back to Home Page**](https://bzamith.github.io/)
