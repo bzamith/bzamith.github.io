@@ -274,6 +274,6 @@ title: Data Science Concepts
 
 > A Concept Class (C) is PAC-learnable by a Learner (L) using a Hypothesis Space (H), if L will, with probability 1 - delta (with 'delta' being the certainty goal), output a hypothesis h (belonging to H) such that the error of h is less than epsilon (with 'epsilon' being the error goal) in time and samples polynomial in 1/epsilon, 1/delta.
 
-*[PAC Learning - Georgia Tech - Machine Learning video (2015)](https://www.youtube.com/watch?v=e37nlms7Zi0)
+*[PAC Learning - Georgia Tech - Machine Learning video (2015)](https://www.youtube.com/watch?v=e37nlms7Zi0)*
 
 [**Back to Home Page**](https://bzamith.github.io/)
