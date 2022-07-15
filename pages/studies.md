@@ -5,6 +5,10 @@ title: Studies
 
 ### Topics that I have studied recently
 
+- 2022/1st - [Sequence Models](https://www.coursera.org/learn/nlp-sequence-models?specialization=deep-learning#syllabus)
+
+> DeepLearning.ai; Coursera - Online Course; Part of the Deep Learning specialization
+
 - 2020/2nd - Software Engineering
 
 > The Pragmatic Programmmer; David Thomas and Andrew Hunt; 20th Anniversary Edition
@@ -19,7 +23,7 @@ title: Studies
 
 - 2019/2nd - [Software Development Processes and Methodologies](https://www.coursera.org/learn/software-processes/)
 
-> University of Minnesota; Coursera - Online Course; 1st part of the Software Development Lifecycle specialization
+> University of Minnesota; Coursera - Online Course; Part of the Software Development Lifecycle specialization
 
 - 2019/2nd - Software Engineering Practices
 
