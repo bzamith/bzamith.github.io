@@ -276,4 +276,9 @@ title: Data Science Concepts
 
 *[PAC Learning - Georgia Tech - Machine Learning video (2015)](https://www.youtube.com/watch?v=e37nlms7Zi0)*
 
+### 48. What are counterfactuals?
+> Counterfactual reasoning means thinking about alternative possibilities for past or future events: what might happen/ have happened if…? In other words, you imagine the consequences of something that is contrary to what actually happened or will have happened ("counter to the facts").
+
+*[Conceptually: Counterfactuals (2022)](https://conceptually.org/concepts/counterfactual-thinking)*
+
 [**Back to Home Page**](https://bzamith.github.io/)
