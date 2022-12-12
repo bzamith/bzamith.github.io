@@ -203,6 +203,10 @@ title: Data Science Concepts
 
 *[What is AI bias?; Cassie Kozyrkov (2019)](https://towardsdatascience.com/what-is-ai-bias-6606a3bcb814)*
 
+> In causality, bias is what makes association different from causation. [...] The bias is given by how the treated and control group differ before the treatment, in case neither of them has received the treatment. [...] you can think of bias arising because many things we can’t control are changing together with the treatment.
+
+*[Causal Inference for the Brave and True; Matheus Facure Alves (2022)](https://matheusfacure.github.io/python-causality-handbook/landing-page.html)*
+
 ### 35. What is ETL?
 > The step where the data is pulled processed and loaded into a data warehouse, this is generally done through an ETL pipeline. ETL stands for Extract, Transform and Load. ETL is a 3 steps process: (1) Extracting data from single or multiple Data Sources. (2) Transforming data as per business logic. Transformation is in itself a two steps process - data cleansing and data manipulation. (3) Loading the previously transformed data into the target data source or data warehouse.
 
@@ -211,12 +215,12 @@ title: Data Science Concepts
 ### 36. How to deal with missing values?
 > Frequently data contains missing values or null values which lead to lower the potential of the model. So we try to impute the missing values. 1. For continuous values, we fill in the null values using the mean, mode or the median depending on the need. 2. For categorical values, we use the most frequently occurred categorical value.
 
-*[The “Generic” Data Science Life-Cycle; Sivakar Siva (2020)]*
+*[The “Generic” Data Science Life-Cycle; Sivakar Siva (2020)](https://towardsdatascience.com/stoend-to-end-data-science-life-cycle-6387523b5afc)*
 
 ### 37. What is feature engineering?
 > Feature engineering is the process of using domain knowledge to extract features from raw data via data mining techniques. These features can be used to strengthen the performance of machine learning models. Feature engineering can be considered as applied machine learning itself.
 
-*[The “Generic” Data Science Life-Cycle; Sivakar Siva (2020)]*
+*[The “Generic” Data Science Life-Cycle; Sivakar Siva (2020)](https://towardsdatascience.com/stoend-to-end-data-science-life-cycle-6387523b5afc)*
 
 > Outlier detection, one hot encoding, handling missing data are few basic examples of Feature Engineering.
 
@@ -280,5 +284,14 @@ title: Data Science Concepts
 > Counterfactual reasoning means thinking about alternative possibilities for past or future events: what might happen/ have happened if…? In other words, you imagine the consequences of something that is contrary to what actually happened or will have happened ("counter to the facts").
 
 *[Conceptually: Counterfactuals (2022)](https://conceptually.org/concepts/counterfactual-thinking)*
+
+> [...] we will talk a lot in term of potential outcomes. They are potential because they didn’t actually happen. Instead they denote what would have happened in the case some treatment was taken. We sometimes call the potential outcome that happened, factual, and the one that didn’t happen, counterfactual.
+
+*[Causal Inference for the Brave and True; Matheus Facure Alves (2022)](https://matheusfacure.github.io/python-causality-handbook/landing-page.html)*
+
+### 49. What is the fundamental problem of causal inference?
+> The fundamental problem of causal inference is that we can never observe the same unit with and without treatment. It is as if we have two diverging roads and we can only know what lies ahead of the one we take.
+
+*[Causal Inference for the Brave and True; Matheus Facure Alves (2022)](https://matheusfacure.github.io/python-causality-handbook/landing-page.html)*
 
 [**Back to Home Page**](https://bzamith.github.io/)
