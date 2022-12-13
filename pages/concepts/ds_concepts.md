@@ -274,7 +274,7 @@ title: Data Science Concepts
 ### 47. What is PAC Learning?
 > PAC - probability for approximately correct - learning theory helps to analyze whether and under what conditions a learning algorithm will probably output an approximately correct classifier. 
 
-*[The Hundred-Page Machine Learning Book; Andriy Burkov (2019)](https://medium.com/analytics-vidhya/accuracy-paradox-in-classification-models-d55a2884410)*
+*The Hundred-Page Machine Learning Book; Andriy Burkov (2019)*
 
 > A Concept Class (C) is PAC-learnable by a Learner (L) using a Hypothesis Space (H), if L will, with probability 1 - delta (with 'delta' being the certainty goal), output a hypothesis h (belonging to H) such that the error of h is less than epsilon (with 'epsilon' being the error goal) in time and samples polynomial in 1/epsilon, 1/delta.
 
@@ -293,5 +293,20 @@ title: Data Science Concepts
 > The fundamental problem of causal inference is that we can never observe the same unit with and without treatment. It is as if we have two diverging roads and we can only know what lies ahead of the one we take.
 
 *[Causal Inference for the Brave and True; Matheus Facure Alves (2022)](https://matheusfacure.github.io/python-causality-handbook/landing-page.html)*
+
+### 50. What are confidence intervals?
+> Confidence intervals are a way to place uncertainty around our estimates. The smaller the sample size, the larger the standard error, and the wider the confidence interval.
+
+*[Causal Inference for the Brave and True; Matheus Facure Alves (2022)](https://matheusfacure.github.io/python-causality-handbook/landing-page.html)*
+
+> Confidence intervals are a part of Data Science and basically, they show us the probability of an event occurring. Confidence intervals are generally used in statistics to give a range of values within which we are confident that a parameter lies. Confidence intervals are a part of Data Science. Confidence intervals help us understand the behavior of a certain dataset. A confidence interval is a range of values that a parameter is expected to fall within. [...] A confidence interval is a range of values that a statistic is likely to fall between. The confidence interval is denoted by the number of standard errors that the statistic is above and below the mean value. The standard error is the standard deviation of a statistic, divided by the square root of the sample size. This is a long way of saying that the standard error is the standard deviation of your statistic. Confidence intervals vary by which data scientist you talk to, but generally, a 95% confidence interval means that you are 95% sure that the statistic falls in that range.
+
+*[Confidence intervals are a part of Data Science; Rijul Singh Malik (2022)](https://medium.com/mlearning-ai/confidence-intervals-are-a-part-of-data-science-a54f45f6d8c6)*
+
+### 51. What are the basic types of structured data?
+
+> There are two basic types of structured data: numeric and categorical. Numeric data comes in two forms: continuous, such as wind speed or time duration, and discrete, such as the count of the occurrence of an event. Categorical data takes only a fixed set of values, such as a type of TV screen (plasma, LCD, LED, etc.) or a state name (Alabama, Alaska, etc.). Binary data is an important special case of categorical data that takes on only one of two values, such as 0/1, yes/no, or true/false. Another useful type of categorical data is ordinal data in which the categories are ordered; an example of this is a numerical rating (1, 2, 3, 4, or 5).
+
+*Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
 
 [**Back to Home Page**](https://bzamith.github.io/)
