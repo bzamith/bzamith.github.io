@@ -4,6 +4,9 @@ title: Studies
 ---
 
 ### Topics that I have studied recently
+- 2022/2nd - Practical Statistics for Data Scientists
+
+> Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck; 2nd Edition
 
 - 2022/1st - [Sequence Models](https://www.coursera.org/learn/nlp-sequence-models?specialization=deep-learning#syllabus)
 
@@ -29,11 +32,9 @@ title: Studies
 
 > Clean Code: A Handbook of Agile Software Craftsmanship; Robert C. Martin; 1st Edition
 
-- 2019/2nd - Getting Deeper on Data Science
-
 - 2019/1st - OpenMP and Parallel Computing
 
-> Tim Mattson classes; A  Hands-on  Introduction  to  OpenMP
+> Tim Mattson classes; A Hands-on Introduction to OpenMP
 
 - 2019/1st - Distributed Systems
 
@@ -75,9 +76,6 @@ title: Studies
 
 > Amazon Web Services in Action; Andreas Wittig and Michael Wittig; 2nd Edition
 
-- Deep Learning
-- SQL Injection
-- Data streams
 - Blockchain
 - Spanish
 - Psychoanalysis

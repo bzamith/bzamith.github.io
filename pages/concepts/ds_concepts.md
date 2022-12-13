@@ -149,7 +149,78 @@ title: Data Science Concepts
 > Nominal, Ordinal, Interval and Ratio.
 
 ### What are the basic types of structured data?
+
 > There are two basic types of structured data: numeric and categorical. Numeric data comes in two forms: continuous, such as wind speed or time duration, and discrete, such as the count of the occurrence of an event. Categorical data takes only a fixed set of values, such as a type of TV screen (plasma, LCD, LED, etc.) or a state name (Alabama, Alaska, etc.). Binary data is an important special case of categorical data that takes on only one of two values, such as 0/1, yes/no, or true/false. Another useful type of categorical data is ordinal data in which the categories are ordered; an example of this is a numerical rating (1, 2, 3, 4, or 5).
+
+*Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
+
+### What are Percentiles and Quantiles?
+
+> To avoid the sensitivity to outliers, we can look at the range of the data after dropping values from each end. Formally, these types of estimates are based on differences between percentiles. In a data set, the Pth percentile is a value such that at least P percent of the values take on this value or less and at least (100 – P) percent of the values take on this value or more. For example, to find the 80th percentile, sort the data. Then, starting with the smallest value, proceed 80 percent of the way to the largest value. Note that the median is the same thing as the 50th percentile. The percentile is essentially the same as a quantile, with quantiles indexed by fractions (so the .8 quantile is the same as the 80th percentile).
+
+*Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
+
+### What is Interquartile Range (IQR)?
+
+> A common measurement of variability is the difference between the 25th percentile and the 75th percentile, called the interquartile range (or IQR). Here is a simple example: {3,1,5,3,6,7,2,9}. We sort these to get {1,2,3,3,5,6,7,9}. The 25th percentile is at 2.5, and the 75th percentile is at 6.5, so the interquartile range is 6.5 – 2.5 = 4.
+
+*Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
+
+### What are the Estimates of Location?
+
+> Mean, Weighted Mean, Median, Percentile, Weighted Median and Trimmed Mean (the average of all values after dropping a fixed number of extreme values). 
+
+> The basic metric for location is the mean, but it can be sensitive to extreme values (outlier). Other metrics (median, trimmed mean) are less sensitive to outliers and unusual distributions and hence are more robust. 
+
+*Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
+
+### What are the Estimates of Variability?
+
+> Deviations (the difference between the observed values and the estimate of location), Variance, Standard Deviation (the square root of the variance), Mean Absolute Deviation, Median Absolute Deviation (the median of the absolute values of deviations from the median), Range, Percentile and Interquartile Range.
+
+> Variance and standard deviation are the most widespread and routinely reported statistics of variability. Both are sensitive to outliers. More robust metrics include mean absolute deviation, median absolute deviation from the median, and percentiles (quantiles).
+
+*Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
+
+### What are the Key Terms for Exploring the Distribution?
+
+> Boxplot, Frequency Table, Histogram and Density Plot (a smoothed version of the histogram, often based on a kernel density estimate).
+
+> A frequency histogram plots frequency counts on the y-axis and variable values on the x-axis; it gives a sense of the distribution of the data at a glance. A frequency table is a tabular version of the frequency counts found in a histogram. A boxplot - with the top and bottom of the box at the 75th and 25th percentiles, respectively - also gives a quick sense of the distribution of the data; it is often used in side-by-side displays to compare distributions. A density plot is a smoothed version of a histogram; it requires a functions to estimate a plot based on the data (multiple estimates are possible, of course).
+
+*Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
+
+### What is the difference between Frequency Tables and Percentiles?
+
+> Both frequency tables and percentiles summarize the data by creating bins. In general, quartiles and deciles will have the same count in each bin (equal-count bins), but the bin sizes will be different. The frequency table, by contrast, will have different counts in the bins (equal-size bins), and the bin sizes will be the same.
+
+*Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
+
+### What are the Key Terms for Exploring Binary and Categorical Data?
+
+> Mode, Expected Value (when the categories can be associated with a numeric value, this gives an average value based on a category's probability of occurrence), Bar Charts and Pie Charts.
+
+*Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
+
+### What are the Key Terms for Correlation?
+
+> Correlation Coefficient (measures the extent to which numeric variables are associated with one another), Correlation Matrix and Scatterplot.
+
+> Variables X and Y (each with measured data) are said to be positively correlated if high values of X go with high values of Y, and low values of X go with low values of Y. If high values of X go with low values of Y, and vice versa, the variables are negatively correlated.
+
+> Like the mean and standard deviation, the correlation coefficient is sensitive to outliers in the data. Software packages offer robust alternatives to the classical correlation coefficient. For example, the R package robust uses the function covRob to compute a robust estimate of correlation. The methods in the scikit-learn module sklearn.covariance implement a variety of approaches. 
+
+*Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
+
+### What are the Key Terms for Exploring Two or More Variables?
+
+> Scatterplot, Contingency Table, Hexagonal Binning, Contour Plot and Violin Plot.
+ 
+> For plotting numeric vs numeric data, scatterplots are fine when there is a relatively small number of data values. For data sets with hundreds of thousands or millions of records, a scatterplot will be too dense, so we need a different way to visualize the relationship. Heat maps, hexagonal binning, and contour plots all give a visual representation of a two-dimensional density. In this way, they are natural analogs to histograms and density plots. 
+
+> A useful way to summarize two categorical variables is a contingency table - a table of counts by category.
+
+> Boxplots are a simple way to visually compare the distributions of a numeric variable grouped according to a categorical variable. A violin plot, introduced by [Hintze-Nelson-1998], is an enhancement to the boxplot and plots the density estimate with the density on the y-axis. The density is mirrored and flipped over, and the resulting shape is filled in, creating an image resembling a violin. The advantage of a violin plot is that it can show nuances in the distribution that aren’t perceptible in a boxplot. On the other hand, the boxplot more clearly shows the outliers in the data.
 
 *Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
 
@@ -167,16 +238,8 @@ title: Data Science Concepts
 
 *[Causal Inference for the Brave and True; Matheus Facure Alves (2022)](https://matheusfacure.github.io/python-causality-handbook/landing-page.html)*
 
-### What are Confidence Intervals?
-> Confidence intervals are a way to place uncertainty around our estimates. The smaller the sample size, the larger the standard error, and the wider the confidence interval.
-
-*[Causal Inference for the Brave and True; Matheus Facure Alves (2022)](https://matheusfacure.github.io/python-causality-handbook/landing-page.html)*
-
-> Confidence intervals are a part of Data Science and basically, they show us the probability of an event occurring. Confidence intervals are generally used in statistics to give a range of values within which we are confident that a parameter lies. Confidence intervals are a part of Data Science. Confidence intervals help us understand the behavior of a certain dataset. A confidence interval is a range of values that a parameter is expected to fall within. [...] A confidence interval is a range of values that a statistic is likely to fall between. The confidence interval is denoted by the number of standard errors that the statistic is above and below the mean value. The standard error is the standard deviation of a statistic, divided by the square root of the sample size. This is a long way of saying that the standard error is the standard deviation of your statistic. Confidence intervals vary by which data scientist you talk to, but generally, a 95% confidence interval means that you are 95% sure that the statistic falls in that range.
-
-*[Confidence intervals are a part of Data Science; Rijul Singh Malik (2022)](https://medium.com/mlearning-ai/confidence-intervals-are-a-part-of-data-science-a54f45f6d8c6)*
-
 ### What are the Normal Distribution and the Gamma Distribution?
+
 > [Normal model] says that the randomness in a set of data can be explained by the Normal distribution, or a bell-shaped curve. The Normal distribution is fully specified by two parameters — the mean and the standard deviation. [The Gamma distribution] has the feature that it only allows positive values, so it eliminates the problem we had with negative values with the Normal distribution.
 
 *[The Art of Data Science; Roger D. Peng and Elizabeth Matsui (2017)](https://bookdown.org/rdpeng/artofdatascience/)*
@@ -200,10 +263,71 @@ title: Data Science Concepts
 
 *[Causal Inference for the Brave and True; Matheus Facure Alves (2022)](https://matheusfacure.github.io/python-causality-handbook/landing-page.html)*
 
+> Statistical bias refers to measurement or sampling errors that are systematic and produced by the measurement or sampling process. An important distinction should be made between errors due to random chance and errors due to bias. Consider the physical process of a gun shooting at a target. It will not hit the absolute center of the target every time, or even much at all. An unbiased process will produce error, but it is random and does not tend strongly in any direction. Bias comes in different forms, and may be observable or invisible. When a result does suggest bias (e.g., by reference to a benchmark or actual values), it is often an indicator that a statistical or machine learning model has been misspecified, or an important variable left out.
+
+*Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
+
+### What is Sample Bias?
+
+> [When] the sample is different in some meaningful and nonrandom way from the larger population it was meant to represent. The term nonrandom is important - hardly any sample, including random samples, will be exactly representative of the population. Sample bias occurs when the difference is meaningful, and it can be expected to continue for other samples drawn in the same way as the first. 
+ 
+*Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
+
 ### What is the Bias-Variance trade-off?
 > Bias is the difference between the average prediction of our model and the correct value which we are trying to predict. Model with high bias pays very little attention to the training data and oversimplifies the model. It always leads to high error on training and test data. Variance is the variability of model prediction for a given data point or a value which tells us spread of our data. Model with high variance pays a lot of attention to training data and does not generalize on the data which it hasn’t seen before. As a result, such models perform very well on training data but has high error rates on test data. If our model is too simple and has very few parameters then it may have high bias and low variance. On the other hand if our model has large number of parameters then it’s going to have high variance and low bias. So we need to find the right/good balance without overfitting and underfitting the data. This tradeoff in complexity is why there is a tradeoff between bias and variance. An algorithm can’t be more complex and less complex at the same time.
 
 *[Understanding the Bias-Variance Tradeoff; Seema Singh (2018)](https://towardsdatascience.com/understanding-the-bias-variance-tradeoff-165e6942b229)*
+
+### What is Random Sampling?
+
+> Random sampling is a process in which each available member of the population being sampled has an equal chance of being chosen for the sample at each draw. The sample that results is called a simple random sample. Sampling can be done with replacement, in which observations are put back in the population after each draw for possible future reselection. Or it can be done without replacement, in which case observations, once selected, are unavailable for future draws. Data quality often matters more than data quantity when making an estimate or a model based on a sample. Data quality in data science involves completeness, consistency of format, cleanliness, and accuracy of individual data points. Statistics adds the notion of representativeness.
+
+*Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
+
+### What is the Vast Search Effect?
+
+> Bias or nonreproducibility resulting from repeated data modeling, or modeling data with large numbers of predictor variables. [...] Typical forms of selection bias in statistics, in addition to the vast search effect, include nonrandom sampling, cherry-picking data, selection of time intervals that accentuate a particular statistical effect, and stopping an experiment when the results look “interesting.” 
+
+*Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
+
+### What is Bootstrap?
+
+> One easy and effective way to estimate the sampling distribution of a statistic, or of model parameters, is to draw additional samples, with replacement, from the sample itself and recalculate the statistic or model for each resample. This procedure is called the bootstrap, and it does not necessarily involve any assumptions about the data or the sample statistic being normally distributed.
+
+> The bootstrap (sampling with replacement from a data set) is a powerful tool for assessing the variability of a sample statistic.
+
+*Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
+
+### What is Bagging?
+
+> With classification and regression trees (also called decision trees), running multiple trees on bootstrap samples and then averaging their predictions (or, with classification, taking a majority vote) generally performs better than using a single tree. This process is called bagging (short for “bootstrap aggregating”)
+
+*Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
+
+### What is Standard Error?
+
+> The standard error is a single metric that sums up the variability in the sampling distribution for a statistic. The standard error can be estimated using a statistic based on the standard deviation s of the sample values, and the sample size n. As the sample size increases, the standard error decreases. The relationship between standard error and sample size is sometimes referred to as the square root of n rule: to reduce the standard error by a factor of 2, the sample size must be increased by a factor of 4.
+
+*Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
+
+### What are Confidence Intervals?
+> Confidence intervals are a way to place uncertainty around our estimates. The smaller the sample size, the larger the standard error, and the wider the confidence interval.
+
+*[Causal Inference for the Brave and True; Matheus Facure Alves (2022)](https://matheusfacure.github.io/python-causality-handbook/landing-page.html)*
+
+> Confidence intervals are a part of Data Science and basically, they show us the probability of an event occurring. Confidence intervals are generally used in statistics to give a range of values within which we are confident that a parameter lies. Confidence intervals are a part of Data Science. Confidence intervals help us understand the behavior of a certain dataset. A confidence interval is a range of values that a parameter is expected to fall within. [...] A confidence interval is a range of values that a statistic is likely to fall between. The confidence interval is denoted by the number of standard errors that the statistic is above and below the mean value. The standard error is the standard deviation of a statistic, divided by the square root of the sample size. This is a long way of saying that the standard error is the standard deviation of your statistic. Confidence intervals vary by which data scientist you talk to, but generally, a 95% confidence interval means that you are 95% sure that the statistic falls in that range.
+
+*[Confidence intervals are a part of Data Science; Rijul Singh Malik (2022)](https://medium.com/mlearning-ai/confidence-intervals-are-a-part-of-data-science-a54f45f6d8c6)*
+
+> Confidence intervals always come with a coverage level, expressed as a (high) percentage, say 90% or 95%. One way to think of a 90% confidence interval is as follows:it is the interval that encloses the central 90% of the bootstrap sampling distribution of a sample statistic. More generally, an x% confidence interval around a sample estimate should, on average, contain similar sample estimates x% of the time (when a similar sampling procedure is followed). [...] The percentage associated with the confidence interval is termed the level of confidence. The higher the level of confidence, the wider the interval. Also, the smaller the sample, the wider the interval (i.e., the greater the uncertainty). Both make sense: the more confident you want to be, and the less data you have, the wider you must make the confidence interval to be sufficiently assured of capturing the true value.
+
+*Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
+
+### What is p-Value?
+
+> Like with confidence intervals (and most frequentist statistics, as a matter of fact), the true definition of p-values can be very confusing. So, to not take any risks, I’ll copy the definition from Wikipedia: “the p-value is the probability of obtaining test results at least as extreme as the results actually observed during the test, assuming that the null hypothesis is correct”. To put it more succinctly, the p-value is the probability of seeing such data, given that the null hypothesis is true. It measures how unlikely it is that you are seeing a measurement if the null hypothesis is true. Naturally, this often gets confused with the probability of the null hypothesis being true.
+
+*[Causal Inference for the Brave and True; Matheus Facure Alves (2022)](https://matheusfacure.github.io/python-causality-handbook/landing-page.html)*
 
 ### What are the 4 different Categories of Data Analysis?
 > Descriptive Analytics (tells you what happened in the past); Diagnostic Analytics (helps you understand why something happened in the past); Predictive Analytics (predicts what is most likely to happen in the future); Prescriptive Analytics (recommends actions you can take to affect those outcomes).
