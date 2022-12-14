@@ -9,6 +9,7 @@ title: Data Science Concepts
 * [Key Terms and Areas](#key-terms-and-areas)
 * [Data Storage](#data-storage)
 * [Statistics and Data Analysis](#statistics-and-data-analysis)
+* [Causal Inference](#causal-inference)
 * [Feature Engineering](#feature-engineering)
 * [Machine Learning](#machine-learning)
 * [Miscellaneous](#miscellaneous)
@@ -149,25 +150,21 @@ title: Data Science Concepts
 > Nominal, Ordinal, Interval and Ratio.
 
 ### What are the basic types of structured data?
-
 > There are two basic types of structured data: numeric and categorical. Numeric data comes in two forms: continuous, such as wind speed or time duration, and discrete, such as the count of the occurrence of an event. Categorical data takes only a fixed set of values, such as a type of TV screen (plasma, LCD, LED, etc.) or a state name (Alabama, Alaska, etc.). Binary data is an important special case of categorical data that takes on only one of two values, such as 0/1, yes/no, or true/false. Another useful type of categorical data is ordinal data in which the categories are ordered; an example of this is a numerical rating (1, 2, 3, 4, or 5).
 
 *Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
 
 ### What are Percentiles and Quantiles?
-
 > To avoid the sensitivity to outliers, we can look at the range of the data after dropping values from each end. Formally, these types of estimates are based on differences between percentiles. In a data set, the Pth percentile is a value such that at least P percent of the values take on this value or less and at least (100 – P) percent of the values take on this value or more. For example, to find the 80th percentile, sort the data. Then, starting with the smallest value, proceed 80 percent of the way to the largest value. Note that the median is the same thing as the 50th percentile. The percentile is essentially the same as a quantile, with quantiles indexed by fractions (so the .8 quantile is the same as the 80th percentile).
 
 *Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
 
 ### What is Interquartile Range (IQR)?
-
 > A common measurement of variability is the difference between the 25th percentile and the 75th percentile, called the interquartile range (or IQR). Here is a simple example: {3,1,5,3,6,7,2,9}. We sort these to get {1,2,3,3,5,6,7,9}. The 25th percentile is at 2.5, and the 75th percentile is at 6.5, so the interquartile range is 6.5 – 2.5 = 4.
 
 *Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
 
 ### What are the Estimates of Location?
-
 > Mean, Weighted Mean, Median, Percentile, Weighted Median and Trimmed Mean (the average of all values after dropping a fixed number of extreme values). 
 
 > The basic metric for location is the mean, but it can be sensitive to extreme values (outlier). Other metrics (median, trimmed mean) are less sensitive to outliers and unusual distributions and hence are more robust. 
@@ -175,7 +172,6 @@ title: Data Science Concepts
 *Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
 
 ### What are the Estimates of Variability?
-
 > Deviations (the difference between the observed values and the estimate of location), Variance, Standard Deviation (the square root of the variance), Mean Absolute Deviation, Median Absolute Deviation (the median of the absolute values of deviations from the median), Range, Percentile and Interquartile Range.
 
 > Variance and standard deviation are the most widespread and routinely reported statistics of variability. Both are sensitive to outliers. More robust metrics include mean absolute deviation, median absolute deviation from the median, and percentiles (quantiles).
@@ -183,7 +179,6 @@ title: Data Science Concepts
 *Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
 
 ### What are the Key Terms for Exploring the Distribution?
-
 > Boxplot, Frequency Table, Histogram and Density Plot (a smoothed version of the histogram, often based on a kernel density estimate).
 
 > A frequency histogram plots frequency counts on the y-axis and variable values on the x-axis; it gives a sense of the distribution of the data at a glance. A frequency table is a tabular version of the frequency counts found in a histogram. A boxplot - with the top and bottom of the box at the 75th and 25th percentiles, respectively - also gives a quick sense of the distribution of the data; it is often used in side-by-side displays to compare distributions. A density plot is a smoothed version of a histogram; it requires a functions to estimate a plot based on the data (multiple estimates are possible, of course).
@@ -191,19 +186,16 @@ title: Data Science Concepts
 *Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
 
 ### What is the difference between Frequency Tables and Percentiles?
-
 > Both frequency tables and percentiles summarize the data by creating bins. In general, quartiles and deciles will have the same count in each bin (equal-count bins), but the bin sizes will be different. The frequency table, by contrast, will have different counts in the bins (equal-size bins), and the bin sizes will be the same.
 
 *Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
 
 ### What are the Key Terms for Exploring Binary and Categorical Data?
-
 > Mode, Expected Value (when the categories can be associated with a numeric value, this gives an average value based on a category's probability of occurrence), Bar Charts and Pie Charts.
 
 *Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
 
 ### What are the Key Terms for Correlation?
-
 > Correlation Coefficient (measures the extent to which numeric variables are associated with one another), Correlation Matrix and Scatterplot.
 
 > Variables X and Y (each with measured data) are said to be positively correlated if high values of X go with high values of Y, and low values of X go with low values of Y. If high values of X go with low values of Y, and vice versa, the variables are negatively correlated.
@@ -213,7 +205,6 @@ title: Data Science Concepts
 *Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
 
 ### What are the Key Terms for Exploring Two or More Variables?
-
 > Scatterplot, Contingency Table, Hexagonal Binning, Contour Plot and Violin Plot.
  
 > For plotting numeric vs numeric data, scatterplots are fine when there is a relatively small number of data values. For data sets with hundreds of thousands or millions of records, a scatterplot will be too dense, so we need a different way to visualize the relationship. Heat maps, hexagonal binning, and contour plots all give a visual representation of a two-dimensional density. In this way, they are natural analogs to histograms and density plots. 
@@ -224,25 +215,14 @@ title: Data Science Concepts
 
 *Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
 
-### What are Counterfactuals?
-> Counterfactual reasoning means thinking about alternative possibilities for past or future events: what might happen/ have happened if…? In other words, you imagine the consequences of something that is contrary to what actually happened or will have happened ("counter to the facts").
-
-*[Conceptually: Counterfactuals (2022)](https://conceptually.org/concepts/counterfactual-thinking)*
-
-> [...] we will talk a lot in terms of potential outcomes. They are potential because they didn’t actually happen. Instead they denote what would have happened in the case some treatment was taken. We sometimes call the potential outcome that happened, factual, and the one that didn’t happen, counterfactual.
-
-*[Causal Inference for the Brave and True; Matheus Facure Alves (2022)](https://matheusfacure.github.io/python-causality-handbook/landing-page.html)*
-
-### What is the fundamental problem of Causal Inference?
-> The fundamental problem of causal inference is that we can never observe the same unit with and without treatment. It is as if we have two diverging roads and we can only know what lies ahead of the one we take.
-
-*[Causal Inference for the Brave and True; Matheus Facure Alves (2022)](https://matheusfacure.github.io/python-causality-handbook/landing-page.html)*
-
 ### What are the Normal Distribution and the Gamma Distribution?
-
 > [Normal model] says that the randomness in a set of data can be explained by the Normal distribution, or a bell-shaped curve. The Normal distribution is fully specified by two parameters — the mean and the standard deviation. [The Gamma distribution] has the feature that it only allows positive values, so it eliminates the problem we had with negative values with the Normal distribution.
 
 *[The Art of Data Science; Roger D. Peng and Elizabeth Matsui (2017)](https://bookdown.org/rdpeng/artofdatascience/)*
+
+> The Normal distribution is also referred to as Gaussian distribution. 
+
+*Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
 
 ### What is Inference?
 > Inference is one of many possible goals in data analysis. [...] In general, the goal of inference is to be able to make a statement about something that is not observed, and ideally to be able to characterize any uncertainty you have about that statement. Inference is difficult because of the difference between what you are able to observe and what you ultimately want to know. [..] The language of inference can change depending on the application, but most commonly, we refer to the things we cannot observe (but want to know about) as the population or as features of the population and the data that we observe as the sample. The goal is to use the sample to somehow make a statement about the population.
@@ -268,7 +248,6 @@ title: Data Science Concepts
 *Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
 
 ### What is Sample Bias?
-
 > [When] the sample is different in some meaningful and nonrandom way from the larger population it was meant to represent. The term nonrandom is important - hardly any sample, including random samples, will be exactly representative of the population. Sample bias occurs when the difference is meaningful, and it can be expected to continue for other samples drawn in the same way as the first. 
  
 *Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
@@ -279,19 +258,16 @@ title: Data Science Concepts
 *[Understanding the Bias-Variance Tradeoff; Seema Singh (2018)](https://towardsdatascience.com/understanding-the-bias-variance-tradeoff-165e6942b229)*
 
 ### What is Random Sampling?
-
 > Random sampling is a process in which each available member of the population being sampled has an equal chance of being chosen for the sample at each draw. The sample that results is called a simple random sample. Sampling can be done with replacement, in which observations are put back in the population after each draw for possible future reselection. Or it can be done without replacement, in which case observations, once selected, are unavailable for future draws. Data quality often matters more than data quantity when making an estimate or a model based on a sample. Data quality in data science involves completeness, consistency of format, cleanliness, and accuracy of individual data points. Statistics adds the notion of representativeness.
 
 *Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
 
 ### What is the Vast Search Effect?
-
 > Bias or nonreproducibility resulting from repeated data modeling, or modeling data with large numbers of predictor variables. [...] Typical forms of selection bias in statistics, in addition to the vast search effect, include nonrandom sampling, cherry-picking data, selection of time intervals that accentuate a particular statistical effect, and stopping an experiment when the results look “interesting.” 
 
 *Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
 
 ### What is Bootstrap?
-
 > One easy and effective way to estimate the sampling distribution of a statistic, or of model parameters, is to draw additional samples, with replacement, from the sample itself and recalculate the statistic or model for each resample. This procedure is called the bootstrap, and it does not necessarily involve any assumptions about the data or the sample statistic being normally distributed.
 
 > The bootstrap (sampling with replacement from a data set) is a powerful tool for assessing the variability of a sample statistic.
@@ -299,13 +275,16 @@ title: Data Science Concepts
 *Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
 
 ### What is Bagging?
-
 > With classification and regression trees (also called decision trees), running multiple trees on bootstrap samples and then averaging their predictions (or, with classification, taking a majority vote) generally performs better than using a single tree. This process is called bagging (short for “bootstrap aggregating”)
 
 *Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
 
-### What is Standard Error?
+### What is the difference between Bootstrap and Permutation?
+> There are two main types of resampling procedures: the bootstrap and permutation tests. The bootstrap is used to assess the reliability of an estimate. Permutation tests are used to test hypotheses, typically involving two or more groups.
 
+*Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
+
+### What is Standard Error?
 > The standard error is a single metric that sums up the variability in the sampling distribution for a statistic. The standard error can be estimated using a statistic based on the standard deviation s of the sample values, and the sample size n. As the sample size increases, the standard error decreases. The relationship between standard error and sample size is sometimes referred to as the square root of n rule: to reduce the standard error by a factor of 2, the sample size must be increased by a factor of 4.
 
 *Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
@@ -324,10 +303,71 @@ title: Data Science Concepts
 *Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
 
 ### What is p-Value?
-
 > Like with confidence intervals (and most frequentist statistics, as a matter of fact), the true definition of p-values can be very confusing. So, to not take any risks, I’ll copy the definition from Wikipedia: “the p-value is the probability of obtaining test results at least as extreme as the results actually observed during the test, assuming that the null hypothesis is correct”. To put it more succinctly, the p-value is the probability of seeing such data, given that the null hypothesis is true. It measures how unlikely it is that you are seeing a measurement if the null hypothesis is true. Naturally, this often gets confused with the probability of the null hypothesis being true.
 
 *[Causal Inference for the Brave and True; Matheus Facure Alves (2022)](https://matheusfacure.github.io/python-causality-handbook/landing-page.html)*
+
+> Given a chance model that embodies the null hypothesis, the p-value is the probability of obtaining results as unusual or extreme as the observed results.
+
+*Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
+
+### What is Alpha in the context of p-Value?
+> Statisticians frown on the practice of leaving it to the researcher’s discretion to determine whether a result is “too unusual” to happen by chance. Rather, a threshold is specified in advance, as in “more extreme than 5% of the chance (null hypothesis)results”; this threshold is known as alpha. Typical alpha levels are 5% and 1%. Any chosen level is an arbitrary decision—there is nothing about the process that will guarantee correct decisions x% of the time. This is because the probability question being answered is not “What is the probability that this happened by chance?” but rather “Given a chance model, what is the probability of a result this extreme?” We then deduce backward about the appropriateness of the chance model, but that judgment does not carry a probability. This point has been the subject of much confusion.
+ 
+*Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
+
+### What is z-Score?
+> The result of standardizing an individual data point. Standardize means subtracting the mean and dividing by the standard deviation.
+
+> A standard normal distribution is one in which the units on the x-axis are expressed in terms of standard deviations away from the mean. To compare data to a standard normal distribution, you subtract the mean and then divide by the standard deviation; this is also called normalization or standardization. The transformed value is termed a z-score, and the normal distribution is sometimes called the z-distribution.
+
+> Converting data to z-scores (i.e., standardizing or normalizing the data) does not make the data normally distributed. It just puts the data on the same scale as the standard normal distribution, often for comparison purposes. 
+
+*Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
+
+### What is a QQ-Plot?
+> A QQ-Plot is used to visually determine how close a sample is to a specified distribution - in this case, the normal distribution. The QQ-Plot orders the z-scores from low to high and plots each value's z-score on the y-axis; the x-asis is the corresponding quantile of a normal distribution for the value's rank. Since the data is normalized, the units correspond to the number of standard deviations away from the mean. If the points roughly fall on the diagonal line, then the sample distribution can be considered close to normal.
+
+*Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
+
+### What is the t-Distribution?
+> The t-distribution is actually a family of distributions resembling the normal distribution but with thicker tails. The t-distribution is widely used as a reference basis for the distribution of sample means, differences between two sample means, regression parameters, and more.
+
+*Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
+
+### What is the Chi-Square Test?
+> The Chi-square test is a hypothesis test that is used when you want to determine whether there is a relationship between two categorical variables.
+
+*[Chi-Square Test [Simply explained]: DATAtab (2022)](https://www.youtube.com/watch?v=rpKzq64GA9Y)*
+
+> Web testing often goes beyond A/B testing and tests multiple treatments at once. The chi-square test is used with count data to test how well it fits some expected distribution. The most common use of the chi-square statistic in statistical practice is with r × c contingency tables, to assess whether the null hypothesis of independence among variables is reasonable.
+ 
+*Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
+
+### What is the difference between a chi-square test and a correlation?
+> Both correlations and chi-square tests can test for relationships between two variables. However, a correlation is used when you have two quantitative variables and a chi-square test of independence is used when you have two categorical variables.
+
+*[Scribbr - Frequently asked questions (2022)](https://www.scribbr.com/frequently-asked-questions/difference-between-chi-square-and-correlation/)*
+
+### What is the Null Hypothesis?
+> Hypothesis tests use the following logic: “Given the human tendency to react to unusual but random behavior and interpret it as something meaningful and real, in our experiments we will require proof that the difference between groups is more extreme than what chance might reasonably produce.” This involves a baseline assumption that the treatments are equivalent, and any difference between the groups is due to chance. This baseline assumption is termed the null hypothesis. Our hope, then, is that we can in fact prove the null hypothesis wrong and show that the outcomes for groups A and B are more different than what chance might produce.
+
+*Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
+
+### What are Degrees of Freedom?
+> In the documentation and settings for many statistical tests and probability distributions, you will see a reference to “degrees of freedom.” The concept is applied to statistics calculated from sample data, and refers to the number of values free to vary. For example, if you know the mean for a sample of 10 values, there are 9 degrees of freedom(once you know 9 of the sample values, the 10th can be calculated and is not free to vary). The degrees of freedom parameter, as applied to many probability distributions, affects the shape of the distribution. The number of degrees of freedom is an input to many statistical tests. For example, degrees of freedom is the name given to the n – 1 denominator seen in the calculations for variance and standard deviation. Why does it matter? When you use a sample to estimate the variance for a population, you will end up with an estimate that is slightly biased downward if you use n in the denominator. If you use n – 1 in the denominator, the estimate will be free of that bias.
+
+> The number of degrees of freedom (d.f.) forms part of the calculation to standardize test statistics so they can be compared to reference distributions (t-distribution, F-distribution, etc.).
+
+*Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
+
+### When are Degrees of Freedom important to Data Scientists?
+> Is it important for data science? Not really, at least in the context of significance testing. For one thing, formal statistical tests are used only sparingly in data science. For another, the data size is usually large enough that it rarely makes a real difference for a data scientist whether, for example, the denominator has n or n – 1. (As n gets large, the bias that would come from using n in the denominator disappears.)There is one context, though, in which it is relevant: the use of factored variables in regression (including logistic regression). Some regression algorithms choke if exactly redundant predictor variables are present. This most commonly occurs when factoring categorical variables into binary indicators (dummies). Consider the variable “day of week.” Although there are seven days of the week, there are only six degrees of freedom in specifying day of week. For example, once you know that day of week is not Monday through Saturday, you know it must be Sunday. Inclusion of the Mon–Sat indicators thus means that also including Sunday would cause the regression to fail, due to a multicollinearity error.
+
+*Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
+
+### What is ANOVA?
+> ANOVA is a statistical procedure for analyzing the results of an experiment with multiple groups. It is the extension of similar procedures for the A/B test, used to assess whether the overall variation among groups is within the range of chance variation. A useful outcome of ANOVA is the identification of variance components associated with group treatments, interaction effects, and errors.
 
 ### What are the 4 different Categories of Data Analysis?
 > Descriptive Analytics (tells you what happened in the past); Diagnostic Analytics (helps you understand why something happened in the past); Predictive Analytics (predicts what is most likely to happen in the future); Prescriptive Analytics (recommends actions you can take to affect those outcomes).
@@ -365,6 +405,48 @@ title: Data Science Concepts
 > Descriptive statistics describe a sample. That’s pretty straightforward. You simply take a group that you’re interested in, record data about the group members, and then use summary statistics and graphs to present the group properties. With descriptive statistics, there is no uncertainty because you are describing only the people or items that you actually measure. You’re not trying to infer properties about a larger population.[...] Inferential statistics takes data from a sample and makes inferences about the larger population from which the sample was drawn. Because the goal of inferential statistics is to draw conclusions from a sample and generalize them to a population, we need to have confidence that our sample accurately reflects the population. This requirement affects our process.
 
 *[Difference between Descriptive and Inferential Statistics; Jim Frost (2020)](https://statisticsbyjim.com/basics/descriptive-inferential-statistics/)*
+
+### What is the Classical Statistical Inference Pipeline?
+> Formulate hypothesis -> Design experiment -> Collect Data -> Inference/conclusions
+
+> The term inference reflects the intention to apply the experiment results, which involve a limited set of data, to a larger process or population. 
+
+*Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)* 
+
+## Causal Inference
+
+### What are Counterfactuals?
+> Counterfactual reasoning means thinking about alternative possibilities for past or future events: what might happen/ have happened if…? In other words, you imagine the consequences of something that is contrary to what actually happened or will have happened ("counter to the facts").
+
+*[Conceptually: Counterfactuals (2022)](https://conceptually.org/concepts/counterfactual-thinking)*
+
+> [...] we will talk a lot in terms of potential outcomes. They are potential because they didn’t actually happen. Instead they denote what would have happened in the case some treatment was taken. We sometimes call the potential outcome that happened, factual, and the one that didn’t happen, counterfactual.
+
+*[Causal Inference for the Brave and True; Matheus Facure Alves (2022)](https://matheusfacure.github.io/python-causality-handbook/landing-page.html)*
+
+### What is the fundamental problem of Causal Inference?
+> The fundamental problem of causal inference is that we can never observe the same unit with and without treatment. It is as if we have two diverging roads and we can only know what lies ahead of the one we take.
+
+*[Causal Inference for the Brave and True; Matheus Facure Alves (2022)](https://matheusfacure.github.io/python-causality-handbook/landing-page.html)*
+
+### What is the difference between Causation and Association?
+> Inferences about causation are concerned with "what if" questions in counterfactuals worlds, such as "what would be the risk if everybody had been treated?" and "what would be the risk if everybody had been untreated?", whereas inferences about association are concerned with questions in the actual world, such as "what is the risk in the treated?" and "what is the risk in the untreated?".
+
+> Association is defined by a different risk in two disjoint subsets of the population determined by the individuals' actual treatment value (A = 1 or A = 0), whereas causation is defined by a different risk in the same population under two different treatment values (a = 1 or a = 0).
+
+> In ideal randomized experiments, association is causation.
+
+*[Causal Inference: What if; Miguel A. Hernán and James M. Robins (2022)](https://www.hsph.harvard.edu/miguel-hernan/causal-inference-book/)*
+
+### What is Confounding Bias?
+> The first significant cause of bias is confounding. It happens when the treatment and the outcome share a common cause. For example, let’s say that the treatment is education, and the outcome is income. It is hard to know the causal effect of education on wages because both share a common cause: intelligence. So we could argue that more educated people earn more money simply because they are more intelligent, not because they have more education. We need to close all backdoor paths between the treatment and the outcome to identify the causal effect. If we do so, the only effect that will be left is the direct effect T->Y. In our example, if we control for intelligence, that is, we compare people with the same level of intellect but different levels of education, the difference in the outcome will be only due to the difference in schooling since intelligence will be the same for everyone. To fix confounding bias, we need to control all common causes of the treatment and the outcome.
+
+*[Causal Inference for the Brave and True; Matheus Facure Alves (2022)](https://matheusfacure.github.io/python-causality-handbook/landing-page.html)*
+
+### What is Selection Bias?
+> Often, selection bias arises when we control for more variables than we should. It might be the case that the treatment and the potential outcome are marginally independent but become dependent once we condition on a collider.
+
+*[Causal Inference for the Brave and True; Matheus Facure Alves (2022)](https://matheusfacure.github.io/python-causality-handbook/landing-page.html)*
 
 ## Feature Engineering
 
@@ -416,12 +498,17 @@ title: Data Science Concepts
 
 > A Concept Class (C) is PAC-learnable by a Learner (L) using a Hypothesis Space (H), if L will, with probability 1 - delta (with 'delta' being the certainty goal), output a hypothesis h (belonging to H) such that the error of h is less than epsilon (with 'epsilon' being the error goal) in time and samples polynomial in 1/epsilon, 1/delta.
 
-*[PAC Learning - Georgia Tech - Machine Learning video (2015)](https://www.youtube.com/watch?v=e37nlms7Zi0)*
+*[PAC Learning - Georgia Tech - Machine Learning (2015)](https://www.youtube.com/watch?v=e37nlms7Zi0)*
+
+### What is Multicollinearity?
+> It will be recalled that one of the factors that affects the standard error of a partial regression coefficient is the degree to which that independent variable is correlated with the other independent variables in the regression equation. Other things being equal, an independent variable that is very highly correlated with one or more other independent variables will have a relatively large standard error. This implies that the partial regression coefficient is unstable and will vary greatly from one sample to the next. This is the situation known as multicollinearity. Multicollinearity exists whenever an independent variable is highly correlated with one or more of the other independent variables in a multiple regression equation. Multicollinearity is a problem because it undermines the statistical significance of an independent variable. Other things being equal, the larger the standard error of a regression coefficient, the less likely it is that this coefficient will be statistically significant.
+
+*[The problem of multicollinearity - Understanding Regression Analysis; Michael Patrick Allen (1997)](https://link.springer.com/chapter/10.1007/978-0-585-25657-3_37)*
 
 ## Miscellaneous
 
 ### How is Moore's Law applied to data?
-> Since the early '80s, processor speed has increased from 10 MHz to 3.6 GHz — an increase of 360 (not counting increases in word length and number of cores). But we've seen much bigger increases in storage capacity, on every level. RAM has moved from $1,000/MB to roughly $25/GB — a price reduction of about 40000, to say nothing of the reduction in size and increase in speed. Hitachi made the first gigabyte disk drives in 1982, weighing in at roughly 250 pounds; now terabyte drives are consumer equipment, and a 32 GB microSD card weighs about half a gram. Whether you look at bits per gram, bits per dollar, or raw capacity, storage has more than kept pace with the increase of CPU speed. The importance of Moore's law as applied to data isn't just geek pyrotechnics. Data expands to fill the space you have to store it. The more storage is available, the more data you will find to put into it. [...] Increased storage capacity demands increased sophistication in the analysis and use of that data. That's the foundation of data science.
+> Since the early '80s, processor speed has increased from 10 MHz to 3.6 GHz — an increase of 360 (not counting increases in word length and number of cores). But we've seen much bigger increases in storage capacity, on every level. RAM has moved from 1,000/MB to roughly 25/GB — a price reduction of about 40000, to say nothing of the reduction in size and increase in speed. Hitachi made the first gigabyte disk drives in 1982, weighing in at roughly 250 pounds; now terabyte drives are consumer equipment, and a 32 GB microSD card weighs about half a gram. Whether you look at bits per gram, bits per dollar, or raw capacity, storage has more than kept pace with the increase of CPU speed. The importance of Moore's law as applied to data isn't just geek pyrotechnics. Data expands to fill the space you have to store it. The more storage is available, the more data you will find to put into it. [...] Increased storage capacity demands increased sophistication in the analysis and use of that data. That's the foundation of data science.
 
 *[What Is Data Science?; Mike Loukides (2010)](https://www.oreilly.com/ideas/what-is-data-science)*
 
@@ -430,6 +517,7 @@ title: Data Science Concepts
 *Bioinformatics Data Skills; Vince Buffalo (2015)*
 
 ### Should I use R programming language for Data Science? 
+
 > R in data science is considered as [one of] the best programming language[s]. It is a programming language and programming condition for illustrations and measurable registering. It is space explicit and has fantastic top notch run. R comprises of open source bundles for measurable and quantitative applications. This incorporates progressed plotting, non-direct relapse, neural systems, phylogenetics, and some more. For analysing data, Data Scientists and Data Miners use R broadly.
 
 *Data Science From Scratch: How to Become a Data Scientist; David Park (2019)*
