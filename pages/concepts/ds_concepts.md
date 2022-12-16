@@ -257,6 +257,10 @@ title: Data Science Concepts
 
 *[Understanding the Bias-Variance Tradeoff; Seema Singh (2018)](https://towardsdatascience.com/understanding-the-bias-variance-tradeoff-165e6942b229)*
 
+> The tension between oversmoothing and overfitting is an instance of the bias-variance trade-off, a ubiquitous problem in statistical model fitting. Variance refers to the modeling error that occurs because of the choice of training data; that is, if you were to choose a different set of training data, the resulting model would be different. Bias refers to the modeling error that occurs because you have not properly identified the underlying real-world scenario; this error would not disappear if you simply added more training data. When a flexible model is overfit, the variance increases. You can reduce this by using a simpler model, but the bias may increase due to the loss of flexibility in modeling the real underlying situation. A general approach to handling this trade-off is through crossvalidation.
+
+*Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
+
 ### What is Random Sampling?
 > Random sampling is a process in which each available member of the population being sampled has an equal chance of being chosen for the sample at each draw. The sample that results is called a simple random sample. Sampling can be done with replacement, in which observations are put back in the population after each draw for possible future reselection. Or it can be done without replacement, in which case observations, once selected, are unavailable for future draws. Data quality often matters more than data quantity when making an estimate or a model based on a sample. Data quality in data science involves completeness, consistency of format, cleanliness, and accuracy of individual data points. Statistics adds the notion of representativeness.
 
@@ -284,10 +288,20 @@ title: Data Science Concepts
 
 *Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
 
+### What is Average Treatment Effect (ATE)?
+> The average treatment effect (ATE) is a measure used to compare treatments (or interventions) in randomized experiments, evaluation of policy interventions, and medical trials. The ATE measures the difference in mean (average) outcomes between units assigned to the treatment and units assigned to the control.
+
+*[Average treatment effect - Wikipedia (2022)](https://en.wikipedia.org/wiki/Average_treatment_effect)*
+
 ### What is Standard Error?
 > The standard error is a single metric that sums up the variability in the sampling distribution for a statistic. The standard error can be estimated using a statistic based on the standard deviation s of the sample values, and the sample size n. As the sample size increases, the standard error decreases. The relationship between standard error and sample size is sometimes referred to as the square root of n rule: to reduce the standard error by a factor of 2, the sample size must be increased by a factor of 4.
 
 *Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
+
+### What is the relationship between Standard Error and Variables' Variance?
+> The standard error is inversely proportional to the variance of the variable. This means that, if doesn’t change much, it will be hard to estimate its effect on the outcome. This also makes intuitive sense. Take it to the extreme and pretend you want to estimate the effect of a drug, so you conduct a test with 10000 individuals but only 1 of them get the treatment. This will make finding the ATE very hard, we will have to rely on comparing a single individual with everyone else. Another way to say this is that we need lots of variability in the treatment to make it easier to find its impact.
+
+*[Causal Inference for the Brave and True; Matheus Facure Alves (2022)](https://matheusfacure.github.io/python-causality-handbook/landing-page.html)*
 
 ### What are Confidence Intervals?
 > Confidence intervals are a way to place uncertainty around our estimates. The smaller the sample size, the larger the standard error, and the wider the confidence interval.
@@ -448,6 +462,17 @@ title: Data Science Concepts
 
 *[Causal Inference for the Brave and True; Matheus Facure Alves (2022)](https://matheusfacure.github.io/python-causality-handbook/landing-page.html)*
 
+> While confounding is the bias from failing to control for a common cause, selection bias is when we control for a common effect or a variable in between the path from cause to effect. As a rule of thumb, always include confounders and variables that are good predictors of  in your model. Always exclude variables that are good predictors of only, mediators between the treatment and outcome or common effect of the treatment and outcome.
+
+> Selection bias is so pervasive that not even randomization can fix it. Better yet, it is often introduced by the ill advised, even in random data! Spotting and avoiding selection bias requires more practice than skill. Often, they appear underneath some supposedly clever idea, making it even harder to uncover.
+
+*[Causal Inference for the Brave and True; Matheus Facure Alves (2022)](https://matheusfacure.github.io/python-causality-handbook/landing-page.html)*
+
+### Which features/controls/predictors should we add to a Causal Inference model?
+> We should add controls that are both correlated with the treatment and the outcome (confounder). We should also add controls that are good predictors of the outcome, even if they are not confounders, because they lower the variance of our estimates. However, we should NOT add controls that are just good predictors of the treatment, because they will increase the variance of our estimates.
+
+*[Causal Inference for the Brave and True; Matheus Facure Alves (2022)](https://matheusfacure.github.io/python-causality-handbook/landing-page.html)*
+
 ## Feature Engineering
 
 ### How to deal with Missing Values?
@@ -468,7 +493,7 @@ title: Data Science Concepts
 *[The Art of Data Science; Roger D. Peng and Elizabeth Matsui (2017)](https://bookdown.org/rdpeng/artofdatascience/)*
 
 ### What is the basic difference between Inferential Statistics and Machine Learning?
-> Inferential statistics is a way to learn from data, and one of the tool of Machine Learning. Both use a set of observations to discover underlying processes or patterns, then be able to predict. If you have all the houses characteristics and prices in a given area , you can find out what is determining the price, then predict the price for a new house. Simple statistical analysis. Now if you want to build an app to predict houses prices, it’s another story. You need a lot more work, on data pre-processing, multiple algorithms, other models of regression, etc … That’s machine learning territory. Inferential statistics is only one of the tool. Machine Learning also wants to learn from “big data”, high dimensional data, unstructured, streaming data, find connexions in a social network, group press releases by similar topics, recognize images, compress pictures etc. No nice excel-like data set for this. It requires a different set of tools (whose goal is basically to turn everything the messy world is throwing at us into a nice excel-like data set with matrices that compute fast). The techniques that deal with high dimensional and streaming data have all the attention today, but a lot of the implementations of Machine Learning are still classic regression. You hear a lot that a business can be “moneyballed”, referring to base ball statistics. The idea is that you can take something that is “obviously” not data driven (“I have been doing this business for 30 years and let me tell you it’s all about connecting with people”), and prove that it can be run more effectively with data. Most of that is indeed inferential statistics, plus additional techniques. It’s all “learning from data”.
+> Inferential statistics is a way to learn from data, and one of the tool of Machine Learning. Both use a set of observations to discover underlying processes or patterns, then be able to predict. If you have all the houses characteristics and prices in a given area, you can find out what is determining the price, then predict the price for a new house. Simple statistical analysis. Now if you want to build an app to predict houses prices, it’s another story. You need a lot more work, on data pre-processing, multiple algorithms, other models of regression, etc … That’s machine learning territory. Inferential statistics is only one of the tool. Machine Learning also wants to learn from “big data”, high dimensional data, unstructured, streaming data, find connexions in a social network, group press releases by similar topics, recognize images, compress pictures etc. No nice excel-like data set for this. It requires a different set of tools (whose goal is basically to turn everything the messy world is throwing at us into a nice excel-like data set with matrices that compute fast). The techniques that deal with high dimensional and streaming data have all the attention today, but a lot of the implementations of Machine Learning are still classic regression. You hear a lot that a business can be “moneyballed”, referring to base ball statistics. The idea is that you can take something that is “obviously” not data driven (“I have been doing this business for 30 years and let me tell you it’s all about connecting with people”), and prove that it can be run more effectively with data. Most of that is indeed inferential statistics, plus additional techniques. It’s all “learning from data”.
 
 *[Quora Answer; Philippe Hocquet (2017)](https://www.quora.com/What-is-the-basic-difference-between-inferential-statistics-and-machine-learning)*
 
@@ -504,6 +529,48 @@ title: Data Science Concepts
 > It will be recalled that one of the factors that affects the standard error of a partial regression coefficient is the degree to which that independent variable is correlated with the other independent variables in the regression equation. Other things being equal, an independent variable that is very highly correlated with one or more other independent variables will have a relatively large standard error. This implies that the partial regression coefficient is unstable and will vary greatly from one sample to the next. This is the situation known as multicollinearity. Multicollinearity exists whenever an independent variable is highly correlated with one or more of the other independent variables in a multiple regression equation. Multicollinearity is a problem because it undermines the statistical significance of an independent variable. Other things being equal, the larger the standard error of a regression coefficient, the less likely it is that this coefficient will be statistically significant.
 
 *[The problem of multicollinearity - Understanding Regression Analysis; Michael Patrick Allen (1997)](https://link.springer.com/chapter/10.1007/978-0-585-25657-3_37)*
+
+### What is the difference between Simple Linear Regression and Correlation?
+> Both are ways of measuring how two variables are related. The difference is that while correlation measures the strength of an association between two variables, regression quantifies the nature of the relationship.
+
+*Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
+
+### What is the difference between Correlated Variables and Confounding Variables?
+> With correlated variables, the problem is one of commission: including different variables that have a similar predictive relationship with the response. With confounding variables, the problem is one of omission: an important variable is not included in the regression equation. Naive interpretation of the equation coefficients can lead to invalid conclusions.
+
+*Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
+
+### What is Heteroskedasticity?
+> When some ranges of the outcome experience residuals with higher variance (may indicate a predictor missing from the equation).
+
+> Heteroskedasticity is the lack of constant residual variance across the range of the predicted values. In other words, errors are greater for some portions of the range than for others. Visualizing the data is a convenient way to analyze residuals.
+ 
+> Heteroskedasticity indicates that prediction errors differ for different ranges of the predicted value, and may suggest an incomplete model.
+
+*Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
+
+> This phenomenon of having a region of low variance and another of high variance is called heteroskedasticity. Put it simply, heteroskedasticity is when the variance is not constant across all values of the features.
+
+*[Causal Inference for the Brave and True; Matheus Facure Alves (2022)](https://matheusfacure.github.io/python-causality-handbook/landing-page.html)*
+
+### What is Ordinary Least Squares?
+
+> OLS is a common technique used in analyzing linear regression. In brief, it compares the difference between individual points in your data set and the predicted best fit line to measure the amount of error produced. 
+
+*[Interpreting Linear Regression Through statsmodels .summary(); Tim McAleer (2020)](https://medium.com/swlh/interpreting-linear-regression-through-statsmodels-summary-4796d359035a)*
+
+> How is the model fit to the data? When there is a clear relationship, you could imagine fitting the line by hand. In practice, the regression line is the estimate that minimizes the sum of squared residual values, also called the residual sum of squares or RSS. The method of minimizing the sum of the squared residuals is termed least squares regression, or ordinary least squares (OLS) regression. 
+
+*Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
+
+### What is the difference between Linear Regression and Logistic Regression?
+> Linear Regression and Logistic Regression are the two famous Machine Learning Algorithms which come under supervised learning technique. Since both the algorithms are of supervised in nature hence these algorithms use labeled dataset to make the predictions. But the main difference between them is how they are being used. The Linear Regression is used for solving Regression problems whereas Logistic Regression is used for solving the Classification problems.
+
+*[Linear Regression vs Logistic Regression - Java T Point (2022)](https://www.javatpoint.com/linear-regression-vs-logistic-regression-in-machine-learning)*
+
+> Linear regression and logistic regression share many commonalities. Both assume a parametric linear form relating the predictors with the response. Exploring and finding the best model are done in very similar ways. Extensions to the linear model, like the use of a spline transform of a predictor, are equally applicable in the logistic regression setting. Logistic regression differs in two fundamental ways: (1) The way the model is fit (least squares is not applicable); (2) The nature and analysis of the residuals from the model
+
+*Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
 
 ## Miscellaneous
 
