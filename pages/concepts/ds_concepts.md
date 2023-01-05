@@ -144,6 +144,11 @@ title: Data Science Concepts
 
 *The Modern Data Warehouse: A New Approach for a New Era; Tom Traubitz (2018)*
 
+### What is Data Serialization?
+> The process of converting a data structure or object state into a format that can be stored or transmitted and reconstructured later. There are many, many data serialization formats. When considering a format to work with, you might want to consider different characteristics such as human readability, access patterns, and whether it's based on text or binary, which influences the size of its files. Some examples are JSON, CSV and Parquet.
+
+*Designing Machine Learning Systems; Chip Huyen (2021)*
+
 ## Statistics and Data Analysis
 
 ### What are the different Types of Data?
