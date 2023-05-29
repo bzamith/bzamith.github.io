@@ -3,6 +3,12 @@ layout: page
 title: Studies
 ---
 
+### Books that I Read and Recommend
+- Clean Architecture
+ 
+<img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1471680093i/18043011.jpg", width="95", height="129"> 
+
+
 ### Topics that I have studied recently
 - 2022/2nd - Practical Statistics for Data Scientists
 
