@@ -4,12 +4,29 @@ title: Studies
 ---
 
 ### Books that I Read and Recommend
-- Clean Architecture
+- Designing Machine Learning Systems - Chip Huyen
+
+> ![Designing Machine Learning Systems](https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1653945265i/60715378._SX50_.jpg) 
+
+- Clean Code - Robert C. Martin
+
+> ![Clean Code](https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1436202607i/3735293._SX50_.jpg) 
+
+- The Hundred-Page Machine Learning Book - Andriy Burkov
+
+> ![The Hundred-Page Machine Learning Book](https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1546285613i/43190851._SX50_.jpg) 
+
+### Reading Queue
+
+- Clean Architecture - Robert C. Martin
+
+> ![Clean Architecture](https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1471680093i/18043011._SX50_.jpg) 
  
-![Test](https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1471680093i/18043011.jpg)
+- Inspired: How to Create Tech Products Customers Love - Marty Cagan
 
-![Test 2](http://localhost:4000/static/img/profile.png)
+> ![Inspired](https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1496058487i/35249663._SY75_.jpg) 
 
+### Wish List
 
 ### Topics that I have studied recently
 - 2022/2nd - Practical Statistics for Data Scientists
