@@ -3,6 +3,12 @@ layout: page
 title: Studies
 ---
 
+### Books that I am Currently Reading
+
+- Essential Math for Data Science - Thomas Nield
+
+> ![Essential Math for Data Science](https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1620715594i/51763086._SX50_.jpg)
+
 ### Books that I Read and Recommend
 
 - Practical Statistics for Data Scientists - Peter Bruce, Andrew Bruce & Peter Gedeck
