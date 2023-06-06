@@ -75,7 +75,7 @@ title: Studies
 
 ### Wish List
 
-- Data Science on AWS - Chris Fregly, Antje Barth
+- Data Science on AWS - Chris Fregly & Antje Barth
 
 > ![Data Science on AWS](https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1620719678i/55769407._SX50_.jpg)
 
