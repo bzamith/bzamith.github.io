@@ -25,7 +25,7 @@ description: "Portfolio"
 navbar-links:
   Home: ""
   Publications: "pages/publications"
-  Presentations: "pages/presentations"
+  Talks: "pages/talks"
   Concepts: "pages/concepts"
   Studies: "pages/studies"
   Resume: "pages/resume"
