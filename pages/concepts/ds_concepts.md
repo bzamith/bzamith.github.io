@@ -432,6 +432,14 @@ title: Data Science Concepts
 
 *Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)* 
 
+### What assumptions do we make for regression models?
+> When doing a simple regression model, we make the (often reasonable!) assumptions that:
+> a) The errors are normally distributed and, on average, zero;
+> b) The errors all have the same variance (they are homoscedastic), and
+> c) The errors are unrelated to each other (they are independent across observations).
+
+*[Pratical Time Series - The State University of New York (2024)](https://www.coursera.org/learn/practical-time-series-analysis)*
+
 ## Causal Inference
 
 ### What are Counterfactuals?
