@@ -83,15 +83,6 @@ title: Studies
 
 > ![99 Bottles of OOP](https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1477514056i/31183020._SX50_.jpg) 
 
-### Courses
-
-- [Sequence Models](https://www.coursera.org/learn/nlp-sequence-models?specialization=deep-learning#syllabus)
-
-> DeepLearning.ai; Coursera - Online Course; Part of the Deep Learning specialization
-
-- [Version Control with Git](https://www.coursera.org/learn/version-control-with-git/)
-
-> Atlassian; Coursera - Online Course
 
 - [Software Development Processes and Methodologies](https://www.coursera.org/learn/software-processes/)
 
