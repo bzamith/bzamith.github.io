@@ -440,6 +440,38 @@ title: Data Science Concepts
 
 *[Pratical Time Series - The State University of New York (2024)](https://www.coursera.org/learn/practical-time-series-analysis)*
 
+### What is stationarity in a time series context?
+> A strict stationarity imposes a stronger condition of identical probability distributions across different time points, while weak stationarity allows for changes in the distribution but requires the mean, variance, and autocorrelation structure to remain constant over time. In practice, weak stationarity is often more applicable and easier to verify, making it a commonly used assumption in time series analysis.
+
+*Pratical Time Series - The State University of New York (2024)*
+
+### Why is it important to know stationarity and inversability for ARIMA models?
+> Stationarity and invertibility are crucial concepts in the context of ARIMA (AutoRegressive Integrated Moving Average) models, and understanding these properties is essential for ensuring the validity and reliability of the model. Here's why these properties are important:
+
+> Stationarity:
+
+> - Statistical Assumption: ARIMA models assume that the time series data is stationary. Stationarity means that the statistical properties of the time series, such as mean and variance, do not change over time. This assumption is necessary for the model to capture meaningful patterns and relationships.
+
+> - Differencing Requirement: If the original time series is not stationary, differencing is applied to make it stationary. Differencing involves taking the difference between consecutive observations. Stationarity is important because it simplifies the modeling process and allows for more reliable parameter estimation.
+
+> Invertibility:
+
+> - Interpretability: Invertibility is a property that ensures the model is interpretable. An invertible model implies that the current value of the time series only depends on past values and white noise. This property is crucial for understanding the impact of past observations on the present without causing feedback loops.
+
+> - Meaningful Forecasts: Invertibility is important for making meaningful forecasts. If a model is not invertible, the forecasted values may not have clear interpretability, and it might be challenging to attribute changes in the forecast to specific changes in the input data.
+
+> - Numerical Stability: Invertibility is related to the numerical stability of the model. Invertible models are more likely to produce stable and reliable parameter estimates, making them more suitable for forecasting.
+
+> In summary, stationarity ensures that the statistical properties of the time series remain consistent over time, making it suitable for modeling. Invertibility ensures that the model is interpretable and capable of providing meaningful forecasts. Both properties contribute to the reliability and accuracy of ARIMA models in capturing and forecasting time series patterns.
+
+### Can I apply ARIMA on a non stationary and non invertible time series?
+> The ARIMA (AutoRegressive Integrated Moving Average) model assumes that the time series data is stationary. If your time series is non-stationary, you typically need to apply differencing to make it stationary before applying ARIMA. Similarly, invertibility is a desirable property of ARIMA models to ensure that the model is interpretable and suitable for forecasting. An invertible model implies that the current value of the time series only depends on past values and white noise. If a model is not invertible, it may lead to challenges in interpretation and potentially less reliable forecasts. Here are the general steps when dealing with a non-stationary time series: (1) Differencing - If your time series is non-stationary, you may need to apply differencing to make it stationary. Differencing involves taking the difference between consecutive observations; (2) ARIMA Model - Once the data is stationary, you can apply the ARIMA model. The ARIMA model is typically denoted as ARIMA(p, d, q), where p is the order of the autoregressive (AR) component, d is the degree of differencing, q is the order of the moving average (MA) component; (3) Invertibility Check: After fitting the ARIMA model, it's important to check if the model is invertible. If the model is not invertible, you might need to reconsider the model specification or apply transformations to achieve invertibility.
+
+### How to model a time series for ARIMA?
+> Modeling: Trend suggests differencing; Variation in variance suggests transformation (common transformation: log, then differencing); ACF (auto-correlation function) suggests order of moving average process (q); PACF (partial ACF) suggests order of autoregressive process (p).
+
+*Pratical Time Series - The State University of New York (2024)*
+
 ## Causal Inference
 
 ### What are Counterfactuals?
@@ -554,8 +586,6 @@ title: Data Science Concepts
 *Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
 
 ### What is Heteroskedasticity?
-> When some ranges of the outcome experience residuals with higher variance (may indicate a predictor missing from the equation).
-
 > Heteroskedasticity is the lack of constant residual variance across the range of the predicted values. In other words, errors are greater for some portions of the range than for others. Visualizing the data is a convenient way to analyze residuals.
  
 > Heteroskedasticity indicates that prediction errors differ for different ranges of the predicted value, and may suggest an incomplete model.
