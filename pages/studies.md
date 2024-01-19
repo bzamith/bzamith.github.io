@@ -5,15 +5,15 @@ title: Studies
 
 ### Books that I am Currently Reading
 
-- Machine Learning Pocket Reference: Working with Structured Data in Python - Matt Harrison
+- Machine Learning Pocket Reference: Working with Structured Data in Python - Matt Harrison (**)
 
 > ![Machine Learning Pocket Reference](https://m.media-amazon.com/images/I/71P35A0AsDL._AC_UY436_FMwebp_QL65__SX50_.jpg)
 
-- Practical Time Series Analysis: Prediction with Statistics and Machine Learning - Aileen Nielsen
+- Practical Time Series Analysis: Prediction with Statistics and Machine Learning - Aileen Nielsen (**)
 
 > ![Practical Time Series Analysis](https://m.media-amazon.com/images/I/91vNT0C2lrL._SY522_SX50_.jpg)
 
-- Fundamentals of Probability and Statistics (from Portuguese, _Noções de Probabilidade e Estatística_) - Marcos Nascimento Magalhães
+- Fundamentals of Probability and Statistics (from Portuguese, _Noções de Probabilidade e Estatística_) - Marcos Nascimento Magalhães (**)
 
 > ![Fundamentals of Probability and Statistics](https://m.media-amazon.com/images/I/31flBehUXkL._SY445_SX50_.jpg)
 
