@@ -14,3 +14,4 @@ European Conference on Machine Learning (ECML-PKDD)*.
 #### Others
 
 1. **Undergraduate Thesis (in Portuguese)**: [Classificação Hierárquica Multirrótulo de Funções de Proteínas via Predição de Interações](https://repositorio.ufscar.br/handle/ufscar/15890) - *Zamith B. (2020)*.
+2. **Master's Thesis**: [Climate Variables Forecasting and Forest Fire Risk Rate Classification in the Brazilian Pantanal](https://repositorio.ufscar.br/handle/ufscar/19084) - *Zamith B. (2020)*.
