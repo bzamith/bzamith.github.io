@@ -5,6 +5,12 @@ title: Talks
 
 Here is a list of my talks and presentations:
 
+### 2024
+- **Unveiling the World of Data: Careers and Opportunities** (from Portuguese: *Desvendando o Mundo dos Dados: Carreiras e Oportunidades*)  
+  [*Semana da Computação - Unesp*](https://www.youtube.com/watch?v=pkMhlL3Gp1k)  
+  Virtual
+  October 03, 2024
+
 ### 2023
 - **Computer Science Orientation** (from Portuguese: *Orientação em Computação*)  
   [*PET BCC UFSCar*](https://www.instagram.com/p/CvNxYTVgWsO/?img_index=1)  
