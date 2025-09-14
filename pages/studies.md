@@ -4,18 +4,13 @@ title: Studies
 ---
 
 ### Books that I am Currently Reading
+- The Art of Statistics: Learning from Data - David Spiegelhalter (**)
 
-- Machine Learning Pocket Reference: Working with Structured Data in Python - Matt Harrison (**)
+> ![The Art of Statistics: Learning from Data](https://m.media-amazon.com/images/I/71YPjusCEWL._SX50_.jpg)
 
-> ![Machine Learning Pocket Reference](https://m.media-amazon.com/images/I/71P35A0AsDL._AC_UY436_FMwebp_QL65__SX50_.jpg)
+- The Phoenix Project: A Novel About IT, DevOps, and Helping Your Business Win - Gene Kim, Kevin Behr, George Spafford (**)
 
-- Practical Time Series Analysis: Prediction with Statistics and Machine Learning - Aileen Nielsen (**)
-
-> ![Practical Time Series Analysis](https://m.media-amazon.com/images/I/91vNT0C2lrL._SY522_SX50_.jpg)
-
-- Fundamentals of Probability and Statistics (from Portuguese, _Noções de Probabilidade e Estatística_) - Marcos Nascimento Magalhães (**)
-
-> ![Fundamentals of Probability and Statistics](https://m.media-amazon.com/images/I/31flBehUXkL._SY445_SX50_.jpg)
+> ![The Phoenix Project](https://m.media-amazon.com/images/I/71MCzRvsraL._SX50_.jpg)
 
 ### Books that I Read and Recommend
 
@@ -52,6 +47,17 @@ title: Studies
 > ![Distributed Systems](https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1347701966i/405614._SX50_.jpg) 
 
 ### Reading Queue
+- Machine Learning Pocket Reference: Working with Structured Data in Python - Matt Harrison (**)
+
+> ![Machine Learning Pocket Reference](https://m.media-amazon.com/images/I/71P35A0AsDL._AC_UY436_FMwebp_QL65__SX50_.jpg)
+
+- Practical Time Series Analysis: Prediction with Statistics and Machine Learning - Aileen Nielsen (**)
+
+> ![Practical Time Series Analysis](https://m.media-amazon.com/images/I/91vNT0C2lrL._SY522_SX50_.jpg)
+
+- Fundamentals of Probability and Statistics (from Portuguese, _Noções de Probabilidade e Estatística_) - Marcos Nascimento Magalhães (**)
+
+> ![Fundamentals of Probability and Statistics](https://m.media-amazon.com/images/I/31flBehUXkL._SY445_SX50_.jpg)
 
 - Designing Data-Intensive Applications - Martin Kleppmann (**)
 
