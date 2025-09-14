@@ -172,9 +172,13 @@ title: Data Science Concepts
 ### What are the Estimates of Location?
 > Mean, Weighted Mean, Median, Percentile, Weighted Median and Trimmed Mean (the average of all values after dropping a fixed number of extreme values). 
 
-> The basic metric for location is the mean, but it can be sensitive to extreme values (outlier). Other metrics (median, trimmed mean) are less sensitive to outliers and unusual distributions and hence are more robust. 
+> The basic metric for location is the mean, but it can be sensitive to extreme values (outlier). Other metrics (median, trimmed mean) are less sensitive to outliers and unusual distributions and hence are more robust.
 
 *Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
+
+> Mean: The sum of the numbers divided by the number of occurrences;Median: The middle value when the numbers are arranged in order; Mode: The number that appears most often.
+
+*[The Art of Statistics: Learning from Data; David Spiegelhalter (2019)](https://www.amazon.com/Art-Statistics-Learning-Pelican-Books/dp/0241398630)*
 
 ### What are the Estimates of Variability?
 > Deviations (the difference between the observed values and the estimate of location), Variance, Standard Deviation (the square root of the variance), Mean Absolute Deviation, Median Absolute Deviation (the median of the absolute values of deviations from the median), Range, Percentile and Interquartile Range.
@@ -182,6 +186,12 @@ title: Data Science Concepts
 > Variance and standard deviation are the most widespread and routinely reported statistics of variability. Both are sensitive to outliers. More robust metrics include mean absolute deviation, median absolute deviation from the median, and percentiles (quantiles).
 
 *Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
+
+> Range, Interquartile Range and Standard Devitation.
+
+> The standard deviation is a widely used measure of dispersion. It is the most complex from a technical point of view and appropriate only for well-behaved symmetric data, since it is also unduly influenced by very discrepant values. The Gini index is a measure of dispersion used for data with a high level of distortion, such as income, and is widely used to measure inequality, but it has a complex and not very intuitive form. The square of the standard deviation is known as variance: difficult to interpret directly, but nevertheless of great mathematical utility.
+
+*The Art of Statistics: Learning from Data; David Spiegelhalter (2019)*
 
 ### What are the Key Terms for Exploring the Distribution?
 > Boxplot, Frequency Table, Histogram and Density Plot (a smoothed version of the histogram, often based on a kernel density estimate).
@@ -194,6 +204,13 @@ title: Data Science Concepts
 > Both frequency tables and percentiles summarize the data by creating bins. In general, quartiles and deciles will have the same count in each bin (equal-count bins), but the bin sizes will be different. The frequency table, by contrast, will have different counts in the bins (equal-size bins), and the bin sizes will be the same.
 
 *Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
+
+## What is the Pearson Correlation Coefficient?
+> It is convenient to use a single number to summarize a consistent relationship of increase or decrease between pairs of numbers shown in a scatter plot. The number usually chosen for this is the Pearson correlation coefficient. A Pearson correlation lies in the interval between –1 and 1 and expresses how close the points are to a straight line. A correlation of 1 occurs if all points lie on an ascending straight line, while a correlation of –1 is observed when all points lie on a descending straight line. A correlation close to 0 may have to do with a random scatter of points, or any other pattern in which there is no systematic tendency upward or downward.
+
+> An alternative measure is Spearman’s rank correlation, which depends only on the ordering of the data, and not on their specific values. Thus, the coefficient can be close to 1 or –1 if the points are near a line that rises or falls consistently, even if it is not a straight line.
+
+*The Art of Statistics: Learning from Data; David Spiegelhalter (2019)*
 
 ### What are the Key Terms for Exploring Binary and Categorical Data?
 > Mode, Expected Value (when the categories can be associated with a numeric value, this gives an average value based on a category's probability of occurrence), Bar Charts and Pie Charts.
@@ -265,6 +282,16 @@ title: Data Science Concepts
 > The tension between oversmoothing and overfitting is an instance of the bias-variance trade-off, a ubiquitous problem in statistical model fitting. Variance refers to the modeling error that occurs because of the choice of training data; that is, if you were to choose a different set of training data, the resulting model would be different. Bias refers to the modeling error that occurs because you have not properly identified the underlying real-world scenario; this error would not disappear if you simply added more training data. When a flexible model is overfit, the variance increases. You can reduce this by using a simpler model, but the bias may increase due to the loss of flexibility in modeling the real underlying situation. A general approach to handling this trade-off is through crossvalidation.
 
 *Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
+
+### What is a Population?
+> A population can be thought of as a physical group of individuals, but also as the provider of the probability distribution for a random observation drawn from that population. Populations can be summarized through parameters that mirror the statistical synthesis of the sample data.
+
+*The Art of Statistics: Learning from Data; David Spiegelhalter (2019)*
+
+### What are the types of Population?
+> There are three types of populations from which a sample can be drawn: (i) Literal population: This is an identifiable group, such as when we randomly select a person to conduct a survey. Or it can be a group of individuals that can be measured, and, although we do not randomly pick one of them, we have volunteer data; (ii) Virtual population: We usually take measurements using some instrument, for example by measuring someone’s blood pressure or air pollution. We know it is always possible to take new measurements and obtain slightly different responses. The closeness of multiple readings depends on the accuracy of the instrument and the stability of the circumstances — we could think of this as extracting observations from a virtual population of all the measurements that could be taken if we had enough time; (iii) Metaphoric population: When there is no larger population. This is an unusual concept. Here we act as if the data were randomly drawn from some population, when it is clear that this is not the case—for example, the children who undergo heart surgery: we did no sampling, we have all the data, and there is nothing more to collect. Think of the number of murders that occur each year, the exam results for a specific class, or the data on all the countries in the world—none of these can be considered a sample from a real population.
+
+*The Art of Statistics: Learning from Data; David Spiegelhalter (2019)*
 
 ### What is Random Sampling?
 > Random sampling is a process in which each available member of the population being sampled has an equal chance of being chosen for the sample at each draw. The sample that results is called a simple random sample. Sampling can be done with replacement, in which observations are put back in the population after each draw for possible future reselection. Or it can be done without replacement, in which case observations, once selected, are unavailable for future draws. Data quality often matters more than data quantity when making an estimate or a model based on a sample. Data quality in data science involves completeness, consistency of format, cleanliness, and accuracy of individual data points. Statistics adds the notion of representativeness.
