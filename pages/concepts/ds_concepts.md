@@ -122,6 +122,10 @@ title: Data Science Concepts
 
 *[The Art of Data Science; Roger D. Peng and Elizabeth Matsui (2017)](https://bookdown.org/rdpeng/artofdatascience/)*
 
+> Statistical model, which is a formal representation of the relationships between variables, that we can use to provide the desired explanations or predictions.
+
+*The Art of Statistics: Learning from Data; David Spiegelhalter (2019)*
+
 ### What is Statistic?
 > The first key element of a statistical model is data reduction. The basic idea is you want to take the original set of numbers consisting of your dataset and transform them into a smaller set of numbers. [...] The process of data reduction typically ends up with a statistic. Generally speaking, a statistic is any summary of the data. The sample mean, or average, is a statistic. So is the median, the standard deviation, the maximum, the minimum, and the range. Some statistics are more or less useful than others but they are all summaries of the data.
 
@@ -135,7 +139,7 @@ title: Data Science Concepts
 ## Data Storage
 
 ### How to Store Data in Data Science scenario?
-> Relational databases are designed for consistency, to support complex transactions that can easily be rolled back if any one of a complex set of operations fails. While rock-solid consistency is crucial to many applications, it's not really necessary for the kind of analysis we're discussing here. [...] Precision has an allure, but in most data-driven applications outside of finance, that allure is deceptive. Most data analysis is comparative [...]. To store huge datasets effectively, we've seen a new breed of databases appear. These are frequently called NoSQL databases, or Non-Relational databases [...]. They group together fundamentally dissimilar products by telling you what they aren't. Many of these databases are [..] designed to be distributed across many nodes, to provide ''eventual consistency'' but not absolute consistency, and to have very flexible schema.
+> Relational databases are designed for consistency, to support complex transactions that can easily be rolled back if any one of a complex set of operations fails. While rock-solid consistency is crucial to many applications, it's not really necessary for the kind of analysis we're discussing here. [...] Precision has an allure, but in most data-driven applications outside of finance, that allure is deceptive. Most data analysis is comparative [...]. To store huge datasets effectively, we've seen a new breed of databases appear. These are frequently called NoSQL databases, or Non-Relational databases [...]. They group together fundamentally dissimilar products by telling you what they aren't. Many of these databases are [..] designed to be distributed across many nodes, to provide ”eventual consistency” but not absolute consistency, and to have very flexible schema.
 
 *[What Is Data Science?; Mike Loukides (2010)](https://www.oreilly.com/ideas/what-is-data-science)*
 
@@ -178,7 +182,7 @@ title: Data Science Concepts
 
 > Mean: The sum of the numbers divided by the number of occurrences;Median: The middle value when the numbers are arranged in order; Mode: The number that appears most often.
 
-*[The Art of Statistics: Learning from Data; David Spiegelhalter (2019)](https://www.amazon.com/Art-Statistics-Learning-Pelican-Books/dp/0241398630)*
+*The Art of Statistics: Learning from Data; David Spiegelhalter (2019)*
 
 ### What are the Estimates of Variability?
 > Deviations (the difference between the observed values and the estimate of location), Variance, Standard Deviation (the square root of the variance), Mean Absolute Deviation, Median Absolute Deviation (the median of the absolute values of deviations from the median), Range, Percentile and Interquartile Range.
@@ -256,6 +260,19 @@ title: Data Science Concepts
 
 *[What is Linear Regression?; Statistics Solutions (2013)](https://www.statisticssolutions.com/what-is-linear-regression/)*
 
+> In basic regression analysis, the dependent variable is the quantity we want to predict or explain, usually forming the vertical y-axis of a graph, and is also known as the response variable. The independent variable is the quantity we use to make the prediction or explanation, generally forming the horizontal x-axis of a graph, and is also known as the explanatory variable. The gradient — slope — is also known as the regression coefficient.
+
+> The meaning of these gradients depends entirely on our assumptions about the relationship between the variables being studied. For correlation data, the gradient indicates how much the dependent variable would be expected to change, on average, if we observe a difference of one unit in the independent variable. If, however, we assumed a causal relationship, then the interpretation of the gradient would be very different — it would be the expected change in the dependent variable if we intervened and changed the independent variable by one unit.
+
+> Statistical models have two main components. First, a mathematical formula that expresses a deterministic, predictable component, such as the straight line fit that allows us to predict a child’s height from the parent’s height. But the deterministic part of a model will never be a perfect representation of the observed world. The difference between what the model predicts and what actually happens is the second component of a model, known as the residual error — although it may sound misleading, it is simply the inevitable inability of a model to represent exactly what we observe. Thus, in sum, we assume that: observation = deterministic model + residual error.
+
+*The Art of Statistics: Learning from Data; David Spiegelhalter (2019)*
+
+### What is Regression to Mean?
+> Regression to the mean occurs when more extreme responses tend to revert and move closer to the mean in the long run, since some contribution to their initially extreme character happened merely by chance.
+
+*The Art of Statistics: Learning from Data; David Spiegelhalter (2019)*
+
 ### What is Bias?
 > In statistics, bias is the difference between the expected value of an estimator and its estimand. [...] (it) refers to results that are systematically off the mark. Think archery where your bow is sighted incorrectly. High bias doesn’t mean you’re shooting all over the place (that’s high variance), but may cause a perfect archer hit below the bullseye all the time.
 
@@ -282,6 +299,11 @@ title: Data Science Concepts
 > The tension between oversmoothing and overfitting is an instance of the bias-variance trade-off, a ubiquitous problem in statistical model fitting. Variance refers to the modeling error that occurs because of the choice of training data; that is, if you were to choose a different set of training data, the resulting model would be different. Bias refers to the modeling error that occurs because you have not properly identified the underlying real-world scenario; this error would not disappear if you simply added more training data. When a flexible model is overfit, the variance increases. You can reduce this by using a simpler model, but the bias may increase due to the loss of flexibility in modeling the real underlying situation. A general approach to handling this trade-off is through crossvalidation.
 
 *Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
+
+### What is the Brier Score?
+> Although the ROC curve assesses how well the algorithm separates the groups, and the calibration plot checks whether the probabilities actually correspond to what they claim, the ideal would be to find a simple composite measure that combines these two aspects into a single number that we could then use to compare algorithms. Fortunately, meteorologists in the 1950s discovered exactly how to do this. If we were predicting a numerical quantity, such as tomorrow’s temperature at noon in a given place, accuracy would generally be summarized by the error — the difference between the observed temperature and the predicted one. The usual way to summarize error over a series of days is the mean squared error (MSE) — the average of the squared errors—analogous to the least-squares criterion we saw used in regression analysis. The trick for probabilities is to use the same mean-squared-error criterion we use when predicting a quantity, assigning the value 1 to a future observation of “rain” and the value 0 to “no rain.” The average of the squared errors is known as the Brier score, in honor of meteorologist Glenn Brier, who described the method in 1950.
+
+*The Art of Statistics: Learning from Data; David Spiegelhalter (2019)*
 
 ### What is a Population?
 > A population can be thought of as a physical group of individuals, but also as the provider of the probability distribution for a random observation drawn from that population. Populations can be summarized through parameters that mirror the statistical synthesis of the sample data.
@@ -501,6 +523,32 @@ title: Data Science Concepts
 
 ## Causal Inference
 
+### What is Causality?
+> Causality, in the statistical sense, means that when we make interventions, the chances of obtaining different results are systematically modified.
+It is difficult to establish causality statistically; for this, well-designed randomized studies are the best tool we have. Observational data may include background factors that influence the apparent relationships observed between an exposure and an outcome; these may be either observed confounders or hidden factors.
+
+> Our “statistical” idea of causality is not strictly deterministic. When we say that X causes Y, we are not trying to say that every time X occurs, Y will also occur. Or that Y only occurs if X occurs. We only mean that if we intervene and force X to occur, then Y will tend to occur more frequently. Thus, we can never say that X caused Y in a specific case, only that X increases the proportion of times that Y occurs.
+
+> First, to infer causality with real confidence, the ideal is to intervene and conduct experiments. Second, since this is a statistical or stochastic world, we need to intervene more than once to accumulate evidence.
+
+*The Art of Statistics: Learning from Data; David Spiegelhalter (2019)*
+
+### What is the purpose of a Clinical Experiment?
+> The purpose of a clinical experiment is to conduct an “honest test” that properly determines a causality and estimates the average effect of a new medical treatment, without introducing biases that may give us a mistaken idea of its effectiveness. An adequate medical experiment should ideally follow the following principles:
+> (1) Allocation of treatment: it is important to compare like with like, so the treatment and comparison groups need to be as similar as possible. The best way to ensure this is to randomly assign participants to be treated or not, and then observe what happens to them — this is known as a Randomized Controlled Trial (RCT).
+
+> (2) All individuals in the groups to which they were allocated must be counted: the individuals allocated to the “statin” group of the EPC were included in the final analysis even if they did not take their statins.
+
+> (3) If possible, people should not know which group they are in: in studies with statins, both the real medication pills and the placebo pills had the same appearance, so that the participants did not know the treatment they were receiving — a blind test. If possible, those evaluating the final results should not know which group of subjects they are examining.
+
+> (4) Evaluate all individuals: every effort should be made to follow all individuals, since people who drop out of the study may, for example, have done so due to the drug’s side effects.
+
+> (5) Do not rely on a single study: a single experiment with statins cannot tell us that the drug worked in a particular group in a particular place, but robust conclusions require multiple studies.
+
+> (6) Systematically review the evidence: when examining multiple experiments, it is important to include any study that has been conducted, and thus create what is known as a systematic review. The results can then be formally combined in a meta-analysis.
+
+*The Art of Statistics: Learning from Data; David Spiegelhalter (2019)*
+
 ### What are Counterfactuals?
 > Counterfactual reasoning means thinking about alternative possibilities for past or future events: what might happen/ have happened if…? In other words, you imagine the consequences of something that is contrary to what actually happened or will have happened ("counter to the facts").
 
@@ -528,6 +576,12 @@ title: Data Science Concepts
 > The first significant cause of bias is confounding. It happens when the treatment and the outcome share a common cause. For example, let’s say that the treatment is education, and the outcome is income. It is hard to know the causal effect of education on wages because both share a common cause: intelligence. So we could argue that more educated people earn more money simply because they are more intelligent, not because they have more education. We need to close all backdoor paths between the treatment and the outcome to identify the causal effect. If we do so, the only effect that will be left is the direct effect T->Y. In our example, if we control for intelligence, that is, we compare people with the same level of intellect but different levels of education, the difference in the outcome will be only due to the difference in schooling since intelligence will be the same for everyone. To fix confounding bias, we need to control all common causes of the treatment and the outcome.
 
 *[Causal Inference for the Brave and True; Matheus Facure Alves (2022)](https://matheusfacure.github.io/python-causality-handbook/landing-page.html)*
+
+> Any correlation between ice cream sales and drownings must be due to both being influenced by the weather. When an apparent association between results can be explained by a common factor influencing both, this common cause is known as a confounder, or confounding variable. The simplest technique to deal with confounding variables is to examine the apparent relationship within each level of the confounder. This is known as adjustment, or stratification. Thus, for example, we could explore the relationship between drownings and ice cream sales on days with more or less the same temperature. This is known as Simpson’s paradox, which occurs when the apparent direction of an association is reversed by a confounder, requiring a complete change in the apparent information from the data. Statisticians delight in finding real-life examples of this, each reinforcing the caution required in interpreting observational data. However, it shows the insight gained by dividing data according to factors that may help explain observed associations.
+
+> In a randomized study, there should be no need for adjustment for confounding variables, since random allocation in theory ensures that all other factors not being studied are balanced between the groups.
+
+*The Art of Statistics: Learning from Data; David Spiegelhalter (2019)*
 
 ### What is Selection Bias?
 > Often, selection bias arises when we control for more variables than we should. It might be the case that the treatment and the potential outcome are marginally independent but become dependent once we condition on a collider.
@@ -665,7 +719,7 @@ title: Data Science Concepts
 *[What Is Data Science?; Mike Loukides (2010)](https://www.oreilly.com/ideas/what-is-data-science)*
 
 ### What is Hadoop?
-> Hadoop goes far beyond a simple MapReduce implementation (of which there are several); it's the key component of a data platform. It incorporates HDFS, a distributed filesystem designed for the performance and reliability requirements of huge datasets; the HBase database; Hive, which lets developers explore Hadoop datasets using SQL-like queries; a high-level dataflow language called Pig; and other components. If anything can be called a one-stop information platform, Hadoop is it. Hadoop has been instrumental in enabling ''agile'' data analysis. [...] Hadoop (and particularly Elastic MapReduce) make it easy to build clusters that can perform computations on long datasets quickly. Hadoop is essentially a batch system, but Hadoop Online Prototype (HOP) is an experimental project that enables stream processing. Hadoop processes data as it arrives, and delivers intermediate results in (near) real-time. Near real-time data analysis enables features like trending topics on sites like Twitter. 
+> Hadoop goes far beyond a simple MapReduce implementation (of which there are several); it's the key component of a data platform. It incorporates HDFS, a distributed filesystem designed for the performance and reliability requirements of huge datasets; the HBase database; Hive, which lets developers explore Hadoop datasets using SQL-like queries; a high-level dataflow language called Pig; and other components. If anything can be called a one-stop information platform, Hadoop is it. Hadoop has been instrumental in enabling ”agile” data analysis. [...] Hadoop (and particularly Elastic MapReduce) make it easy to build clusters that can perform computations on long datasets quickly. Hadoop is essentially a batch system, but Hadoop Online Prototype (HOP) is an experimental project that enables stream processing. Hadoop processes data as it arrives, and delivers intermediate results in (near) real-time. Near real-time data analysis enables features like trending topics on sites like Twitter. 
 
 *[What Is Data Science?; Mike Loukides (2010)](https://www.oreilly.com/ideas/what-is-data-science)*
 
