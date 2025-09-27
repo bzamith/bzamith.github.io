@@ -71,6 +71,10 @@ title: Books
 
 > ![Practical Time Series Analysis](https://m.media-amazon.com/images/I/91vNT0C2lrL._SX50_.jpg)
 
+- Data Science on AWS - Chris Fregly & Antje Barth (*)
+
+> ![Data Science on AWS](https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1620719678i/55769407._SX50_.jpg)
+
 - Fundamentals of Probability and Statistics (from Portuguese, _Noções de Probabilidade e Estatística_) - Marcos Nascimento Magalhães (*)
 
 > ![Fundamentals of Probability and Statistics](https://m.media-amazon.com/images/I/31flBehUXkL._SX50_.jpg)
@@ -97,11 +101,7 @@ title: Books
 
 - Artificial Intelligence: A Modern Approach - Stuart Russel & Peter Norvig (*)
 
-> ![Artificial Intelligence](https://m.media-amazon.com/images/I/61nHC3YWZlL._SX50_.jpg) 
- 
-- Inspired: How to Create Tech Products Customers Love - Marty Cagan (*)
-
-> ![Inspired](https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1496058487i/35249663._SX50_.jpg) 
+> ![Artificial Intelligence](https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1464302055i/30297902._SX50_.jpg) 
 
 - Fundamentals of Natural Computing - Leandro Nunes de Castro (*)
 
@@ -111,17 +111,13 @@ title: Books
 
 > ![The Art of Computer Programming](https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1388242904i/112247._SX50_.jpg)
 
-- Data Science on AWS - Chris Fregly & Antje Barth (*)
+- Inspired: How to Create Tech Products Customers Love - Marty Cagan (*)
 
-> ![Data Science on AWS](https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1620719678i/55769407._SX50_.jpg)
+> ![Inspired](https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1496058487i/35249663._SX50_.jpg) 
 
 - How to Win Friends and Influentiate People - Dale Carnegie (*)
 
 > ![How to Win Friends and Influentiate People](https://m.media-amazon.com/images/I/71vK0WVQ4rL._SX50_.jpg)
-
-- Experimentation Works: The Surprising Power of Business Experiments - Stefan H. Thomke (*)
-
-> ![Experimentation Works](https://m.media-amazon.com/images/I/71Z-58DIzdL._SX50_.jpg)
 
 - Experimentation Works: The Surprising Power of Business Experiments - Stefan H. Thomke (*)
 
