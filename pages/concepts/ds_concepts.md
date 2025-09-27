@@ -209,7 +209,19 @@ title: Data Science Concepts
 
 *Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
 
-## What is the Pearson Correlation Coefficient?
+### What is the Law of Large Numbers?
+> The variability of the observed proportion decreases as the sample size increases—this is the law of large numbers.
+
+*The Art of Statistics: Learning from Data; David Spiegelhalter (2019)*
+
+### What is the Central Limit Theorem?
+> [...] But it is not only the binomial distribution that tends toward a normal curve as the sample size increases — it is a remarkable fact that, whatever the shape of the population distribution from which each of the original measurements is drawn, for large sample sizes their mean can be regarded as having been drawn from a normal curve. This will have a mean equal to the mean of the original distribution, and a standard deviation in a simple relation to the standard deviation of the original population distribution.
+
+> The central limit theorem implies that sample means and other statistical summaries will have an approximately normal distribution, for large samples.
+
+*The Art of Statistics: Learning from Data; David Spiegelhalter (2019)*
+
+### What is the Pearson Correlation Coefficient?
 > It is convenient to use a single number to summarize a consistent relationship of increase or decrease between pairs of numbers shown in a scatter plot. The number usually chosen for this is the Pearson correlation coefficient. A Pearson correlation lies in the interval between –1 and 1 and expresses how close the points are to a straight line. A correlation of 1 occurs if all points lie on an ascending straight line, while a correlation of –1 is observed when all points lie on a descending straight line. A correlation close to 0 may have to do with a random scatter of points, or any other pattern in which there is no systematic tendency upward or downward.
 
 > An alternative measure is Spearman’s rank correlation, which depends only on the ordering of the data, and not on their specific values. Thus, the coefficient can be close to 1 or –1 if the points are near a line that rises or falls consistently, even if it is not a straight line.
@@ -332,6 +344,12 @@ title: Data Science Concepts
 
 *Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
 
+> [...] have an idea of how much our estimate varies. This process is known as bootstrapping the data — the magical idea of bootstrapping is reflected in this ability to learn about variability in an estimate without having to make any assumptions about the shape of the population distribution. If we repeat this resampling, say, a thousand times, we will obtain a thousand possible estimates of the mean. These are known as sampling distributions of estimates, since they reflect the variability in the estimates that arise from repeated samplings of the data. The distributions of estimates based on resampled data are almost symmetric around the mean of the original data, almost independently of the shape of the original data distribution. The second important characteristic is that the bootstrap distributions narrow as the sample size increases, reflected in the 95% uncertainty intervals becoming ever narrower. Bootstrapping provides an intuitive way, with heavy use of the computer, to assess the uncertainty in our estimates, without needing to make strong assumptions or use probability theory. 
+
+> Bootstrapping a sample consists of creating new datasets of the same size by resampling the original data, with replacement. Sample statistics calculated from bootstrap resamplings tend toward a normal distribution for large datasets, regardless of the shape of the original data distribution. Uncertainty intervals based on bootstrapping take advantage of modern computing power and do not require assumptions about the mathematical form of the population nor complex probability theory.
+
+*The Art of Statistics: Learning from Data; David Spiegelhalter (2019)*
+
 ### What is Bagging?
 > With classification and regression trees (also called decision trees), running multiple trees on bootstrap samples and then averaging their predictions (or, with classification, taking a majority vote) generally performs better than using a single tree. This process is called bagging (short for “bootstrap aggregating”)
 
@@ -370,6 +388,15 @@ title: Data Science Concepts
 
 *Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
 
+> A confidence interval is the range of population parameters for which our observed statistic is a plausible consequence. A simple practical rule is that if you are estimating the percentage of people who prefer, say, coffee instead of tea, from a random sample of the population, then your margin of error is roughly plus or minus 100 divided by the square root of the sample size. Thus, for a survey with 1,000 people (the industry standard), the margin of error is generally mentioned as ±3%. So if 400 said they prefer coffee and 600 said they prefer tea, then it is possible to estimate roughly that the percentage preferring coffee in the population is about 40% ± 3%, or between 37% and 43%. A 95% confidence interval is the result of a procedure that, if anchored in correct assumptions, contains the true value of the parameter 95% of the time. One cannot say that a specific interval has a 95% probability of containing the true value, but only that the procedure yields such intervals with that frequency.
+
+*The Art of Statistics: Learning from Data; David Spiegelhalter (2019)*
+
+### What is the Null Hypothesis?
+> The null hypothesis is what we are willing to assume happens until proven otherwise. It is relentlessly negative, denying all progress and change. The null hypothesis is never proved or established, but it can be refuted in the course of experimentation. One can say that every experiment exists only to give the facts a chance to refute the null hypothesis. A defendant can be considered guilty, but no one is ever considered innocent, there is simply no proof of guilt. In the same way, we may reject the null hypothesis, but if we do not have sufficient evidence to do so, this does not mean we can accept it as true. It is only a working premise until something better appears.
+
+*The Art of Statistics: Learning from Data; David Spiegelhalter (2019)*
+
 ### What is p-Value?
 > Like with confidence intervals (and most frequentist statistics, as a matter of fact), the true definition of p-values can be very confusing. So, to not take any risks, I’ll copy the definition from Wikipedia: “the p-value is the probability of obtaining test results at least as extreme as the results actually observed during the test, assuming that the null hypothesis is correct”. To put it more succinctly, the p-value is the probability of seeing such data, given that the null hypothesis is true. It measures how unlikely it is that you are seeing a measurement if the null hypothesis is true. Naturally, this often gets confused with the probability of the null hypothesis being true.
 
@@ -379,10 +406,26 @@ title: Data Science Concepts
 
 *Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
 
+> A p-value is the probability of obtaining a result at least as extreme as the one we obtained, if the null hypothesis (and all other modeling assumptions) were really true.
+
+*The Art of Statistics: Learning from Data; David Spiegelhalter (2019)*
+
 ### What is Alpha in the context of p-Value?
 > Statisticians frown on the practice of leaving it to the researcher’s discretion to determine whether a result is “too unusual” to happen by chance. Rather, a threshold is specified in advance, as in “more extreme than 5% of the chance (null hypothesis)results”; this threshold is known as alpha. Typical alpha levels are 5% and 1%. Any chosen level is an arbitrary decision—there is nothing about the process that will guarantee correct decisions x% of the time. This is because the probability question being answered is not “What is the probability that this happened by chance?” but rather “Given a chance model, what is the probability of a result this extreme?” We then deduce backward about the appropriateness of the chance model, but that judgment does not carry a probability. This point has been the subject of much confusion.
  
 *Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
+
+### What is Statistical Significance?
+> The idea of statistical significance is straightforward: if a p-value is sufficiently small, then we say the results are statistically significant.
+
+> To perform a statistical significance test, follow these steps: (1) Define a question in terms of a null hypothesis we want to test; (2) Generate a sampling distribution of this test statistic, where the null hypothesis is true; (3) erify whether the observed statistic lies in one of the tails of this distribution and summarize this observation through a p-value: the probability, if the null hypothesis is true, of observing such an extreme statistic; (4) It is necessary to carefully define ‘extreme’—if, for instance, very large values, both positive and negative, of the test statistic are considered incompatible with the null hypothesis, then the p-value should account for that; (5) Declare the result with statistical significance if the p-value lies below some critical threshold.
+
+*The Art of Statistics: Learning from Data; David Spiegelhalter (2019)*
+
+### What is the Student's t-test?
+> The t-value, also known as the t-test, is an important focus of attention, since it is the link that tells us whether the association between an explanatory variable and the response has statistical significance. The t-value is simply the estimate divided by the standard error, and so it can be interpreted as the distance of the estimate from 0, measured in standard errors. Given a t-value and the sample size, the software can provide an exact p-value; for large samples, t-values greater than 2 or less than –2 correspond to p < 0.05, although these thresholds are higher for smaller sample sizes.
+
+*The Art of Statistics: Learning from Data; David Spiegelhalter (2019)*
 
 ### What is z-Score?
 > The result of standardizing an individual data point. Standardize means subtracting the mean and dividing by the standard deviation.
@@ -409,8 +452,12 @@ title: Data Science Concepts
 *[Chi-Square Test [Simply explained]: DATAtab (2022)](https://www.youtube.com/watch?v=rpKzq64GA9Y)*
 
 > Web testing often goes beyond A/B testing and tests multiple treatments at once. The chi-square test is used with count data to test how well it fits some expected distribution. The most common use of the chi-square statistic in statistical practice is with r × c contingency tables, to assess whether the null hypothesis of independence among variables is reasonable.
- 
+
 *Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
+ 
+> The chi-square statistic is a general measure of the dissimilarity between the observed and expected counts.
+
+*The Art of Statistics: Learning from Data; David Spiegelhalter (2019)*
 
 ### What is the difference between a chi-square test and a correlation?
 > Both correlations and chi-square tests can test for relationships between two variables. However, a correlation is used when you have two quantitative variables and a chi-square test of independence is used when you have two categorical variables.
