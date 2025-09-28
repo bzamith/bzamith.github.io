@@ -3,20 +3,23 @@ layout: page
 title: Books
 ---
 
-### Books that I am Currently Reading
-- The Art of Statistics: Learning from Data - David Spiegelhalter (*)
-
-> ![The Art of Statistics: Learning from Data](https://m.media-amazon.com/images/I/71YPjusCEWL._SX50_.jpg)
-
+### Books I am Currently Reading
 - The Phoenix Project - Gene Kim, Kevin Behr, George Spafford (*)
 
 > ![The Phoenix Project](https://m.media-amazon.com/images/I/71MCzRvsraL._SX50_.jpg)
 
+- AI Engineering - Chip Huyen (*)
+
+> ![AI Engineering](https://m.media-amazon.com/images/I/815KH9GjFTL._SX50_.jpg)
+
+### Books I’ve Read and Recommend
 - How to Lie with Statistics - Darrell Huff
 
 > ![How to Lie with Statistics](https://m.media-amazon.com/images/I/71nNZWg65DL._SX50_.jpg)
 
-### Books that I Read and Recommend
+- The Art of Statistics: Learning from Data - David Spiegelhalter (*)
+
+> ![The Art of Statistics: Learning from Data](https://m.media-amazon.com/images/I/71YPjusCEWL._SX50_.jpg)
 
 - Practical Statistics for Data Scientists - Peter Bruce, Andrew Bruce & Peter Gedeck (*)
 
@@ -58,10 +61,6 @@ title: Books
 - Generative AI on AWS - Chris Fregly (*)
 
 > ![Generative AI on AWS](https://m.media-amazon.com/images/I/81-Nao5OE0L._SX50_.jpg)
-
-- AI Engineering - Chip Huyen (*)
-
-> ![AI Engineering](https://m.media-amazon.com/images/I/815KH9GjFTL._SX50_.jpg)
 
 - Practical Recommender Systems - Kim Falk (*)
 
@@ -127,6 +126,10 @@ title: Books
 
 > ![Storytelling with Data](https://m.media-amazon.com/images/I/71EN1l+uQKL._SX50_.jpg)
 
+- Range: Why Generalists Triumph in a Specialized World - David J. Epstein
+
+> ![Range](https://m.media-amazon.com/images/I/71tET8K-+yL._SX50_.jpg)
+
 ### Wish List
 
 - 99 Bottles of OOP - Sandi Metz
@@ -140,5 +143,29 @@ title: Books
 - Essential Math for AI - Hala Nelson
 
 > ![Essential Math for AI](https://m.media-amazon.com/images/I/81EiZSd74ZL._SX50_.jpg)
+
+- Machine Learning Design Patterns - Valliappa Lakshmanan
+
+> ![Machine Learning Design Patterns](https://m.media-amazon.com/images/I/81Gw--pXkzL._SX50_.jpg)
+
+- Crucial Conversations - Joseph Grenny
+
+> ![Crucial Conversations](https://m.media-amazon.com/images/I/71oJG4ynmaL._SX50_.jpg)
+
+- Algorithms of Oppression - Safiya Umoja Noble
+
+> ![Algorithms of Oppression](https://m.media-amazon.com/images/I/7162Hl2w0VL._SX50_.jpg)
+
+- Weapons of Math Destruction - Cathy O'Neil
+
+> ![Weapons of Math Destruction](https://m.media-amazon.com/images/I/71UCr1GIFrL._SX50_.jpg)
+
+- It's Okay to Be the Boss - Bruce Tulgan
+
+> ![Its Okay to Be the Boss](https://m.media-amazon.com/images/I/51pvLJRushL._SX50_.jpg)
+
+- The Leadership Pipeline - Ram Charan
+
+> ![The Leadership Pipeline](https://m.media-amazon.com/images/I/71NADEYWIHL._SX50_.jpg)
 
 (*) Books that I own
