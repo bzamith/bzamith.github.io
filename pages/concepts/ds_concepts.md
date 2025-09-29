@@ -12,6 +12,8 @@ title: Data Science Concepts
 * [Causal Inference](#causal-inference)
 * [Feature Engineering](#feature-engineering)
 * [Machine Learning](#machine-learning)
+* [Time Series](#time-series)
+* [Generative AI](#generative-ai)
 * [Miscellaneous](#miscellaneous)
 
 ## Science and Data
@@ -33,18 +35,15 @@ title: Data Science Concepts
 
 > Data science isn't just about the existence of data, or making guesses about what that data might mean; it's about testing hypotheses and making sure that the conclusions you're drawing from the data are valid. 
 
+> What differentiates data science from statistics is that data sicence is a holistic approach. We're increasingly finding data in the wild, and data scientists are involved with gathering data, massaging it into a tractable form, making it tell its story, and presenting that story to others.
+
 *[What Is Data Science?; Mike Loukides (2010)](https://www.oreilly.com/ideas/what-is-data-science)*
 
 > Data Science is a mix of traditional data analysis techniques with advanced algorithms for handling a considerable measure of games. It has likewise approached finding new sorts of data.
 
 *Data Science From Scratch: How to Become a Data Scientist; David Park (2019)*
 
-### What is the difference between Data Science and Statistics?
-> What differentiates data science from statistics is that data sicence is a holistic approach. We're increasingly finding data in the wild, and data scientists are involved with gathering data, massaging it into a tractable form, making it tell its story, and presenting that story to others.
-
-*[What Is Data Science?; Mike Loukides (2010)](https://www.oreilly.com/ideas/what-is-data-science)*
-
-### What is a Data Scientist?
+### What does a Data Scientist do?
 > A data researcher is somebody who decodes large measures of data and extracts importance to support an association or organization to improve its activities. They utilize various tools, philosophies, insights, systems, calculations, etc. to examine data additionally. [...] The job of the data researcher fundamentally is to the pursuit and perused the data, preparing and speaking to it and bringing a feeling of the data for down to earth use. [Besides that,] in request to check the present status of an organization or where it stands, a Business [Intelligent] Analyst utilizes data and searches for examples, business patterns, connections and concocts a representation and report. [...] A Machine Learning Engineer works with various calculations identified with machine learning like grouping, choice tress, characterization, arbitrary backwoods, etc. 
 
 *Data Science From Scratch: How to Become a Data Scientist; David Park (2019)*
@@ -56,8 +55,55 @@ title: Data Science Concepts
 
 ## Key Terms and Areas
 
+### What is Artificial Intelligence?
+> The study of making computers do things that the human needs intelligence to do. [...] Classes of problems requiring intelligence include inference based on knowledge, reasoning with uncertain or incomplete information, various forms of perception and learning, and applications to problems such as control, prediction, classification and optimization
+
+*Fundamentals of the New Artificial Intelligence; Toshinori Munakata (2008)*
+
+> Artificial Intelligence involves using methods based on the intelligent behavior of humans and other animals to solve complex problems.
+
+*Artificial Intelligence: Illuminated; Ben Coppin (2004)*
+
+### What is Machine Learning?
+> Machine learning can be understood as and application of AI. (It) was born from pattern recognition and the theory that computers can learn without being programmed to perform specific tasks. This includes techniques such as Bayesian methods; neural networks; inductive logic programming; explanation-based, natural language processing; decision tree; and reinforcement learning. [...] Systems that have hard-coded knowledge bases will typically experience difficulties in new environments. Certain difficulties can be overcome by a system that can acquire its own knowledge. This capability is known as machine learning.
+
+*Machine Learning and AI for Healthcare; Arjun Panesar (2019)*
+
 ### What is Data Analysis?
 > Data analysis is an art [apart from Data Science]. It is not something yet that we can teach to a computer. Data analysts have many tools at their disposal, from linear regression to classification trees and even deep learning, and these tools have all been carefully taught to computers. But ultimately, a data analyst must find a way to assemble all of the tools and apply them to data to answer a relevant question—a question of interest to people. [...] While a study includes developing and executing a plan for collecting data, a data analysis presumes the data have already been collected. More specifically, a study includes the development of a hypothesis or question, the designing of the data collection process (or study protocol), the collection of the data, and the analysis and interpretation of the data. Because a data analysis presumes that the data have already been collected, it includes development and refinement of a question and the process of analyzing and interpreting the data.
+
+*[The Art of Data Science; Roger D. Peng and Elizabeth Matsui (2017)](https://bookdown.org/rdpeng/artofdatascience/)*
+
+### What is Inference?
+> Inference is one of many possible goals in data analysis. [...] In general, the goal of inference is to be able to make a statement about something that is not observed, and ideally to be able to characterize any uncertainty you have about that statement. Inference is difficult because of the difference between what you are able to observe and what you ultimately want to know. [..] The language of inference can change depending on the application, but most commonly, we refer to the things we cannot observe (but want to know about) as the population or as features of the population and the data that we observe as the sample. The goal is to use the sample to somehow make a statement about the population.
+
+*[The Art of Data Science; Roger D. Peng and Elizabeth Matsui (2017)](https://bookdown.org/rdpeng/artofdatascience/)*
+
+### What is Knowledge Discovery from Data (KDD)?
+> It is an iterative sequence of the following steps: 1. Data cleaning (to remove noise and inconsistent data); 2. Data integration (where multiple data sources may be combined); 3. Data selection (where data relevant to the analysis task are retrieved from the database); 4. Data transformation (where data are transformed and consolidated into forms of appropriate for mining by performing summary or aggregation operations); 5. Data mining (an essential process where intelligent methods are applied to extract data patterns); 6. Pattern evaluation (to identify the truly interesting patterns representing knowledge based on interestingness measures); 7. Knowledge presentation (where visualization and knowledge representation techniques are used to present mined knowledge to users).
+
+*Data Mining; Jiawei Hang, Micheline Kamber and Jian Pei (2012)*
+
+### What is Feature Engineering?
+> Feature engineering is the process of using domain knowledge to extract features from raw data via data mining techniques. These features can be used to strengthen the performance of machine learning models. Feature engineering can be considered as applied machine learning itself.
+
+*[The “Generic” Data Science Life-Cycle; Sivakar Siva (2020)](https://towardsdatascience.com/stoend-to-end-data-science-life-cycle-6387523b5afc)*
+
+> Outlier detection, one hot encoding, handling missing data are few basic examples of Feature Engineering.
+
+*[What is feature engineering; CodeBasics (2020)](https://www.youtube.com/watch?v=pYVScuY-GPk)*
+
+### What is a Statistical Model?
+> In a very general sense, a model is something we construct to help us understand the real world. [...]  The process of building a model involves imposing a specific structure on the data and creating a summary of the data. [...] A statistical model serves two key purposes in a data analysis, which are to provide a quantitative summary of your data and to impose a specific structure on the population from which the data were sampled. [...] At its core, a statistical model provides a description of how the world works and how the data were generated. The model is essentially an expectation of the relationships between various factors in the real world and in your dataset. What makes a model a statistical model is that it allows for some randomness in generating the data.
+
+*[The Art of Data Science; Roger D. Peng and Elizabeth Matsui (2017)](https://bookdown.org/rdpeng/artofdatascience/)*
+
+> Statistical model, which is a formal representation of the relationships between variables, that we can use to provide the desired explanations or predictions.
+
+*The Art of Statistics: Learning from Data; David Spiegelhalter (2019)*
+
+### What is Statistic?
+> The first key element of a statistical model is data reduction. The basic idea is you want to take the original set of numbers consisting of your dataset and transform them into a smaller set of numbers. [...] The process of data reduction typically ends up with a statistic. Generally speaking, a statistic is any summary of the data. The sample mean, or average, is a statistic. So is the median, the standard deviation, the maximum, the minimum, and the range. Some statistics are more or less useful than others but they are all summaries of the data.
 
 *[The Art of Data Science; Roger D. Peng and Elizabeth Matsui (2017)](https://bookdown.org/rdpeng/artofdatascience/)*
 
@@ -89,77 +135,44 @@ title: Data Science Concepts
 
 *Bioinformatics Data Skills; Vince Buffalo (2015)*
 
-### What is Artificial Intelligence?
-> The study of making computers do things that the human needs intelligence to do. [...] Classes of problems requiring intelligence include inference based on knowledge, reasoning with uncertain or incomplete information, various forms of perception and learning, and applications to problems such as control, prediction, classification and optimization
-
-*Fundamentals of the New Artificial Intelligence; Toshinori Munakata (2008)*
-
-> Artificial Intelligence involves using methods based on the intelligent behavior of humans and other animals to solve complex problems.
-
-*Artificial Intelligence: Illuminated; Ben Coppin (2004)*
-
-### What is Machine Learning?
-> Machine learning can be understood as and application of AI. (It) was born from pattern recognition and the theory that computers can learn without being programmed to perform specific tasks. This includes techniques such as Bayesian methods; neural networks; inductive logic programming; explanation-based, natural language processing; decision tree; and reinforcement learning. [...] Systems that have hard-coded knowledge bases will typically experience difficulties in new environments. Certain difficulties can be overcome by a system that can acquire its own knowledge. This capability is known as machine learning.
-
-*Machine Learning and AI for Healthcare; Arjun Panesar (2019)*
-
-### What is Feature Engineering?
-> Feature engineering is the process of using domain knowledge to extract features from raw data via data mining techniques. These features can be used to strengthen the performance of machine learning models. Feature engineering can be considered as applied machine learning itself.
-
-*[The “Generic” Data Science Life-Cycle; Sivakar Siva (2020)](https://towardsdatascience.com/stoend-to-end-data-science-life-cycle-6387523b5afc)*
-
-> Outlier detection, one hot encoding, handling missing data are few basic examples of Feature Engineering.
-
-*[What is feature engineering; CodeBasics (2020)](https://www.youtube.com/watch?v=pYVScuY-GPk)*
-
-### What is Information Science? 
-> It is the field of science where unique logical methodologies and approaches are consolidated to consider data innovation. In layman language, it is technically the science for examining information. 
-
-*Data Science From Scratch: How to Become a Data Scientist; David Park (2019)*
-
-### What is a Model?
-> In a very general sense, a model is something we construct to help us understand the real world. [...]  The process of building a model involves imposing a specific structure on the data and creating a summary of the data. [...] A statistical model serves two key purposes in a data analysis, which are to provide a quantitative summary of your data and to impose a specific structure on the population from which the data were sampled. [...] At its core, a statistical model provides a description of how the world works and how the data were generated. The model is essentially an expectation of the relationships between various factors in the real world and in your dataset. What makes a model a statistical model is that it allows for some randomness in generating the data.
-
-*[The Art of Data Science; Roger D. Peng and Elizabeth Matsui (2017)](https://bookdown.org/rdpeng/artofdatascience/)*
-
-> Statistical model, which is a formal representation of the relationships between variables, that we can use to provide the desired explanations or predictions.
-
-*The Art of Statistics: Learning from Data; David Spiegelhalter (2019)*
-
-### What is Statistic?
-> The first key element of a statistical model is data reduction. The basic idea is you want to take the original set of numbers consisting of your dataset and transform them into a smaller set of numbers. [...] The process of data reduction typically ends up with a statistic. Generally speaking, a statistic is any summary of the data. The sample mean, or average, is a statistic. So is the median, the standard deviation, the maximum, the minimum, and the range. Some statistics are more or less useful than others but they are all summaries of the data.
-
-*[The Art of Data Science; Roger D. Peng and Elizabeth Matsui (2017)](https://bookdown.org/rdpeng/artofdatascience/)*
-
-### What is Knowledge Discovery from Data (KDD)?
-> It is an iterative sequence of the following steps: 1. Data cleaning (to remove noise and inconsistent data); 2. Data integration (where multiple data sources may be combined); 3. Data selection (where data relevant to the analysis task are retrieved from the database); 4. Data transformation (where data are transformed and consolidated into forms of appropriate for mining by performing summary or aggregation operations); 5. Data mining (an essential process where intelligent methods are applied to extract data patterns); 6. Pattern evaluation (to identify the truly interesting patterns representing knowledge based on interestingness measures); 7. Knowledge presentation (where visualization and knowledge representation techniques are used to present mined knowledge to users).
-
-*Data Mining; Jiawei Hang, Micheline Kamber and Jian Pei (2012)*
-
 ## Data Storage
-
-### How to Store Data in Data Science scenario?
-> Relational databases are designed for consistency, to support complex transactions that can easily be rolled back if any one of a complex set of operations fails. While rock-solid consistency is crucial to many applications, it's not really necessary for the kind of analysis we're discussing here. [...] Precision has an allure, but in most data-driven applications outside of finance, that allure is deceptive. Most data analysis is comparative [...]. To store huge datasets effectively, we've seen a new breed of databases appear. These are frequently called NoSQL databases, or Non-Relational databases [...]. They group together fundamentally dissimilar products by telling you what they aren't. Many of these databases are [..] designed to be distributed across many nodes, to provide ”eventual consistency” but not absolute consistency, and to have very flexible schema.
-
-*[What Is Data Science?; Mike Loukides (2010)](https://www.oreilly.com/ideas/what-is-data-science)*
-
-### What are the challenges of the modern Data Warehouse?
-> Today your business faces an unprecedented sets of challenges. Bigger data volumes. New data types. A deluge of machine data from the Internet of Things. Digital business models that require real-time performance all the time drive the need for zero-latency reporting. Data-driven businesses need more complex, more extensive, and yet paradoxically faster and more easily accessed analytics. To suceed, you need a deeper understanding of the Why bnehind what your customers, your competitors, and the market as a whole is up to. These are the challenges of the modern Data Warehouse. And to meet these challenges, you need something more than just a database. 
-
-*The Modern Data Warehouse: A New Approach for a New Era; Tom Traubitz (2018)*
 
 ### What is Data Serialization?
 > The process of converting a data structure or object state into a format that can be stored or transmitted and reconstructured later. There are many, many data serialization formats. When considering a format to work with, you might want to consider different characteristics such as human readability, access patterns, and whether it's based on text or binary, which influences the size of its files. Some examples are JSON, CSV and Parquet.
 
 *Designing Machine Learning Systems; Chip Huyen (2021)*
 
+### How do we Store Data for Analytics?
+> Relational databases are designed for consistency, to support complex transactions that can easily be rolled back if any one of a complex set of operations fails. While rock-solid consistency is crucial to many applications, it's not really necessary for the kind of analysis we're discussing here. [...] Precision has an allure, but in most data-driven applications outside of finance, that allure is deceptive. Most data analysis is comparative [...]. To store huge datasets effectively, we've seen a new breed of databases appear. These are frequently called NoSQL databases, or Non-Relational databases [...]. They group together fundamentally dissimilar products by telling you what they aren't. Many of these databases are [..] designed to be distributed across many nodes, to provide ”eventual consistency” but not absolute consistency, and to have very flexible schema.
+
+*[What Is Data Science?; Mike Loukides (2010)](https://www.oreilly.com/ideas/what-is-data-science)*
+
+### What are the Challenges of the modern Data Warehouse?
+> Today your business faces an unprecedented sets of challenges. Bigger data volumes. New data types. A deluge of machine data from the Internet of Things. Digital business models that require real-time performance all the time drive the need for zero-latency reporting. Data-driven businesses need more complex, more extensive, and yet paradoxically faster and more easily accessed analytics. To suceed, you need a deeper understanding of the Why bnehind what your customers, your competitors, and the market as a whole is up to. These are the challenges of the modern Data Warehouse. And to meet these challenges, you need something more than just a database. 
+
+*The Modern Data Warehouse: A New Approach for a New Era; Tom Traubitz (2018)*
+
 ## Statistics and Data Analysis
 
-### What are the different Types of Data?
+### What are the different types of data?
 > Nominal, Ordinal, Interval and Ratio.
 
-### What are the basic types of structured data?
 > There are two basic types of structured data: numeric and categorical. Numeric data comes in two forms: continuous, such as wind speed or time duration, and discrete, such as the count of the occurrence of an event. Categorical data takes only a fixed set of values, such as a type of TV screen (plasma, LCD, LED, etc.) or a state name (Alabama, Alaska, etc.). Binary data is an important special case of categorical data that takes on only one of two values, such as 0/1, yes/no, or true/false. Another useful type of categorical data is ordinal data in which the categories are ordered; an example of this is a numerical rating (1, 2, 3, 4, or 5).
+
+*Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
+
+### What is a Population?
+> A population can be thought of as a physical group of individuals, but also as the provider of the probability distribution for a random observation drawn from that population. Populations can be summarized through parameters that mirror the statistical synthesis of the sample data.
+
+*The Art of Statistics: Learning from Data; David Spiegelhalter (2019)*
+
+### What are the types of Population?
+> There are three types of populations from which a sample can be drawn: (i) Literal population: This is an identifiable group, such as when we randomly select a person to conduct a survey. Or it can be a group of individuals that can be measured, and, although we do not randomly pick one of them, we have volunteer data; (ii) Virtual population: We usually take measurements using some instrument, for example by measuring someone’s blood pressure or air pollution. We know it is always possible to take new measurements and obtain slightly different responses. The closeness of multiple readings depends on the accuracy of the instrument and the stability of the circumstances — we could think of this as extracting observations from a virtual population of all the measurements that could be taken if we had enough time; (iii) Metaphoric population: When there is no larger population. This is an unusual concept. Here we act as if the data were randomly drawn from some population, when it is clear that this is not the case—for example, the children who undergo heart surgery: we did no sampling, we have all the data, and there is nothing more to collect. Think of the number of murders that occur each year, the exam results for a specific class, or the data on all the countries in the world—none of these can be considered a sample from a real population.
+
+*The Art of Statistics: Learning from Data; David Spiegelhalter (2019)*
+
+### What is Random Sampling?
+> Random sampling is a process in which each available member of the population being sampled has an equal chance of being chosen for the sample at each draw. The sample that results is called a simple random sample. Sampling can be done with replacement, in which observations are put back in the population after each draw for possible future reselection. Or it can be done without replacement, in which case observations, once selected, are unavailable for future draws. Data quality often matters more than data quantity when making an estimate or a model based on a sample. Data quality in data science involves completeness, consistency of format, cleanliness, and accuracy of individual data points. Statistics adds the notion of representativeness.
 
 *Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
 
@@ -202,24 +215,37 @@ title: Data Science Concepts
 
 > A frequency histogram plots frequency counts on the y-axis and variable values on the x-axis; it gives a sense of the distribution of the data at a glance. A frequency table is a tabular version of the frequency counts found in a histogram. A boxplot - with the top and bottom of the box at the 75th and 25th percentiles, respectively - also gives a quick sense of the distribution of the data; it is often used in side-by-side displays to compare distributions. A density plot is a smoothed version of a histogram; it requires a functions to estimate a plot based on the data (multiple estimates are possible, of course).
 
-*Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
-
-### What is the difference between Frequency Tables and Percentiles?
 > Both frequency tables and percentiles summarize the data by creating bins. In general, quartiles and deciles will have the same count in each bin (equal-count bins), but the bin sizes will be different. The frequency table, by contrast, will have different counts in the bins (equal-size bins), and the bin sizes will be the same.
 
 *Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
 
-### What is the Law of Large Numbers?
-> The variability of the observed proportion decreases as the sample size increases—this is the law of large numbers.
+### What are the Normal and Gamma Distributions?
+> [Normal model] says that the randomness in a set of data can be explained by the Normal distribution, or a bell-shaped curve. The Normal distribution is fully specified by two parameters — the mean and the standard deviation. [The Gamma distribution] has the feature that it only allows positive values, so it eliminates the problem we had with negative values with the Normal distribution.
 
-*The Art of Statistics: Learning from Data; David Spiegelhalter (2019)*
+*[The Art of Data Science; Roger D. Peng and Elizabeth Matsui (2017)](https://bookdown.org/rdpeng/artofdatascience/)*
 
-### What is the Central Limit Theorem?
-> [...] But it is not only the binomial distribution that tends toward a normal curve as the sample size increases — it is a remarkable fact that, whatever the shape of the population distribution from which each of the original measurements is drawn, for large sample sizes their mean can be regarded as having been drawn from a normal curve. This will have a mean equal to the mean of the original distribution, and a standard deviation in a simple relation to the standard deviation of the original population distribution.
+> The Normal distribution is also referred to as Gaussian distribution. 
 
-> The central limit theorem implies that sample means and other statistical summaries will have an approximately normal distribution, for large samples.
+*Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
 
-*The Art of Statistics: Learning from Data; David Spiegelhalter (2019)*
+### What is the t-Distribution?
+> The t-distribution is actually a family of distributions resembling the normal distribution but with thicker tails. The t-distribution is widely used as a reference basis for the distribution of sample means, differences between two sample means, regression parameters, and more.
+
+*Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
+
+### What is z-Score?
+> The result of standardizing an individual data point. Standardize means subtracting the mean and dividing by the standard deviation.
+
+> A standard normal distribution is one in which the units on the x-axis are expressed in terms of standard deviations away from the mean. To compare data to a standard normal distribution, you subtract the mean and then divide by the standard deviation; this is also called normalization or standardization. The transformed value is termed a z-score, and the normal distribution is sometimes called the z-distribution.
+
+> Converting data to z-scores (i.e., standardizing or normalizing the data) does not make the data normally distributed. It just puts the data on the same scale as the standard normal distribution, often for comparison purposes. 
+
+*Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
+
+### What is a QQ-Plot?
+> A QQ-Plot is used to visually determine how close a sample is to a specified distribution - in this case, the normal distribution. The QQ-Plot orders the z-scores from low to high and plots each value's z-score on the y-axis; the x-asis is the corresponding quantile of a normal distribution for the value's rank. Since the data is normalized, the units correspond to the number of standard deviations away from the mean. If the points roughly fall on the diagonal line, then the sample distribution can be considered close to normal.
+
+*Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
 
 ### What is the Pearson Correlation Coefficient?
 > It is convenient to use a single number to summarize a consistent relationship of increase or decrease between pairs of numbers shown in a scatter plot. The number usually chosen for this is the Pearson correlation coefficient. A Pearson correlation lies in the interval between –1 and 1 and expresses how close the points are to a straight line. A correlation of 1 occurs if all points lie on an ascending straight line, while a correlation of –1 is observed when all points lie on a descending straight line. A correlation close to 0 may have to do with a random scatter of points, or any other pattern in which there is no systematic tendency upward or downward.
@@ -227,11 +253,6 @@ title: Data Science Concepts
 > An alternative measure is Spearman’s rank correlation, which depends only on the ordering of the data, and not on their specific values. Thus, the coefficient can be close to 1 or –1 if the points are near a line that rises or falls consistently, even if it is not a straight line.
 
 *The Art of Statistics: Learning from Data; David Spiegelhalter (2019)*
-
-### What are the Key Terms for Exploring Binary and Categorical Data?
-> Mode, Expected Value (when the categories can be associated with a numeric value, this gives an average value based on a category's probability of occurrence), Bar Charts and Pie Charts.
-
-*Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
 
 ### What are the Key Terms for Correlation?
 > Correlation Coefficient (measures the extent to which numeric variables are associated with one another), Correlation Matrix and Scatterplot.
@@ -253,32 +274,115 @@ title: Data Science Concepts
 
 *Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
 
-### What are the Normal Distribution and the Gamma Distribution?
-> [Normal model] says that the randomness in a set of data can be explained by the Normal distribution, or a bell-shaped curve. The Normal distribution is fully specified by two parameters — the mean and the standard deviation. [The Gamma distribution] has the feature that it only allows positive values, so it eliminates the problem we had with negative values with the Normal distribution.
-
-*[The Art of Data Science; Roger D. Peng and Elizabeth Matsui (2017)](https://bookdown.org/rdpeng/artofdatascience/)*
-
-> The Normal distribution is also referred to as Gaussian distribution. 
+### What are the Key Terms for Exploring Binary and Categorical Data?
+> Mode, Expected Value (when the categories can be associated with a numeric value, this gives an average value based on a category's probability of occurrence), Bar Charts and Pie Charts.
 
 *Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
 
-### What is Inference?
-> Inference is one of many possible goals in data analysis. [...] In general, the goal of inference is to be able to make a statement about something that is not observed, and ideally to be able to characterize any uncertainty you have about that statement. Inference is difficult because of the difference between what you are able to observe and what you ultimately want to know. [..] The language of inference can change depending on the application, but most commonly, we refer to the things we cannot observe (but want to know about) as the population or as features of the population and the data that we observe as the sample. The goal is to use the sample to somehow make a statement about the population.
-
-*[The Art of Data Science; Roger D. Peng and Elizabeth Matsui (2017)](https://bookdown.org/rdpeng/artofdatascience/)*
-
-### What is Linear Regression?
-> Linear regression is a basic and commonly used type of predictive analysis.  The overall idea of regression is to examine two things: (1) does a set of predictor variables do a good job in predicting an outcome (dependent) variable?  (2) Which variables in particular are significant predictors of the outcome variable, and in what way do they–indicated by the magnitude and sign of the beta estimates–impact the outcome variable?  These regression estimates are used to explain the relationship between one dependent variable and one or more independent variables. 
-
-*[What is Linear Regression?; Statistics Solutions (2013)](https://www.statisticssolutions.com/what-is-linear-regression/)*
-
-> In basic regression analysis, the dependent variable is the quantity we want to predict or explain, usually forming the vertical y-axis of a graph, and is also known as the response variable. The independent variable is the quantity we use to make the prediction or explanation, generally forming the horizontal x-axis of a graph, and is also known as the explanatory variable. The gradient — slope — is also known as the regression coefficient.
-
-> The meaning of these gradients depends entirely on our assumptions about the relationship between the variables being studied. For correlation data, the gradient indicates how much the dependent variable would be expected to change, on average, if we observe a difference of one unit in the independent variable. If, however, we assumed a causal relationship, then the interpretation of the gradient would be very different — it would be the expected change in the dependent variable if we intervened and changed the independent variable by one unit.
-
-> Statistical models have two main components. First, a mathematical formula that expresses a deterministic, predictable component, such as the straight line fit that allows us to predict a child’s height from the parent’s height. But the deterministic part of a model will never be a perfect representation of the observed world. The difference between what the model predicts and what actually happens is the second component of a model, known as the residual error — although it may sound misleading, it is simply the inevitable inability of a model to represent exactly what we observe. Thus, in sum, we assume that: observation = deterministic model + residual error.
+### What is the Law of Large Numbers?
+> The variability of the observed proportion decreases as the sample size increases—this is the law of large numbers.
 
 *The Art of Statistics: Learning from Data; David Spiegelhalter (2019)*
+
+### What is the Central Limit Theorem?
+> [...] But it is not only the binomial distribution that tends toward a normal curve as the sample size increases — it is a remarkable fact that, whatever the shape of the population distribution from which each of the original measurements is drawn, for large sample sizes their mean can be regarded as having been drawn from a normal curve. This will have a mean equal to the mean of the original distribution, and a standard deviation in a simple relation to the standard deviation of the original population distribution.
+
+> The central limit theorem implies that sample means and other statistical summaries will have an approximately normal distribution, for large samples.
+
+*The Art of Statistics: Learning from Data; David Spiegelhalter (2019)*
+
+### What is Standard Error?
+> The standard error is a single metric that sums up the variability in the sampling distribution for a statistic. The standard error can be estimated using a statistic based on the standard deviation s of the sample values, and the sample size n. As the sample size increases, the standard error decreases. The relationship between standard error and sample size is sometimes referred to as the square root of n rule: to reduce the standard error by a factor of 2, the sample size must be increased by a factor of 4.
+
+*Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
+
+### What are Confidence Intervals?
+> Confidence intervals are a way to place uncertainty around our estimates. The smaller the sample size, the larger the standard error, and the wider the confidence interval.
+
+*[Causal Inference for the Brave and True; Matheus Facure Alves (2022)](https://matheusfacure.github.io/python-causality-handbook/landing-page.html)*
+
+> Confidence intervals are a part of Data Science and basically, they show us the probability of an event occurring. Confidence intervals are generally used in statistics to give a range of values within which we are confident that a parameter lies. Confidence intervals are a part of Data Science. Confidence intervals help us understand the behavior of a certain dataset. A confidence interval is a range of values that a parameter is expected to fall within. [...] A confidence interval is a range of values that a statistic is likely to fall between. The confidence interval is denoted by the number of standard errors that the statistic is above and below the mean value. The standard error is the standard deviation of a statistic, divided by the square root of the sample size. This is a long way of saying that the standard error is the standard deviation of your statistic. Confidence intervals vary by which data scientist you talk to, but generally, a 95% confidence interval means that you are 95% sure that the statistic falls in that range.
+
+*[Confidence intervals are a part of Data Science; Rijul Singh Malik (2022)](https://medium.com/mlearning-ai/confidence-intervals-are-a-part-of-data-science-a54f45f6d8c6)*
+
+> Confidence intervals always come with a coverage level, expressed as a (high) percentage, say 90% or 95%. One way to think of a 90% confidence interval is as follows:it is the interval that encloses the central 90% of the bootstrap sampling distribution of a sample statistic. More generally, an x% confidence interval around a sample estimate should, on average, contain similar sample estimates x% of the time (when a similar sampling procedure is followed). [...] The percentage associated with the confidence interval is termed the level of confidence. The higher the level of confidence, the wider the interval. Also, the smaller the sample, the wider the interval (i.e., the greater the uncertainty). Both make sense: the more confident you want to be, and the less data you have, the wider you must make the confidence interval to be sufficiently assured of capturing the true value.
+
+*Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
+
+> A confidence interval is the range of population parameters for which our observed statistic is a plausible consequence. A simple practical rule is that if you are estimating the percentage of people who prefer, say, coffee instead of tea, from a random sample of the population, then your margin of error is roughly plus or minus 100 divided by the square root of the sample size. Thus, for a survey with 1,000 people (the industry standard), the margin of error is generally mentioned as ±3%. So if 400 said they prefer coffee and 600 said they prefer tea, then it is possible to estimate roughly that the percentage preferring coffee in the population is about 40% ± 3%, or between 37% and 43%. A 95% confidence interval is the result of a procedure that, if anchored in correct assumptions, contains the true value of the parameter 95% of the time. One cannot say that a specific interval has a 95% probability of containing the true value, but only that the procedure yields such intervals with that frequency.
+
+*The Art of Statistics: Learning from Data; David Spiegelhalter (2019)*
+
+### What is the relationship between Standard Error and Variables' Variance?
+> The standard error is inversely proportional to the variance of the variable. This means that, if doesn’t change much, it will be hard to estimate its effect on the outcome. This also makes intuitive sense. Take it to the extreme and pretend you want to estimate the effect of a drug, so you conduct a test with 10000 individuals but only 1 of them get the treatment. This will make finding the ATE very hard, we will have to rely on comparing a single individual with everyone else. Another way to say this is that we need lots of variability in the treatment to make it easier to find its impact.
+
+*[Causal Inference for the Brave and True; Matheus Facure Alves (2022)](https://matheusfacure.github.io/python-causality-handbook/landing-page.html)*
+
+### What is the Null Hypothesis?
+> Hypothesis tests use the following logic: “Given the human tendency to react to unusual but random behavior and interpret it as something meaningful and real, in our experiments we will require proof that the difference between groups is more extreme than what chance might reasonably produce.” This involves a baseline assumption that the treatments are equivalent, and any difference between the groups is due to chance. This baseline assumption is termed the null hypothesis. Our hope, then, is that we can in fact prove the null hypothesis wrong and show that the outcomes for groups A and B are more different than what chance might produce.
+
+*Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
+
+> The null hypothesis is what we are willing to assume happens until proven otherwise. It is relentlessly negative, denying all progress and change. The null hypothesis is never proved or established, but it can be refuted in the course of experimentation. One can say that every experiment exists only to give the facts a chance to refute the null hypothesis. A defendant can be considered guilty, but no one is ever considered innocent, there is simply no proof of guilt. In the same way, we may reject the null hypothesis, but if we do not have sufficient evidence to do so, this does not mean we can accept it as true. It is only a working premise until something better appears.
+
+*The Art of Statistics: Learning from Data; David Spiegelhalter (2019)*
+
+### What is p-Value?
+> Like with confidence intervals (and most frequentist statistics, as a matter of fact), the true definition of p-values can be very confusing. So, to not take any risks, I’ll copy the definition from Wikipedia: “the p-value is the probability of obtaining test results at least as extreme as the results actually observed during the test, assuming that the null hypothesis is correct”. To put it more succinctly, the p-value is the probability of seeing such data, given that the null hypothesis is true. It measures how unlikely it is that you are seeing a measurement if the null hypothesis is true. Naturally, this often gets confused with the probability of the null hypothesis being true.
+
+*[Causal Inference for the Brave and True; Matheus Facure Alves (2022)](https://matheusfacure.github.io/python-causality-handbook/landing-page.html)*
+
+> Given a chance model that embodies the null hypothesis, the p-value is the probability of obtaining results as unusual or extreme as the observed results.
+
+*Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
+
+> A p-value is the probability of obtaining a result at least as extreme as the one we obtained, if the null hypothesis (and all other modeling assumptions) were really true.
+
+*The Art of Statistics: Learning from Data; David Spiegelhalter (2019)*
+
+### What is Alpha (significance level)?
+> Statisticians frown on the practice of leaving it to the researcher’s discretion to determine whether a result is “too unusual” to happen by chance. Rather, a threshold is specified in advance, as in “more extreme than 5% of the chance (null hypothesis)results”; this threshold is known as alpha. Typical alpha levels are 5% and 1%. Any chosen level is an arbitrary decision—there is nothing about the process that will guarantee correct decisions x% of the time. This is because the probability question being answered is not “What is the probability that this happened by chance?” but rather “Given a chance model, what is the probability of a result this extreme?” We then deduce backward about the appropriateness of the chance model, but that judgment does not carry a probability. This point has been the subject of much confusion.
+ 
+*Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
+
+### What is Statistical Significance?
+> The idea of statistical significance is straightforward: if a p-value is sufficiently small, then we say the results are statistically significant.
+
+> To perform a statistical significance test, follow these steps: (1) Define a question in terms of a null hypothesis we want to test; (2) Generate a sampling distribution of this test statistic, where the null hypothesis is true; (3) erify whether the observed statistic lies in one of the tails of this distribution and summarize this observation through a p-value: the probability, if the null hypothesis is true, of observing such an extreme statistic; (4) It is necessary to carefully define ‘extreme’—if, for instance, very large values, both positive and negative, of the test statistic are considered incompatible with the null hypothesis, then the p-value should account for that; (5) Declare the result with statistical significance if the p-value lies below some critical threshold.
+
+*The Art of Statistics: Learning from Data; David Spiegelhalter (2019)*
+
+### What are Degrees of Freedom?
+> In the documentation and settings for many statistical tests and probability distributions, you will see a reference to “degrees of freedom.” The concept is applied to statistics calculated from sample data, and refers to the number of values free to vary. For example, if you know the mean for a sample of 10 values, there are 9 degrees of freedom(once you know 9 of the sample values, the 10th can be calculated and is not free to vary). The degrees of freedom parameter, as applied to many probability distributions, affects the shape of the distribution. The number of degrees of freedom is an input to many statistical tests. For example, degrees of freedom is the name given to the n – 1 denominator seen in the calculations for variance and standard deviation. Why does it matter? When you use a sample to estimate the variance for a population, you will end up with an estimate that is slightly biased downward if you use n in the denominator. If you use n – 1 in the denominator, the estimate will be free of that bias.
+
+> The number of degrees of freedom (d.f.) forms part of the calculation to standardize test statistics so they can be compared to reference distributions (t-distribution, F-distribution, etc.).
+
+> Is it important for data science? Not really, at least in the context of significance testing. For one thing, formal statistical tests are used only sparingly in data science. For another, the data size is usually large enough that it rarely makes a real difference for a data scientist whether, for example, the denominator has n or n – 1. (As n gets large, the bias that would come from using n in the denominator disappears.)There is one context, though, in which it is relevant: the use of factored variables in regression (including logistic regression). Some regression algorithms choke if exactly redundant predictor variables are present. This most commonly occurs when factoring categorical variables into binary indicators (dummies). Consider the variable “day of week.” Although there are seven days of the week, there are only six degrees of freedom in specifying day of week. For example, once you know that day of week is not Monday through Saturday, you know it must be Sunday. Inclusion of the Mon–Sat indicators thus means that also including Sunday would cause the regression to fail, due to a multicollinearity error.
+
+*Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
+
+### What is the Student's t-test?
+> The t-value, also known as the t-test, is an important focus of attention, since it is the link that tells us whether the association between an explanatory variable and the response has statistical significance. The t-value is simply the estimate divided by the standard error, and so it can be interpreted as the distance of the estimate from 0, measured in standard errors. Given a t-value and the sample size, the software can provide an exact p-value; for large samples, t-values greater than 2 or less than –2 correspond to p < 0.05, although these thresholds are higher for smaller sample sizes.
+
+*The Art of Statistics: Learning from Data; David Spiegelhalter (2019)*
+
+### What is the Chi-Square Test?
+> The Chi-square test is a hypothesis test that is used when you want to determine whether there is a relationship between two categorical variables.
+
+*[Chi-Square Test [Simply explained]: DATAtab (2022)](https://www.youtube.com/watch?v=rpKzq64GA9Y)*
+
+> Web testing often goes beyond A/B testing and tests multiple treatments at once. The chi-square test is used with count data to test how well it fits some expected distribution. The most common use of the chi-square statistic in statistical practice is with r × c contingency tables, to assess whether the null hypothesis of independence among variables is reasonable.
+
+*Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
+ 
+> The chi-square statistic is a general measure of the dissimilarity between the observed and expected counts.
+
+*The Art of Statistics: Learning from Data; David Spiegelhalter (2019)*
+
+### What is the difference between a chi-square test and a correlation?
+> Both correlations and chi-square tests can test for relationships between two variables. However, a correlation is used when you have two quantitative variables and a chi-square test of independence is used when you have two categorical variables.
+
+*[Scribbr - Frequently asked questions (2022)](https://www.scribbr.com/frequently-asked-questions/difference-between-chi-square-and-correlation/)*
 
 ### What is Regression to Mean?
 > Regression to the mean occurs when more extreme responses tend to revert and move closer to the mean in the long run, since some contribution to their initially extreme character happened merely by chance.
@@ -312,30 +416,8 @@ title: Data Science Concepts
 
 *Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
 
-### What is the Brier Score?
-> Although the ROC curve assesses how well the algorithm separates the groups, and the calibration plot checks whether the probabilities actually correspond to what they claim, the ideal would be to find a simple composite measure that combines these two aspects into a single number that we could then use to compare algorithms. Fortunately, meteorologists in the 1950s discovered exactly how to do this. If we were predicting a numerical quantity, such as tomorrow’s temperature at noon in a given place, accuracy would generally be summarized by the error — the difference between the observed temperature and the predicted one. The usual way to summarize error over a series of days is the mean squared error (MSE) — the average of the squared errors—analogous to the least-squares criterion we saw used in regression analysis. The trick for probabilities is to use the same mean-squared-error criterion we use when predicting a quantity, assigning the value 1 to a future observation of “rain” and the value 0 to “no rain.” The average of the squared errors is known as the Brier score, in honor of meteorologist Glenn Brier, who described the method in 1950.
-
-*The Art of Statistics: Learning from Data; David Spiegelhalter (2019)*
-
-### What is a Population?
-> A population can be thought of as a physical group of individuals, but also as the provider of the probability distribution for a random observation drawn from that population. Populations can be summarized through parameters that mirror the statistical synthesis of the sample data.
-
-*The Art of Statistics: Learning from Data; David Spiegelhalter (2019)*
-
-### What are the types of Population?
-> There are three types of populations from which a sample can be drawn: (i) Literal population: This is an identifiable group, such as when we randomly select a person to conduct a survey. Or it can be a group of individuals that can be measured, and, although we do not randomly pick one of them, we have volunteer data; (ii) Virtual population: We usually take measurements using some instrument, for example by measuring someone’s blood pressure or air pollution. We know it is always possible to take new measurements and obtain slightly different responses. The closeness of multiple readings depends on the accuracy of the instrument and the stability of the circumstances — we could think of this as extracting observations from a virtual population of all the measurements that could be taken if we had enough time; (iii) Metaphoric population: When there is no larger population. This is an unusual concept. Here we act as if the data were randomly drawn from some population, when it is clear that this is not the case—for example, the children who undergo heart surgery: we did no sampling, we have all the data, and there is nothing more to collect. Think of the number of murders that occur each year, the exam results for a specific class, or the data on all the countries in the world—none of these can be considered a sample from a real population.
-
-*The Art of Statistics: Learning from Data; David Spiegelhalter (2019)*
-
-### What is Random Sampling?
-> Random sampling is a process in which each available member of the population being sampled has an equal chance of being chosen for the sample at each draw. The sample that results is called a simple random sample. Sampling can be done with replacement, in which observations are put back in the population after each draw for possible future reselection. Or it can be done without replacement, in which case observations, once selected, are unavailable for future draws. Data quality often matters more than data quantity when making an estimate or a model based on a sample. Data quality in data science involves completeness, consistency of format, cleanliness, and accuracy of individual data points. Statistics adds the notion of representativeness.
-
-*Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
-
-### What is the Vast Search Effect?
-> Bias or nonreproducibility resulting from repeated data modeling, or modeling data with large numbers of predictor variables. [...] Typical forms of selection bias in statistics, in addition to the vast search effect, include nonrandom sampling, cherry-picking data, selection of time intervals that accentuate a particular statistical effect, and stopping an experiment when the results look “interesting.” 
-
-*Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
+### What is ANOVA?
+> ANOVA is a statistical procedure for analyzing the results of an experiment with multiple groups. It is the extension of similar procedures for the A/B test, used to assess whether the overall variation among groups is within the range of chance variation. A useful outcome of ANOVA is the identification of variance components associated with group treatments, interaction effects, and errors.
 
 ### What is Bootstrap?
 > One easy and effective way to estimate the sampling distribution of a statistic, or of model parameters, is to draw additional samples, with replacement, from the sample itself and recalculate the statistic or model for each resample. This procedure is called the bootstrap, and it does not necessarily involve any assumptions about the data or the sample statistic being normally distributed.
@@ -350,144 +432,15 @@ title: Data Science Concepts
 
 *The Art of Statistics: Learning from Data; David Spiegelhalter (2019)*
 
-### What is Bagging?
-> With classification and regression trees (also called decision trees), running multiple trees on bootstrap samples and then averaging their predictions (or, with classification, taking a majority vote) generally performs better than using a single tree. This process is called bagging (short for “bootstrap aggregating”)
-
-*Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
-
 ### What is the difference between Bootstrap and Permutation?
 > There are two main types of resampling procedures: the bootstrap and permutation tests. The bootstrap is used to assess the reliability of an estimate. Permutation tests are used to test hypotheses, typically involving two or more groups.
 
 *Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
 
-### What is Average Treatment Effect (ATE)?
-> The average treatment effect (ATE) is a measure used to compare treatments (or interventions) in randomized experiments, evaluation of policy interventions, and medical trials. The ATE measures the difference in mean (average) outcomes between units assigned to the treatment and units assigned to the control.
-
-*[Average treatment effect - Wikipedia (2022)](https://en.wikipedia.org/wiki/Average_treatment_effect)*
-
-### What is Standard Error?
-> The standard error is a single metric that sums up the variability in the sampling distribution for a statistic. The standard error can be estimated using a statistic based on the standard deviation s of the sample values, and the sample size n. As the sample size increases, the standard error decreases. The relationship between standard error and sample size is sometimes referred to as the square root of n rule: to reduce the standard error by a factor of 2, the sample size must be increased by a factor of 4.
+### What is Bagging?
+> With classification and regression trees (also called decision trees), running multiple trees on bootstrap samples and then averaging their predictions (or, with classification, taking a majority vote) generally performs better than using a single tree. This process is called bagging (short for “bootstrap aggregating”)
 
 *Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
-
-### What is the relationship between Standard Error and Variables' Variance?
-> The standard error is inversely proportional to the variance of the variable. This means that, if doesn’t change much, it will be hard to estimate its effect on the outcome. This also makes intuitive sense. Take it to the extreme and pretend you want to estimate the effect of a drug, so you conduct a test with 10000 individuals but only 1 of them get the treatment. This will make finding the ATE very hard, we will have to rely on comparing a single individual with everyone else. Another way to say this is that we need lots of variability in the treatment to make it easier to find its impact.
-
-*[Causal Inference for the Brave and True; Matheus Facure Alves (2022)](https://matheusfacure.github.io/python-causality-handbook/landing-page.html)*
-
-### What are Confidence Intervals?
-> Confidence intervals are a way to place uncertainty around our estimates. The smaller the sample size, the larger the standard error, and the wider the confidence interval.
-
-*[Causal Inference for the Brave and True; Matheus Facure Alves (2022)](https://matheusfacure.github.io/python-causality-handbook/landing-page.html)*
-
-> Confidence intervals are a part of Data Science and basically, they show us the probability of an event occurring. Confidence intervals are generally used in statistics to give a range of values within which we are confident that a parameter lies. Confidence intervals are a part of Data Science. Confidence intervals help us understand the behavior of a certain dataset. A confidence interval is a range of values that a parameter is expected to fall within. [...] A confidence interval is a range of values that a statistic is likely to fall between. The confidence interval is denoted by the number of standard errors that the statistic is above and below the mean value. The standard error is the standard deviation of a statistic, divided by the square root of the sample size. This is a long way of saying that the standard error is the standard deviation of your statistic. Confidence intervals vary by which data scientist you talk to, but generally, a 95% confidence interval means that you are 95% sure that the statistic falls in that range.
-
-*[Confidence intervals are a part of Data Science; Rijul Singh Malik (2022)](https://medium.com/mlearning-ai/confidence-intervals-are-a-part-of-data-science-a54f45f6d8c6)*
-
-> Confidence intervals always come with a coverage level, expressed as a (high) percentage, say 90% or 95%. One way to think of a 90% confidence interval is as follows:it is the interval that encloses the central 90% of the bootstrap sampling distribution of a sample statistic. More generally, an x% confidence interval around a sample estimate should, on average, contain similar sample estimates x% of the time (when a similar sampling procedure is followed). [...] The percentage associated with the confidence interval is termed the level of confidence. The higher the level of confidence, the wider the interval. Also, the smaller the sample, the wider the interval (i.e., the greater the uncertainty). Both make sense: the more confident you want to be, and the less data you have, the wider you must make the confidence interval to be sufficiently assured of capturing the true value.
-
-*Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
-
-> A confidence interval is the range of population parameters for which our observed statistic is a plausible consequence. A simple practical rule is that if you are estimating the percentage of people who prefer, say, coffee instead of tea, from a random sample of the population, then your margin of error is roughly plus or minus 100 divided by the square root of the sample size. Thus, for a survey with 1,000 people (the industry standard), the margin of error is generally mentioned as ±3%. So if 400 said they prefer coffee and 600 said they prefer tea, then it is possible to estimate roughly that the percentage preferring coffee in the population is about 40% ± 3%, or between 37% and 43%. A 95% confidence interval is the result of a procedure that, if anchored in correct assumptions, contains the true value of the parameter 95% of the time. One cannot say that a specific interval has a 95% probability of containing the true value, but only that the procedure yields such intervals with that frequency.
-
-*The Art of Statistics: Learning from Data; David Spiegelhalter (2019)*
-
-### What is the Null Hypothesis?
-> The null hypothesis is what we are willing to assume happens until proven otherwise. It is relentlessly negative, denying all progress and change. The null hypothesis is never proved or established, but it can be refuted in the course of experimentation. One can say that every experiment exists only to give the facts a chance to refute the null hypothesis. A defendant can be considered guilty, but no one is ever considered innocent, there is simply no proof of guilt. In the same way, we may reject the null hypothesis, but if we do not have sufficient evidence to do so, this does not mean we can accept it as true. It is only a working premise until something better appears.
-
-*The Art of Statistics: Learning from Data; David Spiegelhalter (2019)*
-
-### What is p-Value?
-> Like with confidence intervals (and most frequentist statistics, as a matter of fact), the true definition of p-values can be very confusing. So, to not take any risks, I’ll copy the definition from Wikipedia: “the p-value is the probability of obtaining test results at least as extreme as the results actually observed during the test, assuming that the null hypothesis is correct”. To put it more succinctly, the p-value is the probability of seeing such data, given that the null hypothesis is true. It measures how unlikely it is that you are seeing a measurement if the null hypothesis is true. Naturally, this often gets confused with the probability of the null hypothesis being true.
-
-*[Causal Inference for the Brave and True; Matheus Facure Alves (2022)](https://matheusfacure.github.io/python-causality-handbook/landing-page.html)*
-
-> Given a chance model that embodies the null hypothesis, the p-value is the probability of obtaining results as unusual or extreme as the observed results.
-
-*Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
-
-> A p-value is the probability of obtaining a result at least as extreme as the one we obtained, if the null hypothesis (and all other modeling assumptions) were really true.
-
-*The Art of Statistics: Learning from Data; David Spiegelhalter (2019)*
-
-### What is Alpha in the context of p-Value?
-> Statisticians frown on the practice of leaving it to the researcher’s discretion to determine whether a result is “too unusual” to happen by chance. Rather, a threshold is specified in advance, as in “more extreme than 5% of the chance (null hypothesis)results”; this threshold is known as alpha. Typical alpha levels are 5% and 1%. Any chosen level is an arbitrary decision—there is nothing about the process that will guarantee correct decisions x% of the time. This is because the probability question being answered is not “What is the probability that this happened by chance?” but rather “Given a chance model, what is the probability of a result this extreme?” We then deduce backward about the appropriateness of the chance model, but that judgment does not carry a probability. This point has been the subject of much confusion.
- 
-*Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
-
-### What is Statistical Significance?
-> The idea of statistical significance is straightforward: if a p-value is sufficiently small, then we say the results are statistically significant.
-
-> To perform a statistical significance test, follow these steps: (1) Define a question in terms of a null hypothesis we want to test; (2) Generate a sampling distribution of this test statistic, where the null hypothesis is true; (3) erify whether the observed statistic lies in one of the tails of this distribution and summarize this observation through a p-value: the probability, if the null hypothesis is true, of observing such an extreme statistic; (4) It is necessary to carefully define ‘extreme’—if, for instance, very large values, both positive and negative, of the test statistic are considered incompatible with the null hypothesis, then the p-value should account for that; (5) Declare the result with statistical significance if the p-value lies below some critical threshold.
-
-*The Art of Statistics: Learning from Data; David Spiegelhalter (2019)*
-
-### What is the Student's t-test?
-> The t-value, also known as the t-test, is an important focus of attention, since it is the link that tells us whether the association between an explanatory variable and the response has statistical significance. The t-value is simply the estimate divided by the standard error, and so it can be interpreted as the distance of the estimate from 0, measured in standard errors. Given a t-value and the sample size, the software can provide an exact p-value; for large samples, t-values greater than 2 or less than –2 correspond to p < 0.05, although these thresholds are higher for smaller sample sizes.
-
-*The Art of Statistics: Learning from Data; David Spiegelhalter (2019)*
-
-### What is z-Score?
-> The result of standardizing an individual data point. Standardize means subtracting the mean and dividing by the standard deviation.
-
-> A standard normal distribution is one in which the units on the x-axis are expressed in terms of standard deviations away from the mean. To compare data to a standard normal distribution, you subtract the mean and then divide by the standard deviation; this is also called normalization or standardization. The transformed value is termed a z-score, and the normal distribution is sometimes called the z-distribution.
-
-> Converting data to z-scores (i.e., standardizing or normalizing the data) does not make the data normally distributed. It just puts the data on the same scale as the standard normal distribution, often for comparison purposes. 
-
-*Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
-
-### What is a QQ-Plot?
-> A QQ-Plot is used to visually determine how close a sample is to a specified distribution - in this case, the normal distribution. The QQ-Plot orders the z-scores from low to high and plots each value's z-score on the y-axis; the x-asis is the corresponding quantile of a normal distribution for the value's rank. Since the data is normalized, the units correspond to the number of standard deviations away from the mean. If the points roughly fall on the diagonal line, then the sample distribution can be considered close to normal.
-
-*Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
-
-### What is the t-Distribution?
-> The t-distribution is actually a family of distributions resembling the normal distribution but with thicker tails. The t-distribution is widely used as a reference basis for the distribution of sample means, differences between two sample means, regression parameters, and more.
-
-*Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
-
-### What is the Chi-Square Test?
-> The Chi-square test is a hypothesis test that is used when you want to determine whether there is a relationship between two categorical variables.
-
-*[Chi-Square Test [Simply explained]: DATAtab (2022)](https://www.youtube.com/watch?v=rpKzq64GA9Y)*
-
-> Web testing often goes beyond A/B testing and tests multiple treatments at once. The chi-square test is used with count data to test how well it fits some expected distribution. The most common use of the chi-square statistic in statistical practice is with r × c contingency tables, to assess whether the null hypothesis of independence among variables is reasonable.
-
-*Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
- 
-> The chi-square statistic is a general measure of the dissimilarity between the observed and expected counts.
-
-*The Art of Statistics: Learning from Data; David Spiegelhalter (2019)*
-
-### What is the difference between a chi-square test and a correlation?
-> Both correlations and chi-square tests can test for relationships between two variables. However, a correlation is used when you have two quantitative variables and a chi-square test of independence is used when you have two categorical variables.
-
-*[Scribbr - Frequently asked questions (2022)](https://www.scribbr.com/frequently-asked-questions/difference-between-chi-square-and-correlation/)*
-
-### What is the Null Hypothesis?
-> Hypothesis tests use the following logic: “Given the human tendency to react to unusual but random behavior and interpret it as something meaningful and real, in our experiments we will require proof that the difference between groups is more extreme than what chance might reasonably produce.” This involves a baseline assumption that the treatments are equivalent, and any difference between the groups is due to chance. This baseline assumption is termed the null hypothesis. Our hope, then, is that we can in fact prove the null hypothesis wrong and show that the outcomes for groups A and B are more different than what chance might produce.
-
-*Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
-
-### What are Degrees of Freedom?
-> In the documentation and settings for many statistical tests and probability distributions, you will see a reference to “degrees of freedom.” The concept is applied to statistics calculated from sample data, and refers to the number of values free to vary. For example, if you know the mean for a sample of 10 values, there are 9 degrees of freedom(once you know 9 of the sample values, the 10th can be calculated and is not free to vary). The degrees of freedom parameter, as applied to many probability distributions, affects the shape of the distribution. The number of degrees of freedom is an input to many statistical tests. For example, degrees of freedom is the name given to the n – 1 denominator seen in the calculations for variance and standard deviation. Why does it matter? When you use a sample to estimate the variance for a population, you will end up with an estimate that is slightly biased downward if you use n in the denominator. If you use n – 1 in the denominator, the estimate will be free of that bias.
-
-> The number of degrees of freedom (d.f.) forms part of the calculation to standardize test statistics so they can be compared to reference distributions (t-distribution, F-distribution, etc.).
-
-*Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
-
-### When are Degrees of Freedom important to Data Scientists?
-> Is it important for data science? Not really, at least in the context of significance testing. For one thing, formal statistical tests are used only sparingly in data science. For another, the data size is usually large enough that it rarely makes a real difference for a data scientist whether, for example, the denominator has n or n – 1. (As n gets large, the bias that would come from using n in the denominator disappears.)There is one context, though, in which it is relevant: the use of factored variables in regression (including logistic regression). Some regression algorithms choke if exactly redundant predictor variables are present. This most commonly occurs when factoring categorical variables into binary indicators (dummies). Consider the variable “day of week.” Although there are seven days of the week, there are only six degrees of freedom in specifying day of week. For example, once you know that day of week is not Monday through Saturday, you know it must be Sunday. Inclusion of the Mon–Sat indicators thus means that also including Sunday would cause the regression to fail, due to a multicollinearity error.
-
-*Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
-
-### What is ANOVA?
-> ANOVA is a statistical procedure for analyzing the results of an experiment with multiple groups. It is the extension of similar procedures for the A/B test, used to assess whether the overall variation among groups is within the range of chance variation. A useful outcome of ANOVA is the identification of variance components associated with group treatments, interaction effects, and errors.
-
-### What are the 4 different Categories of Data Analysis?
-> Descriptive Analytics (tells you what happened in the past); Diagnostic Analytics (helps you understand why something happened in the past); Predictive Analytics (predicts what is most likely to happen in the future); Prescriptive Analytics (recommends actions you can take to affect those outcomes).
-
-*[Comparing Descriptive, Predictive, Prescriptive, and Diagnostic Analytics; Brian Brinkmann (2019)](https://www.logianalytics.com/predictive-analytics/comparing-descriptive-predictive-prescriptive-and-diagnostic-analytics/)*
 
 ### What are the Epicycles of Data Analysis?
 > Develop Expectations -> Collect Data -> Match Expectations with Data
@@ -496,15 +449,15 @@ title: Data Science Concepts
 
 *[The Art of Data Science; Roger D. Peng and Elizabeth Matsui (2017)](https://bookdown.org/rdpeng/artofdatascience/)*
 
-### What is QMV? 
-> It is an iterative process of questioning, modeling, and validation to data analysis and model building.
+### What are the differences between Descriptive Analysis and Inferential Statistics?
+> Descriptive statistics describe a sample. That’s pretty straightforward. You simply take a group that you’re interested in, record data about the group members, and then use summary statistics and graphs to present the group properties. With descriptive statistics, there is no uncertainty because you are describing only the people or items that you actually measure. You’re not trying to infer properties about a larger population.[...] Inferential statistics takes data from a sample and makes inferences about the larger population from which the sample was drawn. Because the goal of inferential statistics is to draw conclusions from a sample and generalize them to a population, we need to have confidence that our sample accurately reflects the population. This requirement affects our process.
 
-*[Model Building and Validation by AT&T, Online Course - Advanced Techniques for Analyzing Data](https://www.udacity.com/course/model-building-and-validation--ud919)*
+*[Difference between Descriptive and Inferential Statistics; Jim Frost (2020)](https://statisticsbyjim.com/basics/descriptive-inferential-statistics/)*
 
-### What is Data Conditioning?
-> [It is] the first step of any data analysis project [and means] getting data into a state where it's usable. Data conditioning can involve cleaning up messy HTML with tools [...], natural language processing to parse plain text in English and other languages, or even getting humans to do the dirty work.
+### What are the 4 different Categories of Data Analysis?
+> Descriptive Analytics (tells you what happened in the past); Diagnostic Analytics (helps you understand why something happened in the past); Predictive Analytics (predicts what is most likely to happen in the future); Prescriptive Analytics (recommends actions you can take to affect those outcomes).
 
-*[What Is Data Science?; Mike Loukides (2010)](https://www.oreilly.com/ideas/what-is-data-science)*
+*[Comparing Descriptive, Predictive, Prescriptive, and Diagnostic Analytics; Brian Brinkmann (2019)](https://www.logianalytics.com/predictive-analytics/comparing-descriptive-predictive-prescriptive-and-diagnostic-analytics/)*
 
 ### What is Associational Analyses?
 > Associational analyses are ones where we are looking at an association between two or more features in the presence of other potentially confounding factors. There are three classes of variables that are important to think about in an associational analysis: Outcome (the feature of your dataset that is thought to change along with your key predictor); Key predictor (often for associational analyses there is one key predictor of interest); Potential confounders (this is a large class of predictors that are both related to the key predictor and the outcome).
@@ -516,11 +469,6 @@ title: Data Science Concepts
 
 *[The Art of Data Science; Roger D. Peng and Elizabeth Matsui (2017)](https://bookdown.org/rdpeng/artofdatascience/)*
 
-### What are the differences between Descriptive Analysis and Inferential Statistics?
-> Descriptive statistics describe a sample. That’s pretty straightforward. You simply take a group that you’re interested in, record data about the group members, and then use summary statistics and graphs to present the group properties. With descriptive statistics, there is no uncertainty because you are describing only the people or items that you actually measure. You’re not trying to infer properties about a larger population.[...] Inferential statistics takes data from a sample and makes inferences about the larger population from which the sample was drawn. Because the goal of inferential statistics is to draw conclusions from a sample and generalize them to a population, we need to have confidence that our sample accurately reflects the population. This requirement affects our process.
-
-*[Difference between Descriptive and Inferential Statistics; Jim Frost (2020)](https://statisticsbyjim.com/basics/descriptive-inferential-statistics/)*
-
 ### What is the Classical Statistical Inference Pipeline?
 > Formulate hypothesis -> Design experiment -> Collect Data -> Inference/conclusions
 
@@ -528,45 +476,15 @@ title: Data Science Concepts
 
 *Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)* 
 
-### What assumptions do we make for regression models?
-> When doing a simple regression model, we make the (often reasonable!) assumptions that:
-> a) The errors are normally distributed and, on average, zero;
-> b) The errors all have the same variance (they are homoscedastic), and
-> c) The errors are unrelated to each other (they are independent across observations).
+### What is Data Conditioning?
+> [It is] the first step of any data analysis project [and means] getting data into a state where it's usable. Data conditioning can involve cleaning up messy HTML with tools [...], natural language processing to parse plain text in English and other languages, or even getting humans to do the dirty work.
 
-*[Pratical Time Series - The State University of New York (2024)](https://www.coursera.org/learn/practical-time-series-analysis)*
+*[What Is Data Science?; Mike Loukides (2010)](https://www.oreilly.com/ideas/what-is-data-science)*
 
-### What is stationarity in a time series context?
-> A strict stationarity imposes a stronger condition of identical probability distributions across different time points, while weak stationarity allows for changes in the distribution but requires the mean, variance, and autocorrelation structure to remain constant over time. In practice, weak stationarity is often more applicable and easier to verify, making it a commonly used assumption in time series analysis.
+### What is QMV? 
+> It is an iterative process of questioning, modeling, and validation to data analysis and model building.
 
-*Pratical Time Series - The State University of New York (2024)*
-
-### Why is it important to know stationarity and inversability for ARIMA models?
-> Stationarity and invertibility are crucial concepts in the context of ARIMA (AutoRegressive Integrated Moving Average) models, and understanding these properties is essential for ensuring the validity and reliability of the model. Here's why these properties are important:
-
-> Stationarity:
-
-> - Statistical Assumption: ARIMA models assume that the time series data is stationary. Stationarity means that the statistical properties of the time series, such as mean and variance, do not change over time. This assumption is necessary for the model to capture meaningful patterns and relationships.
-
-> - Differencing Requirement: If the original time series is not stationary, differencing is applied to make it stationary. Differencing involves taking the difference between consecutive observations. Stationarity is important because it simplifies the modeling process and allows for more reliable parameter estimation.
-
-> Invertibility:
-
-> - Interpretability: Invertibility is a property that ensures the model is interpretable. An invertible model implies that the current value of the time series only depends on past values and white noise. This property is crucial for understanding the impact of past observations on the present without causing feedback loops.
-
-> - Meaningful Forecasts: Invertibility is important for making meaningful forecasts. If a model is not invertible, the forecasted values may not have clear interpretability, and it might be challenging to attribute changes in the forecast to specific changes in the input data.
-
-> - Numerical Stability: Invertibility is related to the numerical stability of the model. Invertible models are more likely to produce stable and reliable parameter estimates, making them more suitable for forecasting.
-
-> In summary, stationarity ensures that the statistical properties of the time series remain consistent over time, making it suitable for modeling. Invertibility ensures that the model is interpretable and capable of providing meaningful forecasts. Both properties contribute to the reliability and accuracy of ARIMA models in capturing and forecasting time series patterns.
-
-### Can I apply ARIMA on a non stationary and non invertible time series?
-> The ARIMA (AutoRegressive Integrated Moving Average) model assumes that the time series data is stationary. If your time series is non-stationary, you typically need to apply differencing to make it stationary before applying ARIMA. Similarly, invertibility is a desirable property of ARIMA models to ensure that the model is interpretable and suitable for forecasting. An invertible model implies that the current value of the time series only depends on past values and white noise. If a model is not invertible, it may lead to challenges in interpretation and potentially less reliable forecasts. Here are the general steps when dealing with a non-stationary time series: (1) Differencing - If your time series is non-stationary, you may need to apply differencing to make it stationary. Differencing involves taking the difference between consecutive observations; (2) ARIMA Model - Once the data is stationary, you can apply the ARIMA model. The ARIMA model is typically denoted as ARIMA(p, d, q), where p is the order of the autoregressive (AR) component, d is the degree of differencing, q is the order of the moving average (MA) component; (3) Invertibility Check: After fitting the ARIMA model, it's important to check if the model is invertible. If the model is not invertible, you might need to reconsider the model specification or apply transformations to achieve invertibility.
-
-### How to model a time series for ARIMA?
-> Modeling: Trend suggests differencing; Variation in variance suggests transformation (common transformation: log, then differencing); ACF (auto-correlation function) suggests order of moving average process (q); PACF (partial ACF) suggests order of autoregressive process (p).
-
-*Pratical Time Series - The State University of New York (2024)*
+*[Model Building and Validation by AT&T, Online Course - Advanced Techniques for Analyzing Data](https://www.udacity.com/course/model-building-and-validation--ud919)*
 
 ## Causal Inference
 
@@ -577,22 +495,6 @@ It is difficult to establish causality statistically; for this, well-designed ra
 > Our “statistical” idea of causality is not strictly deterministic. When we say that X causes Y, we are not trying to say that every time X occurs, Y will also occur. Or that Y only occurs if X occurs. We only mean that if we intervene and force X to occur, then Y will tend to occur more frequently. Thus, we can never say that X caused Y in a specific case, only that X increases the proportion of times that Y occurs.
 
 > First, to infer causality with real confidence, the ideal is to intervene and conduct experiments. Second, since this is a statistical or stochastic world, we need to intervene more than once to accumulate evidence.
-
-*The Art of Statistics: Learning from Data; David Spiegelhalter (2019)*
-
-### What is the purpose of a Clinical Experiment?
-> The purpose of a clinical experiment is to conduct an “honest test” that properly determines a causality and estimates the average effect of a new medical treatment, without introducing biases that may give us a mistaken idea of its effectiveness. An adequate medical experiment should ideally follow the following principles:
-> (1) Allocation of treatment: it is important to compare like with like, so the treatment and comparison groups need to be as similar as possible. The best way to ensure this is to randomly assign participants to be treated or not, and then observe what happens to them — this is known as a Randomized Controlled Trial (RCT).
-
-> (2) All individuals in the groups to which they were allocated must be counted: the individuals allocated to the “statin” group of the EPC were included in the final analysis even if they did not take their statins.
-
-> (3) If possible, people should not know which group they are in: in studies with statins, both the real medication pills and the placebo pills had the same appearance, so that the participants did not know the treatment they were receiving — a blind test. If possible, those evaluating the final results should not know which group of subjects they are examining.
-
-> (4) Evaluate all individuals: every effort should be made to follow all individuals, since people who drop out of the study may, for example, have done so due to the drug’s side effects.
-
-> (5) Do not rely on a single study: a single experiment with statins cannot tell us that the drug worked in a particular group in a particular place, but robust conclusions require multiple studies.
-
-> (6) Systematically review the evidence: when examining multiple experiments, it is important to include any study that has been conducted, and thus create what is known as a systematic review. The results can then be formally combined in a meta-analysis.
 
 *The Art of Statistics: Learning from Data; David Spiegelhalter (2019)*
 
@@ -619,6 +521,27 @@ It is difficult to establish causality statistically; for this, well-designed ra
 
 *[Causal Inference: What if; Miguel A. Hernán and James M. Robins (2022)](https://www.hsph.harvard.edu/miguel-hernan/causal-inference-book/)*
 
+### What is the purpose of a Clinical Experiment?
+> The purpose of a clinical experiment is to conduct an “honest test” that properly determines a causality and estimates the average effect of a new medical treatment, without introducing biases that may give us a mistaken idea of its effectiveness. An adequate medical experiment should ideally follow the following principles:
+> (1) Allocation of treatment: it is important to compare like with like, so the treatment and comparison groups need to be as similar as possible. The best way to ensure this is to randomly assign participants to be treated or not, and then observe what happens to them — this is known as a Randomized Controlled Trial (RCT).
+
+> (2) All individuals in the groups to which they were allocated must be counted: the individuals allocated to the “statin” group of the EPC were included in the final analysis even if they did not take their statins.
+
+> (3) If possible, people should not know which group they are in: in studies with statins, both the real medication pills and the placebo pills had the same appearance, so that the participants did not know the treatment they were receiving — a blind test. If possible, those evaluating the final results should not know which group of subjects they are examining.
+
+> (4) Evaluate all individuals: every effort should be made to follow all individuals, since people who drop out of the study may, for example, have done so due to the drug’s side effects.
+
+> (5) Do not rely on a single study: a single experiment with statins cannot tell us that the drug worked in a particular group in a particular place, but robust conclusions require multiple studies.
+
+> (6) Systematically review the evidence: when examining multiple experiments, it is important to include any study that has been conducted, and thus create what is known as a systematic review. The results can then be formally combined in a meta-analysis.
+
+*The Art of Statistics: Learning from Data; David Spiegelhalter (2019)*
+
+### What is Average Treatment Effect (ATE)?
+> The average treatment effect (ATE) is a measure used to compare treatments (or interventions) in randomized experiments, evaluation of policy interventions, and medical trials. The ATE measures the difference in mean (average) outcomes between units assigned to the treatment and units assigned to the control.
+
+*[Average treatment effect - Wikipedia (2022)](https://en.wikipedia.org/wiki/Average_treatment_effect)*
+
 ### What is Confounding Bias?
 > The first significant cause of bias is confounding. It happens when the treatment and the outcome share a common cause. For example, let’s say that the treatment is education, and the outcome is income. It is hard to know the causal effect of education on wages because both share a common cause: intelligence. So we could argue that more educated people earn more money simply because they are more intelligent, not because they have more education. We need to close all backdoor paths between the treatment and the outcome to identify the causal effect. If we do so, the only effect that will be left is the direct effect T->Y. In our example, if we control for intelligence, that is, we compare people with the same level of intellect but different levels of education, the difference in the outcome will be only due to the difference in schooling since intelligence will be the same for everyone. To fix confounding bias, we need to control all common causes of the treatment and the outcome.
 
@@ -641,10 +564,20 @@ It is difficult to establish causality statistically; for this, well-designed ra
 
 *[Causal Inference for the Brave and True; Matheus Facure Alves (2022)](https://matheusfacure.github.io/python-causality-handbook/landing-page.html)*
 
+### What is the difference between Correlated Variables and Confounding Variables?
+> With correlated variables, the problem is one of commission: including different variables that have a similar predictive relationship with the response. With confounding variables, the problem is one of omission: an important variable is not included in the regression equation. Naive interpretation of the equation coefficients can lead to invalid conclusions.
+
+*Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
+
 ### Which features/controls/predictors should we add to a Causal Inference model?
 > We should add controls that are both correlated with the treatment and the outcome (confounder). We should also add controls that are good predictors of the outcome, even if they are not confounders, because they lower the variance of our estimates. However, we should NOT add controls that are just good predictors of the treatment, because they will increase the variance of our estimates.
 
 *[Causal Inference for the Brave and True; Matheus Facure Alves (2022)](https://matheusfacure.github.io/python-causality-handbook/landing-page.html)*
+
+### What is the Vast Search Effect?
+> Bias or nonreproducibility resulting from repeated data modeling, or modeling data with large numbers of predictor variables. [...] Typical forms of selection bias in statistics, in addition to the vast search effect, include nonrandom sampling, cherry-picking data, selection of time intervals that accentuate a particular statistical effect, and stopping an experiment when the results look “interesting.” 
+
+*Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
 
 ## Feature Engineering
 
@@ -660,58 +593,86 @@ It is difficult to establish causality statistically; for this, well-designed ra
 
 ## Machine Learning
 
-### Why is Model Tuning relevant?
-> Model tuning. A hallmark of prediction algorithms is their many tuning parameters. Sometimes these parameters can have large effects on prediction quality if they are changed and so it is important to be informed of the impact of tuning parameters for whatever algorithm you use. There is no prediction algorithm for which a single set of tuning parameters works well for all problems. Most likely, for the initial model fit, you will use “default” parameters, but these defaults may not be sufficient for your purposes. Fiddling with the tuning parameters may greatly change the quality of your predictions. It's very important that you document the values of these tuning parameters so that the analysis can be reproduced in the future.
-
-*[The Art of Data Science; Roger D. Peng and Elizabeth Matsui (2017)](https://bookdown.org/rdpeng/artofdatascience/)*
-
 ### What is the basic difference between Inferential Statistics and Machine Learning?
 > Inferential statistics is a way to learn from data, and one of the tool of Machine Learning. Both use a set of observations to discover underlying processes or patterns, then be able to predict. If you have all the houses characteristics and prices in a given area, you can find out what is determining the price, then predict the price for a new house. Simple statistical analysis. Now if you want to build an app to predict houses prices, it’s another story. You need a lot more work, on data pre-processing, multiple algorithms, other models of regression, etc … That’s machine learning territory. Inferential statistics is only one of the tool. Machine Learning also wants to learn from “big data”, high dimensional data, unstructured, streaming data, find connexions in a social network, group press releases by similar topics, recognize images, compress pictures etc. No nice excel-like data set for this. It requires a different set of tools (whose goal is basically to turn everything the messy world is throwing at us into a nice excel-like data set with matrices that compute fast). The techniques that deal with high dimensional and streaming data have all the attention today, but a lot of the implementations of Machine Learning are still classic regression. You hear a lot that a business can be “moneyballed”, referring to base ball statistics. The idea is that you can take something that is “obviously” not data driven (“I have been doing this business for 30 years and let me tell you it’s all about connecting with people”), and prove that it can be run more effectively with data. Most of that is indeed inferential statistics, plus additional techniques. It’s all “learning from data”.
 
 *[Quora Answer; Philippe Hocquet (2017)](https://www.quora.com/What-is-the-basic-difference-between-inferential-statistics-and-machine-learning)*
 
-### What is Underfitting?
-> In supervised learning, underfitting happens when a model unable to capture the underlying pattern of the data. These models usually have high bias and low variance. It happens when we have very less amount of data to build an accurate model or when we try to build a linear model with a nonlinear data. Also, these kind of models are very simple to capture the complex patterns in data like Linear and logistic regression.
+### What is a Linear Model?
+> Mathematically, the function $f(x) = wx + b$ is an affine transformation, not a linear one, since true linear transformations require $b = 0$. However, in machine learning, we often call such models "linear" whenever the parameters appear linearly in the equation — meaning $w$ and $b$ are only multiplied by inputs or constants and added, without multiplying each other, being raised to powers, or appearing inside functions like $e^w$.
 
-*Understanding the Bias-Variance Tradeoff; Seema Singh (2018)*
+*The Hundred-Page Language Models Book; Andriy Burkov (2025)*
 
-### What is Overfitting?
-> In supervised learning, overfitting happens when our model captures the noise along with the underlying pattern in data. It happens when we train our model a lot over noisy dataset. These models have low bias and high variance. These models are very complex like Decision trees which are prone to overfitting.
+### What is Linear Regression?
+> Linear regression is a basic and commonly used type of predictive analysis.  The overall idea of regression is to examine two things: (1) does a set of predictor variables do a good job in predicting an outcome (dependent) variable?  (2) Which variables in particular are significant predictors of the outcome variable, and in what way do they–indicated by the magnitude and sign of the beta estimates–impact the outcome variable?  These regression estimates are used to explain the relationship between one dependent variable and one or more independent variables. 
 
-*Understanding the Bias-Variance Tradeoff; Seema Singh (2018)*
+*[What is Linear Regression?; Statistics Solutions (2013)](https://www.statisticssolutions.com/what-is-linear-regression/)*
 
-### What is the High Accuracy Paradox?
-> Accuracy is not useful when trying to predict things that are not common. Accuracy is simply the proportion of correctly classified instances. It is usually the first metric you look at when evaluating a model. However, when the data is imbalanced (where most of the instances belong to one of the classes), or you are more interested in the performance on either one of the classes, accuracy doesn’t really capture the effectiveness of a classifier. Normally in classification problems, we're typically more concerned about the errors that we make. Because the target class is usually the area of interest that we're trying to focus on.  This is called accuracy paradox.
+> In basic regression analysis, the dependent variable is the quantity we want to predict or explain, usually forming the vertical y-axis of a graph, and is also known as the response variable. The independent variable is the quantity we use to make the prediction or explanation, generally forming the horizontal x-axis of a graph, and is also known as the explanatory variable. The gradient — slope — is also known as the regression coefficient.
 
-*[Machine Learning - Accuracy Paradox; Randy Lao (2017)](https://www.linkedin.com/pulse/machine-learning-accuracy-paradox-randy-lao/)*
+> The meaning of these gradients depends entirely on our assumptions about the relationship between the variables being studied. For correlation data, the gradient indicates how much the dependent variable would be expected to change, on average, if we observe a difference of one unit in the independent variable. If, however, we assumed a causal relationship, then the interpretation of the gradient would be very different — it would be the expected change in the dependent variable if we intervened and changed the independent variable by one unit.
 
-> Accuracy is not a reliable metric to determine a model performance. That’s why it’s called a Paradox because, intuitively, you’d expect a Model with a higher Accuracy to have been the best Model but Accuracy Paradox tells us that this, sometimes, isn’t the case.
+> Statistical models have two main components. First, a mathematical formula that expresses a deterministic, predictable component, such as the straight line fit that allows us to predict a child’s height from the parent’s height. But the deterministic part of a model will never be a perfect representation of the observed world. The difference between what the model predicts and what actually happens is the second component of a model, known as the residual error — although it may sound misleading, it is simply the inevitable inability of a model to represent exactly what we observe. Thus, in sum, we assume that: observation = deterministic model + residual error.
 
-*[Accuracy Paradox in Classification Models; Amit Ranjan (2020)](https://medium.com/analytics-vidhya/accuracy-paradox-in-classification-models-d55a2884410)*
+*The Art of Statistics: Learning from Data; David Spiegelhalter (2019)*
 
-### What is PAC Learning?
-> PAC - probability for approximately correct - learning theory helps to analyze whether and under what conditions a learning algorithm will probably output an approximately correct classifier. 
+> OLS is a common technique used in analyzing linear regression. In brief, it compares the difference between individual points in your data set and the predicted best fit line to measure the amount of error produced. 
 
-*The Hundred-Page Machine Learning Book; Andriy Burkov (2019)*
+*[Interpreting Linear Regression Through statsmodels .summary(); Tim McAleer (2020)](https://medium.com/swlh/interpreting-linear-regression-through-statsmodels-summary-4796d359035a)*
 
-> A Concept Class (C) is PAC-learnable by a Learner (L) using a Hypothesis Space (H), if L will, with probability 1 - delta (with 'delta' being the certainty goal), output a hypothesis h (belonging to H) such that the error of h is less than epsilon (with 'epsilon' being the error goal) in time and samples polynomial in 1/epsilon, 1/delta.
+> How is the model fit to the data? When there is a clear relationship, you could imagine fitting the line by hand. In practice, the regression line is the estimate that minimizes the sum of squared residual values, also called the residual sum of squares or RSS. The method of minimizing the sum of the squared residuals is termed least squares regression, or ordinary least squares (OLS) regression. 
 
-*[PAC Learning - Georgia Tech - Machine Learning (2015)](https://www.youtube.com/watch?v=e37nlms7Zi0)*
+*Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
 
-### What is Multicollinearity?
-> It will be recalled that one of the factors that affects the standard error of a partial regression coefficient is the degree to which that independent variable is correlated with the other independent variables in the regression equation. Other things being equal, an independent variable that is very highly correlated with one or more other independent variables will have a relatively large standard error. This implies that the partial regression coefficient is unstable and will vary greatly from one sample to the next. This is the situation known as multicollinearity. Multicollinearity exists whenever an independent variable is highly correlated with one or more of the other independent variables in a multiple regression equation. Multicollinearity is a problem because it undermines the statistical significance of an independent variable. Other things being equal, the larger the standard error of a regression coefficient, the less likely it is that this coefficient will be statistically significant.
+### How do Neural Networks differ from Linear Models?
+> A neural network differs from a linear model in two fundamental ways:  
+> (1) It applies fixed non-linear functions to the outputs of trainable linear functions.  
+> (2) Its structure is deeper, combining multiple functions hierarchically through layers.
 
-*[The problem of multicollinearity - Understanding Regression Analysis; Michael Patrick Allen (1997)](https://link.springer.com/chapter/10.1007/978-0-585-25657-3_37)*
+*The Hundred-Page Language Models Book; Andriy Burkov (2025)*
+
+### What are Logits?
+> Logits are the raw outputs of a neural network, prior to applying an activation function.
+
+*The Hundred-Page Language Models Book; Andriy Burkov (2025)*
+
+### What is Logistic Regression?
+> Logistic regression is commonly used for binary classification tasks. Unlike linear regression, which produces outputs ranging from −∞ to ∞, logistic regression always outputs values between 0 and 1. It does this by applying the sigmoid function to a linear combination of inputs. Logistic regression can serve either as a standalone model or as the output layer in a larger neural network.
+
+*[The Hundred-Page Language Models Book; Andriy Burkov (2025)]*
+
+### What is the difference between Linear Regression and Logistic Regression?
+> Linear Regression and Logistic Regression are the two famous Machine Learning Algorithms which come under supervised learning technique. Since both the algorithms are of supervised in nature hence these algorithms use labeled dataset to make the predictions. But the main difference between them is how they are being used. The Linear Regression is used for solving Regression problems whereas Logistic Regression is used for solving the Classification problems.
+
+*[Linear Regression vs Logistic Regression - Java T Point (2022)](https://www.javatpoint.com/linear-regression-vs-logistic-regression-in-machine-learning)*
+
+> Linear regression and logistic regression share many commonalities. Both assume a parametric linear form relating the predictors with the response. Exploring and finding the best model are done in very similar ways. Extensions to the linear model, like the use of a spline transform of a predictor, are equally applicable in the logistic regression setting. Logistic regression differs in two fundamental ways: (1) The way the model is fit (least squares is not applicable); (2) The nature and analysis of the residuals from the model
+
+*Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
+
+> Logistic regression is commonly used for binary classification tasks. Unlike linear regression, which produces outputs ranging from minus infinity to infinity, logistic regression puts values between 0 and 1. It can serve either as a standalone model or as the output layer in a larger neural network.
+
+> A common choice for the loss function in this case is binary cross-entropy, also called logistic loss.
+
+*The Hundred-Page Language Models Book; Andriy Burkov (2025)*
+
+### What Assumptions do we make for Regression models?
+> When doing a simple regression model, we make the (often reasonable!) assumptions that:
+> a) The errors are normally distributed and, on average, zero;
+> b) The errors all have the same variance (they are homoscedastic), and
+> c) The errors are unrelated to each other (they are independent across observations).
+
+*[Pratical Time Series - The State University of New York (2024)](https://www.coursera.org/learn/practical-time-series-analysis)*
 
 ### What is the difference between Simple Linear Regression and Correlation?
 > Both are ways of measuring how two variables are related. The difference is that while correlation measures the strength of an association between two variables, regression quantifies the nature of the relationship.
 
 *Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
 
-### What is the difference between Correlated Variables and Confounding Variables?
-> With correlated variables, the problem is one of commission: including different variables that have a similar predictive relationship with the response. With confounding variables, the problem is one of omission: an important variable is not included in the regression equation. Naive interpretation of the equation coefficients can lead to invalid conclusions.
+### What is Multicollinearity?
+> It will be recalled that one of the factors that affects the standard error of a partial regression coefficient is the degree to which that independent variable is correlated with the other independent variables in the regression equation. Other things being equal, an independent variable that is very highly correlated with one or more other independent variables will have a relatively large standard error. This implies that the partial regression coefficient is unstable and will vary greatly from one sample to the next. This is the situation known as multicollinearity. Multicollinearity exists whenever an independent variable is highly correlated with one or more of the other independent variables in a multiple regression equation. Multicollinearity is a problem because it undermines the statistical significance of an independent variable. Other things being equal, the larger the standard error of a regression coefficient, the less likely it is that this coefficient will be statistically significant.
 
-*Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
+*[The problem of multicollinearity - Understanding Regression Analysis; Michael Patrick Allen (1997)](https://link.springer.com/chapter/10.1007/978-0-585-25657-3_37)*
 
 ### What is Heteroskedasticity?
 > Heteroskedasticity is the lack of constant residual variance across the range of the predicted values. In other words, errors are greater for some portions of the range than for others. Visualizing the data is a convenient way to analyze residuals.
@@ -724,24 +685,221 @@ It is difficult to establish causality statistically; for this, well-designed ra
 
 *[Causal Inference for the Brave and True; Matheus Facure Alves (2022)](https://matheusfacure.github.io/python-causality-handbook/landing-page.html)*
 
-### What is Ordinary Least Squares?
+### What is Loss in Machine Learning?
+> Smaller errors mean the model fits the data better. The loss, which aggregates these errors, measures how well the model aligns with the dataset.
 
-> OLS is a common technique used in analyzing linear regression. In brief, it compares the difference between individual points in your data set and the predicted best fit line to measure the amount of error produced. 
+*The Hundred-Page Language Models Book; Andriy Burkov (2025)*
 
-*[Interpreting Linear Regression Through statsmodels .summary(); Tim McAleer (2020)](https://medium.com/swlh/interpreting-linear-regression-through-statsmodels-summary-4796d359035a)*
+### How do we find the Optimum of a Function?
+> To find the optimum (minimum or maximum) of a function, we calculate its first derivative. At the optimum, the first derivative equals 0. For functions of two or more variables, like the loss function $J(w, b)$, we compute partial derivatives with respect to each variable.
 
-> How is the model fit to the data? When there is a clear relationship, you could imagine fitting the line by hand. In practice, the regression line is the estimate that minimizes the sum of squared residual values, also called the residual sum of squares or RSS. The method of minimizing the sum of the squared residuals is termed least squares regression, or ordinary least squares (OLS) regression. 
+*The Hundred-Page Language Models Book; Andriy Burkov (2025)*
 
-*Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
+### What is the Cross-Entropy Loss?
+> Cross-entropy, also known as logarithmic loss or log loss, is a popular loss function used in machine learning to measure the performance of a classification model. It measures the average number of bits required to identify an event from one probability distribution, p, using the optimal code for another probability distribution, q. In other words, cross-entropy measures the difference between the discovered probability distribution of a classification model and the predicted values. The cross-entropy loss function is used to find the optimal solution by adjusting the weights of a machine learning model during training. The objective is to minimize the error between the actual and predicted outcomes. A lower cross-entropy value indicates better performance.
 
-### What is the difference between Linear Regression and Logistic Regression?
-> Linear Regression and Logistic Regression are the two famous Machine Learning Algorithms which come under supervised learning technique. Since both the algorithms are of supervised in nature hence these algorithms use labeled dataset to make the predictions. But the main difference between them is how they are being used. The Linear Regression is used for solving Regression problems whereas Logistic Regression is used for solving the Classification problems.
+> Binary cross-entropy (averaged over $N$ samples):
+> $L = -\frac{1}{N}[\sum_{j=1}^{N}(t_j\log(p_j)+(1-t_j)\log(1-p_j))]$
+> where $t_j\in\{0,1\}$ is the true label and $p_j$ is the predicted probability for sample $j$. For binary, $p_j$ usually comes from a sigmoid, while for more labels if comes from the softmax.
 
-*[Linear Regression vs Logistic Regression - Java T Point (2022)](https://www.javatpoint.com/linear-regression-vs-logistic-regression-in-machine-learning)*
+*[Cross-Entropy Loss Function in Machine Learning: Enhancing Model Accuracy; Kurtis Pykes (2025)](https://www.datacamp.com/tutorial/the-cross-entropy-loss-function-in-machine-learning)*
 
-> Linear regression and logistic regression share many commonalities. Both assume a parametric linear form relating the predictors with the response. Exploring and finding the best model are done in very similar ways. Extensions to the linear model, like the use of a spline transform of a predictor, are equally applicable in the logistic regression setting. Logistic regression differs in two fundamental ways: (1) The way the model is fit (least squares is not applicable); (2) The nature and analysis of the residuals from the model
+> When used with softmax in the output layer, cross-entropy guides the network to assign high probabilities to correct classes while reducing probabilities for incorrect ones.
 
-*Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
+*[The Hundred-Page Language Models Book; Andriy Burkov (2025)]*
+
+### What is the Gradient in Gradient Descent?
+> The gradient of the loss function is a vector containing all partial derivatives with respect to the model’s parameters. It indicates the direction of steepest ascent in the loss function. To minimize loss, parameters are updated in the opposite direction of the gradient.
+
+*[The Hundred-Page Language Models Book; Andriy Burkov (2025)]*
+
+### What is Gradient Descent and How Does it Work?
+> Gradient descent is an iterative optimization algorithm that updates model parameters to minimize the loss function. Steps include:
+> 1. Initialize parameters randomly.  
+> 2. Compute predictions.  
+> 3. Compute gradients of the loss with respect to parameters.  
+> 4. Update parameters using, adjusting in the direction that decreases the loss function. This adjustment involves taking a small step in the opposite direction of the gradient.
+> 5. Calculate the loss by substituting the updated values.
+> 6. Repeat until the loss converges to a minimum.  
+
+*[The Hundred-Page Language Models Book; Andriy Burkov (2025)]*
+
+### What is the Learning Rate in Gradient Descent?
+> The learning rate is a hyperparameter that controls the step size during updates. If the learning rate is too small, training is very slow; if it is too large, the algorithm may overshoot the minimum or even diverge. Choosing an appropriate learning rate is critical for convergence.
+
+*[The Hundred-Page Language Models Book; Andriy Burkov (2025)]*
+
+### What is Convergence in Gradient Descent?
+> Convergence occurs when subsequent iterations yield minimal decreases in loss. A properly tuned learning rate ensures steady progress toward the minimum of the loss function.
+
+*[The Hundred-Page Language Models Book; Andriy Burkov (2025)]*
+
+### What is Automatic Differentiation?
+> Automatic differentiation (autograd) is a feature in modern ML frameworks (e.g., PyTorch, TensorFlow) that computes derivatives directly from Python code. It eliminates the need for manual derivations, even for complex models, and enables gradient-based optimization efficiently.
+
+*[The Hundred-Page Language Models Book; Andriy Burkov (2025)]*
+
+### What is Backpropagation?
+> Backpropagation is the algorithm used to compute gradients in neural networks. It applies differentiation rules (chain rule) over a computational graph of the model. The process involves two passes:  
+> - Forward pass: data flows from input to output to compute predictions.  
+> - Backward pass: gradients flow from output to input to update parameters.  
+
+*[The Hundred-Page Language Models Book; Andriy Burkov (2025)]*
+
+### What are Activation Functions?
+> For a one-dimensional input, the model becomes: $y = \phi(wx + b)$
+> where $\phi$ is a fixed non-linear function (activation). Common activations include:
+> - ReLU (Rectified Linear Unit): $ \mathrm{ReLU}(z) = \max(0, z) $, widely used in neural networks.
+> - Sigmoid: $\sigma(z) = \frac{1}{1 + e^{-z}}$, outputs values in $[0,1]$, suitable for binary classification.  
+> - Tanh: $\tanh(z) = \frac{e^z - e^{-z}}{e^z + e^{-z}} $, outputs values in $[-1,1]$.
+> - Softmax: Transforms a vector $\mathbf{z}$ into a probability distribution: $\mathrm{softmax}(z_i) = \frac{e^{z_i}}{\sum_{j} e^{z_j}}$, ensuring that the sum is 1. Tasks involving three or more classes generally employ the softmax activation function paired with cross-entropy loss.
+
+> Neural network softmax outputs are better characterized as "probability scores" rather than true statistical probabilities, despite summing to one and resembling class likelihoods. Unlike logistic regression or Naive Bayes models, neural networks don't generate genuine class probabilities.
+
+*The Hundred-Page Language Models Book; Andriy Burkov (2025)*
+
+### What are Feedforward Neural Networks (FNNs) and Multilayer Perceptrons (MLPs)?
+> A feedforward neural network (FNN) is one where information flows in one direction — left to right — without loops. [...] When each layer connects to all units in the next, it is called a multilayer perceptron (MLP), and the layers are known as fully connected (dense) layers.
+
+*The Hundred-Page Language Models Book; Andriy Burkov (2025)*
+
+### What are Convolutional Neural Networks (CNNs)?
+> Convolutional neural networks (CNNs) are feedforward neural networks with convolutional layers that are not fully connected. Initially designed for image processing, they are also effective for tasks like text classification.
+
+*The Hundred-Page Language Models Book; Andriy Burkov (2025)*
+
+### Why was ReLU important in Deep Learning?
+> The ReLU activation function, despite its simplicity, was a breakthrough in machine learning. Neural networks before 2012 relied more on smooth activations like tanh and sigmoid, which made training deep models difficult.
+
+*The Hundred-Page Language Models Book; Andriy Burkov (2025)*
+
+### What is the Brier Score?
+> Although the ROC curve assesses how well the algorithm separates the groups, and the calibration plot checks whether the probabilities actually correspond to what they claim, the ideal would be to find a simple composite measure that combines these two aspects into a single number that we could then use to compare algorithms. Fortunately, meteorologists in the 1950s discovered exactly how to do this. If we were predicting a numerical quantity, such as tomorrow’s temperature at noon in a given place, accuracy would generally be summarized by the error — the difference between the observed temperature and the predicted one. The usual way to summarize error over a series of days is the mean squared error (MSE) — the average of the squared errors—analogous to the least-squares criterion we saw used in regression analysis. The trick for probabilities is to use the same mean-squared-error criterion we use when predicting a quantity, assigning the value 1 to a future observation of “rain” and the value 0 to “no rain.” The average of the squared errors is known as the Brier score, in honor of meteorologist Glenn Brier, who described the method in 1950.
+
+*The Art of Statistics: Learning from Data; David Spiegelhalter (2019)*
+
+### What is the High Accuracy Paradox?
+> Accuracy is not useful when trying to predict things that are not common. Accuracy is simply the proportion of correctly classified instances. It is usually the first metric you look at when evaluating a model. However, when the data is imbalanced (where most of the instances belong to one of the classes), or you are more interested in the performance on either one of the classes, accuracy doesn’t really capture the effectiveness of a classifier. Normally in classification problems, we're typically more concerned about the errors that we make. Because the target class is usually the area of interest that we're trying to focus on.  This is called accuracy paradox.
+
+*[Machine Learning - Accuracy Paradox; Randy Lao (2017)](https://www.linkedin.com/pulse/machine-learning-accuracy-paradox-randy-lao/)*
+
+> Accuracy is not a reliable metric to determine a model performance. That’s why it’s called a Paradox because, intuitively, you’d expect a Model with a higher Accuracy to have been the best Model but Accuracy Paradox tells us that this, sometimes, isn’t the case.
+
+*[Accuracy Paradox in Classification Models; Amit Ranjan (2020)](https://medium.com/analytics-vidhya/accuracy-paradox-in-classification-models-d55a2884410)*
+
+### What is Underfitting?
+> In supervised learning, underfitting happens when a model unable to capture the underlying pattern of the data. These models usually have high bias and low variance. It happens when we have very less amount of data to build an accurate model or when we try to build a linear model with a nonlinear data. Also, these kind of models are very simple to capture the complex patterns in data like Linear and logistic regression.
+
+*Understanding the Bias-Variance Tradeoff; Seema Singh (2018)*
+
+### What is Overfitting?
+> In supervised learning, overfitting happens when our model captures the noise along with the underlying pattern in data. It happens when we train our model a lot over noisy dataset. These models have low bias and high variance. These models are very complex like Decision trees which are prone to overfitting.
+
+*Understanding the Bias-Variance Tradeoff; Seema Singh (2018)*
+
+### Why is Model Tuning relevant?
+> Model tuning. A hallmark of prediction algorithms is their many tuning parameters. Sometimes these parameters can have large effects on prediction quality if they are changed and so it is important to be informed of the impact of tuning parameters for whatever algorithm you use. There is no prediction algorithm for which a single set of tuning parameters works well for all problems. Most likely, for the initial model fit, you will use “default” parameters, but these defaults may not be sufficient for your purposes. Fiddling with the tuning parameters may greatly change the quality of your predictions. It's very important that you document the values of these tuning parameters so that the analysis can be reproduced in the future.
+
+*[The Art of Data Science; Roger D. Peng and Elizabeth Matsui (2017)](https://bookdown.org/rdpeng/artofdatascience/)*
+
+### What is PAC Learning?
+> PAC - probability for approximately correct - learning theory helps to analyze whether and under what conditions a learning algorithm will probably output an approximately correct classifier. 
+
+*The Hundred-Page Machine Learning Book; Andriy Burkov (2019)*
+
+> A Concept Class (C) is PAC-learnable by a Learner (L) using a Hypothesis Space (H), if L will, with probability 1 - delta (with 'delta' being the certainty goal), output a hypothesis h (belonging to H) such that the error of h is less than epsilon (with 'epsilon' being the error goal) in time and samples polynomial in 1/epsilon, 1/delta.
+
+*[PAC Learning - Georgia Tech - Machine Learning (2015)](https://www.youtube.com/watch?v=e37nlms7Zi0)*
+
+## Time Series
+
+### What is Stationarity in a Time Series context?
+> A strict stationarity imposes a stronger condition of identical probability distributions across different time points, while weak stationarity allows for changes in the distribution but requires the mean, variance, and autocorrelation structure to remain constant over time. In practice, weak stationarity is often more applicable and easier to verify, making it a commonly used assumption in time series analysis.
+
+*Pratical Time Series - The State University of New York (2024)*
+
+### Why is it important to know Stationarity and Inversability for ARIMA models?
+> Stationarity and invertibility are crucial concepts in the context of ARIMA (AutoRegressive Integrated Moving Average) models, and understanding these properties is essential for ensuring the validity and reliability of the model. Here's why these properties are important:
+
+> Stationarity:
+
+> - Statistical Assumption: ARIMA models assume that the time series data is stationary. Stationarity means that the statistical properties of the time series, such as mean and variance, do not change over time. This assumption is necessary for the model to capture meaningful patterns and relationships.
+
+> - Differencing Requirement: If the original time series is not stationary, differencing is applied to make it stationary. Differencing involves taking the difference between consecutive observations. Stationarity is important because it simplifies the modeling process and allows for more reliable parameter estimation.
+
+> Invertibility:
+
+> - Interpretability: Invertibility is a property that ensures the model is interpretable. An invertible model implies that the current value of the time series only depends on past values and white noise. This property is crucial for understanding the impact of past observations on the present without causing feedback loops.
+
+> - Meaningful Forecasts: Invertibility is important for making meaningful forecasts. If a model is not invertible, the forecasted values may not have clear interpretability, and it might be challenging to attribute changes in the forecast to specific changes in the input data.
+
+> - Numerical Stability: Invertibility is related to the numerical stability of the model. Invertible models are more likely to produce stable and reliable parameter estimates, making them more suitable for forecasting.
+
+> In summary, stationarity ensures that the statistical properties of the time series remain consistent over time, making it suitable for modeling. Invertibility ensures that the model is interpretable and capable of providing meaningful forecasts. Both properties contribute to the reliability and accuracy of ARIMA models in capturing and forecasting time series patterns.
+
+### Can I apply ARIMA on a Non Stationary and Non Invertible Time Series?
+> The ARIMA (AutoRegressive Integrated Moving Average) model assumes that the time series data is stationary. If your time series is non-stationary, you typically need to apply differencing to make it stationary before applying ARIMA. Similarly, invertibility is a desirable property of ARIMA models to ensure that the model is interpretable and suitable for forecasting. An invertible model implies that the current value of the time series only depends on past values and white noise. If a model is not invertible, it may lead to challenges in interpretation and potentially less reliable forecasts. Here are the general steps when dealing with a non-stationary time series: (1) Differencing - If your time series is non-stationary, you may need to apply differencing to make it stationary. Differencing involves taking the difference between consecutive observations; (2) ARIMA Model - Once the data is stationary, you can apply the ARIMA model. The ARIMA model is typically denoted as ARIMA(p, d, q), where p is the order of the autoregressive (AR) component, d is the degree of differencing, q is the order of the moving average (MA) component; (3) Invertibility Check: After fitting the ARIMA model, it's important to check if the model is invertible. If the model is not invertible, you might need to reconsider the model specification or apply transformations to achieve invertibility.
+
+### How to model a Time Series for ARIMA?
+> Modeling: Trend suggests differencing; Variation in variance suggests transformation (common transformation: log, then differencing); ACF (auto-correlation function) suggests order of moving average process (q); PACF (partial ACF) suggests order of autoregressive process (p).
+
+*Pratical Time Series - The State University of New York (2024)*
+
+## Generative AI
+
+### What is a Corpus?
+> A collection of text documents used in machine learning.
+
+*The Hundred-Page Language Models Book; Andriy Burkov (2025)*
+
+### What is a Token?
+> Splitting a document into small indivisible parts is called tokenization, and each part is a token. There are different ways to tokenize. Sometimes, it's useful to break words into smaller units, called subwords, to keep the vocabulary size manageable.
+
+*The Hundred-Page Language Models Book; Andriy Burkov (2025)*
+
+### How does the Bag of Words work?
+> 1. Create a vocabulary: List all unique words in the corpus to create the vocabulary.
+> 2. Vectorize documents: Convert each document into a feature vector, where each dimension represents a word from the vocabulary. The value indicates the word's presence, absence, or frequency in the document.
+
+> While the bag-of-words approach offers simplicity and practicality, it has notable limitations. Most significantly, it fails to capture token order or context. Consider how "the cat chased the dog" and "the dog chased the cat" yield identical representations, despite conveying opposite meanings. N-grams provide one solution to this challenge.
+
+> Another limitation of bag-of-words is how it handles out-of-vocabulary words. When a word appears during inference that wasn't present during training - and thus isn't in the vocabulary - it can't be represented in the feature vector. Similarly, the approach struggles with synonyms and near-synonyms. Words like "movie" and "film" are processed as completely distinct terms, forcing the model to learn separate parameters for each. Since labeled data is often costly to obtain, resulting in rather small labeled datasets, it would be more efficient if the model could recognize and collectively process words with similar meanings. Word embeddings address this by mapping semantically similar words to similar vectors.
+
+*The Hundred-Page Language Models Book; Andriy Burkov (2025)*
+
+### How does the N-grams work?
+> An n-gram consists of $n$ consecutive tokens from text. By preserving sequences of tokens, n-grans retains contextual information that information that individual tokens cannot capture. However, using n-grams comes at a cost. The vocabulary expands considerably, increasing the computational cost of model training. Additionally, the model requires larger datasets to effectively learn weights for the expanded set of possible n-grams.
+
+*The Hundred-Page Language Models Book; Andriy Burkov (2025)*
+
+### How do Word Embeddings work?
+> Word embeddings overcome the limitations of the bag-of-words model by representing words as dense vectors rather than sparse one-hot vectors. These lower-dimensional representations contain mostly non-zero values, with similar words having embeddings than exhibit high cosine similarity. The embeddings are learned from vast unlabeled datasets spanning millions to hundreds of millions of documents.
+
+*The Hundred-Page Language Models Book; Andriy Burkov (2025)*
+
+### What are Skip-grams?
+> Skip-grams are word sequences where one word is omitted. Training a model to predict these skipped words from their surrouding context helps it learn semantic relationships between words. The process can also work in reverse: the skipped word can be used to predict its context words. [...] The skip-gram model uses cross-entropy as its loss function. [...] Once training is complete, the output layer is discarded. The embedding layer then serves as the new output layer.
+
+> Word2vec is just one method for learning word embeddings from large, unlabeled text corpora. Other methods, such as GloVe and FastText, offer alternative approaches, focusing on capturing global co-occurrence statistics or subword information to create more robust embeddings.
+
+> Using word embeddings to represent text offers clear advantages over bag of words. One advantage is dimensionality reduction, which compresses the word representation from the size of the vocabularity (as in one-hot encoding) to a small vector, typically between 100 and 1000 dimensions. Semantic similarity is another advantage of word embeddings. Words with similar meanings are mapped to vectors that are close to each other in the embedding space.
+
+*The Hundred-Page Language Models Book; Andriy Burkov (2025)*
+
+### What is Cosine Similarity?
+> Cosine similarity is a widely used similarity metric that determines how similar two data points are based on the direction they point rather than their length or size. It is especially effective in high-dimensional spaces where traditional distance-based metrics can struggle.
+
+> Computing cosine similarity requires measuring the cosine of the angle (theta) between two non-zero vectors in an inner product space. This measurement produces a cosine similarity score. Cosine similarity values range from -1 to 1:
+> - A cosine similarity score of 1 indicates that the vectors are pointing in the exact same direction.
+> - A cosine similarity score of 0 indicates that the vectors are orthogonal, meaning they have no directional similarity.
+> - A cosine similarity score of -1 indicates that the vectors point in exactly opposite directions.
+
+> Think of it like comparing arrows: if they’re pointing in the same direction, they are highly similar. Those at right angles are unrelated, and arrows pointing in opposite directions are dissimilar.
+
+> $cs = (A \cdot B) / (||A|| \times ||B||)$
+> , where $||A||$ is the magnitude (length) of vector $A$ and $||B||$ is the magnitude of vector $B$. In a 2D space, if vector $A=(x,y)$, its magnitude is $||A||=\sqrt{x^{2}+y^{2}}$.
+
+*[What is cosine similarity?; IBM (2025)](https://www.ibm.com/think/topics/cosine-similarity)*
 
 ## Miscellaneous
 
@@ -755,7 +913,6 @@ It is difficult to establish causality statistically; for this, well-designed ra
 *Bioinformatics Data Skills; Vince Buffalo (2015)*
 
 ### Should I use R programming language for Data Science? 
-
 > R in data science is considered as [one of] the best programming language[s]. It is a programming language and programming condition for illustrations and measurable registering. It is space explicit and has fantastic top notch run. R comprises of open source bundles for measurable and quantitative applications. This incorporates progressed plotting, non-direct relapse, neural systems, phylogenetics, and some more. For analysing data, Data Scientists and Data Miners use R broadly.
 
 *Data Science From Scratch: How to Become a Data Scientist; David Park (2019)*
