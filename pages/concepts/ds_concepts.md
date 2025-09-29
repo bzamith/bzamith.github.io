@@ -896,8 +896,8 @@ It is difficult to establish causality statistically; for this, well-designed ra
 
 > Think of it like comparing arrows: if they’re pointing in the same direction, they are highly similar. Those at right angles are unrelated, and arrows pointing in opposite directions are dissimilar.
 
-> $cs = (A \cdot B) / (||A|| \times ||B||)$
-> , where $||A||$ is the magnitude (length) of vector $A$ and $||B||$ is the magnitude of vector $B$. In a 2D space, if vector $A=(x,y)$, its magnitude is $||A||=\sqrt{x^{2}+y^{2}}$.
+> $cs = (A \cdot B) / (\|A\| \times \|B\|)$
+> , where $||A||$ is the magnitude (length) of vector $A$ and $\|B\|$ is the magnitude of vector $B$. In a 2D space, if vector $A=(x,y)$, its magnitude is $\|A\|=\sqrt{x^{2}+y^{2}}$.
 
 *[What is cosine similarity?; IBM (2025)](https://www.ibm.com/think/topics/cosine-similarity)*
 
