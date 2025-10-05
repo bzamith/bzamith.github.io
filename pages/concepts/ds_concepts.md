@@ -279,12 +279,37 @@ title: Data Science Concepts
 
 *Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
 
+### What is the difference between the Expected Value and the Mean?
+> Expected value ($\mathbb{E}[X]$) is a theoretical quantity of a random variable $X$:
+
+> $\mathbb{E}[X]=\sum_x x\,P(X=x)\quad\text{or}\quad \int x\,f_X(x)\,dx$
+
+> It’s the distribution’s long-run average — i.e., the population mean — when the first moment exists.
+
+> Mean can mean two different things: (1) Population mean — the same as $\mathbb{E}[X]$ (if finite); or (2) Sample mean $\bar X=\tfrac{1}{n}\sum_{i=1}^n X_i$ — a statistic computed from data that estimates $\mathbb{E}[X]$. It’s unbiased ($\mathbb{E}[\bar X]=\mathbb{E}[X]$) and, by the Law of Large Numbers, $\bar X \to \mathbb{E}[X]$ as $n$ grows.
+
+> When they differ / pitfalls:
+
+> - Some distributions (e.g., Cauchy) have no finite expected value; talking about a population “mean” is not meaningful, though you can still compute a sample average (it won’t stabilize).
+
+> - People sometimes say “mean” when they mean median or other averages (geometric, harmonic); those are not $\mathbb{E}[X]$.
+
+> - In general, $\mathbb{E}[g(X)] \neq g(\mathbb{E}[X])$ for nonlinear $g$.
+
 ### What is the Law of Large Numbers?
-> The variability of the observed proportion decreases as the sample size increases—this is the law of large numbers.
+> The Law of Large Numbers states that if you sample a random variable independently a large number of times, the measured average should converge to the random variable's true expectation (mean). This is important in studying the longer-term behavior of random variables over time. As an example, a coin might land on heads 5 times in a row, but over a much larger n we would expect the proportion of heads to be approximately half of the total flips. Similarly, a casino might experience a loss on any individual game, but over the long run should see a predictable profit over time.
+
+*Ace the Data Science Interview; Kevin Huo, Nick Singh (2022)*
+
+> The variability of the observed proportion decreases as the sample size increases — this is the law of large numbers.
 
 *The Art of Statistics: Learning from Data; David Spiegelhalter (2019)*
 
 ### What is the Central Limit Theorem?
+> The Central Limit Theorem (CLT) states that if you repeatedly sample a random variable a large number of times, the distribution of the sample mean will approach a normal distribution regardless of the initial distribution of the random variable. The CLT provides the basis for much of hypothesis testing. At a very basic level, you can consider the implications of this theorem on coin flipping: the probability of getting some number of heads flipped over a large n should be approximately that of a normal distribution. Whenever you're asked to reason about any particular distribution over a large sample size, you should remember to think of the CLT, regardless of whether it is Binomial, Poisson, or any other distribution.
+
+*Ace the Data Science Interview; Kevin Huo, Nick Singh (2022)*
+
 > [...] But it is not only the binomial distribution that tends toward a normal curve as the sample size increases — it is a remarkable fact that, whatever the shape of the population distribution from which each of the original measurements is drawn, for large sample sizes their mean can be regarded as having been drawn from a normal curve. This will have a mean equal to the mean of the original distribution, and a standard deviation in a simple relation to the standard deviation of the original population distribution.
 
 > The central limit theorem implies that sample means and other statistical summaries will have an approximately normal distribution, for large samples.
@@ -294,6 +319,11 @@ title: Data Science Concepts
 ### What is Standard Error?
 > The standard error is a single metric that sums up the variability in the sampling distribution for a statistic. The standard error can be estimated using a statistic based on the standard deviation s of the sample values, and the sample size n. As the sample size increases, the standard error decreases. The relationship between standard error and sample size is sometimes referred to as the square root of n rule: to reduce the standard error by a factor of 2, the sample size must be increased by a factor of 4.
 
+*Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
+
+### What is Alpha (significance level)?
+> Statisticians frown on the practice of leaving it to the researcher’s discretion to determine whether a result is “too unusual” to happen by chance. Rather, a threshold is specified in advance, as in “more extreme than 5% of the chance (null hypothesis)results”; this threshold is known as alpha. Typical alpha levels are 5% and 1%. Any chosen level is an arbitrary decision—there is nothing about the process that will guarantee correct decisions x% of the time. This is because the probability question being answered is not “What is the probability that this happened by chance?” but rather “Given a chance model, what is the probability of a result this extreme?” We then deduce backward about the appropriateness of the chance model, but that judgment does not carry a probability. This point has been the subject of much confusion.
+ 
 *Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
 
 ### What are Confidence Intervals?
@@ -313,6 +343,10 @@ title: Data Science Concepts
 
 *The Art of Statistics: Learning from Data; David Spiegelhalter (2019)*
 
+> This is a range of values that, if a large sample were taken, would contain the parameter value of interest $(1 - \alpha)\%$ of the time. For instance, a 95\% confidence interval would contain the true value 95\% of the time. If 0 is included in the confidence intervals, then we cannot reject the null hypothesis (and vice versa).
+
+*Ace the Data Science Interview; Kevin Huo, Nick Singh (2022)*
+
 ### What is the relationship between Standard Error and Variables' Variance?
 > The standard error is inversely proportional to the variance of the variable. This means that, if doesn’t change much, it will be hard to estimate its effect on the outcome. This also makes intuitive sense. Take it to the extreme and pretend you want to estimate the effect of a drug, so you conduct a test with 10000 individuals but only 1 of them get the treatment. This will make finding the ATE very hard, we will have to rely on comparing a single individual with everyone else. Another way to say this is that we need lots of variability in the treatment to make it easier to find its impact.
 
@@ -327,6 +361,27 @@ title: Data Science Concepts
 
 *The Art of Statistics: Learning from Data; David Spiegelhalter (2019)*
 
+> The process of testing whether or not a sample of data supports a particular hypothesis is called hypothesis testing. Generally, hypotheses concern particular properties of interest for a given population (such as its parameters), like, for example, the mean conversion rate among a set of users. The steps in testing a hypothesis are as follows:
+
+> 1. State a null hypothesis and an alternative hypothesis: Either the null hypothesis will be rejected (in favor of the alternative hypothesis), or it will fail to be rejected (although failing to reject the null hypothesis does not necessarily mean it is true, but rather that there is not sufficient evidence to reject it).
+
+> 2. Use a particular test statistic of the null hypothesis to calculate the corresponding p-value.
+
+> 3. Compare the p-value to a certain significance level ($\alpha$).
+
+> Since the null hypothesis typically represents a baseline (e.g., “the marketing campaign did not increase conversion rates,” etc.), the goal is to reject the null hypothesis with statistical significance and show that there’s a significant outcome.
+
+> Hypothesis tests are either one-tailed or two-tailed tests. A one-tailed test has the following types of null and alternative hypotheses:
+> - $H_0 : \mu = \mu_0$ versus $H_1 : \mu < \mu_0$, or  
+> - $H_0 : \mu = \mu_0$ versus $H_1 : \mu > \mu_0$
+
+> whereas a two-tailed test has these types:
+> - $H_0 : \mu = \mu_0$ versus $H_1 : \mu \neq \mu_0$
+
+> where $\mu_0$ is the null hypothesis and $\mu_1$ is the alternative hypothesis, and $\mu$ is the parameter of interest.
+
+*Ace the Data Science Interview; Kevin Huo, Nick Singh (2022)*
+
 ### What is p-Value?
 > Like with confidence intervals (and most frequentist statistics, as a matter of fact), the true definition of p-values can be very confusing. So, to not take any risks, I’ll copy the definition from Wikipedia: “the p-value is the probability of obtaining test results at least as extreme as the results actually observed during the test, assuming that the null hypothesis is correct”. To put it more succinctly, the p-value is the probability of seeing such data, given that the null hypothesis is true. It measures how unlikely it is that you are seeing a measurement if the null hypothesis is true. Naturally, this often gets confused with the probability of the null hypothesis being true.
 
@@ -340,17 +395,21 @@ title: Data Science Concepts
 
 *The Art of Statistics: Learning from Data; David Spiegelhalter (2019)*
 
-### What is Alpha (significance level)?
-> Statisticians frown on the practice of leaving it to the researcher’s discretion to determine whether a result is “too unusual” to happen by chance. Rather, a threshold is specified in advance, as in “more extreme than 5% of the chance (null hypothesis)results”; this threshold is known as alpha. Typical alpha levels are 5% and 1%. Any chosen level is an arbitrary decision—there is nothing about the process that will guarantee correct decisions x% of the time. This is because the probability question being answered is not “What is the probability that this happened by chance?” but rather “Given a chance model, what is the probability of a result this extreme?” We then deduce backward about the appropriateness of the chance model, but that judgment does not carry a probability. This point has been the subject of much confusion.
- 
-*Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
+> Put simply, a p-value is the probability of observing the value of the calculated test statistic under the null hypothesis assumptions. Usually, the p-value is assessed relative to some predetermined level of significance (0.05 is often chosen).
+
+*Ace the Data Science Interview; Kevin Huo, Nick Singh (2022)*
 
 ### What is Statistical Significance?
 > The idea of statistical significance is straightforward: if a p-value is sufficiently small, then we say the results are statistically significant.
 
-> To perform a statistical significance test, follow these steps: (1) Define a question in terms of a null hypothesis we want to test; (2) Generate a sampling distribution of this test statistic, where the null hypothesis is true; (3) erify whether the observed statistic lies in one of the tails of this distribution and summarize this observation through a p-value: the probability, if the null hypothesis is true, of observing such an extreme statistic; (4) It is necessary to carefully define ‘extreme’—if, for instance, very large values, both positive and negative, of the test statistic are considered incompatible with the null hypothesis, then the p-value should account for that; (5) Declare the result with statistical significance if the p-value lies below some critical threshold.
+> To perform a statistical significance test, follow these steps: (1) Define a question in terms of a null hypothesis we want to test; (2) Generate a sampling distribution of this test statistic, where the null hypothesis is true; (3) Verify whether the observed statistic lies in one of the tails of this distribution and summarize this observation through a p-value: the probability, if the null hypothesis is true, of observing such an extreme statistic; (4) It is necessary to carefully define ‘extreme’—if, for instance, very large values, both positive and negative, of the test statistic are considered incompatible with the null hypothesis, then the p-value should account for that; (5) Declare the result with statistical significance if the p-value lies below some critical threshold.
 
 *The Art of Statistics: Learning from Data; David Spiegelhalter (2019)*
+
+### What is a Test Statistic?
+> A test statistic is a numerical summary designed for the purpose of determining whether the null hypothesis or the alternative hypothesis should be accepted as correct. More specifically, it assumes that the parameter of interest follows a particular sampling distribution under the null hypothesis. For example, the number of heads in a series of coin flips may be distributed as a binomial distribution, but with a large enough sample size, the sampling distribution should be approximately normally distributed. Hence, the sampling distribution for the total number of heads in a large series of coin flips would be considered normally distributed.
+
+*Ace the Data Science Interview; Kevin Huo, Nick Singh (2022)*
 
 ### What are Degrees of Freedom?
 > In the documentation and settings for many statistical tests and probability distributions, you will see a reference to “degrees of freedom.” The concept is applied to statistics calculated from sample data, and refers to the number of values free to vary. For example, if you know the mean for a sample of 10 values, there are 9 degrees of freedom(once you know 9 of the sample values, the 10th can be calculated and is not free to vary). The degrees of freedom parameter, as applied to many probability distributions, affects the shape of the distribution. The number of degrees of freedom is an input to many statistical tests. For example, degrees of freedom is the name given to the n – 1 denominator seen in the calculations for variance and standard deviation. Why does it matter? When you use a sample to estimate the variance for a population, you will end up with an estimate that is slightly biased downward if you use n in the denominator. If you use n – 1 in the denominator, the estimate will be free of that bias.
@@ -361,12 +420,45 @@ title: Data Science Concepts
 
 *Practical Statistics for Data Scientists; Peter Bruce, Andrew Bruce & Peter Gedeck (2020)*
 
+### What is the Z-test?
+> Assumes the test statistic follows a normal distribution under the null hypothesis. 
+
+> Generally, the Z-test is used when the sample size is large (to invoke the Central Limit Theorem) or when the population variance is known. A t-test is used when the sample size is small and when the population variance is unknown. The Z-test for a population mean is formulated as:
+
+> $z = \frac{\bar{x} - \mu_0}{\sigma / \sqrt{n}} \sim N(0,1)$
+
+> in the case where the population variance $\sigma^2$ is known.
+
+*Ace the Data Science Interview; Kevin Huo, Nick Singh (2022)*
+
 ### What is the Student's t-test?
+> Uses a Student’s t-distribution rather than a normal distribution as test statistic.
+
+> The t-test is structured similarly to the Z-test but uses the sample variance $s^2$ in place of population variance. The t-test is parameterized by the degrees of freedom, which refer to the number of independent observations in a dataset, denoted below by $n - 1$:
+
+> $t = \frac{\bar{x} - \mu_0}{s / \sqrt{n}} \sim t_{n-1}$
+
+> where $s^2 = \frac{\sum_{i=1}^{n} (x_i - \bar{x})^2}{n - 1}$
+
+*Ace the Data Science Interview; Kevin Huo, Nick Singh (2022)*
+
 > The t-value, also known as the t-test, is an important focus of attention, since it is the link that tells us whether the association between an explanatory variable and the response has statistical significance. The t-value is simply the estimate divided by the standard error, and so it can be interpreted as the distance of the estimate from 0, measured in standard errors. Given a t-value and the sample size, the software can provide an exact p-value; for large samples, t-values greater than 2 or less than –2 correspond to p < 0.05, although these thresholds are higher for smaller sample sizes.
 
 *The Art of Statistics: Learning from Data; David Spiegelhalter (2019)*
 
 ### What is the Chi-Square Test?
+> Used to assess goodness of fit and to check whether two categorical variables are independent.
+
+> The Chi-squared test statistic is used to assess goodness of fit and is calculated as follows:
+
+> $\chi^2 = \sum \frac{(O - E)^2}{E}$
+
+> where $O_i$ is the observed value of interest and $E_i$ is its expected value. A Chi-squared test statistic takes on a particular number of degrees of freedom, which is based on the number of categories in the distribution.
+
+> To use the Chi-squared test to check whether two categorical variables are independent: (1) Create a table of counts (called a contingency table) with the values of one variable forming its rows and the values of the other variable forming its columns; (2) Compute the Chi-squared test statistic as above and check for intersections.
+
+*Ace the Data Science Interview; Kevin Huo, Nick Singh (2022)*
+
 > The Chi-square test is a hypothesis test that is used when you want to determine whether there is a relationship between two categorical variables.
 
 *[Chi-Square Test [Simply explained]: DATAtab (2022)](https://www.youtube.com/watch?v=rpKzq64GA9Y)*
@@ -383,6 +475,36 @@ title: Data Science Concepts
 > Both correlations and chi-square tests can test for relationships between two variables. However, a correlation is used when you have two quantitative variables and a chi-square test of independence is used when you have two categorical variables.
 
 *[Scribbr - Frequently asked questions (2022)](https://www.scribbr.com/frequently-asked-questions/difference-between-chi-square-and-correlation/)*
+
+### What are the Type I and Type II Errors?
+> There are two errors that are frequently assessed:
+
+> - A Type I error, which is also known as a *false positive error*, occurs when the null hypothesis is rejected when it is actually correct.
+
+> - A Type II error, which is also known as a *false negative error*, occurs when the null hypothesis is not rejected when it is incorrect.
+
+> Usually, $1 - \alpha$ is referred to as the confidence level, and $1 - \beta$ is referred to as the power of the test.
+
+> - $\alpha$ (alpha) represents the probability of a Type I error.  
+
+> - $\beta$ (beta) represents the probability of a Type II error.  
+
+> - Power = 1 − $\beta$, which reflects the probability of correctly rejecting a false null hypothesis.
+
+> Generally, tests are set up in such a way as to have both $1 - \alpha$ and $1 - \beta$ relatively high (for example, 0.95 and 0.8, respectively). If you plot sample size versus power, generally you should see that a larger sample size corresponds to higher power. It can be useful to look at power curves in order to gauge the sample size needed for detecting a significant effect.
+
+*Ace the Data Science Interview; Kevin Huo, Nick Singh (2022)*
+
+### What is the Bonferroni Correction?
+> If you run many experiments—even if a particular outcome for one is unlikely—you may see a statistically significant result at least once by pure chance. For example, if you set $\alpha = 0.05$ and have 100 hypothesis tests, you would expect 5 out of 100 to be statistically significant by chance alone. To control for this, a more desirable outcome is achieved by adjusting $\alpha$. This can be done by setting a new $\alpha$ value as:
+
+> $\alpha' = \frac{\alpha}{n}$
+
+> where $n$ is the number of hypothesis tests.
+
+> This adjustment is known as the Bonferroni correction and helps ensure that the overall rate of false positives is controlled within a multiple-testing framework.
+
+*Ace the Data Science Interview; Kevin Huo, Nick Singh (2022)*
 
 ### What is Regression to Mean?
 > Regression to the mean occurs when more extreme responses tend to revert and move closer to the mean in the long run, since some contribution to their initially extreme character happened merely by chance.
