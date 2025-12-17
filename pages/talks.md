@@ -7,7 +7,7 @@ Here is a list of my talks and presentations:
 
 ### 2025
 - **Getting Started in a Data Career: Tips and Possible Paths** (from Portuguese: *Começando na Carreira de Dados: Dicas e Caminhos Possíveis*)  
-  [*GIRLs - UFLA*](https://www.youtube.com/watch?v=9pxlrMPvROs)
+  [*GIRLs - UFLA*](https://www.youtube.com/watch?v=9pxlrMPvROs)  
   Virtual  
   May 10, 2025
   
