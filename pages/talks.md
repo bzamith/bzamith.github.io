@@ -7,14 +7,14 @@ Here is a list of my talks and presentations:
 
 ### 2025
 - **Getting Started in a Data Career: Tips and Possible Paths** (from Portuguese: *Começando na Carreira de Dados: Dicas e Caminhos Possíveis*)  
-  [*GIRLs - UFLA*](https://www.youtube.com/watch?v=9pxlrMPvROs)  
-  Virtual  
+  *GIRLs - UFLA*  
+  Virtual ([video recording](https://www.youtube.com/watch?v=9pxlrMPvROs))  
   May 10, 2025
   
 ### 2024
 - **Unveiling the World of Data: Careers and Opportunities** (from Portuguese: *Desvendando o Mundo dos Dados: Carreiras e Oportunidades*)  
-  [*Semana da Computação - Unesp*](https://www.youtube.com/watch?v=pkMhlL3Gp1k)  
-  Virtual  
+  *Semana da Computação - Unesp*
+  Virtual ([video recording](https://www.youtube.com/watch?v=pkMhlL3Gp1k))  
   October 03, 2024
   
 ### 2023
