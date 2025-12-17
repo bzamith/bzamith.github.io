@@ -5,6 +5,12 @@ title: Talks
 
 Here is a list of my talks and presentations:
 
+### 2025
+- **Getting Started in a Data Career: Tips and Possible Paths** (from Portuguese: *Começando na Carreira de Dados: Dicas e Caminhos Possíveis*)
+  [*GIRLs - UFLA*](https://www.youtube.com/watch?v=9pxlrMPvROs)
+  Virtual
+  May 10, 2025
+
 ### 2024
 - **Unveiling the World of Data: Careers and Opportunities** (from Portuguese: *Desvendando o Mundo dos Dados: Carreiras e Oportunidades*)  
   [*Semana da Computação - Unesp*](https://www.youtube.com/watch?v=pkMhlL3Gp1k)  
@@ -13,7 +19,7 @@ Here is a list of my talks and presentations:
 
 ### 2023
 - **Computer Science Orientation** (from Portuguese: *Orientação em Computação*)  
-  [*PET BCC UFSCar*](https://www.instagram.com/p/CvNxYTVgWsO/?img_index=1)  
+  [*PET BCC - UFSCar*](https://www.instagram.com/p/CvNxYTVgWsO/?img_index=1)  
   São Carlos, Brazil  
   July 20, 2023
   
