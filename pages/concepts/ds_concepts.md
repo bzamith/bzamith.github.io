@@ -15,6 +15,7 @@ title: Data Science Concepts
 * [Time Series](#time-series)
 * [Generative AI](#generative-ai)
 * [Miscellaneous](#miscellaneous)
+* [Recommender Systems](#recommender-systems)
 
 ## Science and Data
 
@@ -1055,5 +1056,47 @@ It is difficult to establish causality statistically; for this, well-designed ra
 
 ### What are the 5 V's of Big Data?
 > Volume, velocity, variety, value and veracity.
+
+## Recommender Systems
+
+### What is a Recommendation System?
+> A recommendation system helps users find compelling content in a large corpus. For example, the Google Play Store provides millions of apps, while YouTube provides billions of videos. More apps and videos are added every day. How can users find new and compelling content? Yes, one can use search to access content. However, a recommendation engine can display items that users might not have thought to search for on their own.
+
+*[Recommendation Systems - Google Machine Learning](https://developers.google.com/machine-learning/recommendation/overview)*
+
+### What are the two main kinds of recommendations?
+> Two kinds of recommendations are commonly used: (1) Homepage recommendations, which are personalized to a user based on their known interests. Every user sees different recommendations; (2) Related item recommendations, which are recommendations similar to a particular item.
+
+*[Recommendation Systems - Google Machine Learning](https://developers.google.com/machine-learning/recommendation/overview)*
+
+### What is the typical architecture of a Recommendation System?
+> One common architecture for recommendation systems consists of the following components: (1) Candidate generation: In this first stage, the system starts from a potentially huge corpus and generates a much smaller subset of candidates. For example, the candidate generator in YouTube reduces billions of videos down to hundreds or thousands. The model needs to evaluate queries quickly given the enormous size of the corpus; (2) Scoring: Next, another model scores and ranks the candidates in order to select the set of items (on the order of 10) to display to the user. Since this model evaluates a relatively small subset of items, the system can use a more precise model relying on additional queries; (3) Re-ranking: Finally, the system must take into account additional constraints for the final ranking. For example, the system removes items that the user explicitly disliked or boosts the score of fresher content. Re-ranking can also help ensure diversity, freshness, and fairness.
+
+*[Recommendation Systems - Google Machine Learning](https://developers.google.com/machine-learning/recommendation/overview)*
+
+### What are Items and Queries in Recommendation Systems?
+> Items (also known as documents) are the entities a system recommends. For the Google Play store, the items are apps to install. For YouTube, the items are videos. Query (also known as context) is the information a system uses to make recommendations. Queries can be a combination of user information (the id of the user, items that users previously interacted with) and additional context (time of day, the user's device).
+
+*[Recommendation Systems - Google Machine Learning](https://developers.google.com/machine-learning/recommendation/overview)*
+
+### What is an Embedding in Recommendation Systems?
+> An embedding is a mapping from a discrete set (in this case, the set of queries, or the set of items to recommend) to a vector space called the embedding space. Many recommendation systems rely on learning an appropriate embedding representation of the queries and items. Both content-based and collaborative filtering map each item and each query (or context) to an embedding vector in a common embedding space $E = \mathbb{R}^d$. Typically, the embedding space is low-dimensional (that is, $d$ is much smaller than the size of the corpus), and captures some latent structure of the item or query set. Similar items, such as YouTube videos that are usually watched by the same user, end up close together in the embedding space.
+
+*[Recommendation Systems - Google Machine Learning](https://developers.google.com/machine-learning/recommendation/overview)*
+
+### What are the two main approaches to Candidate Generation?
+> Given a query, the system generates a set of relevant candidates using two common approaches: (1) Content-based filtering uses similarity between items to recommend items similar to what the user likes. If user A watches two cute cat videos, then the system can recommend cute animal videos to that user; (2) Collaborative filtering uses similarities between queries and items simultaneously to provide recommendations. If user A is similar to user B, and user B likes video 1, then the system can recommend video 1 to user A (even if user A hasn't seen any videos similar to video 1).
+
+*[Recommendation Systems - Google Machine Learning](https://developers.google.com/machine-learning/recommendation/overview)*
+
+### What are common Similarity Measures in Recommendation Systems?
+> A similarity measure is a function $s : E \times E \rightarrow \mathbb{R}$ that takes a pair of embeddings and returns a scalar measuring their similarity. To determine the degree of similarity, most recommendation systems rely on one or more of the following: (1) Cosine: the cosine of the angle between the two vectors, $s(q,x) = \cos(q,x)$; (2) Dot product: given by $s(q,x) = \langle q, x \rangle = \|q\| \|x\| \cos(q,x)$. If the embeddings are normalized, then dot-product and cosine coincide; (3) Euclidean distance: the usual distance in Euclidean space, $s(q,x) = \|q-x\|$. A smaller distance means higher similarity. Note that when the embeddings are normalized, the squared Euclidean distance coincides with dot-product (and cosine) up to a constant.
+
+*[Recommendation Systems - Google Machine Learning](https://developers.google.com/machine-learning/recommendation/overview)*
+
+### What are the trade-offs between Similarity Measures?
+> Compared to the cosine, the dot product similarity is sensitive to the norm of the embedding. That is, the larger the norm of an embedding, the higher the similarity (for items with an acute angle) and the more likely the item is to be recommended. This can affect recommendations as follows: (1) Items that appear very frequently in the training set (for example, popular YouTube videos) tend to have embeddings with large norms. If capturing popularity information is desirable, then you should prefer dot product. However, if you're not careful, the popular items may end up dominating the recommendations; (2) Items that appear very rarely may not be updated frequently during training. Consequently, if they are initialized with a large norm, the system may recommend rare items over more relevant items.
+
+*[Recommendation Systems - Google Machine Learning](https://developers.google.com/machine-learning/recommendation/overview)*
 
 [**Back to Home Page**](https://bzamith.github.io/)
