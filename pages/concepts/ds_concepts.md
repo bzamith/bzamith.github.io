@@ -14,8 +14,8 @@ title: Data Science Concepts
 * [Machine Learning](#machine-learning)
 * [Time Series](#time-series)
 * [Generative AI](#generative-ai)
-* [Miscellaneous](#miscellaneous)
 * [Recommender Systems](#recommender-systems)
+* [Miscellaneous](#miscellaneous)
 
 ## Science and Data
 
@@ -1024,6 +1024,301 @@ It is difficult to establish causality statistically; for this, well-designed ra
 
 *[What is cosine similarity?; IBM (2025)](https://www.ibm.com/think/topics/cosine-similarity)*
 
+## Recommender Systems
+
+### What is a Recommender System?
+> A recommender system calculates and provides relevant content to the user based on knowledge of the user, content, and interactions between the user and the item.
+
+*Pratical Recommenders Systems; Kim Falk (2019)*
+
+> A recommender system recommends items to users to optimize a utility composed of one or more objectives.
+
+*[RecSys 2016: Tutorial on Lessons Learned from Building Real-life Recommender Systems](https://www.youtube.com/watch?v=VJOtr47V0eo)*
+
+> A recommendation system helps users find compelling content in a large corpus. For example, the Google Play Store provides millions of apps, while YouTube provides billions of videos. More apps and videos are added every day. How can users find new and compelling content? Yes, one can use search to access content. However, a recommendation engine can display items that users might not have thought to search for on their own.
+
+*[Recommendation Systems - Google Machine Learning](https://developers.google.com/machine-learning/recommendation/overview)*
+
+### What are the different types of Recommendations?
+> A website showing top 10 lists of the most sold bread-making machines provides non-personalized recommendations. If a webiste for home sales or concert tickets shows you recommendations based on your demographics or your current location, the recommendations are semi-personalized. Personalized recommendations can be found on Amazon, where identified customers see "Recommendations for you". The idea of personalized recommendation also arises from the idea that people aren't only interested in the popular items, but also in items that aren't sold the most or items that are in the long tail.
+
+*Pratical Recommenders Systems; Kim Falk (2019)*
+
+> (1) Non-personalized and stereotyped: Popularity, group preference. (2) Product association: People who liked / bought X, also like Y. (3) Content-based: Learn what I like (in terms of attributes). (4) Collaborative: Learn what I like, use other's experience to recommend.
+
+*[Recommender Systems Specialization - University of Minnesota (2025)](https://www.coursera.org/specializations/recommender-systems)*
+
+> Two kinds of recommendations are commonly used: (1) Homepage recommendations, which are personalized to a user based on their known interests. Every user sees different recommendations; (2) Related item recommendations, which are recommendations similar to a particular item.
+
+*[Recommendation Systems - Google Machine Learning](https://developers.google.com/machine-learning/recommendation/overview)*
+
+### What are Items and Queries in Recommendation Systems?
+> Items (also known as documents) are the entities a system recommends. For the Google Play store, the items are apps to install. For YouTube, the items are videos. Query (also known as context) is the information a system uses to make recommendations. Queries can be a combination of user information (the id of the user, items that users previously interacted with) and additional context (time of day, the user's device).
+
+*[Recommendation Systems - Google Machine Learning](https://developers.google.com/machine-learning/recommendation/overview)*
+
+### What is an Embedding in Recommendation Systems?
+> An embedding is a mapping from a discrete set (in this case, the set of queries, or the set of items to recommend) to a vector space called the embedding space. Many recommendation systems rely on learning an appropriate embedding representation of the queries and items. Both content-based and collaborative filtering map each item and each query (or context) to an embedding vector in a common embedding space $E = \mathbb{R}^d$. Typically, the embedding space is low-dimensional (that is, $d$ is much smaller than the size of the corpus), and captures some latent structure of the item or query set. Similar items, such as YouTube videos that are usually watched by the same user, end up close together in the embedding space.
+
+*[Recommendation Systems - Google Machine Learning](https://developers.google.com/machine-learning/recommendation/overview)*
+
+### What is a Prediction?
+> A prediction is an estimate of how much the user would rate/like an item.
+
+*Pratical Recommenders Systems; Kim Falk (2019)*
+
+> The estimate of preference. [...] Ofte scaled to match some rating scaled. Often tied to search or browsing for specific products.
+
+*[Recommender Systems Specialization - University of Minnesota (2025)](https://www.coursera.org/specializations/recommender-systems)*
+
+### What is Relevancy?
+> An ordering of items according to what's most relevant to the user right now. Relevance is a function of context, demographics, and (predicted) ratings.
+
+*Pratical Recommenders Systems; Kim Falk (2019)*
+
+### What is a Recommendation?
+> Recommendations are suggestions for items you might like (or might fit what you're doing). Often presented in the form of "top-n lists".
+
+> Often, prediction and recommendation come together. Predictions help quantify items, but provide something falsiable. Recommendations provide good choices as a default, but if perceived as top-n, can result in failure to explore (if top few seen poor).
+
+*[Recommender Systems Specialization - University of Minnesota (2025)](https://www.coursera.org/specializations/recommender-systems)*
+
+> The top N most relevant items.
+
+*Pratical Recommenders Systems; Kim Falk (2019)*
+
+### What is Personalization?
+> Integrates relevancy into the presentation.
+
+*Pratical Recommenders Systems; Kim Falk (2019)*
+
+### What is the typical architecture of a Recommendation System?
+> One common architecture for recommendation systems consists of the following components: (1) Candidate generation: In this first stage, the system starts from a potentially huge corpus and generates a much smaller subset of candidates. For example, the candidate generator in YouTube reduces billions of videos down to hundreds or thousands. The model needs to evaluate queries quickly given the enormous size of the corpus; (2) Scoring: Next, another model scores and ranks the candidates in order to select the set of items (on the order of 10) to display to the user. Since this model evaluates a relatively small subset of items, the system can use a more precise model relying on additional queries; (3) Re-ranking: Finally, the system must take into account additional constraints for the final ranking. For example, the system removes items that the user explicitly disliked or boosts the score of fresher content. Re-ranking can also help ensure diversity, freshness, and fairness.
+
+*[Recommendation Systems - Google Machine Learning](https://developers.google.com/machine-learning/recommendation/overview)*
+
+### What are the two main approaches to Candidate Generation?
+> Given a query, the system generates a set of relevant candidates using two common approaches: (1) Content-based filtering uses similarity between items to recommend items similar to what the user likes. If user A watches two cute cat videos, then the system can recommend cute animal videos to that user; (2) Collaborative filtering uses similarities between queries and items simultaneously to provide recommendations. If user A is similar to user B, and user B likes video 1, then the system can recommend video 1 to user A (even if user A hasn't seen any videos similar to video 1).
+
+*[Recommendation Systems - Google Machine Learning](https://developers.google.com/machine-learning/recommendation/overview)*
+
+> The algorithms fall into two groups, and they depend on the type of data you use to make recommendations. Algorithms that employ usage data are called collaborative filtering. Algorithms that use content metadata and user profiles to calculate recommendations are called content-based filtering. A mix of the two types is called hybrid recommenders. [...] Collaborative filtering needs much feedback from the users to work properly, while content-based filtering needs good descriptions of the items.
+
+*Pratical Recommenders Systems; Kim Falk (2019)*
+
+### What are common Similarity Measures in Recommendation Systems?
+> A similarity measure is a function $s : E \times E \rightarrow \mathbb{R}$ that takes a pair of embeddings and returns a scalar measuring their similarity. To determine the degree of similarity, most recommendation systems rely on one or more of the following: (1) Cosine: the cosine of the angle between the two vectors, $s(q,x) = \cos(q,x)$; (2) Dot product: given by $s(q,x) = \langle q, x \rangle = \|q\| \|x\| \cos(q,x)$. If the embeddings are normalized, then dot-product and cosine coincide; (3) Euclidean distance: the usual distance in Euclidean space, $s(q,x) = \|q-x\|$. A smaller distance means higher similarity. Note that when the embeddings are normalized, the squared Euclidean distance coincides with dot-product (and cosine) up to a constant.
+
+*[Recommendation Systems - Google Machine Learning](https://developers.google.com/machine-learning/recommendation/overview)*
+
+### What are the trade-offs between Similarity Measures?
+> Compared to the cosine, the dot product similarity is sensitive to the norm of the embedding. That is, the larger the norm of an embedding, the higher the similarity (for items with an acute angle) and the more likely the item is to be recommended. This can affect recommendations as follows: (1) Items that appear very frequently in the training set (for example, popular YouTube videos) tend to have embeddings with large norms. If capturing popularity information is desirable, then you should prefer dot product. However, if you're not careful, the popular items may end up dominating the recommendations; (2) Items that appear very rarely may not be updated frequently during training. Consequently, if they are initialized with a large norm, the system may recommend rare items over more relevant items.
+
+*[Recommendation Systems - Google Machine Learning](https://developers.google.com/machine-learning/recommendation/overview)*
+
+### What is Content-Based Filtering?
+> Content-based filtering uses item features to recommend other items similar to what the user likes, based on their previous actions or explicit feedback. The model should recommend items relevant to this user. To do so, you must first pick a similarity metric (for example, dot product). Then, you must set up the system to score each candidate item according to this similarity metric. Note that the recommendations are specific to this user, as the model did not use any information about other users.
+
+*[Recommendation Systems - Google Machine Learning](https://developers.google.com/machine-learning/recommendation/content-based/basics)*
+
+### How does Dot Product work as a Similarity Measure in Content-Based Filtering?
+> Consider the case where the user embedding $\mathbf{x}$ and the app embedding $\mathbf{y}$ are both binary vectors. Since $\langle \mathbf{x}, \mathbf{y} \rangle = \sum_i x_i y_i$, a feature appearing in both $\mathbf{x}$ and $\mathbf{y}$ contributes a 1 to the sum. In other words, $\langle \mathbf{x}, \mathbf{y} \rangle$ is the number of features that are active in both vectors simultaneously. A high dot product then indicates more common features, thus a higher similarity.
+
+*[Recommendation Systems - Google Machine Learning](https://developers.google.com/machine-learning/recommendation/content-based/basics)*
+
+### What are the advantages and disadvantages of Content-Based Filtering?
+> Advantages: (1) The model doesn't need any data about other users, since the recommendations are specific to this user. This makes it easier to scale to a large number of users; (2) The model can capture the specific interests of a user, and can recommend niche items that very few other users are interested in.
+
+> Disadvantages: (1) Since the feature representation of the items are hand-engineered to some extent, this technique requires a lot of domain knowledge. Therefore, the model can only be as good as the hand-engineered features; (2) The model can only make recommendations based on existing interests of the user. In other words, the model has limited ability to expand on the users' existing interests.
+
+*[Recommendation Systems - Google Machine Learning](https://developers.google.com/machine-learning/recommendation/content-based/summary)*
+
+### What is Collaborative Filtering?
+> To address some of the limitations of content-based filtering, collaborative filtering uses similarities between users and items simultaneously to provide recommendations. This allows for serendipitous recommendations; that is, collaborative filtering models can recommend an item to user A based on the interests of a similar user B. Furthermore, the embeddings can be learned automatically, without relying on hand-engineering of features.
+
+*[Recommendation Systems - Google Machine Learning](https://developers.google.com/machine-learning/recommendation/collaborative/basics)*
+
+### What is the collaborative nature of Collaborative Filtering?
+> The collaborative nature of this approach is apparent when the model learns the embeddings. Suppose the embedding vectors for the movies are fixed. Then, the model can learn an embedding vector for the users to best explain their preferences. Consequently, embeddings of users with similar preferences will be close together. Similarly, if the embeddings for the users are fixed, then we can learn movie embeddings to best explain the feedback matrix. As a result, embeddings of movies liked by similar users will be close in the embedding space.
+
+*[Recommendation Systems - Google Machine Learning](https://developers.google.com/machine-learning/recommendation/collaborative/basics)*
+
+### What is Matrix Factorization in Recommender Systems?
+> Matrix factorization is a simple embedding model. Given the feedback matrix $A \in \mathbb{R}^{m \times n}$, where $m$ is the number of users (or queries) and $n$ is the number of items, the model learns: (1) A user embedding matrix $U \in \mathbb{R}^{m \times d}$, where row $i$ is the embedding for user $i$; (2) An item embedding matrix $V \in \mathbb{R}^{n \times d}$, where row $j$ is the embedding for item $j$. The embeddings are learned such that the product $U V^T$ is a good approximation of the feedback matrix $A$. Observe that the $(i, j)$ entry of $U V^T$ is simply the dot product $\langle U_i, V_j \rangle$ of the embeddings of user $i$ and item $j$, which you want to be close to $A_{i,j}$.
+
+*[Recommendation Systems - Google Machine Learning](https://developers.google.com/machine-learning/recommendation/collaborative/matrix)*
+
+### Why is Matrix Factorization more compact than learning the full matrix?
+> Matrix factorization typically gives a more compact representation than learning the full matrix. The full matrix has $O(nm)$ entries, while the embedding matrices $U, V$ have $O((n+m)d)$ entries, where the embedding dimension $d$ is typically much smaller than $m$ and $n$. As a result, matrix factorization finds latent structure in the data, assuming that observations lie close to a low-dimensional subspace.
+
+*[Recommendation Systems - Google Machine Learning](https://developers.google.com/machine-learning/recommendation/collaborative/matrix)*
+
+### What is the objective function for Matrix Factorization?
+> One intuitive objective function is the squared distance. However, only summing over values of one is not a good idea—a matrix of all ones will have a minimal loss and produce a model that can't make effective recommendations and that generalizes poorly. In contrast, Weighted Matrix Factorization decomposes the objective into the following two sums: (1) A sum over observed entries; (2) A sum over unobserved entries (treated as zeroes). Here, $w_0$ is a hyperparameter that weights the two terms so that the objective is not dominated by one or the other. Tuning this hyperparameter is very important.
+
+*[Recommendation Systems - Google Machine Learning](https://developers.google.com/machine-learning/recommendation/collaborative/matrix)*
+
+### What are the common algorithms to minimize the Matrix Factorization objective function?
+> Common algorithms include: (1) Stochastic gradient descent (SGD) is a generic method to minimize loss functions; (2) Weighted Alternating Least Squares (WALS) is specialized to this particular objective. The objective is quadratic in each of the two matrices $U$ and $V$. WALS works by initializing the embeddings randomly, then alternating between: Fixing $U$ and solving for $V$; Fixing $V$ and solving for $U$. Each stage can be solved exactly (via solution of a linear system) and can be distributed. This technique is guaranteed to converge because each step is guaranteed to decrease the loss.
+
+*[Recommendation Systems - Google Machine Learning](https://developers.google.com/machine-learning/recommendation/collaborative/matrix)*
+
+### What are the advantages and disadvantages of Collaborative Filtering?
+> Advantages: (1) No domain knowledge necessary: We don't need domain knowledge because the embeddings are automatically learned; (2) Serendipity: The model can help users discover new interests. In isolation, the ML system may not know the user is interested in a given item, but the model might still recommend it because similar users are interested in that item; (3) Great starting point: To some extent, the system needs only the feedback matrix to train a matrix factorization model. In particular, the system doesn't need contextual features.
+
+> Disadvantages: (1) Cannot handle fresh items: The prediction of the model for a given (user, item) pair is the dot product of the corresponding embeddings. So, if an item is not seen during training, the system can't create an embedding for it and can't query the model with this item. This issue is often called the cold-start problem; (2) Hard to include side features for query/item: Side features are any features beyond the query or item ID. Although it may not be easy to include side features in WALS, a generalization of WALS makes this possible.
+
+*[Recommendation Systems - Google Machine Learning](https://developers.google.com/machine-learning/recommendation/collaborative/summary)*
+
+### How can Deep Neural Networks address limitations of Matrix Factorization?
+> Deep neural network (DNN) models can address these limitations of matrix factorization. DNNs can easily incorporate query features and item features (due to the flexibility of the input layer of the network), which can help capture the specific interests of a user and improve the relevance of recommendations. One possible DNN model is softmax, which treats the problem as a multiclass prediction problem in which: The input is the user query; The output is a probability vector with size equal to the number of items in the corpus, representing the probability to interact with each item.
+
+*[Recommendation Systems - Google Machine Learning](https://developers.google.com/machine-learning/recommendation/dnn/softmax)*
+
+### What are Softmax Embeddings in DNN Recommender Systems?
+> The probability of item $j$ is given by $p(j|x) = \frac{e^{\langle \psi(x), V_j \rangle}}{\sum_{j'} e^{\langle \psi(x), V_{j'} \rangle}}$, where $Z$ is a normalization constant that does not depend on $j$. In other words, $\log p(j|x) = \langle \psi(x), V_j \rangle + \text{const}$, so the log probability of an item $j$ is (up to an additive constant) the dot product of two $d$-dimensional vectors, which can be interpreted as query and item embeddings: $\psi(x)$ is the output of the last hidden layer. We call it the embedding of the query $x$. $V_j$ is the vector of weights connecting the last hidden layer to output $j$. We call it the embedding of item $j$.
+
+*[Recommendation Systems - Google Machine Learning](https://developers.google.com/machine-learning/recommendation/dnn/softmax)*
+
+### What is Folding in Recommender Systems?
+> The model may learn how to place the query/item embeddings of a given color relative to each other (correctly capturing similarity within that color), but embeddings from different colors may end up in the same region of the embedding space, by chance. This phenomenon, known as folding, can lead to spurious recommendations: at query time, the model may incorrectly predict a high score for an item from a different group. Negative examples are items labeled "irrelevant" to a given query. Showing the model negative examples during training teaches the model that embeddings of different groups should be pushed away from each other.
+
+*[Recommendation Systems - Google Machine Learning](https://developers.google.com/machine-learning/recommendation/dnn/training)*
+
+### What are the differences between Matrix Factorization and Softmax DNN?
+> Matrix factorization is usually the better choice for large corpora. It is easier to scale, cheaper to query, and less prone to folding. DNN models can better capture personalized preferences, but are harder to train and more expensive to query. DNN models are preferable to matrix factorization for scoring because DNN models can use more features to better capture relevance. Also, it is usually acceptable for DNN models to fold, since you mostly care about ranking a pre-filtered set of candidates assumed to be relevant.
+
+*[Recommendation Systems - Google Machine Learning](https://developers.google.com/machine-learning/recommendation/dnn/training)*
+
+### How do you retrieve items to recommend given an embedding model?
+> At serve time, given a query, you start by doing one of the following: For a matrix factorization model, the query (or user) embedding is known statically, and the system can simply look it up from the user embedding matrix. For a DNN model, the system computes the query embedding $q$ at serve time by running the network on the feature vector $x$. Once you have the query embedding $q$, search for item embeddings $V_j$ that are close to $q$ in the embedding space. This is a nearest neighbor problem. For example, you can return the top $k$ items according to the similarity score $s(q, V_j)$.
+
+*[Recommendation Systems - Google Machine Learning](https://developers.google.com/machine-learning/recommendation/overview)*
+
+### What strategies can make large-scale retrieval more efficient?
+> To compute the nearest neighbors in the embedding space, the system can exhaustively score every potential candidate. Exhaustive scoring can be expensive for very large corpora, but you can use either of the following strategies to make it more efficient: If the query embedding is known statically, the system can perform exhaustive scoring offline, precomputing and storing a list of the top candidates for each query. This is a common practice for related-item recommendation. Use approximate nearest neighbors. Google provides an open-source tool on GitHub called ScaNN (Scalable Nearest Neighbors). This tool performs efficient vector similarity search at scale.
+
+*[Recommendation Systems - Google Machine Learning](https://developers.google.com/machine-learning/recommendation/overview)*
+
+### What is the role of Scoring in Recommendation Systems?
+> After candidate generation, another model scores and ranks the generated candidates to select the set of items to display. The recommendation system may have multiple candidate generators that use different sources, such as the following: Related items from a matrix factorization model; User features that account for personalization; "Local" vs "distant" items; that is, taking geographic information into account; Popular or trending items; A social graph; that is, items liked or recommended by friends. The system combines these different sources into a common pool of candidates that are then scored by a single model and ranked according to that score.
+
+*[Recommendation Systems - Google Machine Learning](https://developers.google.com/machine-learning/recommendation/overview)*
+
+### Why not let the candidate generator do the scoring?
+> Since candidate generators compute a score (such as the similarity measure in the embedding space), you might be tempted to use them to do ranking as well. However, you should avoid this practice for the following reasons: Some systems rely on multiple candidate generators. The scores of these different generators might not be comparable. With a smaller pool of candidates, the system can afford to use more features and a more complex model that may better capture context.
+
+*[Recommendation Systems - Google Machine Learning](https://developers.google.com/machine-learning/recommendation/overview)*
+
+### How does the choice of objective function affect recommendation quality?
+> The choice of scoring function can dramatically affect the ranking of items, and ultimately the quality of the recommendations. For example, maximizing click rate might lead to clickbait content being recommended. Instead, maximizing watch time encourages the system to recommend content that users actually engage with. To increase diversity and maximize session watch time, the system can implement re-ranking strategies that promote variety in recommendations while still optimizing for overall engagement.
+
+*[Recommendation Systems - Google Machine Learning](https://developers.google.com/machine-learning/recommendation/overview)*
+
+### What is Positional Bias in scoring?
+> Items that appear lower on the screen are less likely to be clicked than items appearing higher on the screen. However, when scoring videos, the system usually doesn't know where on the screen a link to that video will ultimately appear. Querying the model with all possible positions is too expensive. Even if querying multiple positions were feasible, the system still might not find a consistent ranking across multiple ranking scores. Solutions include creating position-independent rankings or ranking all the candidates as if they are in the top position on the screen.
+
+*[Recommendation Systems - Google Machine Learning](https://developers.google.com/machine-learning/recommendation/overview)*
+
+### What is Re-ranking in Recommendation Systems?
+> In the final stage of a recommendation system, the system can re-rank the candidates to consider additional criteria or constraints. One re-ranking approach is to use filters that remove some candidates. For example, you can implement re-ranking on a video recommender by training a separate model that detects whether a video is click-bait, running this model on the candidate list, and removing the videos that the model classifies as click-bait. Another re-ranking approach is to manually transform the score returned by the ranker. For example, the system re-ranks videos by modifying the score as a function of video age (perhaps to promote fresher content) or video length.
+
+*[Recommendation Systems - Google Machine Learning](https://developers.google.com/machine-learning/recommendation/overview)*
+
+### How can you ensure Freshness in Recommendation Systems?
+> Most recommendation systems aim to incorporate the latest usage information, such as current user history and the newest items. Keeping the model fresh helps the model make good recommendations. Solutions include: Re-run training as often as possible to learn on the latest training data. We recommend warm-starting the training so that the model does not have to re-learn from scratch. Warm-starting can significantly reduce training time. For example, in matrix factorization, warm-start the embeddings for items that were present in the previous instance of the model. Create an "average" user to represent new users in matrix factorization models. You don't need the same embedding for each user—you can create clusters of users based on user features. Use a DNN such as a softmax model or two-tower model. Since the model takes feature vectors as input, it can be run on a query or item that was not seen during training. Add document age as a feature.
+
+*[Recommendation Systems - Google Machine Learning](https://developers.google.com/machine-learning/recommendation/overview)*
+
+### How can you ensure Diversity in Recommendation Systems?
+> If the system always recommend items that are "closest" to the query embedding, the candidates tend to be very similar to each other. This lack of diversity can cause a bad or boring user experience. Solutions include: Train multiple candidate generators using different sources. Train multiple rankers using different objective functions. Re-rank items based on genre or other metadata to ensure diversity.
+
+*[Recommendation Systems - Google Machine Learning](https://developers.google.com/machine-learning/recommendation/overview)*
+
+### How can you ensure Fairness in Recommendation Systems?
+> Your model should treat all users fairly. Therefore, make sure your model isn't learning unconscious biases from the training data. Solutions include: Include diverse perspectives in design and development. Train ML models on comprehensive data sets. Add auxiliary data when your data is too sparse (for example, when certain categories are under-represented). Track metrics (for example, accuracy and absolute error) on each demographic to watch for biases. Make separate models for underserved groups.
+
+*[Recommendation Systems - Google Machine Learning](https://developers.google.com/machine-learning/recommendation/overview)*
+
+### What are the two types of implicit measures used for personalization?
+> Content-based implicit measures use a textual representation of people's interests to infer which results are relevant to their current need. Such a representation can be obtained from a desktop index that indexes all of the information created, copied, or viewed by an individual. Behavior-based implicit measures use people's behavior, such as their prior interactions with search result lists, to infer what is relevant. Click-through is a common behavior-based proxy for relevance.
+
+*[Jaime Teevan, Susan T. Dumais, and Eric Horvitz. 2010. Potential for personalization. ACM Trans. Comput.-Hum. Interact. 17, 1, Article 4 (March 2010), 31 pages.](https://doi.org/10.1145/1721831.1721835)*
+
+### How do content-based and behavior-based measures differ in capturing variation?
+> Implicit measures that are behavior-based (e.g., related to the similarity of a result to previously visited URLs) appear to hold potential for capturing relevance, while measures that are content-based (e.g., related to the similarity of a result to other electronic content the individual has viewed) appear to hold potential for capturing variation across individuals. Behavior-based measures are strongly influenced by presentation order, with much higher relevance for results ranked first or second than expected. In contrast, content-based measures show very flat distributions across ranks, capturing more variation between individuals than explicit relevance judgments.
+
+*[Jaime Teevan, Susan T. Dumais, and Eric Horvitz. 2010. Potential for personalization. ACM Trans. Comput.-Hum. Interact. 17, 1, Article 4 (March 2010), 31 pages.](https://doi.org/10.1145/1721831.1721835)*
+
+### What is Discounted Cumulative Gain (DCG)?
+> A measure commonly used to summarize the quality of a ranked list of results. DCG summarizes the quality of a result set by counting the number of relevant results in the set, and incorporates two important ideas: 1) that higher ranks should contribute more to the score (weighted inversely proportional to rank using a discount factor of $1/\log(i)$), and 2) that very relevant items should contribute more to the score (by assigning different gain values to different relevance levels). The formula is: $\text{DCG}(i) = G(1)$ if $i = 1$, or $\text{DCG}(i-1) + G(i)/\log(i)$ otherwise, where $G(i)$ represents the gain at position $i$.
+
+*[Jaime Teevan, Susan T. Dumais, and Eric Horvitz. 2010. Potential for personalization. ACM Trans. Comput.-Hum. Interact. 17, 1, Article 4 (March 2010), 31 pages.](https://doi.org/10.1145/1721831.1721835)*
+
+### What is BM25 in the context of personalization?
+> A well-known text-based probabilistic weighting scheme for information retrieval. BM25 assigns weights to individual terms in a document based on their frequency of occurrence in the document and the corpus, and uses these weights to estimate the probability that the document is relevant to a query. When relevance information is available, term weights can be modified by giving additional weight to terms that discriminate relevant documents from irrelevant documents, a technique known as relevance feedback. For personalized search, instead of relying on explicit relevance judgments, implicit long-term feedback using content-based profiles can be incorporated.
+
+*[Jaime Teevan, Susan T. Dumais, and Eric Horvitz. 2010. Potential for personalization. ACM Trans. Comput.-Hum. Interact. 17, 1, Article 4 (March 2010), 31 pages.](https://doi.org/10.1145/1721831.1721835)*
+
+### What are Bandits in Recommender Systems?
+> A bandit algorithm is a strategy for choosing what to try next when you're unsure. Example: Slot machines. Each machine gives random rewards. You don't known which is best. You must decide: try new machines (explore) or keep using the best-known one (exploit). In recommendations, slot machines are items to recommend (videos, songs, ads); rewards are clicks, watches, purchases; and goal is to maximize total reward over time. Every recommender must balance between exploration ("let's try this item to learn more about it") and exploitation ("we already know this item works - show it again").
+
+> Bandits address the exploration-exploitation trade-off by modeling uncertainty and exploration. By acknowledging the uncertainty in the data and deliberately exploring to reduce it, bandits learn about the relevance of unexplored items. This is especially applicable when the item set changes quickly, such as for news, ads, and tweets, or when the rate of traffic is low. If new items are constantly added, waiting to collect batch data before retraining the model can be too slow. Bandits are a good fit as they can incrementally update with new data and adaptively focus on items with higher reward. This reduces regret, which is the opportunity cost while recommending suboptimal items.
+
+> Recommender systems work well when we have a lot of data on user-item preferences. With a lot of data, we have high certainty about what users like. Conversely, with very little data, we have low certainty. Despite the low certainty, recommenders tend to greedily promote items that received higher engagement in the past. And because they influence how much exposure an item gets, potentially relevant items that aren't recommended continue getting no to low engagement, perpetuating the feedback loop. The exploration-exploitation trade-off refers to balancing between exploiting known high-reward items and exploring uncertain items to discover potentially better alternatives.
+
+*[Bandits for Recommenders Systems](https://applyingml.com/resources/bandits/)*
+
+### What is ε-greedy in bandit algorithms?
+> ε-greedy is the classic bandit algorithm. At every trial, it randomly chooses an action with probability ε and greedily chooses the highest value action with probability 1 - ε. We balance the explore-exploit trade-off via the parameter ε. A higher ε leads to more exploration while a lower ε leads to more exploitation. However, ε-greedy can explore longer than necessary (though this can be mediated by decreasing ε over time). Another downside is that ε-greedy doesn't provide guidance on which items to explore and defaults to exploring all items uniformly at random.
+
+*[Bandits for Recommenders Systems](https://applyingml.com/resources/bandits/)*
+
+### What is Upper Confidence Bound (UCB)?
+> Upper Confidence Bound (UCB) considers the uncertainty of an arm and selects arms that have the highest potential. Uncertainty is modeled via confidence bounds while potential is represented by the upper confidence bound. Because of how it works, UCB is often referred to as "optimism in the face of uncertainty". In the UCB formula, $Q_t(a)$ is the estimated value of arm $a$ at time step $t$, $N_t(a)$ is the number of times arm $a$ was selected, and $c$ is a confidence parameter (which defaults to 1). Arms that have been chosen frequently have narrower confidence bounds, while arms that haven't been selected often have wider confidence bounds. When selecting an action, even if one arm has a higher estimated value, another arm might have a higher UCB and thus be chosen.
+
+*[Bandits for Recommenders Systems](https://applyingml.com/resources/bandits/)*
+
+### What is Thompson Sampling?
+> Thompson Sampling models uncertainty by building a probability distribution from historical rewards and then samples from the distribution when choosing actions. In the simple case where rewards are binary, a Beta distribution is used. The Beta distribution takes two parameters, α and β, and the mean value of the distribution is $\frac{\alpha}{\alpha + \beta}$ which can be thought of as successes / (successes + failures). To select an action, we sample from each arm's Beta distribution and choose the arm with the highest sampled values. As we collect more data, α and β increase. As a result, the Beta distribution becomes narrower and we gain more certainty in our estimate of the arm's value. With a narrower distribution, our sampled values will be closer to the mean, thus reducing exploration and increasing exploitation.
+
+*[Bandits for Recommenders Systems](https://applyingml.com/resources/bandits/)*
+
+### How do bandit algorithms compare in performance?
+> UCB and Thompson Sampling outperform ε-greedy. By default, ε-greedy is unguided and chooses actions uniformly at random. In contrast, UCB and Thompson Sampling are guided by confidence bounds and probability distributions that shrink as the action is tried more often. When feedback is delayed, Thompson Sampling outperforms UCB. Because UCB selects arms deterministically, it chooses the same action until new feedback is incorporated. In contrast, because Thompson Sampling chooses actions stochastically by sampling from the posterior distribution, it randomizes over actions even without updated rewards. This leads to wider exploration and thus better outcomes. Overall, stochastic policies are more robust to delay as they continue to explore even without updated rewards.
+
+*[Bandits for Recommenders Systems](https://applyingml.com/resources/bandits/)*
+
+### What is LinUCB in bandit algorithms?
+> LinUCB is an extension of UCB for contextual bandits where ridge regression is trained to estimate reward linear on an arm's features. The UCB is then derived by summing the predicted reward and the standard deviation of the ridge regression. A hybrid version of LinUCB also uses features that are shared by all arms (e.g., news category) and experiments showed that shared features allowed CTR information to be learned and exploited across multiple news articles. Yahoo's LinUCB was used for news recommendations, while Alibaba adopted LinUCB for item recommendations with positional weights to address position bias.
+
+*[Bandits for Recommenders Systems](https://applyingml.com/resources/bandits/)*
+
+### What is regret in bandit algorithms?
+> Regret is the opportunity cost while recommending suboptimal items. It represents the difference between the reward that could have been obtained by always selecting the best action and the actual reward obtained by the algorithm's choices. Bandits aim to minimize regret by balancing exploration of uncertain items with exploitation of known good items.
+
+*[Bandits for Recommenders Systems](https://applyingml.com/resources/bandits/)*
+
+### How can bandits be warm-started for better user experience?
+> To ensure bandits provide a good user experience from the very first interaction, it's typical to learn from previously logged user interactions to warm-start the bandit. Doordash warm-starts their cuisine bandits via higher-level regional data, learning a bandit policy at multiple levels (regional, subregional, user). For each lower-level bandit, they update α by adding the average number of orders for the cuisine and update β by adding the average number of orders for other cuisines. Another approach is to warm-start user preferences using data collected via a random policy. Data collected via a greedy policy can also be helpful for warm-start, though this requires careful off-policy evaluation.
+
+*[Bandits for Recommenders Systems](https://applyingml.com/resources/bandits/)*
+
+### What is the curse of dimensionality in bandits?
+> One concern with applying bandits conditioned on user features (e.g., gender, age group, location, behavior) is the curse of dimensionality. More dimensions leads to less data for each combination of dimensions. Yahoo addressed this by applying PCA for dimensionality reduction before learning a policy via LinUCB, reducing 1.2k user features into five features. Another approach is semi-personalization where users are clustered into groups with similar preferences and a separate bandit is trained for each cluster. Deezer found that semi-personalized bandits trained on user clusters outperformed fully personalized alternatives because each bandit received more feedback and was able to learn more effectively.
+
+*[Bandits for Recommenders Systems](https://applyingml.com/resources/bandits/)*
+
+### How can bandits be evaluated via off-policy evaluation?
+> Several bandit implementations cite the replay method for off-policy evaluation. Replay assumes that individual events are independently and identically distributed and that the logging policy chose each arm with some randomness. During evaluation, replay takes in the new policy (to be evaluated) and the logged policy events. If the new policy chooses the same action as the logged policy, the event is added to the history and the reward is updated. If not, the event is ignored with no reward update. Inverse Propensity Scoring is another alternative for counterfactual evaluation. There is often a trade-off between standard supervised learning metrics (e.g., PR-AUC) and actual online metrics (e.g., CTR), where supervised learning that evaluates well on biased logged data may not perform well on the metrics we really care about.
+
+*[Bandits for Recommenders Systems](https://applyingml.com/resources/bandits/)*
+
+### How can uncertainty be modeled in deep learning bandits?
+> Twitter's deep learning bandit for ad recommendations considered two approaches: bootstrapping and dropout. Bootstrapping models uncertainty by training multiple identical networks on different subsets of the data, though this is costly. To reduce computation, a multi-headed network can share the same bottom layers with each data subset passing through a different head during training. Dropout models uncertainty by having the network predict an action's value via multiple forward passes with different dropout units, akin to sampling from the posterior distribution. Twitter's eventual architecture used a dropout layer as the penultimate layer, allowing them to compute the bottom layers once before multiple passes through the dropout layer are done in parallel.
+
+*[Bandits for Recommenders Systems](https://applyingml.com/resources/bandits/)*
+
 ## Miscellaneous
 
 ### How is Moore's Law applied to data?
@@ -1056,47 +1351,5 @@ It is difficult to establish causality statistically; for this, well-designed ra
 
 ### What are the 5 V's of Big Data?
 > Volume, velocity, variety, value and veracity.
-
-## Recommender Systems
-
-### What is a Recommendation System?
-> A recommendation system helps users find compelling content in a large corpus. For example, the Google Play Store provides millions of apps, while YouTube provides billions of videos. More apps and videos are added every day. How can users find new and compelling content? Yes, one can use search to access content. However, a recommendation engine can display items that users might not have thought to search for on their own.
-
-*[Recommendation Systems - Google Machine Learning](https://developers.google.com/machine-learning/recommendation/overview)*
-
-### What are the two main kinds of recommendations?
-> Two kinds of recommendations are commonly used: (1) Homepage recommendations, which are personalized to a user based on their known interests. Every user sees different recommendations; (2) Related item recommendations, which are recommendations similar to a particular item.
-
-*[Recommendation Systems - Google Machine Learning](https://developers.google.com/machine-learning/recommendation/overview)*
-
-### What is the typical architecture of a Recommendation System?
-> One common architecture for recommendation systems consists of the following components: (1) Candidate generation: In this first stage, the system starts from a potentially huge corpus and generates a much smaller subset of candidates. For example, the candidate generator in YouTube reduces billions of videos down to hundreds or thousands. The model needs to evaluate queries quickly given the enormous size of the corpus; (2) Scoring: Next, another model scores and ranks the candidates in order to select the set of items (on the order of 10) to display to the user. Since this model evaluates a relatively small subset of items, the system can use a more precise model relying on additional queries; (3) Re-ranking: Finally, the system must take into account additional constraints for the final ranking. For example, the system removes items that the user explicitly disliked or boosts the score of fresher content. Re-ranking can also help ensure diversity, freshness, and fairness.
-
-*[Recommendation Systems - Google Machine Learning](https://developers.google.com/machine-learning/recommendation/overview)*
-
-### What are Items and Queries in Recommendation Systems?
-> Items (also known as documents) are the entities a system recommends. For the Google Play store, the items are apps to install. For YouTube, the items are videos. Query (also known as context) is the information a system uses to make recommendations. Queries can be a combination of user information (the id of the user, items that users previously interacted with) and additional context (time of day, the user's device).
-
-*[Recommendation Systems - Google Machine Learning](https://developers.google.com/machine-learning/recommendation/overview)*
-
-### What is an Embedding in Recommendation Systems?
-> An embedding is a mapping from a discrete set (in this case, the set of queries, or the set of items to recommend) to a vector space called the embedding space. Many recommendation systems rely on learning an appropriate embedding representation of the queries and items. Both content-based and collaborative filtering map each item and each query (or context) to an embedding vector in a common embedding space $E = \mathbb{R}^d$. Typically, the embedding space is low-dimensional (that is, $d$ is much smaller than the size of the corpus), and captures some latent structure of the item or query set. Similar items, such as YouTube videos that are usually watched by the same user, end up close together in the embedding space.
-
-*[Recommendation Systems - Google Machine Learning](https://developers.google.com/machine-learning/recommendation/overview)*
-
-### What are the two main approaches to Candidate Generation?
-> Given a query, the system generates a set of relevant candidates using two common approaches: (1) Content-based filtering uses similarity between items to recommend items similar to what the user likes. If user A watches two cute cat videos, then the system can recommend cute animal videos to that user; (2) Collaborative filtering uses similarities between queries and items simultaneously to provide recommendations. If user A is similar to user B, and user B likes video 1, then the system can recommend video 1 to user A (even if user A hasn't seen any videos similar to video 1).
-
-*[Recommendation Systems - Google Machine Learning](https://developers.google.com/machine-learning/recommendation/overview)*
-
-### What are common Similarity Measures in Recommendation Systems?
-> A similarity measure is a function $s : E \times E \rightarrow \mathbb{R}$ that takes a pair of embeddings and returns a scalar measuring their similarity. To determine the degree of similarity, most recommendation systems rely on one or more of the following: (1) Cosine: the cosine of the angle between the two vectors, $s(q,x) = \cos(q,x)$; (2) Dot product: given by $s(q,x) = \langle q, x \rangle = \|q\| \|x\| \cos(q,x)$. If the embeddings are normalized, then dot-product and cosine coincide; (3) Euclidean distance: the usual distance in Euclidean space, $s(q,x) = \|q-x\|$. A smaller distance means higher similarity. Note that when the embeddings are normalized, the squared Euclidean distance coincides with dot-product (and cosine) up to a constant.
-
-*[Recommendation Systems - Google Machine Learning](https://developers.google.com/machine-learning/recommendation/overview)*
-
-### What are the trade-offs between Similarity Measures?
-> Compared to the cosine, the dot product similarity is sensitive to the norm of the embedding. That is, the larger the norm of an embedding, the higher the similarity (for items with an acute angle) and the more likely the item is to be recommended. This can affect recommendations as follows: (1) Items that appear very frequently in the training set (for example, popular YouTube videos) tend to have embeddings with large norms. If capturing popularity information is desirable, then you should prefer dot product. However, if you're not careful, the popular items may end up dominating the recommendations; (2) Items that appear very rarely may not be updated frequently during training. Consequently, if they are initialized with a large norm, the system may recommend rare items over more relevant items.
-
-*[Recommendation Systems - Google Machine Learning](https://developers.google.com/machine-learning/recommendation/overview)*
 
 [**Back to Home Page**](https://bzamith.github.io/)
