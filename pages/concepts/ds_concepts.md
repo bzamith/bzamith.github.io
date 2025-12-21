@@ -1175,11 +1175,6 @@ It is difficult to establish causality statistically; for this, well-designed ra
 
 *[Recommendation Systems - Google Machine Learning](https://developers.google.com/machine-learning/recommendation/dnn/softmax)*
 
-### What are Softmax Embeddings in DNN Recommender Systems?
-> The probability of item $j$ is given by $p(j|x) = \frac{e^{\langle \psi(x), V_j \rangle}}{\sum_{j'} e^{\langle \psi(x), V_{j'} \rangle}}$, where $Z$ is a normalization constant that does not depend on $j$. In other words, $\log p(j|x) = \langle \psi(x), V_j \rangle + \text{const}$, so the log probability of an item $j$ is (up to an additive constant) the dot product of two $d$-dimensional vectors, which can be interpreted as query and item embeddings: $\psi(x)$ is the output of the last hidden layer. We call it the embedding of the query $x$. $V_j$ is the vector of weights connecting the last hidden layer to output $j$. We call it the embedding of item $j$.
-
-*[Recommendation Systems - Google Machine Learning](https://developers.google.com/machine-learning/recommendation/dnn/softmax)*
-
 ### What is Folding in Recommender Systems?
 > The model may learn how to place the query/item embeddings of a given color relative to each other (correctly capturing similarity within that color), but embeddings from different colors may end up in the same region of the embedding space, by chance. This phenomenon, known as folding, can lead to spurious recommendations: at query time, the model may incorrectly predict a high score for an item from a different group. Negative examples are items labeled "irrelevant" to a given query. Showing the model negative examples during training teaches the model that embeddings of different groups should be pushed away from each other.
 
