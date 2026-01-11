@@ -101,7 +101,7 @@ title: Books
     <div class="book-title">Designing Machine Learning Systems</div>
     <div class="book-author">Chip Huyen</div>
     <span class="book-tag book-tag-library">In Library</span>
-    <span class="book-tag book-tag-engineering">Engineering</span>
+    <span class="book-tag book-tag-ml">ML/AI</span>
   </div>
   <div class="book-item">
     <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1436202607i/3735293._SY650_.jpg" alt="Clean Code">
@@ -197,7 +197,7 @@ title: Books
     <div class="book-title">Data Science on AWS</div>
     <div class="book-author">Chris Fregly & Antje Barth</div>
     <span class="book-tag book-tag-library">In Library</span>
-    <span class="book-tag book-tag-engineering">Engineering</span>
+    <span class="book-tag book-tag-ml">ML/AI</span>
   </div>
   <div class="book-item">
     <img src="https://m.media-amazon.com/images/I/31flBehUXkL._SY650_.jpg" alt="Fundamentals of Probability and Statistics">
@@ -353,7 +353,7 @@ title: Books
     <img src="https://m.media-amazon.com/images/I/81Gw--pXkzL._SY650_.jpg" alt="Machine Learning Design Patterns">
     <div class="book-title">Machine Learning Design Patterns</div>
     <div class="book-author">Valliappa Lakshmanan</div>
-    <span class="book-tag book-tag-engineering">Engineering</span>
+    <span class="book-tag book-tag-ml">ML/AI</span>
   </div>
   <div class="book-item">
     <img src="https://m.media-amazon.com/images/I/71oJG4ynmaL._SY650_.jpg" alt="Crucial Conversations">
