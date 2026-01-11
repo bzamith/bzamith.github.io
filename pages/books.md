@@ -4,15 +4,23 @@ title: Books
 ---
 
 ### Books I am Currently Reading
-- The Phoenix Project - Gene Kim, Kevin Behr, George Spafford (*)
+- Recommender Systems, The Textbook - Charu C. Aggarwal
 
-> ![The Phoenix Project](https://m.media-amazon.com/images/I/71MCzRvsraL._SX50_.jpg)
+> ![Recommender Systems, The Textbook](https://m.media-amazon.com/images/I/41hn8xdlqcL._SX50_.jpg)
+
+- Practical Recommender Systems - Kim Falk (*)
+
+> ![Practical Recommender Systems](https://m.media-amazon.com/images/I/71d5NYaCdSL._SX50_.jpg)
 
 - AI Engineering - Chip Huyen (*)
 
 > ![AI Engineering](https://m.media-amazon.com/images/I/815KH9GjFTL._SX50_.jpg)
 
 ### Books I’ve Read and Recommend
+- The Phoenix Project - Gene Kim, Kevin Behr, George Spafford (*)
+
+> ![The Phoenix Project](https://m.media-amazon.com/images/I/71MCzRvsraL._SX50_.jpg)
+
 - How to Lie with Statistics - Darrell Huff
 
 > ![How to Lie with Statistics](https://m.media-amazon.com/images/I/71nNZWg65DL._SX50_.jpg)
@@ -53,11 +61,15 @@ title: Books
 
 > ![Distributed Systems](https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1347701966i/405614._SX50_.jpg)
 
-- Introduction to Algorithms -  Thomas H. Cormen (*)
+- Introduction to Algorithms - Thomas H. Cormen (*)
 
 > ![Introduction to Algorithms](https://m.media-amazon.com/images/I/61Pgdn8Ys-L._SX50_.jpg)
 
 ### Reading Queue
+- Graph Machine Learning - Aldo Marzullo (*)
+
+> ![Graph Machine Learning](https://m.media-amazon.com/images/I/71KpXhV9JpL._SX50_.jpg)
+
 - Generative AI on AWS - Chris Fregly (*)
 
 > ![Generative AI on AWS](https://m.media-amazon.com/images/I/81-Nao5OE0L._SX50_.jpg)
