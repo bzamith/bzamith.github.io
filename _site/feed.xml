@@ -3,8 +3,8 @@
   <channel>
     <title>Bruna Zamith</title>
     <description>Portfolio</description>
-    <link>http://localhost:4000</link>
-    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
+    <link>http://0.0.0.0:4000</link>
+    <atom:link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/rss+xml" />
     
   </channel>
 </rss>

@@ -3,6 +3,39 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="{{ site.baseurl }}/static/favicon.svg">
+  <link rel="alternate icon" href="{{ site.baseurl }}/static/favicon.ico">
+
+  <!-- Apply theme immediately to prevent flash of white content -->
+  <script>
+    (function() {
+      'use strict';
+      // Get theme from localStorage or default to light
+      const storedTheme = localStorage.getItem('theme');
+      const preferredTheme = storedTheme || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      
+      // Apply theme immediately before page renders
+      if (preferredTheme === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      } else {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    })();
+  </script>
+  <style>
+    /* Prevent flash of white background - apply immediately */
+    html[data-theme="dark"] {
+      background-color: #1A1A1A;
+    }
+    html[data-theme="light"] {
+      background-color: #FFFFFF;
+    }
+    body {
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+  </style>
+
   <title>{% if page.use-site-title %}{{ site.title }} {{ site.title-separator }} {{ site.description }}{% elsif
     page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
 

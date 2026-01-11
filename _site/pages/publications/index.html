@@ -6,6 +6,39 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="alternate icon" href="/favicon.ico">
+
+  <!-- Apply theme immediately to prevent flash of white content -->
+  <script>
+    (function() {
+      'use strict';
+      // Get theme from localStorage or default to light
+      const storedTheme = localStorage.getItem('theme');
+      const preferredTheme = storedTheme || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      
+      // Apply theme immediately before page renders
+      if (preferredTheme === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      } else {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    })();
+  </script>
+  <style>
+    /* Prevent flash of white background - apply immediately */
+    html[data-theme="dark"] {
+      background-color: #1A1A1A;
+    }
+    html[data-theme="light"] {
+      background-color: #FFFFFF;
+    }
+    body {
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+  </style>
+
   <title>Publications</title>
 
   <meta name="author" content="" />
@@ -57,19 +90,19 @@
   
 
   
-  <meta property="og:description" content="1. [*Predictive Bi-Clustering Trees for Hierarchical Multi-label Classification*](https://limo.libis.be/primo-explore/fulldisplay?docid=LIRIAS3055838&amp;context=L&amp;vid=Lirias&amp;search_scope=Lirias&amp;tab=default_tab&amp;lang=en_US) - Zamith B., Nakano, K. F., Cerri R., Vens C. (2020). European Conference on Machine Learning (ECML-PKDD). 2. [*Strategies for Selection of Positive and Negative Instances in the Hierarchical Classification of Transposable Elements*](https://ieeexplore.ieee.org/document/8575650) - Zamith B., Pereira, T. G., Nakano, K. F.,...">
+  <meta property="og:description" content="1. [A New Time Series Framework for Forest Fire Risk Forecasting and Classification](https://ieeexplore.ieee.org/document/10191502/) - *Zamith B., Soriano, B., Narciso, M., Furtado, D., Cerri R. (2023). International Joint Conference on Neural Networks (IJCNN).* 2. [Predictive Bi-Clustering Trees for Hierarchical Multi-label Classification](https://limo.libis.be/primo-explore/fulldisplay?docid=LIRIAS3055838&amp;context=L&amp;vid=Lirias&amp;search_scope=Lirias&amp;tab=default_tab&amp;lang=en_US) - *Zamith B., Nakano, K. F., Cerri R., Vens C....">
   
 
 
   <meta property="og:type" content="website" />
 
   
-  <meta property="og:url" content="http://localhost:4000/pages/publications/" />
-  <link rel="canonical" href="http://localhost:4000/pages/publications/" />
+  <meta property="og:url" content="http://0.0.0.0:4000/pages/publications/" />
+  <link rel="canonical" href="http://0.0.0.0:4000/pages/publications/" />
   
 
   
-  <meta property="og:image" content="http://localhost:4000/static/img/profile.png" />
+  <meta property="og:image" content="http://0.0.0.0:4000/static/img/profile.png" />
   
 
 
@@ -83,11 +116,11 @@
   
 
   
-  <meta name="twitter:description" content="1. [*Predictive Bi-Clustering Trees for Hierarchical Multi-label Classification*](https://limo.libis.be/primo-explore/fulldisplay?docid=LIRIAS3055838&amp;context=L&amp;vid=Lirias&amp;search_scope=Lirias&amp;tab=default_tab&amp;lang=en_US) - Zamith B., Nakano, K. F., Cerri R., Vens C. (2020). European Conference on Machine Learning (ECML-PKDD). 2. [*Strategies for Selection of Positive and Negative Instances in the Hierarchical Classification of Transposable Elements*](https://ieeexplore.ieee.org/document/8575650) - Zamith B., Pereira, T. G., Nakano, K. F.,...">
+  <meta name="twitter:description" content="1. [A New Time Series Framework for Forest Fire Risk Forecasting and Classification](https://ieeexplore.ieee.org/document/10191502/) - *Zamith B., Soriano, B., Narciso, M., Furtado, D., Cerri R. (2023). International Joint Conference on Neural Networks (IJCNN).* 2. [Predictive Bi-Clustering Trees for Hierarchical Multi-label Classification](https://limo.libis.be/primo-explore/fulldisplay?docid=LIRIAS3055838&amp;context=L&amp;vid=Lirias&amp;search_scope=Lirias&amp;tab=default_tab&amp;lang=en_US) - *Zamith B., Nakano, K. F., Cerri R., Vens C....">
   
 
   
-  <meta name="twitter:image" content="http://localhost:4000/static/img/profile.png" />
+  <meta name="twitter:image" content="http://0.0.0.0:4000/static/img/profile.png" />
   
 
   <script
@@ -109,26 +142,33 @@
 
     
   
-    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
+    <!-- Mobile menu toggle button -->
+<button type="button" class="sidebar-toggle" id="sidebar-toggle" aria-label="Toggle sidebar">
+  <span class="icon-bar"></span>
+  <span class="icon-bar"></span>
+  <span class="icon-bar"></span>
+</button>
+
+<!-- Mobile overlay -->
+<div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+<!-- Left Sidebar Navigation -->
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-content">
+    <!-- Sidebar Header (Name only, no avatar) -->
+    <div class="sidebar-header">
       
-        <a class="navbar-brand" href="http://localhost:4000">Bruna Zamith</a>
+        <a class="sidebar-brand" href="http://0.0.0.0:4000">Bruna Zamith</a>
       
     </div>
 
-    <div class="collapse navbar-collapse" id="main-navbar">
-      <ul class="nav navbar-nav navbar-right">
-      
+    <!-- Navigation Links -->
+    <nav class="sidebar-nav">
+      <ul class="nav sidebar-nav-list">
         
-          <li>
-            
+          
+            <li>
+              
             
 
 
@@ -137,12 +177,14 @@
 
 <a href="/">Home</a>
 
-          </li>
+            </li>
+          
         
-        
-        
-          <li>
+          
             
+              
+                <li>
+                  
             
 
 
@@ -151,12 +193,30 @@
 
 <a href="/pages/publications">Publications</a>
 
-          </li>
-        
-        
-        
-          <li>
+                </li>
+              
             
+              
+                <li>
+                  
+            
+
+
+
+
+
+<a href="/pages/talks">Talks</a>
+
+                </li>
+              
+            
+          
+        
+          
+            
+              
+                <li>
+                  
             
 
 
@@ -165,26 +225,28 @@
 
 <a href="/pages/concepts">Concepts</a>
 
-          </li>
-        
-        
-        
-          <li>
+                </li>
+              
             
+              
+                <li>
+                  
             
 
 
 
 
 
-<a href="/pages/studies">Studies</a>
+<a href="/pages/books">Books</a>
 
-          </li>
-        
-        
-        
-          <li>
+                </li>
+              
             
+          
+        
+          
+            <li>
+              
             
 
 
@@ -193,24 +255,21 @@
 
 <a href="/pages/resume">Resume</a>
 
-          </li>
-        
+            </li>
+          
         
       </ul>
+    </nav>
+
+    <!-- Theme Toggle -->
+    <div class="sidebar-footer">
+      <a href="javascript:void(0)" id="theme-toggle" class="theme-toggle" title="Toggle dark mode">
+        <i class="fa fa-moon-o" id="theme-icon"></i>
+        <span>Toggle Theme</span>
+      </a>
     </div>
-
-	
-	<div class="avatar-container">
-	  <div class="avatar-img-border">
-	    <a href="http://localhost:4000 ">
-	      <img class="avatar-img" src="/static/img/profile.png" />
-		</a>
-	  </div>
-	</div>
-	
-
   </div>
-</nav>
+</aside>
 
 
     <!-- TODO this file has become a mess, refactor it -->
@@ -242,17 +301,26 @@
 
 <div class="container" role="main">
   <div class="row">
-    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-      <ol>
-  <li><a href="https://limo.libis.be/primo-explore/fulldisplay?docid=LIRIAS3055838&amp;context=L&amp;vid=Lirias&amp;search_scope=Lirias&amp;tab=default_tab&amp;lang=en_US"><em>Predictive Bi-Clustering Trees for Hierarchical Multi-label Classification</em></a> - Zamith B., Nakano, K. F., Cerri R., Vens C. (2020). 
-European Conference on Machine Learning (ECML-PKDD).</li>
-  <li><a href="https://ieeexplore.ieee.org/document/8575650"><em>Strategies for Selection of Positive and Negative Instances in the Hierarchical Classification of Transposable Elements</em></a> - Zamith B., Pereira, T. G., Nakano, K. F., Cerri R. (2018). Brazilian Conference on Intelligent Systems (BRACIS).</li>
-  <li><a href="https://ieeexplore.ieee.org/document/8477642"><em>A Genetic Algorithm for Transposable Elements Hierarchical Classification Rule Induction</em></a> - Pereira, T. G., Zamith B., Cerri R. (2018). IEEE Congress on Evolutionary Computation (IEEE CEC).</li>
-  <li><a href="https://www.cin.ufpe.br/~rbcp/bracis-papers/ENIAC/Sessao%20de%20Posters/A%20New%20Machine%20Learning%20Dataset%20for%20Hierarchical%20Classification%20of%20Transposable%20Elements.pdf"><em>A New Machine Learning Dataset for Hierarchical Classification of Transposable Elements</em></a> - Zamith B., Cerri R. (2016). National Meeting of Artificial and Computational Intelligence (ENIAC).</li>
-  <li><a href="https://www.kuleuven-kulak.be/benelearn/papers/Benelearn_2016_paper_57.pdf"><em>Decisions Trees for Hierarchical Classification of Transposable Elements</em></a> - Zamith B., Gomes Mantovani R., Schietgat L., Vens C., Cerri R. (2016). Proceedings of the 25th Belgian-Dutch Machine Learning Conference (Benelearn).</li>
+    <div class="col-lg-12 col-md-12">
+      <article class="newspaper-content">
+        <ol>
+  <li><a href="https://ieeexplore.ieee.org/document/10191502/">A New Time Series Framework for Forest Fire Risk Forecasting and Classification</a> -  <em>Zamith B., Soriano, B., Narciso, M., Furtado, D., Cerri R. (2023). International Joint Conference on Neural Networks (IJCNN).</em></li>
+  <li><a href="https://limo.libis.be/primo-explore/fulldisplay?docid=LIRIAS3055838&amp;context=L&amp;vid=Lirias&amp;search_scope=Lirias&amp;tab=default_tab&amp;lang=en_US">Predictive Bi-Clustering Trees for Hierarchical Multi-label Classification</a> - <em>Zamith B., Nakano, K. F., Cerri R., Vens C. (2020). 
+European Conference on Machine Learning (ECML-PKDD)</em>.</li>
+  <li><a href="https://ieeexplore.ieee.org/document/8575650">Strategies for Selection of Positive and Negative Instances in the Hierarchical Classification of Transposable Elements</a> - <em>Zamith B., Pereira, T. G., Nakano, K. F., Cerri R. (2018). Brazilian Conference on Intelligent Systems (BRACIS)</em>.</li>
+  <li><a href="https://ieeexplore.ieee.org/document/8477642">A Genetic Algorithm for Transposable Elements Hierarchical Classification Rule Induction</a> - <em>Pereira, T. G., Zamith B., Cerri R. (2018). IEEE Congress on Evolutionary Computation (IEEE CEC)</em>.</li>
+  <li><a href="https://www.cin.ufpe.br/~rbcp/bracis-papers/ENIAC/Sessao%20de%20Posters/A%20New%20Machine%20Learning%20Dataset%20for%20Hierarchical%20Classification%20of%20Transposable%20Elements.pdf">A New Machine Learning Dataset for Hierarchical Classification of Transposable Elements</a> - <em>Zamith B., Cerri R. (2016). National Meeting of Artificial and Computational Intelligence (ENIAC)</em>.</li>
+  <li><a href="https://www.kuleuven-kulak.be/benelearn/papers/Benelearn_2016_paper_57.pdf">Decisions Trees for Hierarchical Classification of Transposable Elements</a> - <em>Zamith B., Gomes Mantovani R., Schietgat L., Vens C., Cerri R. (2016). Proceedings of the 25th Belgian-Dutch Machine Learning Conference (Benelearn)</em>.</li>
 </ol>
 
+<h4 id="others">Others</h4>
 
+<ol>
+  <li><strong>Undergraduate Thesis (in Portuguese)</strong>: <a href="https://repositorio.ufscar.br/handle/ufscar/15890">Classificação Hierárquica Multirrótulo de Funções de Proteínas via Predição de Interações</a> - <em>Zamith B. (2020)</em>.</li>
+  <li><strong>Master’s Thesis</strong>: <a href="https://repositorio.ufscar.br/handle/ufscar/19084">Climate Variables Forecasting and Forest Fire Risk Rate Classification in the Brazilian Pantanal</a> - <em>Zamith B. (2020)</em>.</li>
+</ol>
+
+      </article>
 	    
     </div>
   </div>
@@ -314,18 +382,18 @@ European Conference on Machine Learning (ECML-PKDD).</li>
         <p class="copyright text-muted">
 		  
 		  &nbsp;&bull;&nbsp;
-		  2022
+		  2026
 
 		  
 		  &nbsp;&bull;&nbsp;
-		  <a href="http://localhost:4000">bzamith.github.io</a>
+		  <a href="http://0.0.0.0:4000">bzamith.github.io</a>
 		  
 	    </p>
 	        <!-- Please don't remove this, keep my open source work credited :) -->
 		<p class="theme-by text-muted">
 		  Theme by
 		  <a href="http://deanattali.com/beautiful-jekyll/" target="_blank" rel="noopener noreferrer">beautiful-jekyll</a>, and inspired by
-          <a href="https://github.com/daattali/beautiful-jekyll" target="_blank" rel="noopener noreferrer">@daattali's portfolio</a>
+          <a href="https://desh2608.github.io/" target="_blank" rel="noopener noreferrer">@desh2608's portfolio</a>
 		</p>
       </div>
     </div>

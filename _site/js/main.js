@@ -15,52 +15,81 @@ var main = {
         }
     });
     
-    // On mobile, hide the avatar when expanding the navbar menu
-    $('#main-navbar').on('show.bs.collapse', function () {
-      $(".navbar").addClass("top-nav-expanded");
-    });
-    $('#main-navbar').on('hidden.bs.collapse', function () {
-      $(".navbar").removeClass("top-nav-expanded");
-    });
-	
-    // On mobile, when clicking on a multi-level navbar menu, show the child links
-    $('#main-navbar').on("click", ".navlinks-parent", function(e) {
-      var target = e.target;
-      $.each($(".navlinks-parent"), function(key, value) {
-        if (value == target) {
-          $(value).parent().toggleClass("show-children");
-        } else {
-          $(value).parent().removeClass("show-children");
-        }
+    // Sidebar mobile toggle functionality
+    var sidebarToggle = document.getElementById('sidebar-toggle');
+    var sidebar = document.getElementById('sidebar');
+    var sidebarOverlay = document.getElementById('sidebar-overlay');
+    var body = document.body;
+    
+    function toggleSidebar() {
+      sidebar.classList.toggle('active');
+      sidebarOverlay.classList.toggle('active');
+      body.classList.toggle('sidebar-open');
+    }
+    
+    function closeSidebar() {
+      sidebar.classList.remove('active');
+      sidebarOverlay.classList.remove('active');
+      body.classList.remove('sidebar-open');
+    }
+    
+    if (sidebarToggle) {
+      sidebarToggle.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        toggleSidebar();
       });
+    }
+    
+    if (sidebarOverlay) {
+      sidebarOverlay.addEventListener('click', closeSidebar);
+    }
+    
+    // Close sidebar when clicking on a link (mobile)
+    if (window.innerWidth <= 767) {
+      var sidebarLinks = document.querySelectorAll('.sidebar-nav a[href^="/"], .sidebar-nav a[href^="http"]');
+      sidebarLinks.forEach(function(link) {
+        link.addEventListener('click', function() {
+          closeSidebar();
+        });
+      });
+    }
+    
+    // Handle window resize - close sidebar on mobile when resizing to desktop
+    window.addEventListener('resize', function() {
+      if (window.innerWidth > 767) {
+        closeSidebar();
+      }
     });
     
-    // Ensure nested navbar menus are not longer than the menu header
-    var menus = $(".navlinks-container");
-    if (menus.length > 0) {
-      var navbar = $("#main-navbar ul");
-      var fakeMenuHtml = "<li class='fake-menu' style='display:none;'><a></a></li>";
-      navbar.append(fakeMenuHtml);
-      var fakeMenu = $(".fake-menu");
-
-      $.each(menus, function(i) {
-        var parent = $(menus[i]).find(".navlinks-parent");
-        var children = $(menus[i]).find(".navlinks-children a");
-        var words = [];
-        $.each(children, function(idx, el) { words = words.concat($(el).text().trim().split(/\s+/)); });
-        var maxwidth = 0;
-        $.each(words, function(id, word) {
-          fakeMenu.html("<a>" + word + "</a>");
-          var width =  fakeMenu.width();
-          if (width > maxwidth) {
-            maxwidth = width;
-          }
-        });
-        $(menus[i]).css('min-width', maxwidth + 'px')
-      });
-
-      fakeMenu.remove();
-    }        
+    // Hide/show menu button on scroll (mobile only)
+    var lastScrollTop = 0;
+    var scrollThreshold = 100; // Hide after scrolling 100px
+    
+    function handleScroll() {
+      if (window.innerWidth <= 767 && sidebarToggle) {
+        var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        
+        if (scrollTop > scrollThreshold && scrollTop > lastScrollTop) {
+          // Scrolling down - hide button
+          sidebarToggle.classList.add('hide-on-scroll');
+        } else if (scrollTop < lastScrollTop || scrollTop <= scrollThreshold) {
+          // Scrolling up or near top - show button
+          sidebarToggle.classList.remove('hide-on-scroll');
+        }
+        
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+      }
+    }
+    
+    // Throttle scroll events for better performance
+    var scrollTimeout;
+    window.addEventListener('scroll', function() {
+      if (scrollTimeout) {
+        clearTimeout(scrollTimeout);
+      }
+      scrollTimeout = setTimeout(handleScroll, 10);
+    }, { passive: true });        
     
     // show the big header image	
     main.initImgs();
@@ -136,3 +165,290 @@ var main = {
 // 2fc73a3a967e97599c9763d05e564189
 
 document.addEventListener('DOMContentLoaded', main.init);
+
+// Dark mode functionality
+(function() {
+  'use strict';
+  
+  // Get theme from localStorage or default to light
+  const getStoredTheme = () => localStorage.getItem('theme');
+  const setStoredTheme = theme => localStorage.setItem('theme', theme);
+  
+  // Get system preference
+  const getPreferredTheme = () => {
+    const storedTheme = getStoredTheme();
+    if (storedTheme) {
+      return storedTheme;
+    }
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  };
+  
+  // Set theme
+  const setTheme = theme => {
+    if (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    } else {
+      document.documentElement.setAttribute('data-theme', theme === 'dark' ? 'dark' : 'light');
+    }
+    setStoredTheme(theme);
+    updateThemeIcon(theme);
+  };
+  
+  // Update theme icon
+  const updateThemeIcon = theme => {
+    const themeIcon = document.getElementById('theme-icon');
+    if (themeIcon) {
+      const isDark = theme === 'dark' || (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+      if (isDark) {
+        themeIcon.classList.remove('fa-moon-o');
+        themeIcon.classList.add('fa-sun-o');
+      } else {
+        themeIcon.classList.remove('fa-sun-o');
+        themeIcon.classList.add('fa-moon-o');
+      }
+    }
+  };
+  
+  // Get current theme state
+  const getCurrentTheme = () => {
+    return document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+  };
+  
+  // Initialize theme (only if not already set by inline script)
+  const initTheme = () => {
+    // Check if theme is already set (by inline script in head)
+    const currentThemeAttr = document.documentElement.getAttribute('data-theme');
+    if (!currentThemeAttr) {
+      // Only set if not already applied
+      const preferredTheme = getPreferredTheme();
+      setTheme(preferredTheme);
+    } else {
+      // Theme already set, just update the icon
+      const currentTheme = currentThemeAttr === 'dark' ? 'dark' : 'light';
+      updateThemeIcon(currentTheme);
+    }
+  };
+  
+  // Theme toggle handler
+  const handleThemeToggle = (buttonElement) => {
+    const currentTheme = getCurrentTheme();
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    setTheme(newTheme);
+    
+    // Remove focus from button after clicking to prevent it staying highlighted
+    if (buttonElement) {
+      buttonElement.blur();
+    }
+    
+    // On mobile, optionally close the navbar after toggling theme
+    // (Uncomment the line below if you want the menu to close after theme toggle)
+    // if (window.innerWidth <= 767) {
+    //   const navbar = document.getElementById('main-navbar');
+    //   if (navbar && navbar.classList.contains('in')) {
+    //     $('.navbar-toggle').click();
+    //   }
+    // }
+  };
+  
+  // Initialize on page load
+  document.addEventListener('DOMContentLoaded', () => {
+    initTheme();
+    
+    // Add click handler to theme toggle button (works for both click and touch)
+    const themeToggle = document.getElementById('theme-toggle');
+    if (themeToggle) {
+      let touchHandled = false;
+      
+      // Handle touch events (mobile)
+      themeToggle.addEventListener('touchstart', function(e) {
+        touchHandled = true;
+        e.preventDefault();
+        e.stopPropagation();
+        handleThemeToggle(this);
+        // Blur immediately after touch
+        setTimeout(() => this.blur(), 100);
+      }, { passive: false });
+      
+      // Handle click events (desktop and mobile fallback)
+      themeToggle.addEventListener('click', function(e) {
+        if (!touchHandled) {
+          e.preventDefault();
+          e.stopPropagation();
+          handleThemeToggle(this);
+          // Blur immediately after click
+          this.blur();
+        }
+        touchHandled = false;
+      });
+    }
+    
+    // Listen for system theme changes
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+      const storedTheme = getStoredTheme();
+      if (!storedTheme || storedTheme === 'auto') {
+        setTheme(storedTheme || 'auto');
+      }
+    });
+  });
+})();
+
+// Book filtering functionality
+(function() {
+  'use strict';
+  
+  function initBookFilters() {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const bookBelts = document.querySelectorAll('.book-belt');
+    const bookItems = document.querySelectorAll('.book-item');
+    
+    if (filterButtons.length === 0) return; // Not on books page
+    
+    // Initialize data attributes from tags if not already set
+    bookItems.forEach(function(item) {
+      // Set data-type from tags
+      if (!item.hasAttribute('data-type')) {
+        const libraryTag = item.querySelector('.book-tag-library');
+        const kindleTag = item.querySelector('.book-tag-kindle');
+        if (libraryTag) {
+          item.setAttribute('data-type', 'library');
+        } else if (kindleTag) {
+          item.setAttribute('data-type', 'kindle');
+        }
+      }
+      
+      // Set data-topics from topic tags
+      if (!item.hasAttribute('data-topics')) {
+        const topics = [];
+        if (item.querySelector('.book-tag-genai')) topics.push('genai');
+        if (item.querySelector('.book-tag-xai')) topics.push('xai');
+        if (item.querySelector('.book-tag-fundamentals') || item.querySelector('.book-tag-others')) topics.push('others');
+        if (item.querySelector('.book-tag-recommender')) topics.push('recommender');
+        if (item.querySelector('.book-tag-career')) topics.push('career');
+        if (item.querySelector('.book-tag-engineering')) topics.push('engineering');
+        if (item.querySelector('.book-tag-statistics')) topics.push('statistics');
+        if (item.querySelector('.book-tag-ml')) topics.push('ml');
+        if (topics.length > 0) {
+          item.setAttribute('data-topics', topics.join(' '));
+        }
+      }
+    });
+    
+    // Get current filter state
+    function getActiveFilters() {
+      const filters = {
+        status: 'all',
+        type: 'all',
+        topic: 'all'
+      };
+      
+      filterButtons.forEach(function(btn) {
+        if (btn.classList.contains('active')) {
+          const filterType = btn.getAttribute('data-filter');
+          const filterValue = btn.getAttribute('data-value');
+          if (filterType && filterValue) {
+            filters[filterType] = filterValue;
+          }
+        }
+      });
+      
+      return filters;
+    }
+    
+    // Filter books
+    function filterBooks() {
+      const filters = getActiveFilters();
+      
+      bookBelts.forEach(function(belt) {
+        const beltStatus = belt.getAttribute('data-status');
+        let beltVisible = false;
+        
+        // Check if belt matches status filter
+        if (filters.status === 'all' || beltStatus === filters.status) {
+          beltVisible = true;
+        }
+        
+        // Check items within belt
+        const items = belt.querySelectorAll('.book-item');
+        let hasVisibleItems = false;
+        
+        items.forEach(function(item) {
+          let itemVisible = true;
+          
+          // Check type filter
+          if (filters.type !== 'all') {
+            const itemType = item.getAttribute('data-type');
+            if (itemType !== filters.type) {
+              itemVisible = false;
+            }
+          }
+          
+          // Check topic filter
+          if (filters.topic !== 'all') {
+            const itemTopics = item.getAttribute('data-topics');
+            if (!itemTopics || !itemTopics.split(' ').includes(filters.topic)) {
+              itemVisible = false;
+            }
+          }
+          
+          // Show/hide item
+          if (itemVisible) {
+            item.style.display = '';
+            hasVisibleItems = true;
+          } else {
+            item.style.display = 'none';
+          }
+        });
+        
+        // Show/hide belt (and section header)
+        if (beltVisible && hasVisibleItems) {
+          belt.style.display = '';
+          // Show section header (h3 before the belt)
+          const header = belt.previousElementSibling;
+          if (header && header.tagName === 'H3') {
+            header.style.display = '';
+          }
+        } else {
+          belt.style.display = 'none';
+          // Hide section header if belt is hidden
+          const header = belt.previousElementSibling;
+          if (header && header.tagName === 'H3') {
+            header.style.display = 'none';
+          }
+        }
+      });
+    }
+    
+    // Handle filter button clicks
+    filterButtons.forEach(function(btn) {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        const filterType = this.getAttribute('data-filter');
+        const filterValue = this.getAttribute('data-value');
+        
+        // Deactivate all buttons in the same filter group
+        const filterGroup = this.closest('.filter-group');
+        if (filterGroup) {
+          filterGroup.querySelectorAll('.filter-btn').forEach(function(b) {
+            b.classList.remove('active');
+          });
+        }
+        
+        // Activate clicked button
+        this.classList.add('active');
+        
+        // Apply filters
+        filterBooks();
+      });
+    });
+    
+    // Initial filter application
+    filterBooks();
+  }
+  
+  // Initialize when DOM is ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initBookFilters);
+  } else {
+    initBookFilters();
+  }
+})();

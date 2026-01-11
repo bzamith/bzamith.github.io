@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Beautiful Jekyll | MIT license | Copyright Dean Attali 2016 -->
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="alternate icon" href="/favicon.ico">
+
+  <!-- Apply theme immediately to prevent flash of white content -->
+  <script>
+    (function() {
+      'use strict';
+      // Get theme from localStorage or default to light
+      const storedTheme = localStorage.getItem('theme');
+      const preferredTheme = storedTheme || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      
+      // Apply theme immediately before page renders
+      if (preferredTheme === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      } else {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    })();
+  </script>
+  <style>
+    /* Prevent flash of white background - apply immediately */
+    html[data-theme="dark"] {
+      background-color: #1A1A1A;
+    }
+    html[data-theme="light"] {
+      background-color: #FFFFFF;
+    }
+    body {
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+  </style>
+
+  <title>Books</title>
+
+  <meta name="author" content="" />
+
+  
+
+  <link rel="alternate" type="application/rss+xml"
+    title="Bruna Zamith - Portfolio" href="/feed.xml" />
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css" />
+
+  
+  
+
+  
+  
+  <link rel="stylesheet" href="/css/bootstrap.min.css" />
+  
+  <link rel="stylesheet" href="/css/bootstrap-social.css" />
+  
+  <link rel="stylesheet" href="/css/main.css" />
+  
+  
+
+  
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  
+  
+
+  
+
+  
+
+  
+
+  <!-- Facebook OpenGraph tags -->
+  
+
+  
+  <meta property="og:title" content="Books" />
+  
+
+  
+  <meta property="og:description" content="Status: All Reading Read Queue Wish List Type: All In Library Kindle Topic: All Statistics ML/AI Engineering GenAI Recomm. Systems Career XAI Others ### Books I am Currently Reading Recommender Systems, The Textbook Charu C. Aggarwal In Library Recomm. Systems Practical Recommender Systems Kim Falk In Library Recomm. Systems AI...">
+  
+
+
+  <meta property="og:type" content="website" />
+
+  
+  <meta property="og:url" content="http://0.0.0.0:4000/pages/books/" />
+  <link rel="canonical" href="http://0.0.0.0:4000/pages/books/" />
+  
+
+  
+  <meta property="og:image" content="http://0.0.0.0:4000/static/img/profile.png" />
+  
+
+
+  <!-- Twitter summary cards -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@" />
+  <meta name="twitter:creator" content="@" />
+
+  
+  <meta name="twitter:title" content="Books" />
+  
+
+  
+  <meta name="twitter:description" content="Status: All Reading Read Queue Wish List Type: All In Library Kindle Topic: All Statistics ML/AI Engineering GenAI Recomm. Systems Career XAI Others ### Books I am Currently Reading Recommender Systems, The Textbook Charu C. Aggarwal In Library Recomm. Systems Practical Recommender Systems Kim Falk In Library Recomm. Systems AI...">
+  
+
+  
+  <meta name="twitter:image" content="http://0.0.0.0:4000/static/img/profile.png" />
+  
+
+  <script
+    type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "all" } } }); </script>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        processEscapes: true
+      }
+    });
+  </script>
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+    type="text/javascript"></script>
+
+</head>
+
+  <body>
+
+    
+  
+    <!-- Mobile menu toggle button -->
+<button type="button" class="sidebar-toggle" id="sidebar-toggle" aria-label="Toggle sidebar">
+  <span class="icon-bar"></span>
+  <span class="icon-bar"></span>
+  <span class="icon-bar"></span>
+</button>
+
+<!-- Mobile overlay -->
+<div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+<!-- Left Sidebar Navigation -->
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-content">
+    <!-- Sidebar Header (Name only, no avatar) -->
+    <div class="sidebar-header">
+      
+        <a class="sidebar-brand" href="http://0.0.0.0:4000">Bruna Zamith</a>
+      
+    </div>
+
+    <!-- Navigation Links -->
+    <nav class="sidebar-nav">
+      <ul class="nav sidebar-nav-list">
+        
+          
+            <li>
+              
+            
+
+
+
+
+
+<a href="/">Home</a>
+
+            </li>
+          
+        
+          
+            
+              
+                <li>
+                  
+            
+
+
+
+
+
+<a href="/pages/publications">Publications</a>
+
+                </li>
+              
+            
+              
+                <li>
+                  
+            
+
+
+
+
+
+<a href="/pages/talks">Talks</a>
+
+                </li>
+              
+            
+          
+        
+          
+            
+              
+                <li>
+                  
+            
+
+
+
+
+
+<a href="/pages/concepts">Concepts</a>
+
+                </li>
+              
+            
+              
+                <li>
+                  
+            
+
+
+
+
+
+<a href="/pages/books">Books</a>
+
+                </li>
+              
+            
+          
+        
+          
+            <li>
+              
+            
+
+
+
+
+
+<a href="/pages/resume">Resume</a>
+
+            </li>
+          
+        
+      </ul>
+    </nav>
+
+    <!-- Theme Toggle -->
+    <div class="sidebar-footer">
+      <a href="javascript:void(0)" id="theme-toggle" class="theme-toggle" title="Toggle dark mode">
+        <i class="fa fa-moon-o" id="theme-icon"></i>
+        <span>Toggle Theme</span>
+      </a>
+    </div>
+  </div>
+</aside>
+
+
+    <!-- TODO this file has become a mess, refactor it -->
+
+
+
+
+
+<header class="header-section ">
+
+<div class="intro-header no-img">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-heading">
+          <h1>Books</h1>
+		  
+		  
+		  
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</header>
+
+
+
+
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-12 col-md-12">
+      <article class="newspaper-content">
+        <div class="book-filters">
+  <div class="filter-group">
+    <label class="filter-label">Status:</label>
+    <button class="filter-btn active" data-filter="status" data-value="all">All</button>
+    <button class="filter-btn" data-filter="status" data-value="reading">Reading</button>
+    <button class="filter-btn" data-filter="status" data-value="read">Read</button>
+    <button class="filter-btn" data-filter="status" data-value="queue">Queue</button>
+    <button class="filter-btn" data-filter="status" data-value="wishlist">Wish List</button>
+  </div>
+  <div class="filter-group">
+    <label class="filter-label">Type:</label>
+    <button class="filter-btn active" data-filter="type" data-value="all">All</button>
+    <button class="filter-btn" data-filter="type" data-value="library">In Library</button>
+    <button class="filter-btn" data-filter="type" data-value="kindle">Kindle</button>
+  </div>
+  <div class="filter-group">
+    <label class="filter-label">Topic:</label>
+    <button class="filter-btn active" data-filter="topic" data-value="all">All</button>
+    <button class="filter-btn" data-filter="topic" data-value="statistics">Statistics</button>
+    <button class="filter-btn" data-filter="topic" data-value="ml">ML/AI</button>
+    <button class="filter-btn" data-filter="topic" data-value="engineering">Engineering</button>
+    <button class="filter-btn" data-filter="topic" data-value="genai">GenAI</button>
+    <button class="filter-btn" data-filter="topic" data-value="recommender">Recomm. Systems</button>
+    <button class="filter-btn" data-filter="topic" data-value="career">Career</button>
+    <button class="filter-btn" data-filter="topic" data-value="xai">XAI</button>
+    <button class="filter-btn" data-filter="topic" data-value="others">Others</button>
+  </div>
+</div>
+
+<h3 id="books-i-am-currently-reading">Books I am Currently Reading</h3>
+
+<div class="book-belt" data-status="reading">
+  <div class="book-item" data-type="library" data-topics="recommender">
+    <img src="https://m.media-amazon.com/images/I/41hn8xdlqcL._SY650_.jpg" alt="Recommender Systems, The Textbook" />
+    <div class="book-title">Recommender Systems, The Textbook</div>
+    <div class="book-author">Charu C. Aggarwal</div>
+    <span class="book-tag book-tag-library">In Library</span>
+    <span class="book-tag book-tag-recommender">Recomm. Systems</span>
+  </div>
+  <div class="book-item">
+    <img src="https://m.media-amazon.com/images/I/71d5NYaCdSL._SY650_.jpg" alt="Practical Recommender Systems" />
+    <div class="book-title">Practical Recommender Systems</div>
+    <div class="book-author">Kim Falk</div>
+    <span class="book-tag book-tag-library">In Library</span>
+    <span class="book-tag book-tag-recommender">Recomm. Systems</span>
+  </div>
+  <div class="book-item">
+    <img src="https://m.media-amazon.com/images/I/815KH9GjFTL._SY650_.jpg" alt="AI Engineering" />
+    <div class="book-title">AI Engineering</div>
+    <div class="book-author">Chip Huyen</div>
+    <span class="book-tag book-tag-library">In Library</span>
+    <span class="book-tag book-tag-genai">GenAI</span>
+  </div>
+  <div class="book-item">
+    <img src="https://m.media-amazon.com/images/I/51mJGPfhoSL._SY650_.jpg" alt="The Hundred-Page Language Models Book" />
+    <div class="book-title">The Hundred-Page Language Models Book</div>
+    <div class="book-author">Andriy Burkov</div>
+    <span class="book-tag book-tag-library">In Library</span>
+    <span class="book-tag book-tag-genai">GenAI</span>
+  </div>
+</div>
+
+<h3 id="books-ive-read-and-recommend">Books I’ve Read and Recommend</h3>
+
+<div class="book-belt" data-status="read">
+  <div class="book-item">
+    <img src="https://m.media-amazon.com/images/I/71MCzRvsraL._SY650_.jpg" alt="The Phoenix Project" />
+    <div class="book-title">The Phoenix Project</div>
+    <div class="book-author">Gene Kim, Kevin Behr, George Spafford</div>
+    <span class="book-tag book-tag-library">In Library</span>
+    <span class="book-tag book-tag-career">Career</span>
+  </div>
+  <div class="book-item">
+    <img src="https://m.media-amazon.com/images/I/71nNZWg65DL._SY650_.jpg" alt="How to Lie with Statistics" />
+    <div class="book-title">How to Lie with Statistics</div>
+    <div class="book-author">Darrell Huff</div>
+    <span class="book-tag book-tag-kindle">Kindle</span>
+    <span class="book-tag book-tag-statistics">Statistics</span>
+  </div>
+  <div class="book-item">
+    <img src="https://m.media-amazon.com/images/I/71YPjusCEWL._SY650_.jpg" alt="The Art of Statistics: Learning from Data" />
+    <div class="book-title">The Art of Statistics: Learning from Data</div>
+    <div class="book-author">David Spiegelhalter</div>
+    <span class="book-tag book-tag-library">In Library</span>
+    <span class="book-tag book-tag-statistics">Statistics</span>
+  </div>
+  <div class="book-item">
+    <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1587495766i/48816585._SY650_.jpg" alt="Practical Statistics for Data Scientists" />
+    <div class="book-title">Practical Statistics for Data Scientists</div>
+    <div class="book-author">Peter Bruce, Andrew Bruce &amp; Peter Gedeck</div>
+    <span class="book-tag book-tag-library">In Library</span>
+    <span class="book-tag book-tag-statistics">Statistics</span>
+  </div>
+  <div class="book-item">
+    <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1653945265i/60715378._SY650_.jpg" alt="Designing Machine Learning Systems" />
+    <div class="book-title">Designing Machine Learning Systems</div>
+    <div class="book-author">Chip Huyen</div>
+    <span class="book-tag book-tag-library">In Library</span>
+    <span class="book-tag book-tag-engineering">Engineering</span>
+  </div>
+  <div class="book-item">
+    <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1436202607i/3735293._SY650_.jpg" alt="Clean Code" />
+    <div class="book-title">Clean Code</div>
+    <div class="book-author">Robert C. Martin</div>
+    <span class="book-tag book-tag-library">In Library</span>
+    <span class="book-tag book-tag-engineering">Engineering</span>
+  </div>
+  <div class="book-item">
+    <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1546285613i/43190851._SY650_.jpg" alt="The Hundred-Page Machine Learning Book" />
+    <div class="book-title">The Hundred-Page Machine Learning Book</div>
+    <div class="book-author">Andriy Burkov</div>
+    <span class="book-tag book-tag-library">In Library</span>
+    <span class="book-tag book-tag-ml">ML/AI</span>
+  </div>
+  <div class="book-item">
+    <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1395601758i/18859629._SY650_.jpg" alt="Machine Learning with R" />
+    <div class="book-title">Machine Learning with R</div>
+    <div class="book-author">Brett Lantz</div>
+    <span class="book-tag book-tag-library">In Library</span>
+    <span class="book-tag book-tag-ml">ML/AI</span>
+  </div>
+  <div class="book-item">
+    <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1543945452i/43125355._SY650_.jpg" alt="Dive Into Design Patterns" />
+    <div class="book-title">Dive Into Design Patterns</div>
+    <div class="book-author">Alexander Shvets</div>
+    <span class="book-tag book-tag-kindle">Kindle</span>
+    <span class="book-tag book-tag-engineering">Engineering</span>
+  </div>
+  <div class="book-item">
+    <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1401432508i/4099._SY650_.jpg" alt="The Pragmatic Programmer" />
+    <div class="book-title">The Pragmatic Programmer</div>
+    <div class="book-author">David Thomas &amp; Andrew Hunt</div>
+    <span class="book-tag book-tag-library">In Library</span>
+    <span class="book-tag book-tag-engineering">Engineering</span>
+  </div>
+  <div class="book-item">
+    <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1347701966i/405614._SY650_.jpg" alt="Distributed Systems" />
+    <div class="book-title">Distributed Systems</div>
+    <div class="book-author">Maarten Van Steen &amp; Andrew S Tanenbaum</div>
+    <span class="book-tag book-tag-library">In Library</span>
+    <span class="book-tag book-tag-engineering">Engineering</span>
+  </div>
+  <div class="book-item">
+    <img src="https://m.media-amazon.com/images/I/61Pgdn8Ys-L._SY650_.jpg" alt="Introduction to Algorithms" />
+    <div class="book-title">Introduction to Algorithms</div>
+    <div class="book-author">Thomas H. Cormen</div>
+    <span class="book-tag book-tag-library">In Library</span>
+    <span class="book-tag book-tag-engineering">Engineering</span>
+  </div>
+</div>
+
+<h3 id="reading-queue">Reading Queue</h3>
+
+<div class="book-belt" data-status="queue">
+  <div class="book-item">
+    <img src="https://m.media-amazon.com/images/I/71KpXhV9JpL._SY650_.jpg" alt="Graph Machine Learning" />
+    <div class="book-title">Graph Machine Learning</div>
+    <div class="book-author">Aldo Marzullo</div>
+    <span class="book-tag book-tag-library">In Library</span>
+    <span class="book-tag book-tag-ml">ML/AI</span>
+  </div>
+  <div class="book-item">
+    <img src="https://m.media-amazon.com/images/I/41xPBG1XkqL._SY650_.jpg" alt="Interpretable AI" />
+    <div class="book-title">Interpretable AI</div>
+    <div class="book-author">Ajay Thampi</div>
+    <span class="book-tag book-tag-library">In Library</span>
+    <span class="book-tag book-tag-xai">XAI</span>
+  </div>
+  <div class="book-item">
+    <img src="https://m.media-amazon.com/images/I/81EiZSd74ZL._SY650_.jpg" alt="Essential Math for AI" />
+    <div class="book-title">Essential Math for AI</div>
+    <div class="book-author">Hala Nelson</div>
+    <span class="book-tag book-tag-library">In Library</span>
+    <span class="book-tag book-tag-ml">ML/AI</span>
+  </div>
+  <div class="book-item">
+    <img src="https://m.media-amazon.com/images/I/81-Nao5OE0L._SY650_.jpg" alt="Generative AI on AWS" />
+    <div class="book-title">Generative AI on AWS</div>
+    <div class="book-author">Chris Fregly</div>
+    <span class="book-tag book-tag-library">In Library</span>
+    <span class="book-tag book-tag-genai">GenAI</span>
+  </div>
+  <div class="book-item">
+    <img src="https://m.media-amazon.com/images/I/91vNT0C2lrL._SY650_.jpg" alt="Practical Time Series Analysis" />
+    <div class="book-title">Practical Time Series Analysis</div>
+    <div class="book-author">Aileen Nielsen</div>
+    <span class="book-tag book-tag-library">In Library</span>
+    <span class="book-tag book-tag-ml">ML/AI</span>
+  </div>
+  <div class="book-item">
+    <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1620719678i/55769407._SY650_.jpg" alt="Data Science on AWS" />
+    <div class="book-title">Data Science on AWS</div>
+    <div class="book-author">Chris Fregly &amp; Antje Barth</div>
+    <span class="book-tag book-tag-library">In Library</span>
+    <span class="book-tag book-tag-engineering">Engineering</span>
+  </div>
+  <div class="book-item">
+    <img src="https://m.media-amazon.com/images/I/31flBehUXkL._SY650_.jpg" alt="Fundamentals of Probability and Statistics" />
+    <div class="book-title">Fundamentals of Probability and Statistics</div>
+    <div class="book-author">Marcos Nascimento Magalhães</div>
+    <span class="book-tag book-tag-library">In Library</span>
+    <span class="book-tag book-tag-statistics">Statistics</span>
+  </div>
+  <div class="book-item">
+    <img src="https://m.media-amazon.com/images/I/71P35A0AsDL._AC_UY436_FMwebp_QL65__SY650_.jpg" alt="Machine Learning Pocket Reference" />
+    <div class="book-title">Machine Learning Pocket Reference</div>
+    <div class="book-author">Matt Harrison</div>
+    <span class="book-tag book-tag-library">In Library</span>
+    <span class="book-tag book-tag-ml">ML/AI</span>
+  </div>
+  <div class="book-item">
+    <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1415816873i/23463279._SY650_.jpg" alt="Designing Data-Intensive Applications" />
+    <div class="book-title">Designing Data-Intensive Applications</div>
+    <div class="book-author">Martin Kleppmann</div>
+    <span class="book-tag book-tag-library">In Library</span>
+    <span class="book-tag book-tag-engineering">Engineering</span>
+  </div>
+  <div class="book-item">
+    <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1599592043i/55275944._SY650_.jpg" alt="Machine Learning Engineering" />
+    <div class="book-title">Machine Learning Engineering</div>
+    <div class="book-author">Andriy Burkov</div>
+    <span class="book-tag book-tag-library">In Library</span>
+    <span class="book-tag book-tag-engineering">Engineering</span>
+  </div>
+  <div class="book-item">
+    <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1471680093i/18043011._SY650_.jpg" alt="Clean Architecture" />
+    <div class="book-title">Clean Architecture</div>
+    <div class="book-author">Robert C. Martin</div>
+    <span class="book-tag book-tag-library">In Library</span>
+    <span class="book-tag book-tag-engineering">Engineering</span>
+  </div>
+  <div class="book-item">
+    <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1464302055i/30297902._SY650_.jpg" alt="Artificial Intelligence: A Modern Approach" />
+    <div class="book-title">Artificial Intelligence: A Modern Approach</div>
+    <div class="book-author">Stuart Russel &amp; Peter Norvig</div>
+    <span class="book-tag book-tag-library">In Library</span>
+    <span class="book-tag book-tag-ml">ML/AI</span>
+  </div>
+  <div class="book-item">
+    <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1356188279i/2022909._SY650_.jpg" alt="Fundamentals of Natural Computing" />
+    <div class="book-title">Fundamentals of Natural Computing</div>
+    <div class="book-author">Leandro Nunes de Castro</div>
+    <span class="book-tag book-tag-library">In Library</span>
+    <span class="book-tag book-tag-ml">ML/AI</span>
+  </div>
+  <div class="book-item">
+    <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1388242904i/112247._SY650_.jpg" alt="The Art of Computer Programming" />
+    <div class="book-title">The Art of Computer Programming</div>
+    <div class="book-author">Donald E. Knuth</div>
+    <span class="book-tag book-tag-library">In Library</span>
+    <span class="book-tag book-tag-engineering">Engineering</span>
+  </div>
+  <div class="book-item">
+    <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1496058487i/35249663._SY650_.jpg" alt="Inspired: How to Create Tech Products Customers Love" />
+    <div class="book-title">Inspired: How to Create Tech Products Customers Love</div>
+    <div class="book-author">Marty Cagan</div>
+    <span class="book-tag book-tag-library">In Library</span>
+    <span class="book-tag book-tag-career">Career</span>
+  </div>
+  <div class="book-item">
+    <img src="https://m.media-amazon.com/images/I/71vK0WVQ4rL._SY650_.jpg" alt="How to Win Friends and Influentiate People" />
+    <div class="book-title">How to Win Friends and Influentiate People</div>
+    <div class="book-author">Dale Carnegie</div>
+    <span class="book-tag book-tag-library">In Library</span>
+    <span class="book-tag book-tag-career">Career</span>
+  </div>
+  <div class="book-item">
+    <img src="https://m.media-amazon.com/images/I/71Z-58DIzdL._SY650_.jpg" alt="Experimentation Works" />
+    <div class="book-title">Experimentation Works</div>
+    <div class="book-author">Stefan H. Thomke</div>
+    <span class="book-tag book-tag-library">In Library</span>
+    <span class="book-tag book-tag-career">Career</span>
+  </div>
+  <div class="book-item">
+    <img src="https://m.media-amazon.com/images/I/71EN1l+uQKL._SY650_.jpg" alt="Storytelling with Data" />
+    <div class="book-title">Storytelling with Data</div>
+    <div class="book-author">Cole Nussbaumer Knaflic</div>
+    <span class="book-tag book-tag-library">In Library</span>
+    <span class="book-tag book-tag-career">Career</span>
+  </div>
+  <div class="book-item">
+    <img src="https://m.media-amazon.com/images/I/71SnjgK1YSL._SY650_.jpg" alt="The Scientist and the Executive" />
+    <div class="book-title">The Scientist and the Executive</div>
+    <div class="book-author">Diego Barreto</div>
+    <span class="book-tag book-tag-kindle">Kindle</span>
+    <span class="book-tag book-tag-career">Career</span>
+  </div>
+  <div class="book-item">
+    <img src="https://m.media-amazon.com/images/I/71tET8K-+yL._SY650_.jpg" alt="Range" />
+    <div class="book-title">Range: Why Generalists Triumph in a Specialized World</div>
+    <div class="book-author">David J. Epstein</div>
+    <span class="book-tag book-tag-kindle">Kindle</span>
+    <span class="book-tag book-tag-career">Career</span>
+  </div>
+  <div class="book-item">
+    <img src="https://m.media-amazon.com/images/I/91mBBcMEuRL._SY650_.jpg" alt="Never Split the Difference" />
+    <div class="book-title">Never Split the Difference: Negotiating As If Your Life Depended On It</div>
+    <div class="book-author">Chris Voss</div>
+    <span class="book-tag book-tag-kindle">Kindle</span>
+    <span class="book-tag book-tag-career">Career</span>
+  </div>
+  <div class="book-item">
+    <img src="https://m.media-amazon.com/images/I/71UCr1GIFrL._SY650_.jpg" alt="Weapons of Math Destruction" />
+    <div class="book-title">Weapons of Math Destruction</div>
+    <div class="book-author">Cathy O'Neil</div>
+    <span class="book-tag book-tag-kindle">Kindle</span>
+    <span class="book-tag book-tag-others">Others</span>
+  </div>
+  <div class="book-item">
+    <img src="https://m.media-amazon.com/images/I/71jZc6v7F1L._SY650_.jpg" alt="Emotional Intelligence for the Modern Leader" />
+    <div class="book-title">Emotional Intelligence for the Modern Leader: A Guide to Cultivating Effective Leadership and Organizations</div>
+    <div class="book-author">Christopher D. Connors</div>
+    <span class="book-tag book-tag-kindle">Kindle</span>
+    <span class="book-tag book-tag-career">Career</span>
+  </div>
+  <div class="book-item">
+    <img src="https://m.media-amazon.com/images/I/41phtyJ09KL._SY650_.jpg" alt="Creativity, Inc." />
+    <div class="book-title">Creativity, Inc.: Overcoming the Unseen Forces That Stand in the Way of True Inspiration</div>
+    <div class="book-author">Ed Catmull</div>
+    <span class="book-tag book-tag-kindle">Kindle</span>
+    <span class="book-tag book-tag-career">Career</span>
+  </div>
+  <div class="book-item">
+    <img src="https://m.media-amazon.com/images/I/718qValO2oL._SY650_.jpg" alt="Invisible Women" />
+    <div class="book-title">Invisible Women: Data Bias in a World Designed for Men</div>
+    <div class="book-author">Caroline Criado Perez</div>
+    <span class="book-tag book-tag-kindle">Kindle</span>
+    <span class="book-tag book-tag-others">Others</span>
+  </div>
+</div>
+
+<h3 id="wish-list">Wish List</h3>
+
+<div class="book-belt" data-status="wishlist">
+  <div class="book-item">
+    <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1477514056i/31183020._SY650_.jpg" alt="99 Bottles of OOP" />
+    <div class="book-title">99 Bottles of OOP</div>
+    <div class="book-author">Sandi Metz</div>
+    <span class="book-tag book-tag-engineering">Engineering</span>
+  </div>
+  <div class="book-item">
+    <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1620715594i/51763086._SY650_.jpg" alt="Essential Math for Data Science" />
+    <div class="book-title">Essential Math for Data Science</div>
+    <div class="book-author">Thomas Nield</div>
+    <span class="book-tag book-tag-others">Others</span>
+  </div>
+  <div class="book-item">
+    <img src="https://m.media-amazon.com/images/I/81Gw--pXkzL._SY650_.jpg" alt="Machine Learning Design Patterns" />
+    <div class="book-title">Machine Learning Design Patterns</div>
+    <div class="book-author">Valliappa Lakshmanan</div>
+    <span class="book-tag book-tag-engineering">Engineering</span>
+  </div>
+  <div class="book-item">
+    <img src="https://m.media-amazon.com/images/I/71oJG4ynmaL._SY650_.jpg" alt="Crucial Conversations" />
+    <div class="book-title">Crucial Conversations</div>
+    <div class="book-author">Joseph Grenny</div>
+    <span class="book-tag book-tag-career">Career</span>
+  </div>
+  <div class="book-item">
+    <img src="https://m.media-amazon.com/images/I/7162Hl2w0VL._SY650_.jpg" alt="Algorithms of Oppression" />
+    <div class="book-title">Algorithms of Oppression</div>
+    <div class="book-author">Safiya Umoja Noble</div>
+    <span class="book-tag book-tag-others">Others</span>
+  </div>
+  <div class="book-item">
+    <img src="https://m.media-amazon.com/images/I/51pvLJRushL._SY650_.jpg" alt="It's Okay to Be the Boss" />
+    <div class="book-title">It's Okay to Be the Boss</div>
+    <div class="book-author">Bruce Tulgan</div>
+    <span class="book-tag book-tag-career">Career</span>
+  </div>
+  <div class="book-item">
+    <img src="https://m.media-amazon.com/images/I/71NADEYWIHL._SY650_.jpg" alt="The Leadership Pipeline" />
+    <div class="book-title">The Leadership Pipeline</div>
+    <div class="book-author">Ram Charan</div>
+    <span class="book-tag book-tag-career">Career</span>
+  </div>
+</div>
+
+
+      </article>
+	    
+    </div>
+  </div>
+</div>
+
+
+
+    <footer>
+  <div class="container beautiful-jekyll-footer">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          
+          <li>
+            <a href="https://github.com/bzamith" title="GitHub">
+              <span class="fa-stack fa-lg" aria-hidden="true">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+              </span>
+              <span class="sr-only">GitHub</span>
+            </a>
+          </li>
+          
+		  
+	  
+      
+		  
+          <li>
+            <a href="mailto:bruna.zamith@hotmail.com" title="Email me">
+              <span class="fa-stack fa-lg" aria-hidden="true">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+              </span>
+              <span class="sr-only">Email me</span>
+            </a>
+          </li>
+          
+		  
+          <li>
+            <a href="https://linkedin.com/in/bruna-zamith" title="LinkedIn">
+              <span class="fa-stack fa-lg" aria-hidden="true">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+              </span>
+              <span class="sr-only">LinkedIn</span>
+            </a>
+          </li>
+          
+		  
+		  
+      
+      
+      
+      
+      
+		  
+        </ul>
+        <p class="copyright text-muted">
+		  
+		  &nbsp;&bull;&nbsp;
+		  2026
+
+		  
+		  &nbsp;&bull;&nbsp;
+		  <a href="http://0.0.0.0:4000">bzamith.github.io</a>
+		  
+	    </p>
+	        <!-- Please don't remove this, keep my open source work credited :) -->
+		<p class="theme-by text-muted">
+		  Theme by
+		  <a href="http://deanattali.com/beautiful-jekyll/" target="_blank" rel="noopener noreferrer">beautiful-jekyll</a>, and inspired by
+          <a href="https://desh2608.github.io/" target="_blank" rel="noopener noreferrer">@desh2608's portfolio</a>
+		</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  
+    
+
+
+
+
+
+
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+      <script>
+      	if (typeof jQuery == 'undefined') {
+      	  document.write('<script src="/js/jquery-1.11.2.min.js"></scr' + 'ipt>');
+      	}
+      </script>
+    
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+	<script src="/js/bootstrap.min.js"></script>
+    
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+	<script src="/js/main.js"></script>
+    
+  
+
+
+
+	<!-- Google Analytics -->
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		ga('create', '', 'auto');
+		ga('send', 'pageview');
+	</script>
+	<!-- End Google Analytics -->
+
+
+</html>

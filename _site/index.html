@@ -6,12 +6,45 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="alternate icon" href="/favicon.ico">
+
+  <!-- Apply theme immediately to prevent flash of white content -->
+  <script>
+    (function() {
+      'use strict';
+      // Get theme from localStorage or default to light
+      const storedTheme = localStorage.getItem('theme');
+      const preferredTheme = storedTheme || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      
+      // Apply theme immediately before page renders
+      if (preferredTheme === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      } else {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    })();
+  </script>
+  <style>
+    /* Prevent flash of white background - apply immediately */
+    html[data-theme="dark"] {
+      background-color: #1A1A1A;
+    }
+    html[data-theme="light"] {
+      background-color: #FFFFFF;
+    }
+    body {
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+  </style>
+
   <title>Bruna Zamith - Portfolio</title>
 
   <meta name="author" content="" />
 
   
-  <meta name="description" content="Software Engineer II at Amazon; Masters Student">
+  <meta name="description" content="Staff Data Scientist @ iFood; PhD Candidate in AI.">
   
 
   <link rel="alternate" type="application/rss+xml"
@@ -59,19 +92,19 @@
   
 
   
-  <meta property="og:description" content="Software Engineer II at Amazon; Masters Student">
+  <meta property="og:description" content="Staff Data Scientist @ iFood; PhD Candidate in AI.">
   
 
 
   <meta property="og:type" content="website" />
 
   
-  <meta property="og:url" content="http://localhost:4000/" />
-  <link rel="canonical" href="http://localhost:4000/" />
+  <meta property="og:url" content="http://0.0.0.0:4000/" />
+  <link rel="canonical" href="http://0.0.0.0:4000/" />
   
 
   
-  <meta property="og:image" content="http://localhost:4000/static/img/profile.png" />
+  <meta property="og:image" content="http://0.0.0.0:4000/static/img/profile.png" />
   
 
 
@@ -85,11 +118,11 @@
   
 
   
-  <meta name="twitter:description" content="Software Engineer II at Amazon; Masters Student">
+  <meta name="twitter:description" content="Staff Data Scientist @ iFood; PhD Candidate in AI.">
   
 
   
-  <meta name="twitter:image" content="http://localhost:4000/static/img/profile.png" />
+  <meta name="twitter:image" content="http://0.0.0.0:4000/static/img/profile.png" />
   
 
   <script
@@ -111,43 +144,134 @@
 
     
   
-    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
+    <!-- Mobile menu toggle button -->
+<button type="button" class="sidebar-toggle" id="sidebar-toggle" aria-label="Toggle sidebar">
+  <span class="icon-bar"></span>
+  <span class="icon-bar"></span>
+  <span class="icon-bar"></span>
+</button>
+
+<!-- Mobile overlay -->
+<div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+<!-- Left Sidebar Navigation -->
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-content">
+    <!-- Sidebar Header (Name only, no avatar) -->
+    <div class="sidebar-header">
       
-        <a class="navbar-brand" href="http://localhost:4000">Bruna Zamith</a>
+        <a class="sidebar-brand" href="http://0.0.0.0:4000">Bruna Zamith</a>
       
     </div>
 
-    <div class="collapse navbar-collapse" id="main-navbar">
-      <ul class="nav navbar-nav navbar-right">
-      
+    <!-- Navigation Links -->
+    <nav class="sidebar-nav">
+      <ul class="nav sidebar-nav-list">
         
-          <li>
-          </li>
+          
+            <li>
+              
+            
+
+
+
+
+
+<a href="/">Home</a>
+
+            </li>
+          
         
+          
+            
+              
+                <li>
+                  
+            
+
+
+
+
+
+<a href="/pages/publications">Publications</a>
+
+                </li>
+              
+            
+              
+                <li>
+                  
+            
+
+
+
+
+
+<a href="/pages/talks">Talks</a>
+
+                </li>
+              
+            
+          
+        
+          
+            
+              
+                <li>
+                  
+            
+
+
+
+
+
+<a href="/pages/concepts">Concepts</a>
+
+                </li>
+              
+            
+              
+                <li>
+                  
+            
+
+
+
+
+
+<a href="/pages/books">Books</a>
+
+                </li>
+              
+            
+          
+        
+          
+            <li>
+              
+            
+
+
+
+
+
+<a href="/pages/resume">Resume</a>
+
+            </li>
+          
         
       </ul>
+    </nav>
+
+    <!-- Theme Toggle -->
+    <div class="sidebar-footer">
+      <a href="javascript:void(0)" id="theme-toggle" class="theme-toggle" title="Toggle dark mode">
+        <i class="fa fa-moon-o" id="theme-icon"></i>
+        <span>Toggle Theme</span>
+      </a>
     </div>
-
-	
-	<div class="avatar-container">
-	  <div class="avatar-img-border">
-	    <a href="http://localhost:4000 ">
-	      <img class="avatar-img" src="/static/img/profile.png" />
-		</a>
-	  </div>
-	</div>
-	
-
   </div>
-</nav>
+</aside>
 
 
     <!-- TODO this file has become a mess, refactor it -->
@@ -167,7 +291,7 @@
 		  
 		    
             <hr class="small">
-            <span class="page-subheading">Software Engineer II at Amazon; Masters Student</span>
+            <span class="page-subheading">Staff Data Scientist @ iFood; PhD Candidate in AI.</span>
 			
 		  
 		  
@@ -184,16 +308,30 @@
 
 <div class="container" role="main">
   <div class="row">
-    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-      <br>I am Brazilian and I have a bachelor degree in Computer Engineering from <a href="https://www.ufscar.br/" target="_blank" rel="noopener noreferrer">Federal University of Sao Carlos (UFSCar)</a>.
-I am currently working as a Software Engineer II at <a href="https://amazon.com/" target="_blank" rel="noopener noreferrer">Amazon</a>, and pursuing by Master degree in <b>Artificial Intelligence</b> at UFSCar.
-<br><br>
-I am passionate and continuously learning about <b>Data Science</b> and <b>Bioinformatics</b>.
-Still, I am really looking forward to learning more about <u>Computer Networks</u> and <u>Natural Computing</u>.
-<br><br>
-In my spare time, you can find me <a href="https://www.goodreads.com/user/show/93100732-bruna-zamith" target="_blank" rel="noopener noreferrer">reading a good book</a>, riding my bicycle, enjoying a cup of coffee or (hopefully!) traveling.<br><br>
+    <div class="col-lg-12 col-md-12">
+      <article class="newspaper-content">
+        <div class="homepage-content">
+  <div class="homepage-first-paragraph">
+    
+      <div class="homepage-avatar">
+        <img src="/static/img/profile.png" alt="Bruna Zamith" />
+      </div>
+    
+    <p class="article-paragraphIn">
+      BSc. in Computer Engineering, PhD Candidate in Artificial Intelligence, and working as a <strong>Staff Data Scientist</strong> at <a href="https://ifood.com.br/" target="_blank" rel="noopener noreferrer">iFood</a>, in the Data Ads team.
+    </p>
+  </div>
 
-<hr style="height:2px;border-width:0;color:gray;background-color:gray">
+  <p class="article-paragraph">
+    My research interests lie in the application of <strong>Machine Learning</strong> in <strong>Natural Sciences</strong>. Besides that, I'm passionate and continuously learning about <u>Software Engineering</u>, <u>Distributed Systems</u> and <u>Natural Computing</u>.
+  </p>
+
+  <p class="article-paragraph">
+    In my spare time, you can find me <a href="https://www.goodreads.com/user/show/93100732-bruna-zamith" target="_blank" rel="noopener noreferrer">reading a good book</a>, riding my bicycle, enjoying a cup of coffee or (hopefully!) traveling.
+  </p>
+</div>
+
+      </article>
 	    
     </div>
   </div>
@@ -255,18 +393,18 @@ In my spare time, you can find me <a href="https://www.goodreads.com/user/show/9
         <p class="copyright text-muted">
 		  
 		  &nbsp;&bull;&nbsp;
-		  2022
+		  2026
 
 		  
 		  &nbsp;&bull;&nbsp;
-		  <a href="http://localhost:4000">bzamith.github.io</a>
+		  <a href="http://0.0.0.0:4000">bzamith.github.io</a>
 		  
 	    </p>
 	        <!-- Please don't remove this, keep my open source work credited :) -->
 		<p class="theme-by text-muted">
 		  Theme by
 		  <a href="http://deanattali.com/beautiful-jekyll/" target="_blank" rel="noopener noreferrer">beautiful-jekyll</a>, and inspired by
-          <a href="https://github.com/daattali/beautiful-jekyll" target="_blank" rel="noopener noreferrer">@daattali's portfolio</a>
+          <a href="https://desh2608.github.io/" target="_blank" rel="noopener noreferrer">@desh2608's portfolio</a>
 		</p>
       </div>
     </div>
