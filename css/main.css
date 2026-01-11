@@ -1,63 +1,128 @@
 @import url(autumn.css);
 @import url("pygment_highlights.css");
 
+/* --- CSS Variables for Theming --- */
+:root {
+  /* Light mode colors */
+  --bg-primary: #FFFFFF;
+  --bg-secondary: #F8F9FA;
+  --bg-tertiary: #F5F5F5;
+  --text-primary: #2C3E50;
+  --text-secondary: #5A6C7D;
+  --text-muted: #808080;
+  --border-color: #EAEAEA;
+  --accent-color: #008AFF;
+  --accent-hover: #0066CC;
+  --shadow: rgba(0, 0, 0, 0.1);
+  --code-bg: #FAFAFA;
+  --navbar-bg: #F5F5F5;
+  --footer-bg: #F5F5F5;
+  --card-bg: #FFFFFF;
+  --transition: all 0.3s ease;
+}
+
+[data-theme="dark"] {
+  /* Dark mode colors */
+  --bg-primary: #1A1A1A;
+  --bg-secondary: #242424;
+  --bg-tertiary: #2D2D2D;
+  --text-primary: #E8E8E8;
+  --text-secondary: #B0B0B0;
+  --text-muted: #888888;
+  --border-color: #3A3A3A;
+  --accent-color: #4DA6FF;
+  --accent-hover: #66B3FF;
+  --shadow: rgba(0, 0, 0, 0.3);
+  --code-bg: #2A2A2A;
+  --navbar-bg: #1E1E1E;
+  --footer-bg: #1E1E1E;
+  --card-bg: #242424;
+}
+
 /* --- General --- */
+
+html {
+  /* Ensure html doesn't interfere with fixed positioning */
+  position: static;
+  overflow-x: hidden;
+}
 
 body {
   font-family: 'Lora', 'Times New Roman', serif;
   font-size: 18px;
-  color: #404040;
-  position: relative;
-  background: #FFF;
+  color: var(--text-primary);
+  position: static; /* Changed from relative to prevent containing block issues */
+  background: var(--bg-primary);
+  transition: var(--transition);
+  /* Ensure body doesn't create a new containing block for fixed elements */
+  transform: none;
+  overflow-x: hidden;
 }
 p {
   line-height: 1.5;
   margin: 30px 0;
 }
 p a {
-  /* text-decoration: underline */
-  color: #008AFF;
+  color: var(--accent-color);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: var(--transition);
+}
+p a:hover {
+  color: var(--accent-hover);
+  border-bottom-color: var(--accent-hover);
 }
 h1,h2,h3,h4,h5,h6 {
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 800;
+  font-family: 'Lora', 'Times New Roman', serif;
+  font-weight: 700;
+  color: var(--text-primary);
+  transition: var(--transition);
 }
 a {
-  color: #008AFF;
+  color: var(--accent-color);
+  transition: var(--transition);
 }
 a:hover,
 a:focus {
-  color: #008AFF;
+  color: var(--accent-hover);
 }
 li.spaced{
   margin: 10px 0;
 }
 blockquote {
-  color: #808080;
+  color: var(--text-muted);
   font-style: italic;
+  border-left: 4px solid var(--accent-color);
+  padding-left: 20px;
+  margin: 20px 0;
+  background: var(--bg-secondary);
+  padding: 15px 20px;
+  border-radius: 4px;
+  transition: var(--transition);
 }
 blockquote p:first-child {
   margin-top: 0;
 }
 hr.small {
-  max-width: 100px;
-  margin: 15px auto;
-  border-width: 4px;
-  border-color: inherit;
-  border-radius: 3px;
+  max-width: 80px;
+  margin: 12px 0;
+  border-width: 2px;
+  border-color: var(--accent-color);
+  border-radius: 0;
+  border-style: solid;
 }
 
 .main-content {
-  padding-top: 80px;
+  padding-top: 20px;
 }
 @media only screen and (min-width: 768px) {
   .main-content {
-    padding-top: 130px;
+    padding-top: 20px;
   }
 }
 
 .main-explain-area {
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Lora', 'Times New Roman', serif;
   padding: 15px inherit;
 }
 
@@ -68,12 +133,12 @@ hr.small {
 ::-moz-selection {
   color: white;
   text-shadow: none;
-  background: #008AFF;
+  background: var(--accent-color);
 }
 ::selection {
   color: white;
   text-shadow: none;
-  background: #008AFF;
+  background: var(--accent-color);
 }
 img::selection {
   color: white;
@@ -98,12 +163,349 @@ img {
   }
 }
 
-/* --- Navbar --- */
+/* --- Left Sidebar Navigation --- */
+
+/* Mobile menu toggle button */
+.sidebar-toggle {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  z-index: 1001;
+  background: var(--navbar-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 8px 10px;
+  cursor: pointer;
+  display: none;
+  transition: var(--transition);
+  box-shadow: 0 2px 4px var(--shadow);
+}
+
+/* Hide menu button when scrolling down on mobile */
+@media only screen and (max-width: 767px) {
+  .sidebar-toggle.hide-on-scroll {
+    opacity: 0;
+    transform: translateY(-100%);
+    pointer-events: none;
+  }
+}
+
+.sidebar-toggle .icon-bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  border-radius: 1px;
+  background-color: var(--text-primary);
+  margin: 4px 0;
+  transition: var(--transition);
+}
+
+.sidebar-toggle:hover,
+.sidebar-toggle:focus {
+  background: var(--bg-secondary);
+  outline: none;
+}
+
+.sidebar-toggle:hover .icon-bar,
+.sidebar-toggle:focus .icon-bar {
+  background-color: var(--accent-color);
+}
+
+/* Mobile overlay */
+.sidebar-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.sidebar-overlay.active {
+  display: block;
+  opacity: 1;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 280px;
+  height: 100vh;
+  height: 100dvh; /* Use dynamic viewport height for mobile */
+  background: var(--navbar-bg);
+  border-right: 1px solid var(--border-color);
+  font-family: 'Lora', 'Times New Roman', serif;
+  box-shadow: 2px 0 8px var(--shadow);
+  z-index: 1000;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  /* Ensure sidebar doesn't scroll with page */
+  margin: 0;
+  padding: 0;
+  /* Prevent any scrolling behavior */
+  overscroll-behavior: none;
+  -webkit-overflow-scrolling: touch;
+  /* Only use transform for mobile slide-in animation */
+  transform: translateX(0);
+  transition: transform 0.3s ease;
+}
+
+/* Custom scrollbar for sidebar nav */
+.sidebar-nav::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar-nav::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+.sidebar-nav::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 3px;
+}
+
+.sidebar-nav::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-color);
+}
+
+.sidebar-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  max-height: 100vh;
+  max-height: 100dvh;
+  overflow: hidden;
+  /* Prevent content from extending beyond viewport */
+  box-sizing: border-box;
+}
+
+/* Sidebar Header (Brand only, no avatar) */
+.sidebar-header {
+  padding: 30px 0 20px 0;
+  text-align: left;
+  border-bottom: 3px double var(--border-color);
+  background: var(--navbar-bg);
+  margin-bottom: 30px;
+  transition: var(--transition);
+  flex-shrink: 0;
+  position: relative;
+  z-index: 10;
+}
+
+.sidebar-header > * {
+  padding: 0 30px;
+}
+
+.sidebar-brand {
+  font-size: 36px;
+  font-weight: 700;
+  font-family: 'Lora', 'Times New Roman', serif;
+  color: var(--text-primary);
+  text-decoration: none;
+  display: block;
+  transition: var(--transition);
+  text-align: left;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+}
+
+.sidebar-brand:hover,
+.sidebar-brand:focus {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+.sidebar-brand img {
+  max-width: 150px;
+  height: auto;
+}
+
+/* Sidebar Navigation */
+.sidebar-nav {
+  flex: 1;
+  padding: 20px 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  min-height: 0; /* Important for flexbox scrolling */
+}
+
+.sidebar-nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-nav-list > li {
+  margin: 0;
+}
+
+.sidebar-nav-list > li > a {
+  display: block;
+  padding: 14px 25px;
+  color: var(--text-primary);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  text-transform: none;
+  letter-spacing: 0.3px;
+  transition: var(--transition);
+  border-left: 3px solid transparent;
+  font-family: 'Lora', 'Times New Roman', serif;
+}
+
+.sidebar-nav-list > li > a:hover,
+.sidebar-nav-list > li > a:focus,
+.sidebar-nav-list > li > a.active {
+  background: var(--bg-secondary);
+  color: var(--accent-color);
+  border-left-color: var(--accent-color);
+  padding-left: 22px;
+}
+
+/* Nested navigation styles removed - menu is now flat */
+
+/* Sidebar Footer (Theme Toggle) */
+.sidebar-footer {
+  padding: 20px;
+  border-top: 1px solid var(--border-color);
+  background: var(--bg-secondary);
+  flex-shrink: 0;
+}
+
+.sidebar-footer .theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 12px;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  color: var(--text-primary);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.sidebar-footer .theme-toggle:hover {
+  background: var(--accent-color);
+  color: white !important;
+  border-color: var(--accent-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px var(--shadow);
+}
+
+.sidebar-footer .theme-toggle:hover i,
+.sidebar-footer .theme-toggle:hover span {
+  color: white !important;
+}
+
+.sidebar-footer .theme-toggle:active {
+  background: var(--accent-color);
+  color: white !important;
+  border-color: var(--accent-color);
+  transform: translateY(0);
+  box-shadow: 0 2px 4px var(--shadow);
+}
+
+.sidebar-footer .theme-toggle:active i,
+.sidebar-footer .theme-toggle:active span {
+  color: white !important;
+}
+
+/* Only show focus outline for keyboard navigation */
+.sidebar-footer .theme-toggle:focus-visible {
+  background: var(--accent-color);
+  color: white !important;
+  border-color: var(--accent-color);
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+}
+
+.sidebar-footer .theme-toggle:focus-visible i,
+.sidebar-footer .theme-toggle:focus-visible span {
+  color: white !important;
+}
+
+.sidebar-footer .theme-toggle i {
+  font-size: 18px;
+  color: inherit;
+  transition: var(--transition);
+}
+
+/* Mobile Styles */
+@media only screen and (max-width: 767px) {
+  .sidebar-toggle {
+    display: block;
+  }
+  
+  .sidebar {
+    transform: translateX(-100%);
+    box-shadow: none;
+  }
+  
+  .sidebar.active {
+    transform: translateX(0);
+    box-shadow: 2px 0 12px var(--shadow);
+  }
+  
+  .sidebar-overlay.active {
+    display: block;
+  }
+  
+  /* Add top padding to sidebar header to avoid menu button overlap */
+  .sidebar-header {
+    padding-top: 70px !important; /* Space for menu button (15px top + ~40px button height + 15px gap) */
+  }
+}
+
+/* Desktop: Adjust main content for sidebar */
+@media only screen and (min-width: 768px) {
+  body {
+    padding-left: 280px;
+  }
+  
+  .main-content {
+    padding-top: 0;
+  }
+  
+  /* Ensure sidebar stays fixed on tablet and desktop */
+  .sidebar {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    bottom: 0 !important;
+    right: auto !important;
+    width: 280px !important;
+    height: 100vh !important;
+    max-height: 100vh !important;
+    /* Remove transform on desktop to prevent containing block issues */
+    transform: none !important;
+    transition: none !important;
+    will-change: auto !important;
+    /* Ensure it doesn't scroll with page */
+    overflow: hidden !important;
+    /* Force it to stay in viewport */
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+}
+
+/* --- Legacy Navbar (keeping for compatibility) --- */
 
 .navbar-custom {
-  background: #F5F5F5;
-  border-bottom: 1px solid #EAEAEA;
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  display: none; /* Hide old navbar */
 }
 
 .navbar-custom .nav li a {
@@ -115,14 +517,81 @@ img {
 .navbar-custom .navbar-brand,
 .navbar-custom .nav li a {
   font-weight: 800;
-  color: #404040;
+  color: var(--text-primary);
+  transition: var(--transition);
 }
 
 .navbar-custom .navbar-brand:hover,
 .navbar-custom .navbar-brand:focus ,
 .navbar-custom .nav li a:hover,
 .navbar-custom .nav li a:focus {
-  color: #008AFF;
+  color: var(--accent-color);
+}
+
+/* Theme toggle button */
+.theme-toggle {
+  padding: 10px 15px !important;
+  cursor: pointer;
+  transition: var(--transition);
+  border-radius: 4px;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px; /* Touch target size for mobile */
+  min-height: 44px;
+  outline: none;
+  border: none;
+  background: transparent;
+}
+
+.theme-toggle:hover {
+  background: var(--bg-secondary);
+  color: var(--accent-color) !important;
+}
+
+.theme-toggle:active {
+  background: var(--bg-secondary);
+  color: var(--accent-color) !important;
+  transform: scale(0.95);
+}
+
+/* Only show focus outline for keyboard navigation */
+.theme-toggle:focus-visible {
+  background: var(--bg-secondary);
+  color: var(--accent-color) !important;
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+}
+
+.theme-toggle i {
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+.theme-toggle:hover i {
+  transform: rotate(15deg);
+}
+
+/* Mobile-specific theme toggle styling */
+@media only screen and (max-width: 767px) {
+  .theme-toggle {
+    padding: 12px 15px !important;
+    margin-left: 0;
+    margin-top: 5px;
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid var(--border-color);
+  }
+  
+  .theme-toggle i {
+    font-size: 20px;
+  }
+  
+  /* Ensure theme toggle is visible in collapsed menu */
+  .navbar-collapse .nav li:last-child {
+    margin-top: 10px;
+  }
 }
 
 .navbar-custom .navbar-brand-logo {
@@ -224,17 +693,42 @@ img {
   display: block;
   padding: 10px;
   padding-left: 30px;
-  background: #f5f5f5;
+  background: var(--bg-tertiary);
   text-decoration: none !important;
   border-width: 0 1px 1px 1px;
   font-weight: normal;
+  transition: var(--transition);
 }
 @media only screen and (max-width: 767px) {
   .navbar-custom .nav .navlinks-container.show-children {
-    background: #eee;
+    background: var(--bg-secondary);
   }
   .navbar-custom .nav .navlinks-container.show-children .navlinks-children {
     display: block;
+  }
+  
+  /* Mobile navbar styling */
+  .navbar-custom .nav li a {
+    padding: 12px 15px;
+    display: block;
+    width: 100%;
+  }
+  
+  /* Ensure collapsed menu has proper background */
+  .navbar-collapse {
+    background: var(--navbar-bg);
+    border-top: 1px solid var(--border-color);
+    margin-top: 0;
+    box-shadow: 0 4px 6px var(--shadow);
+  }
+  
+  /* Mobile menu items */
+  .navbar-custom .nav > li {
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .navbar-custom .nav > li:last-child {
+    border-bottom: none;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -242,18 +736,25 @@ img {
     text-align: center;
   }  
   .navbar-custom .nav .navlinks-container:hover {
-    background: #eee;
+    background: var(--bg-secondary);
   }
   .navbar-custom .nav .navlinks-container:hover .navlinks-children {
     display: block;
   }
   .navbar-custom .nav .navlinks-children {
     position: absolute;
+    background: var(--card-bg);
+    box-shadow: 0 4px 6px var(--shadow);
+    border-radius: 4px;
+    overflow: hidden;
   }
   .navbar-custom .nav .navlinks-container .navlinks-children a {
     padding-left: 10px;
-    border: 1px solid #eaeaea;
+    border: 1px solid var(--border-color);
     border-width: 0 1px 1px;
+  }
+  .navbar-custom .nav .navlinks-container .navlinks-children a:hover {
+    background: var(--bg-secondary);
   }
 }
 
@@ -261,14 +762,20 @@ img {
 
 footer {
   padding: 30px 0;
-  background: #F5F5F5;
-  border-top: 1px #EAEAEA solid;
+  background: var(--footer-bg);
+  border-top: 1px solid var(--border-color);
   margin-top: 50px;
   font-size: 14px;
+  transition: var(--transition);
 }
 
 footer a {
-  color: #404040;
+  color: var(--text-primary);
+  transition: var(--transition);
+}
+
+footer a:hover {
+  color: var(--accent-color);
 }
 
 footer .list-inline {
@@ -276,7 +783,7 @@ footer .list-inline {
   padding: 0;
 }
 footer .copyright {
-  font-family: Open Sans;
+  font-family: 'Lora', 'Times New Roman', serif;
   text-align: center;
   margin-bottom: 0;
 }
@@ -296,12 +803,56 @@ footer .theme-by {
     font-size: 16px;
   }
 }
+
+/* Footer social icons styling */
+footer .footer-links a {
+  color: var(--text-primary);
+  transition: var(--transition);
+}
+
+footer .footer-links a:hover {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+/* Footer icon circles - ensure visibility in dark mode */
+footer .footer-links .fa-circle {
+  color: var(--text-primary);
+  opacity: 0.3;
+  transition: var(--transition);
+}
+
+footer .footer-links a:hover .fa-circle {
+  color: var(--accent-color);
+  opacity: 0.8;
+}
+
+/* Dark mode specific adjustments for footer icons */
+[data-theme="dark"] footer .footer-links .fa-circle {
+  color: var(--text-primary);
+  opacity: 0.5;
+}
+
+[data-theme="dark"] footer .footer-links a:hover .fa-circle {
+  color: var(--accent-color);
+  opacity: 1;
+}
+
+/* Ensure inverse icons are visible */
+footer .footer-links .fa-inverse {
+  color: var(--bg-primary);
+}
+
+[data-theme="dark"] footer .footer-links .fa-inverse {
+  color: var(--bg-primary);
+}
  
 /* --- Post preview --- */
 
 .post-preview {
   padding: 20px 0;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid var(--border-color);
+  transition: var(--transition);
 }
 
 @media only screen and (min-width: 768px) {
@@ -316,13 +867,14 @@ footer .theme-by {
 
 .post-preview a {
   text-decoration: none;
-  color: #404040;
+  color: var(--text-primary);
+  transition: var(--transition);
 }
 
 .post-preview a:focus,
 .post-preview a:hover {
   text-decoration: none;
-  color: #008AFF;
+  color: var(--accent-color);
 }
 
 .post-preview .post-title {
@@ -336,13 +888,13 @@ footer .theme-by {
 }
 .post-preview .post-meta,
 .post-heading .post-meta {
-  color: #808080;
+  color: var(--text-muted);
   font-size: 18px;
   font-style: italic;
   margin: 0 0 10px;
 }
 .post-preview .post-entry {
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Lora', 'Times New Roman', serif;
 }
 .post-entry-container {
   display: inline-block;
@@ -379,22 +931,27 @@ footer .theme-by {
 /* --- Tags --- */
 
 .blog-tags {
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  color: #999;
+  font-family: 'Lora', 'Times New Roman', serif;
+  color: var(--text-muted);
   font-size: 15px;
   margin-bottom: 30px;
 }
 
 .blog-tags a {
-  color: #008AFF;
+  color: var(--accent-color);
   text-decoration: none;
-  padding: 0px 5px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background: var(--bg-secondary);
+  transition: var(--transition);
+  display: inline-block;
+  margin: 2px;
 }
 
 .blog-tags a:hover {
-  border-radius: 2px;
-  color: #008AFF;
-  background-color: #CCC;
+  color: var(--accent-hover);
+  background: var(--accent-color);
+  color: white;
 }
 
 .post-preview .blog-tags {
@@ -424,8 +981,13 @@ footer .theme-by {
 /* --- Post and page headers --- */
 
 .intro-header {
-  margin: 80px 0 20px;
+  margin: 0;
   position: relative;
+}
+
+/* Override for sticky header */
+.intro-header.no-img {
+  position: sticky !important;
 }
 .intro-header.big-img {
   background: no-repeat center center;
@@ -433,7 +995,7 @@ footer .theme-by {
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
-  margin-top: 51px; /* The small navbar is 50px tall + 1px border */
+  margin-top: 0;
   margin-bottom: 35px;
 }
 .intro-header.big-img  .big-img-transition {
@@ -451,7 +1013,71 @@ footer .theme-by {
   transition: opacity 1s linear;
 }
 .intro-header .page-heading {
-  text-align: center;
+  text-align: left;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.intro-header .container {
+  max-width: 900px;
+  padding: 0 30px;
+}
+
+/* Desktop: Ensure page heading matches content centering */
+@media only screen and (min-width: 768px) {
+  /* Override Bootstrap column system to match content centering */
+  .intro-header .container {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  
+  .intro-header .container .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  
+  .intro-header .container .col-lg-8,
+  .intro-header .container .col-md-10 {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+  }
+  
+  .intro-header .page-heading {
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  /* Ensure fixed header works on tablet and desktop - account for sidebar */
+  .intro-header.no-img {
+    position: fixed !important;
+    top: 0 !important;
+    left: 280px !important; /* Account for sidebar width */
+    right: 0 !important;
+    width: calc(100% - 280px) !important;
+    z-index: 99 !important; /* Below sidebar */
+  }
+  
+  /* Ensure header content is properly centered */
+  .intro-header.no-img .container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 30px;
+  }
+  
+  /* Adjust content padding to account for fixed header */
+  .container[role="main"] {
+    padding-top: 140px; /* Increased for better spacing */
+  }
 }
 .intro-header.big-img .page-heading,
 .intro-header.big-img .post-heading {
@@ -461,20 +1087,89 @@ footer .theme-by {
 }
 .intro-header .page-heading h1 {
   margin-top: 0;
-  font-size: 30px;
+  font-size: 36px;
+  font-family: 'Lora', 'Times New Roman', serif;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-align: left;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+}
+
+/* Homepage content with profile picture */
+.newspaper-content .homepage-content {
+  margin-bottom: 2em;
+  margin-top: 40px; /* Extra top margin for homepage to account for fixed header */
+  padding-top: 0;
+}
+
+.newspaper-content .homepage-first-paragraph {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  margin-bottom: 1.5em;
+}
+
+.newspaper-content .homepage-avatar {
+  flex-shrink: 0;
+  margin-top: 0.3em; /* Align with first line of text */
+}
+
+.newspaper-content .homepage-avatar img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid var(--accent-color);
+  box-shadow: 0 4px 8px var(--shadow);
+  transition: var(--transition);
+  object-fit: cover;
+}
+
+.newspaper-content .homepage-avatar img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px var(--shadow);
+}
+
+.newspaper-content .homepage-first-paragraph .article-paragraphIn {
+  flex: 1;
+  margin: 0;
+}
+
+/* Mobile adjustments for homepage content */
+@media only screen and (max-width: 767px) {
+  .newspaper-content .homepage-first-paragraph {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .newspaper-content .homepage-avatar {
+    margin-top: 0;
+  }
+  
+  .newspaper-content .homepage-avatar img {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .newspaper-content .homepage-first-paragraph .article-paragraphIn {
+    text-align: left;
+  }
 }
 .intro-header .post-heading h1 {
   margin-top: 0;
   font-size: 25px;
 }
-.intro-header .page-heading .page-subheading,
-.intro-header .post-heading .post-subheading {
-  font-size: 23px;
-  line-height: 1.1;
+.intro-header .page-heading .page-subheading {
+  font-size: 18px;
+  line-height: 1.4;
   display: block;
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 300;
-  margin: 10px 0 0;
+  font-family: 'Lora', 'Times New Roman', serif;
+  font-weight: 400;
+  font-style: italic;
+  margin: 8px 0 0;
+  color: var(--text-secondary);
+  text-align: left;
 }
 .intro-header .post-heading .post-subheading {
   margin-bottom: 20px;
@@ -497,24 +1192,24 @@ footer .theme-by {
   padding: 5px 10px;
   font-size: 11px;
   color: #EEE;
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Lora', 'Times New Roman', serif;
   right: 0;
   bottom: 0;
   display: none;
 }
 @media only screen and (min-width: 768px) {
   .intro-header {
-    margin-top: 130px;
+    margin-top: 0;
   }
   .intro-header.big-img {
-    margin-top: 91px;  /* Full navbar is small navbar + 20px padding on each side when expanded */
+    margin-top: 0;
   }	
   .intro-header.big-img .page-heading,
   .intro-header.big-img .post-heading  {
     padding: 150px 0;
   }  
   .intro-header .page-heading h1 {
-    font-size: 30px;
+    font-size: 36px;
   }
   .intro-header .post-heading h1 {
     font-size: 20px;
@@ -526,10 +1221,11 @@ footer .theme-by {
 
 .header-section.has-img .no-img {
   margin-top: 0;
-  background: #FCFCFC;
+  background: var(--bg-secondary);
   margin: 0 0 40px;
   padding: 20px 0;
-  box-shadow: 0 0 5px #AAA;
+  box-shadow: 0 2px 8px var(--shadow);
+  transition: var(--transition);
 }
 /* Many phones are 320 or 360px, so make sure images are a proper aspect ratio in those cases */
 .header-section.has-img .intro-header.no-img {
@@ -571,15 +1267,17 @@ footer .theme-by {
 /* --- Pager --- */
 
 .pager li a {
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
+  font-family: 'Lora', 'Times New Roman', serif;
+  text-transform: none;
   font-size: 14px;
-  font-weight: 800;
-  letter-spacing: 1px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
   padding: 10px 5px;
-  background: #FFF;
-  border-radius: 0;
-  color: #404040;
+  background: var(--card-bg);
+  border-radius: 4px;
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  transition: var(--transition);
 }
 @media only screen and (min-width: 768px) {
   .pager li a {
@@ -589,8 +1287,10 @@ footer .theme-by {
 .pager li a:hover,
 .pager li a:focus {
   color: #FFF;
-  background: #008AFF;
-  border: 1px solid #008AFF;
+  background: var(--accent-color);
+  border: 1px solid var(--accent-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px var(--shadow);
 }
 
 .pager {
@@ -613,23 +1313,25 @@ table {
   padding: 0;
 }
 table tr {
-  border-top: 1px solid #cccccc;
-  background-color: #000000;
+  border-top: 1px solid var(--border-color);
+  background-color: var(--card-bg);
   margin: 0;
   padding: 0;
+  transition: var(--transition);
 }
 table tr:nth-child(2n) {
-  background-color: #f8f8f8;
+  background-color: var(--bg-secondary);
 }
 table tr th {
   font-weight: bold;
-  border: 1px solid #cccccc;
+  border: 1px solid var(--border-color);
   text-align: left;
   margin: 0;
   padding: 6px 13px;
+  background: var(--bg-tertiary);
 }
 table tr td {
-  border: 1px solid #cccccc;
+  border: 1px solid var(--border-color);
   text-align: left;
   margin: 0;
   padding: 6px 13px;
@@ -653,18 +1355,20 @@ pre code {
   white-space: pre;
 }
 pre.highlight, .highlight > pre, td.code pre {
-  background: #FAFAFA;
-  background-image: linear-gradient(#F9F9F9 50%, #FDFDFD 50%);
+  background: var(--code-bg);
+  background-image: linear-gradient(var(--bg-secondary) 50%, var(--code-bg) 50%);
   background-repeat: repeat;
   background-size: 3em 3em;
   background-position: 0px 10px;
-  border-left: 7px solid #444;
+  border-left: 4px solid var(--accent-color);
+  border-radius: 4px;
+  transition: var(--transition);
 }
 code table, code table td, code table th, code table tbody, code table tr,
 td.gutter pre {
   padding: 0;
   border: none;
-  background-color: #000000;
+  background-color: transparent;
 }
 .highlight > pre {
   padding: 0;
@@ -672,7 +1376,7 @@ td.gutter pre {
 td.code pre {
   border-width: 0 0 0 2px;
   border-style: solid;
-  border-color: #444;
+  border-color: var(--accent-color);
   border-radius: 0;
 }
 td.gutter {
@@ -683,4 +1387,1075 @@ td.gutter {
 
 #social-share-section {
   margin-bottom: 30px;
+}
+
+/* --- Enhanced Professional Styling --- */
+
+/* Smooth page transitions */
+.container {
+  transition: var(--transition);
+}
+
+/* Improved content area */
+.main-explain-area {
+  background: var(--bg-secondary);
+  padding: 30px;
+  border-radius: 8px;
+  margin: 20px 0;
+  box-shadow: 0 2px 4px var(--shadow);
+  transition: var(--transition);
+}
+
+/* Professional card styling for content */
+.container[role="main"] {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Enhanced intro header - Fixed at top */
+.intro-header.no-img {
+  background: var(--bg-primary);
+  padding: 30px 0 20px 0;
+  border-radius: 0;
+  margin: 0;
+  transition: var(--transition);
+  border-bottom: 3px double var(--border-color);
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  z-index: 99; /* Below sidebar (z-index: 1000) */
+  /* Add subtle shadow */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Ensure header-section doesn't interfere */
+.header-section {
+  position: relative;
+  overflow: visible;
+}
+
+/* Add margin to content to account for fixed header */
+.intro-header.no-img + *,
+.header-section + * {
+  margin-top: 0;
+}
+
+/* Padding for fixed header is now in main container definition above */
+
+/* Better link styling */
+.container a:not(.btn):not(.navbar-brand):not(.theme-toggle) {
+  position: relative;
+}
+
+/* Mobile-specific improvements */
+@media only screen and (max-width: 767px) {
+  /* Better text readability on mobile */
+  body {
+    font-size: 16px;
+    padding-left: 0 !important; /* Remove sidebar padding on mobile */
+  }
+  
+  /* Improved spacing */
+  .main-content {
+    padding-top: 70px; /* Space for mobile toggle button */
+  }
+  
+  /* Better footer on mobile */
+  footer {
+    padding: 25px 0;
+    font-size: 13px;
+  }
+  
+  /* Ensure proper contrast in dark mode on mobile */
+  [data-theme="dark"] .sidebar-toggle {
+    background-color: var(--bg-tertiary);
+  }
+  
+  [data-theme="dark"] .sidebar-toggle .icon-bar {
+    background-color: var(--text-primary);
+  }
+  
+  /* Prevent body scroll when sidebar is open */
+  body.sidebar-open {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* Ensure sidebar stays fixed even when page scrolls */
+  .sidebar {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+  }
+}
+
+/* Improved spacing */
+.container p {
+  margin-bottom: 1.2em;
+}
+
+/* Professional hover effects */
+.post-preview:hover {
+  transform: translateX(5px);
+  transition: var(--transition);
+}
+
+/* Disable transform on mobile for better UX */
+@media only screen and (max-width: 767px) {
+  .post-preview:hover {
+    transform: none;
+  }
+  
+  /* Better touch targets on mobile */
+  a, button, .btn {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+}
+
+/* Responsive improvements */
+@media only screen and (min-width: 768px) {
+  .container {
+    max-width: 900px;
+  }
+}
+
+/* Old intro-content styles removed - using newspaper-article instead */
+
+/* Enhanced page content area */
+.container[role="main"] {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  padding-top: 140px; /* Account for fixed header on desktop (increased for better spacing) */
+}
+
+/* Mobile and smaller screens - more padding for fixed header */
+@media only screen and (max-width: 991px) {
+  .container[role="main"] {
+    padding-top: 200px !important; /* Extra space for fixed header on smaller screens */
+  }
+}
+
+.container[role="main"] .col-lg-12,
+.container[role="main"] .col-lg-10 {
+  padding: 0;
+  width: 100%;
+}
+
+/* Newspaper-style content - applies to all pages */
+.newspaper-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 30px 60px 30px;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  position: relative;
+  transition: var(--transition);
+}
+
+/* Desktop: Center content in available space (viewport - sidebar) with equal margins */
+@media only screen and (min-width: 768px) {
+  .newspaper-content {
+    /* Available space = viewport width - sidebar width (280px) */
+    /* Content max-width is 900px, but we want it centered in available space */
+    /* The body has padding-left: 280px, so content area starts at 280px */
+    /* margin: 0 auto centers the content in its container (which is in the available space) */
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    /* Padding is inside the element, margins are outside */
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  
+  /* Ensure the container doesn't interfere with centering */
+  .container[role="main"] {
+    width: 100%;
+  }
+  
+  .container[role="main"] .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  
+  .container[role="main"] .col-lg-12 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.newspaper-content::before,
+.newspaper-content::after {
+  display: none;
+}
+
+/* Style all content within newspaper-content */
+.newspaper-content > * {
+  font-family: 'Lora', 'Times New Roman', serif;
+  color: var(--text-primary);
+  transition: var(--transition);
+}
+
+.newspaper-content p,
+.newspaper-content li,
+.newspaper-content td,
+.newspaper-content dd {
+  font-size: 20px;
+  line-height: 1.9;
+  text-align: justify;
+  text-justify: inter-word;
+  margin-bottom: 1.5em;
+}
+
+.newspaper-content h1,
+.newspaper-content h2,
+.newspaper-content h3,
+.newspaper-content h4,
+.newspaper-content h5,
+.newspaper-content h6 {
+  font-family: 'Lora', 'Times New Roman', serif;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-top: 2em;
+  margin-bottom: 1em;
+  text-align: left;
+}
+
+.newspaper-content h1 {
+  font-size: 32px;
+  border-bottom: 2px solid var(--accent-color);
+  padding-bottom: 10px;
+}
+
+.newspaper-content h2 {
+  font-size: 28px;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 8px;
+}
+
+.newspaper-content h3 {
+  font-size: 24px;
+}
+
+.newspaper-content h4 {
+  font-size: 20px;
+}
+
+.newspaper-content ul,
+.newspaper-content ol {
+  margin: 1.5em 0;
+  padding-left: 2em;
+}
+
+.newspaper-content li {
+  margin-bottom: 0.8em;
+}
+
+.newspaper-content blockquote {
+  border-left: 4px solid var(--accent-color);
+  padding: 20px 30px;
+  margin: 2em 0;
+  background: var(--bg-secondary);
+  border-radius: 4px;
+  font-style: italic;
+  font-size: 18px;
+}
+
+.newspaper-content blockquote p {
+  margin-bottom: 0;
+}
+
+.newspaper-content a {
+  color: var(--accent-color);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: var(--transition);
+  font-weight: 500;
+}
+
+.newspaper-content a:hover {
+  border-bottom-color: var(--accent-color);
+  color: var(--accent-hover);
+}
+
+.newspaper-content strong {
+  color: var(--text-primary);
+  font-weight: 700;
+  font-family: 'Lora', 'Times New Roman', serif;
+}
+
+.newspaper-content em {
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+.newspaper-content code {
+  background: var(--bg-secondary);
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 0.9em;
+  font-family: 'Courier New', monospace;
+}
+
+.newspaper-content pre {
+  background: var(--bg-secondary);
+  padding: 20px;
+  border-radius: 4px;
+  overflow-x: auto;
+  margin: 1.5em 0;
+}
+
+.newspaper-content table {
+  width: 100%;
+  margin: 2em 0;
+  border-collapse: collapse;
+}
+
+.newspaper-content table th,
+.newspaper-content table td {
+  padding: 12px;
+  border: 1px solid var(--border-color);
+  text-align: left;
+}
+
+.newspaper-content table th {
+  background: var(--bg-tertiary);
+  font-weight: 700;
+  font-family: 'Lora', 'Times New Roman', serif;
+}
+
+/* Special handling for PDF viewers and iframes */
+.newspaper-content #pdf,
+.newspaper-content iframe,
+.newspaper-content embed,
+.newspaper-content object {
+  width: 100%;
+  margin: 2em 0;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  box-shadow: 0 2px 8px var(--shadow);
+}
+
+/* --- Books Page - Book Belt Layout --- */
+
+/* Book section headings */
+.newspaper-content h3 {
+  margin-top: 3em;
+  margin-bottom: 1.5em;
+  clear: both;
+  page-break-after: avoid;
+}
+
+.newspaper-content h3:first-of-type {
+  margin-top: 1em;
+}
+
+/* Book filters */
+.newspaper-content .book-filters {
+  margin-bottom: 2.5em;
+  padding: 0;
+  background: transparent;
+}
+
+.newspaper-content .filter-group {
+  margin-bottom: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.newspaper-content .filter-group:last-child {
+  margin-bottom: 0;
+}
+
+.newspaper-content .filter-label {
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--text-primary);
+  margin-right: 8px;
+  min-width: 60px;
+  font-family: 'Lora', 'Times New Roman', serif;
+}
+
+.newspaper-content .filter-btn {
+  padding: 6px 14px;
+  border: 1px solid var(--border-color);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.newspaper-content .filter-btn:hover {
+  background: var(--bg-secondary);
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+}
+
+.newspaper-content .filter-btn.active {
+  background: var(--accent-color);
+  color: white;
+  border-color: var(--accent-color);
+}
+
+.newspaper-content .filter-btn.active:hover {
+  background: var(--accent-hover);
+  border-color: var(--accent-hover);
+}
+
+@media only screen and (max-width: 767px) {
+  .newspaper-content .book-filters {
+    padding: 0 25px;
+  }
+  
+  .newspaper-content .filter-group {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .newspaper-content .filter-label {
+    margin-bottom: 8px;
+    margin-right: 0;
+  }
+  
+  .newspaper-content .filter-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Book belt container - horizontal flexbox layout */
+.newspaper-content .book-belt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 0;
+  margin: 0 -10px 3em -10px;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  list-style: none;
+  width: calc(100% + 20px);
+}
+
+/* Individual book item card */
+.newspaper-content .book-belt .book-item {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 140px;
+  flex: 0 0 140px;
+  background: var(--bg-secondary);
+  border-radius: 8px;
+  padding: 15px;
+  text-align: center;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  border: 2px solid transparent;
+  box-shadow: 0 2px 6px var(--shadow);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  height: 370px; /* Fixed height for all cards */
+  position: relative;
+  margin: 0;
+  overflow: hidden; /* Prevent content from overflowing */
+}
+
+/* Book cover image */
+.newspaper-content .book-item img {
+  width: 100%;
+  max-width: 120px;
+  height: 180px; /* Fixed height for all images */
+  -o-object-fit: contain;
+  object-fit: contain;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 12px;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  display: block;
+  flex-shrink: 0; /* Prevent image from shrinking */
+}
+
+/* Book title */
+.newspaper-content .book-item .book-title {
+  font-size: 13px;
+  line-height: 1.4;
+  color: var(--text-primary);
+  font-weight: 600;
+  font-family: 'Lora', 'Times New Roman', serif;
+  word-wrap: break-word;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  text-align: center;
+  margin: 0 0 6px 0;
+  padding: 0;
+  min-height: 36px; /* Minimum height (2 lines at 1.4 line-height) */
+  max-height: 84px; /* Maximum height (3 lines) */
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+}
+
+/* Book author */
+.newspaper-content .book-item .book-author {
+  font-size: 11px;
+  line-height: 1.3;
+  color: var(--text-secondary);
+  font-style: italic;
+  font-family: 'Lora', 'Times New Roman', serif;
+  text-align: center;
+  margin: 0 0 6px 0;
+  padding: 0;
+  height: 28px; /* Fixed height (2 lines at 1.3 line-height) */
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+}
+
+/* Book tags - base style for format tags (rounded) */
+.newspaper-content .book-item .book-tag {
+  display: inline-block;
+  font-size: 9px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 4px;
+  margin-right: 8px;
+  margin-bottom: 4px;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  white-space: nowrap;
+}
+
+.newspaper-content .book-item .book-tag:last-child {
+  margin-right: 0;
+}
+
+/* Format tags - rounded style */
+.newspaper-content .book-item .book-tag-library {
+  background-color: var(--accent-color);
+  color: white;
+  border-radius: 12px;
+}
+
+.newspaper-content .book-item .book-tag-kindle {
+  background-color: #FF9900;
+  color: white;
+  border-radius: 12px;
+}
+
+/* Topic tags - squared/price tag style */
+.newspaper-content .book-item .book-tag-genai,
+.newspaper-content .book-item .book-tag-xai,
+.newspaper-content .book-item .book-tag-others,
+.newspaper-content .book-item .book-tag-recommender,
+.newspaper-content .book-item .book-tag-career,
+.newspaper-content .book-item .book-tag-engineering,
+.newspaper-content .book-item .book-tag-statistics,
+.newspaper-content .book-item .book-tag-ml {
+  border-radius: 0;
+  border: 1px solid currentColor;
+  position: relative;
+  padding: 3px 10px 3px 8px;
+}
+
+/* Price tag effect - small triangle on the right */
+.newspaper-content .book-item .book-tag-genai::after,
+.newspaper-content .book-item .book-tag-xai::after,
+.newspaper-content .book-item .book-tag-others::after,
+.newspaper-content .book-item .book-tag-recommender::after,
+.newspaper-content .book-item .book-tag-career::after,
+.newspaper-content .book-item .book-tag-engineering::after,
+.newspaper-content .book-item .book-tag-statistics::after,
+.newspaper-content .book-item .book-tag-ml::after {
+  content: '';
+  position: absolute;
+  right: -6px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 4px 0 4px 6px;
+  border-color: transparent transparent transparent currentColor;
+}
+
+.newspaper-content .book-item .book-tag-genai {
+  background-color: #8B5CF6;
+  color: white;
+  border-color: #6D28D9;
+}
+
+.newspaper-content .book-item .book-tag-xai {
+  background-color: #10B981;
+  color: white;
+  border-color: #059669;
+}
+
+.newspaper-content .book-item .book-tag-others,
+.newspaper-content .book-item .book-tag-others {
+  background-color: #6366F1;
+  color: white;
+  border-color: #4F46E5;
+}
+
+.newspaper-content .book-item .book-tag-recommender {
+  background-color: #EC4899;
+  color: white;
+  border-color: #DB2777;
+}
+
+.newspaper-content .book-item .book-tag-career {
+  background-color: #14B8A6;
+  color: white;
+  border-color: #0D9488;
+}
+
+.newspaper-content .book-item .book-tag-engineering {
+  background-color: #EF4444;
+  color: white;
+  border-color: #DC2626;
+}
+
+.newspaper-content .book-item .book-tag-statistics {
+  background-color: #EAB308;
+  color: white;
+  border-color: #CA8A04;
+}
+
+.newspaper-content .book-item .book-tag-ml {
+  background-color: #06B6D4;
+  color: white;
+  border-color: #0891B2;
+}
+
+/* Tags container - ensure tags stay at bottom of card */
+.newspaper-content .book-item .book-tag {
+  margin-top: auto;
+}
+
+/* Book note at bottom */
+.newspaper-content .book-note {
+  text-align: center;
+  font-size: 14px;
+  color: var(--text-muted);
+  font-style: italic;
+  margin-top: 2em;
+  margin-bottom: 1em;
+}
+
+/* Hover effects */
+.newspaper-content .book-item:hover {
+  -webkit-transform: translateY(-5px);
+  -ms-transform: translateY(-5px);
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px var(--shadow);
+  border-color: var(--accent-color);
+}
+
+.newspaper-content .book-item:hover img {
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Ownership indicator styling */
+.newspaper-content h3 + ul > li:contains("(*)")::after {
+  content: "(*)";
+  font-size: 11px;
+  color: var(--accent-color);
+  margin-top: 5px;
+  font-style: italic;
+}
+
+/* Responsive design for book belts */
+@media only screen and (max-width: 767px) {
+  .newspaper-content .book-belt {
+    gap: 15px;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  
+  .newspaper-content .book-belt .book-item {
+    -ms-flex: 0 0 calc(50% - 7.5px);
+    flex: 0 0 calc(50% - 7.5px);
+    min-width: 120px;
+    max-width: 140px;
+    min-height: 280px;
+    padding: 12px;
+  }
+  
+  .newspaper-content .book-item img {
+    max-width: 100px;
+    max-height: 150px;
+  }
+  
+  .newspaper-content .book-item .book-title {
+    font-size: 12px;
+  }
+  
+  .newspaper-content .book-item .book-author {
+    font-size: 10px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .newspaper-content .book-belt {
+    gap: 10px;
+  }
+  
+  .newspaper-content .book-belt .book-item {
+    -ms-flex: 0 0 calc(50% - 5px);
+    flex: 0 0 calc(50% - 5px);
+    min-width: 110px;
+    padding: 10px;
+    min-height: 260px;
+  }
+  
+  .newspaper-content .book-item img {
+    max-width: 90px;
+    max-height: 130px;
+  }
+  
+  .newspaper-content .book-item .book-title {
+    font-size: 11px;
+  }
+  
+  .newspaper-content .book-item .book-author {
+    font-size: 9px;
+  }
+}
+
+/* Special styling for homepage article */
+.newspaper-article {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  position: relative;
+}
+
+.newspaper-article::before,
+.newspaper-article::after {
+  display: none;
+}
+
+/* Homepage article body styling */
+.article-body {
+  font-family: 'Lora', 'Times New Roman', serif;
+  font-size: 20px;
+  line-height: 1.9;
+  color: var(--text-primary);
+  text-align: justify;
+  text-justify: inter-word;
+  transition: var(--transition);
+}
+
+.article-lead {
+  font-size: 24px;
+  line-height: 1.8;
+  font-weight: 400;
+  margin-bottom: 2em;
+  color: var(--text-primary);
+  text-align: left;
+  font-style: italic;
+  border-left: 4px solid var(--accent-color);
+  padding: 20px 30px;
+  background: var(--bg-secondary);
+  border-radius: 4px;
+  margin-bottom: 2.5em;
+}
+
+.article-paragraph {
+  font-size: 20px;
+  line-height: 1.9;
+  margin-bottom: 1.8em;
+  color: var(--text-primary);
+  text-indent: 0;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.article-body strong {
+  color: var(--text-primary);
+  font-weight: 700;
+  font-family: 'Lora', 'Times New Roman', serif;
+}
+
+.article-body em {
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+.article-body a {
+  color: var(--accent-color);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: var(--transition);
+  font-weight: 500;
+}
+
+.article-body a:hover {
+  border-bottom-color: var(--accent-color);
+  color: var(--accent-hover);
+}
+
+/* Ensure mobile navbar toggle button is visible */
+.navbar-toggle {
+  border-color: var(--border-color);
+  background-color: var(--bg-secondary);
+  transition: var(--transition);
+}
+
+.navbar-toggle .icon-bar {
+  background-color: var(--text-primary);
+  transition: var(--transition);
+}
+
+.navbar-toggle:hover,
+.navbar-toggle:focus {
+  background-color: var(--bg-tertiary);
+}
+
+.navbar-toggle:hover .icon-bar,
+.navbar-toggle:focus .icon-bar {
+  background-color: var(--accent-color);
+}
+
+@media only screen and (max-width: 767px) {
+  .container[role="main"] {
+    padding: 20px 15px;
+  }
+  
+  /* Fixed header on mobile - account for menu button */
+  .intro-header.no-img {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    padding-top: 70px; /* Space for menu button */
+    z-index: 999; /* Below sidebar but above content */
+  }
+  
+  /* Ensure header content doesn't overlap with menu button */
+  .intro-header.no-img .container {
+    padding-left: 60px !important; /* Extra left padding to avoid menu button */
+    padding-right: 25px;
+  }
+  
+  .intro-header .page-heading {
+    padding: 0 25px;
+    padding-left: 0 !important; /* Remove default padding, container handles it */
+  }
+  
+  .intro-header .page-heading h1 {
+    padding-left: 0;
+    margin-left: 0;
+  }
+  
+  /* Adjust content padding on mobile - header is ~70px (menu) + ~80px (header content) = ~150px */
+  .container[role="main"] {
+    padding-top: 200px !important; /* Extra space to account for fixed header + menu button */
+  }
+  
+  /* Also add margin to newspaper content on mobile */
+  .newspaper-content {
+    margin-top: 0;
+  }
+  
+  /* Also handle big-img variant */
+  .intro-header.big-img .page-heading,
+  .intro-header.big-img .post-heading {
+    padding-top: 70px;
+    padding-left: 60px; /* Extra left padding to avoid menu button */
+    padding-right: 25px;
+  }
+  
+  .intro-header .page-heading h1 {
+    font-size: 28px;
+  }
+  
+  .intro-header .page-heading .page-subheading {
+    font-size: 16px;
+  }
+  
+  .newspaper-content {
+    padding: 0 25px 40px 25px;
+    margin: 0;
+  }
+  
+  .newspaper-content p,
+  .newspaper-content li {
+    font-size: 18px;
+    line-height: 1.8;
+    text-align: left;
+    text-justify: none;
+  }
+  
+  .newspaper-content h1 {
+    font-size: 26px;
+  }
+  
+  .newspaper-content h2 {
+    font-size: 22px;
+  }
+  
+  .newspaper-content h3 {
+    font-size: 20px;
+  }
+  
+  .article-body {
+    font-size: 18px;
+    line-height: 1.8;
+    text-align: left;
+  }
+  
+  .article-lead {
+    font-size: 20px;
+    line-height: 1.7;
+    padding: 15px 20px;
+    margin-bottom: 2em;
+  }
+  
+  .article-paragraph {
+    font-size: 18px;
+    line-height: 1.8;
+    text-align: left;
+    text-justify: none;
+    margin-bottom: 1.5em;
+  }
+  
+  /* Better mobile navbar */
+  .navbar-custom {
+    box-shadow: 0 1px 3px var(--shadow);
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  /* Ensure fixed header is properly positioned on tablet */
+  .intro-header.no-img {
+    position: fixed !important;
+    top: 0 !important;
+    left: 280px !important; /* Account for sidebar */
+    right: 0 !important;
+    width: calc(100% - 280px) !important;
+    z-index: 99 !important; /* Below sidebar */
+  }
+  
+  .intro-header .page-heading {
+    padding: 0 30px; /* Reduced padding to match content */
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .intro-header .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 30px;
+    width: 100%;
+  }
+  
+  /* Ensure header content doesn't overflow */
+  .intro-header.no-img .page-heading h1 {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .newspaper-content {
+    padding: 0 30px 50px 30px;
+  }
+  
+  .newspaper-content p,
+  .newspaper-content li {
+    font-size: 19px;
+  }
+  
+  /* Ensure content has proper padding for fixed header */
+  .container[role="main"] {
+    padding-top: 140px; /* Increased for better spacing */
+  }
+}
+
+/* Ensure header positioning is consistent for all desktop sizes above 991px */
+@media only screen and (min-width: 992px) {
+  .intro-header.no-img {
+    position: fixed !important;
+    top: 0 !important;
+    left: 280px !important; /* Account for sidebar */
+    right: 0 !important;
+    width: calc(100% - 280px) !important;
+    z-index: 99 !important; /* Below sidebar */
+  }
+  
+  /* Ensure header content is properly centered */
+  .intro-header.no-img .container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 30px;
+  }
+  
+  .container[role="main"] {
+    padding-top: 140px; /* Increased for better spacing */
+  }
+}
+  
+  .article-body {
+    font-size: 19px;
+  }
+  
+  .article-lead {
+    font-size: 22px;
+  }
 }
