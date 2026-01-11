@@ -5,8 +5,23 @@ subtitle: Staff Data Scientist @ iFood; PhD Candidate in AI.
 use-site-title: true
 ---
 
-<br>BSc. in Computer Engineering, PhD Candidate in Artificial Intelligence, and working as a Staff Data Scientist at <a href="https://ifood.com.br/" target="_blank" rel="noopener noreferrer">iFood</a>, in the Data Ads team.
-<br><br>
-My research interests lie in the application of <b>Machine Learning</b> in <b>Natural Sciences</b>. Besides that, I'm passionate and continuously learning about <u>Software Engineering</u>, <u>Distributed Systems</u> and <u>Natural Computing</u>.
-<br><br>
-In my spare time, you can find me <a href="https://www.goodreads.com/user/show/93100732-bruna-zamith" target="_blank" rel="noopener noreferrer">reading a good book</a>, riding my bicycle, enjoying a cup of coffee or (hopefully!) traveling.<br><br>
+<div class="homepage-content">
+  <div class="homepage-first-paragraph">
+    {% if site.avatar %}
+      <div class="homepage-avatar">
+        <img src="{{ site.avatar | prepend: site.baseurl | replace: '//', '/' }}" alt="{{ site.title }}" />
+      </div>
+    {% endif %}
+    <p class="article-paragraphIn">
+      BSc. in Computer Engineering, PhD Candidate in Artificial Intelligence, and working as a <strong>Staff Data Scientist</strong> at <a href="https://ifood.com.br/" target="_blank" rel="noopener noreferrer">iFood</a>, in the Data Ads team.
+    </p>
+  </div>
+
+  <p class="article-paragraph">
+    My research interests lie in the application of <strong>Machine Learning</strong> in <strong>Natural Sciences</strong>. Besides that, I'm passionate and continuously learning about <u>Software Engineering</u>, <u>Distributed Systems</u> and <u>Natural Computing</u>.
+  </p>
+
+  <p class="article-paragraph">
+    In my spare time, you can find me <a href="https://www.goodreads.com/user/show/93100732-bruna-zamith" target="_blank" rel="noopener noreferrer">reading a good book</a>, riding my bicycle, enjoying a cup of coffee or (hopefully!) traveling.
+  </p>
+</div>
