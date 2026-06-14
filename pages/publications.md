@@ -3,7 +3,7 @@ layout: page
 title: Publications
 ---
 
-1. [TSCFEval: A Model-Agnostic Framework for Evaluating Time Series Classification Counterfactuals](https://tscf-eval.readthedocs.io/en/latest/) - *Zamith B., Andrade Lira, M. F., Cerri R. (2026). Explainable Artificial Intelligence (XAI 2026).*
+1. [TSCFEval: A Model-Agnostic Framework for Evaluating Time Series Classification Counterfactuals](https://tscf-eval.readthedocs.io/en/latest/) - *Zamith B., Andrade Lira, M. F., Cerri R. (2026). Explainable Artificial Intelligence (XAI World Conference).*
 2. [A New Time Series Framework for Forest Fire Risk Forecasting and Classification](https://ieeexplore.ieee.org/document/10191502/) - *Zamith B., Soriano, B., Narciso, M., Furtado, D., Cerri R. (2023). International Joint Conference on Neural Networks (IJCNN).*
 3. [Predictive Bi-Clustering Trees for Hierarchical Multi-Label Classification](https://limo.libis.be/primo-explore/fulldisplay?docid=LIRIAS3055838&context=L&vid=Lirias&search_scope=Lirias&tab=default_tab&lang=en_US) - *Zamith B., Nakano, K. F., Cerri R., Vens C. (2020). European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases (ECML-PKDD).*
 4. [Strategies for Selection of Positive and Negative Instances in the Hierarchical Classification of Transposable Elements](https://ieeexplore.ieee.org/document/8575650) - *Zamith B., Pereira, T. G., Nakano, K. F., Cerri R. (2018). Brazilian Conference on Intelligent Systems (BRACIS).*
