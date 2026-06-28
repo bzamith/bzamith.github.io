@@ -12,6 +12,7 @@
 \usepackage{enumitem}
 \usepackage{array}
 \usepackage{fancyhdr}
+\usepackage{etoolbox}
 \usepackage[hidelinks]{hyperref}
 
 \pagestyle{fancy}
@@ -42,7 +43,7 @@
 %-------------------------------------------
 % Custom commands
 \newcommand{\resumeItem}[2]{%
-  \item \textbf{#1}{ #2}%
+  \item \ifblank{#1}{}{\textbf{#1}\ }#2%
 }
 
 \newcommand{\resumeSubheading}[4]{%
@@ -107,7 +108,7 @@
 \end{center}
 \vspace{2pt}
 
-% %-----------AREAS OF INTEREST-----------------
+%-----------AREAS OF INTEREST-----------------
 % \section{Main Areas of Interest}
 % \resumeSubHeadingListStart
 %     \resumeSubItem{Data Science, Machine Learning, Research \& Development, Software Engineering}{}
@@ -162,8 +163,8 @@
         {PhD in Artificial Intelligence}{Feb. 2025 -- Present}
     \resumeItemListStart
         \resumeItem{Topic:}{Explainable AI (XAI) for Time Series Classification.}
-        \resumeItem{GPA:}{10/10}
         \resumeTechDomain{Python (PyTorch/NumPy/Pandas), LaTeX}{XAI, Time Series, Instance Hardness}
+        \resumeItem{GPA:}{10/10}
     \resumeItemListEnd
 
     \resumeSubheading{Federal University of Sao Carlos (UFSCar)}{Remote - Brazil}
@@ -172,8 +173,8 @@
         \resumeItem{Project:}{Climate Variables Forecasting \& Forest Fire Risk Classification in the Brazilian Pantanal. Pantanal faces recurrent fires driven by climate; existing indexes are biome-agnostic, limited in variables, and lack multi-day predictions.}
         \resumeItem{Approach:}{Built a two-stage ML system: (1) forecast climate variables; (2) classify daily fire-risk levels using predicted covariates. Compared exhaustive hyperparameter search to Genetic Algorithms (GA) for multi-objective optimization.}
         \resumeItem{Results:}{System outperformed standard fire-risk indexes on key classes and enabled forward-looking risk.}
-        \resumeItem{GPA:}{10/10}
         \resumeTechDomain{Python, R}{Time Series, Forecasting, Classification, Genetic Algorithms}
+        \resumeItem{GPA:}{10/10}
     \resumeItemListEnd
 
     \resumeSubheading{Katholieke Universiteit Leuven (KU Leuven)}{Kortrijk, Flanders - Belgium}{Research Intern}{Sep. 2017 -- Dec. 2017}
