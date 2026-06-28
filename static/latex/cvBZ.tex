@@ -1,112 +1,117 @@
 %-------------------------
-% Resume in Latex
-% Author : Sourabh Bajaj
-% License : MIT
-%------------------------
+% Resume in LaTeX
+% Professional, no color, no decorative elements
+%-------------------------
 
-\documentclass[letterpaper,6pt]{article}
+\documentclass[11pt,letterpaper]{article}
 
-\usepackage{latexsym}
-\usepackage[empty]{fullpage}
+\usepackage[T1]{fontenc}
+\usepackage{charter}                 % clean, classic, professional serif typeface
+\usepackage[top=0.7in,bottom=0.7in,left=0.8in,right=0.8in]{geometry}
 \usepackage{titlesec}
-\usepackage{marvosym}
-\usepackage[usenames,dvipsnames]{color}
-\usepackage{verbatim}
 \usepackage{enumitem}
-\usepackage[pdftex]{hyperref}
+\usepackage{array}
 \usepackage{fancyhdr}
-\usepackage{multicol}
+\usepackage[hidelinks]{hyperref}
 
 \pagestyle{fancy}
-\fancyhf{} % clear all header and footer fields
-\fancyfoot{}
+\fancyhf{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
-% Adjust margins
-\addtolength{\oddsidemargin}{-0.375in}
-\addtolength{\evensidemargin}{-0.375in}
-\addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.0in}
+\setlength{\tabcolsep}{0pt}
+\setlength{\parindent}{0pt}
+\raggedbottom
+\raggedright
 
 \urlstyle{same}
 
-\raggedbottom
-\raggedright
-\setlength{\tabcolsep}{0in}
-
-% Sections formatting
-\titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
-
-%-------------------------
-% Custom commands
-\newcommand{\resumeItem}[2]{
-  \item\small{
-    \textbf{#1}{ #2 \vspace{-2pt}}
-  }
-}
-
-\newcommand{\resumeSubheading}[4]{
-  \vspace{-10pt}\item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}\\
-      \textbf{#1} & #2 \\
-      \textbf{  }\underline{#3} & \small #4 \\
-    \end{tabular*}\vspace{-5pt}
-}
-
-\newcommand{\resumeSubheadingTwo}[6]{
-  \vspace{-10pt}\item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}\\
-      \textbf{#1} & #2 \\
-      \vspace{2pt}\textbf{  }\underline{#3} & \small #4 \\
-      \textbf{  }\underline{#5} & \small #6 \\
-    \end{tabular*}\vspace{-5pt}
-}
-
-\newcommand{\resumeSubheadingTree}[8]{
-  \vspace{-10pt}\item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}\\
-      \textbf{#1} & #2 \\
-      \vspace{2pt}\textbf{  }\underline{#3} & \small #4 \\
-      \textbf{  }\underline{#5} & \small #6 \\
-      \textbf{  }\underline{#7} & \small #8 \\
-    \end{tabular*}\vspace{-5pt}
-}
-
-\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
-
-\renewcommand{\labelitemii}{$\circ$}
-
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+%-------------------------------------------
+% Section formatting: bold heading + thin rule, no color, no small caps font issues
+\titleformat{\section}
+  {\normalfont\bfseries\large}
+  {}{0em}{}
+  [\vspace{-7pt}\rule{\linewidth}{0.6pt}]
+\titlespacing{\section}{0pt}{13pt}{6pt}
 
 %-------------------------------------------
+% List spacing (replaces manual negative \vspace hacks with consistent rules)
+\setlist[itemize,1]{leftmargin=0pt, label={}, itemsep=10pt, topsep=3pt, parsep=0pt, partopsep=0pt}
+\setlist[itemize,2]{leftmargin=14pt, label=\textendash, itemsep=3pt, topsep=3pt, parsep=0pt, partopsep=0pt, after=\vspace{4pt}}
+
+%-------------------------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{%
+  \item \textbf{#1}{ #2}%
+}
+
+\newcommand{\resumeSubheading}[4]{%
+  \item
+  \begin{tabular*}{\textwidth}{@{}l@{\extracolsep{\fill}}r@{}}
+    \textbf{\normalsize #1} & \textit{\small #2} \\
+    \textit{#3} & \small #4 \\
+  \end{tabular*}%
+}
+
+\newcommand{\resumeSubheadingTwo}[6]{%
+  \item
+  \begin{tabular*}{\textwidth}{@{}l@{\extracolsep{\fill}}r@{}}
+    \textbf{\normalsize #1} & \textit{\small #2} \\
+    \textit{#3} & \small #4 \\
+    \textit{#5} & \small #6 \\
+  \end{tabular*}%
+}
+
+\newcommand{\resumeSubheadingTree}[8]{%
+  \item
+  \begin{tabular*}{\textwidth}{@{}l@{\extracolsep{\fill}}r@{}}
+    \textbf{\normalsize #1} & \textit{\small #2} \\
+    \textit{#3} & \small #4 \\
+    \textit{#5} & \small #6 \\
+    \textit{#7} & \small #8 \\
+  \end{tabular*}%
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}}
+
+% Highlighted (but not flashy) Technologies/Domains lines: uppercase bold label, no italics, aligned values
+\newcommand{\resumeTechDomain}[2]{%
+  \item[]\vspace{2pt}
+  \makebox[3.4cm][l]{\textbf{\small TECHNOLOGIES}}#1\\[3pt]
+  \makebox[3.4cm][l]{\textbf{\small DOMAINS}}#2
+  \vspace{2pt}%
+}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}}
+
+%-------------------------------------------------------------------
 %%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
 \begin{document}
+\small
 
 %----------HEADING-----------------
-% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-%   \textbf{\href{linkedin.com/in/bruna-zamith/}{\Large Bruna Zamith Santos, PhD Candidate}} & Email : HIDDEN\\
-%   \href{http://bzamith.github.io}{bzamith.github.io} & Mobile : HIDDEN \\
-% \end{tabular*}
+\begin{center}
+  {\LARGE \textbf{Bruna Zamith Santos}}\\[2pt]
+  {\normalsize PhD Candidate}\\[6pt]
+  \href{mailto:bruna.zamith@hotmail.com}{bruna.zamith@hotmail.com}
+  \,\textbar\,
+  +55 (12) 99166-7541
+  \,\textbar\,
+  \href{http://bzamith.github.io}{bzamith.github.io}
+  \,\textbar\,
+  \href{https://linkedin.com/in/bruna-zamith/}{linkedin.com/in/bruna-zamith}
+\end{center}
+\vspace{2pt}
 
-\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{\href{linkedin.com/in/bruna-zamith/}{\Large Bruna Zamith Santos, PhD Candidate}} & Email : \href{mailto:bruna.zamith@hotmail.com}{bruna.zamith@hotmail.com}\\
-  \href{http://bzamith.github.io}{bzamith.github.io} & Mobile : +55 (12) 99166-7541 \\
-\end{tabular*}
-
-%-----------AREAS OF INTEREST-----------------
-\section{Main Areas of Interest}
-\resumeSubHeadingListStart
-    \resumeSubItem{Data Science, Machine Learning, Research \& Development, Software Engineering}{}
-\resumeSubHeadingListEnd
+% %-----------AREAS OF INTEREST-----------------
+% \section{Main Areas of Interest}
+% \resumeSubHeadingListStart
+%     \resumeSubItem{Data Science, Machine Learning, Research \& Development, Software Engineering}{}
+% \resumeSubHeadingListEnd
 
 %-----------EXPERIENCE-----------------
 \section{Professional Experience}
@@ -114,10 +119,11 @@
     \resumeSubheading{iFood}{Remote - Brazil}
         {Staff Data Scientist}{Dec. 2025 -- Current}
     \resumeItemListStart
-        \resumeItem{Technologies:}{AWS, Python, SQL}
-        \resumeItem{Domains:}{Recommender Systems, GenAI, A/B Testing, MLOps}
+        \resumeItem{}{Develop recommendation models and bidding optimization systems for Retail Media and Ads products.}
+        \resumeItem{}{Own end-to-end ML development: business framing, experimentation, model training, deployment, monitoring, and optimization.}
+        \resumeTechDomain{AWS, Python, SQL}{Recommender Systems, Optimization, GenAI, A/B Testing, MLOps}
     \resumeItemListEnd
-    
+
     \resumeSubheadingTwo{Amazon}{Remote - Brazil}
         {Applied Scientist II}{Feb. 2024 -- Dec. 2025}
         {Data Scientist II}{Mar. 2022 -- Jan. 2024}
@@ -127,10 +133,9 @@
         \resumeItem{}{Partnered with PM/Eng/Ops to prioritize a multi-quarter roadmap, negotiate trade-offs (latency/cost/quality), and unblock adoption across LatAm businesses.}
         \resumeItem{}{Program Owner, GenAI capacitation: designed curriculum and delivered trainings and office hours for different job roles across 12 marketplaces (10k+ employees); measured adoption and learning outcomes.}
         \resumeItem{}{Published 2 internal Amazon papers (applied ML/GenAI); evangelized best practices in experimentation, evaluation, and productionization.}
-        \resumeItem{Technologies:}{AWS, Python, SQL, Typescript}
-        \resumeItem{Domains:}{GenAI, Forecasting, Classification, A/B Testing, MLOps}
+        \resumeTechDomain{AWS, Python, SQL, Typescript}{GenAI, Forecasting, Classification, A/B Testing, MLOps}
     \resumeItemListEnd
-      
+
     \resumeSubheadingTree{Amazon}{Sao Paulo, SP - Brazil}
         {Software Development Engineer II}{Dec. 2021 -- Feb. 2022}
         {Software Development Engineer I}{Jul. 2020 -- Nov. 2021}
@@ -139,28 +144,25 @@
         \resumeItem{}{Built and operated large-scale front-/back-end services integrating with Amazon core systems to improve seller \& buyer experiences.}
         \resumeItem{}{Led design reviews, API contracts, performance testing, reliability, and on-call for high-throughput workloads.}
         \resumeItem{}{Shipped resilient, well-instrumented services adopted by core retail flows in Brazil.}
-        \resumeItem{Technologies:}{AWS, Java, Python, Typescript}
-        \resumeItem{Domains:}{Distributed Systems, APIs, Observability, Reliability}
+        \resumeTechDomain{AWS, Java, Python, Typescript}{Distributed Systems, APIs, Observability, Reliability}
     \resumeItemListEnd
-      
+
     \resumeSubheading{Serasa Experian}{Sao Carlos, SP - Brazil}
         {MIS Intern}{Aug. 2019 -- Dec. 2019}
     \resumeItemListStart
         \resumeItem{}{Delivered Finance dashboards and automated data pipelines; improved reporting accuracy and turnaround time by 40\%.}
-        \resumeItem{Technologies:}{SQL, SAS, Tableau}
-        \resumeItem{Domains:}{Business Intelligence, Data Engineering}
+        \resumeTechDomain{SQL, SAS, Tableau}{Business Intelligence, Data Engineering}
     \resumeItemListEnd
 \resumeSubHeadingListEnd
 
 %-----------EDUCATION-----------------
 \section{Education \& Research}
 \resumeSubHeadingListStart
-    \resumeSubheading{Federal University of Pernambuco (UFPE)}{Remote — Brazil}
+    \resumeSubheading{Federal University of Pernambuco (UFPE)}{Remote -- Brazil}
         {PhD in Artificial Intelligence}{Feb. 2025 -- Present}
     \resumeItemListStart
         \resumeItem{Topic:}{Explainable AI (XAI) for Time Series Classification.}
-        \resumeItem{Technologies:}{Python (PyTorch/NumPy/Pandas), LaTeX}
-        \resumeItem{Domains:}{XAI, Time Series, Instance Hardness}
+        \resumeTechDomain{Python (PyTorch/NumPy/Pandas), LaTeX}{XAI, Time Series, Instance Hardness}
         \resumeItem{GPA:}{10/10}
     \resumeItemListEnd
 
@@ -170,8 +172,7 @@
         \resumeItem{Project:}{Climate Variables Forecasting \& Forest Fire Risk Classification in the Brazilian Pantanal. Pantanal faces recurrent fires driven by climate; existing indexes are biome-agnostic, limited in variables, and lack multi-day predictions.}
         \resumeItem{Approach:}{Built a two-stage ML system: (1) forecast climate variables; (2) classify daily fire-risk levels using predicted covariates. Compared exhaustive hyperparameter search to Genetic Algorithms (GA) for multi-objective optimization.}
         \resumeItem{Results:}{System outperformed standard fire-risk indexes on key classes and enabled forward-looking risk.}
-        \resumeItem{Technologies:}{Python, R}
-        \resumeItem{Domains:}{Time Series, Forecasting, Classification, Genetic Algorithms}
+        \resumeTechDomain{Python, R}{Time Series, Forecasting, Classification, Genetic Algorithms}
         \resumeItem{GPA:}{10/10}
     \resumeItemListEnd
 
@@ -180,9 +181,9 @@
         \resumeItem{Project:}{Predicting Protein Functions via Interaction Prediction. Funded by Sao Paulo Research Foundation (FAPESP).}
         \resumeItem{Approach:}{Modeled protein function prediction as Hierarchical Multi-label Classification (HMC) over interaction networks; implemented data processing and evaluation pipelines.}
         \resumeItem{Outcome:}{Delivered reproducible code and benchmarks; informed subsequent HMC research at BioMaL/KU Leuven.}
-        \resumeItem{Technologies:}{Java} \resumeItem{Domains:}{HMC, Bioinformatics}
-    \resumeItemListEnd 
-    
+        \resumeTechDomain{Java}{HMC, Bioinformatics}
+    \resumeItemListEnd
+
     \resumeSubheading{Federal University of Sao Carlos (UFSCar)}{Sao Carlos, SP - Brazil}
         {Bachelor in Computer Engineering}{Mar. 2015 -- Jul. 2020}
     \resumeItemListStart
@@ -190,17 +191,19 @@
     \resumeItemListEnd
 \resumeSubHeadingListEnd
 
-\begin{multicols}{2}
+\noindent
+\begin{minipage}[t]{0.48\textwidth}
 %-----------PROGRAMMING SKILLS-----------------
 \section{Programming Skills}
   \resumeSubHeadingListStart
     \resumeSubItem{Languages:}
-      {Python (6 years); Java (5 years); SQL (3 years); \\Typescript (2 years); R (2 years); C++ (6 months)}
+      {Python (6 years); Java (5 years); SQL (3 years); Typescript (2 years); R (2 years); C++ (6 months)}
     \resumeSubItem{Others:}
-      {AWS, Git, Linux, Latex}
-\vfill\null
+      {AWS, Git, Linux, LaTeX}
   \resumeSubHeadingListEnd
-
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.48\textwidth}
 %-----------LANGUAGE-----------------
 \section{Language}
   \resumeSubHeadingListStart
@@ -208,25 +211,41 @@
       {Native}
     \resumeSubItem{English:}
       {Fluent (Cambridge English Certificate ESOL Intl)}
-      \vfill\null
   \resumeSubHeadingListEnd
-\end{multicols}
+\end{minipage}
 
 %-----------PUBLICATIONS-----------------
 \section{Presentations, Proceedings, and Papers}
-  \resumeSubHeadingListStart
-    \resumeSubItem{``A New Time Series Framework for Forest Fire Risk Forecasting and Classification''}{Zamith B., Soriano, B., Narciso, M., Furtado, D., Cerri R. (2023).  International Joint Conference on Neural Networks (IJCNN).}
-    \resumeSubItem{``Predictive Bi-Clustering Trees for Hierachical Multi-label Classification''}{Zamith B., Nakano, K. F., Cerri R., Vens C. (2020). European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases (ECML-PKDD).}
-    \resumeSubItem{``Strategies for Selection of Positive and Negative Instances in the Hierarchical Classification of Transposable Elements''}{Zamith B., Pereira, T. G., Nakano, K. F., Cerri R. (2018). Brazilian Conference on Intelligent Systems (BRACIS).}
-    \resumeSubItem{``A Genetic Algorithm for Transposable Elements Hierarchical Classification Rule Induction''}{Pereira, T. G., Zamith B., Cerri R. (2018). IEEE Congress on Evolutionary Computation (IEEE CEC).}
-    \resumeSubItem{``A New Machine Learning Dataset for Hierarchical Classification of Transposable Elements''}{Zamith B., Cerri R. (2016). National Meeting of Artificial and Computational Intelligence (ENIAC).}
-    \resumeSubItem{``Decisions Trees for Hierarchical Classification of Transposable Elements''}{Zamith B., Gomes Mantovani R., Schietgat L., Vens C., Cerri R. (2016). Proceedings of the 25th Belgian-Dutch Machine Learning Conference (Benelearn).}
-  \resumeSubHeadingListEnd
-%-------------------------------------------
+  \begingroup\small
+  \begin{itemize}[leftmargin=0pt, label={}, itemsep=6pt, topsep=2pt, parsep=0pt, partopsep=0pt]
+    \resumeSubItem{TSCFEval: A Model-Agnostic Framework for Evaluating Time Series Classification Counterfactuals}
+    {B. Zamith Santos, M. F. Andrade Lira, R. Cerri. 2026. In \textit{Explainable Artificial Intelligence (XAI World Conference)}.}
+
+    \resumeSubItem{A New Time Series Framework for Forest Fire Risk Forecasting and Classification}
+    {B. Zamith Santos, B. Soriano, M. Narciso, D. Furtado, R. Cerri. 2023. In \textit{International Joint Conference on Neural Networks (IJCNN)}.}
+
+    \resumeSubItem{Predictive Bi-Clustering Trees for Hierarchical Multi-Label Classification}
+    {B. Zamith Santos, K. F. Nakano, R. Cerri, C. Vens. 2020. In \textit{European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases (ECML-PKDD)}.}
+
+    \resumeSubItem{Strategies for Selection of Positive and Negative Instances in the Hierarchical Classification of Transposable Elements}
+    {B. Zamith Santos, T. G. Pereira, K. F. Nakano, R. Cerri. 2018. In \textit{Brazilian Conference on Intelligent Systems (BRACIS)}.}
+
+    \resumeSubItem{A Genetic Algorithm for Transposable Elements Hierarchical Classification Rule Induction}
+    {T. G. Pereira, B. Zamith Santos, R. Cerri. 2018. In \textit{IEEE Congress on Evolutionary Computation (IEEE CEC)}.}
+
+    \resumeSubItem{A New Machine Learning Dataset for Hierarchical Classification of Transposable Elements}
+    {B. Zamith Santos, R. Cerri. 2016. In \textit{National Meeting on Artificial and Computational Intelligence (ENIAC)}.}
+
+    \resumeSubItem{Decision Trees for Hierarchical Classification of Transposable Elements}
+    {B. Zamith Santos, R. G. Mantovani, L. Schietgat, C. Vens, R. Cerri. 2016. In \textit{Proceedings of the 25th Belgian-Dutch Machine Learning Conference (Benelearn)}.}
+  \end{itemize}
+  \endgroup
 
 %-----------CERTIFICATIONS-----------------
 \section{Certifications}
-  \resumeSubHeadingListStart
+  \begingroup\small
+  \begin{itemize}[leftmargin=0pt, label={}, itemsep=6pt, topsep=2pt, parsep=0pt, partopsep=0pt]
+    \resumeItem{\href{https://drive.google.com/file/d/1CwHMRyzeZmDvrS_AfFiSRuisy2ZotFBx/view}{Statistics and Optimization for Data Science and Operations Research (2026):}}{60 hours online course provided by University of Sao Paulo (USP).}
     \resumeItem{\href{https://coursera.org/share/43e3090b53acbdb77301e0ec5c6bbb81}{Recommender Systems Specialization (2025):}}{80 hours online course provided by University of Minnesota.}
     \resumeItem{\href{https://drive.google.com/file/d/1KvUsgIFlltR3SW48f4Pu1RNp0cE1g_y0/view?usp=sharing}{Fundamentals of Probability and Statistics for Data Science (2025):}}{30 hours online course provided by University of Sao Paulo (USP).}
     \resumeItem{\href{https://learn.deeplearning.ai/accomplishments/3db9d146-093c-4dea-bb10-35f1f4fcf390?usp=sharing}{Practical Multi AI Agents and Advanced Use Cases with crewAI (2025):}}{3 hours online course provided by DeepLearning.ai and crewAI.}
@@ -237,12 +256,7 @@
     \resumeItem{\href{https://verify.acloud.guru/40ACAB21F4F9}{Introduction to AWS (2020):}}{5 hours online course provided by A Cloud Guru.}
     \resumeItem{\href{https://coursera.org/share/0f7a200acafda161712761aabc647fdf}{Version Control With Git (2019):}}{12 hours online course provided by Atlassian.}
     \resumeItem{\href{https://coursera.org/share/49e36f73ee5af2e58a65943a26848b88}{Software Development Processes and Methodologies (2019):}}{18 hours online course provided by University of Minnesota.}
-  \resumeSubHeadingListEnd
+  \end{itemize}
+  \endgroup
 
-%-----------OTHER PROJECTS-----------------
-% \section{Other Projects}
-%   \resumeSubHeadingListStart
-%     \resumeSubItem{\href{https://github.com/bzamith/ID_Agile-HH}{School of AI - Health Hackathon (2019):}}{Team project aimed to develop an app which seeks to reduce patients waiting time (at hospitals queue). The patient types what he is feeling and then via Natural Language Processing the symptoms are classified into a medical specialty. }
-%     \resumeSubItem{\href{http://www.instructables.com/id/IoT-Smart-Bathroom/}{Intel IoT Roadshow (2015):}}{Team project aimed to develop a ``smart" bathroom making use of relevant capacity utilization data, and trigger ``on demand" cleaning process alert, which leads to resources use optimization.}
-%   \resumeSubHeadingListEnd
 \end{document}
