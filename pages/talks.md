@@ -6,7 +6,6 @@ title: Talks
 Here is a list of my talks and presentations:
 
 ### 2026
-### 2026
 - **Second Brain for Agile Teams: The Augmented Enterprise** (from Portuguese: *Second Brain para Times Ágeis: A Empresa Aumentada*)  
   [Agile Trends](https://agiletrendsbr.com/agile-trends-2026/)  
   São Paulo, Brazil  
