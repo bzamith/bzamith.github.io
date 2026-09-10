@@ -35,20 +35,6 @@ title: Books
 ### Books I am Currently Reading
 
 <div class="book-belt" data-status="reading">
-  <div class="book-item" data-type="library" data-topics="recommender">
-    <img src="https://m.media-amazon.com/images/I/41hn8xdlqcL._SY650_.jpg" alt="Recommender Systems, The Textbook">
-    <div class="book-title">Recommender Systems, The Textbook</div>
-    <div class="book-author">Charu C. Aggarwal</div>
-    <span class="book-tag book-tag-library">In Library</span>
-    <span class="book-tag book-tag-recommender">Recomm. Systems</span>
-  </div>
-  <div class="book-item">
-    <img src="https://m.media-amazon.com/images/I/71d5NYaCdSL._SY650_.jpg" alt="Practical Recommender Systems">
-    <div class="book-title">Practical Recommender Systems</div>
-    <div class="book-author">Kim Falk</div>
-    <span class="book-tag book-tag-library">In Library</span>
-    <span class="book-tag book-tag-recommender">Recomm. Systems</span>
-  </div>
   <div class="book-item">
     <img src="https://m.media-amazon.com/images/I/815KH9GjFTL._SY650_.jpg" alt="AI Engineering">
     <div class="book-title">AI Engineering</div>
@@ -68,6 +54,20 @@ title: Books
 ### Books I've Read and Recommend
 
 <div class="book-belt" data-status="read">
+  <div class="book-item" data-type="library" data-topics="recommender">
+    <img src="https://m.media-amazon.com/images/I/41hn8xdlqcL._SY650_.jpg" alt="Recommender Systems, The Textbook">
+    <div class="book-title">Recommender Systems, The Textbook</div>
+    <div class="book-author">Charu C. Aggarwal</div>
+    <span class="book-tag book-tag-library">In Library</span>
+    <span class="book-tag book-tag-recommender">Recomm. Systems</span>
+  </div>
+  <div class="book-item">
+    <img src="https://m.media-amazon.com/images/I/71d5NYaCdSL._SY650_.jpg" alt="Practical Recommender Systems">
+    <div class="book-title">Practical Recommender Systems</div>
+    <div class="book-author">Kim Falk</div>
+    <span class="book-tag book-tag-library">In Library</span>
+    <span class="book-tag book-tag-recommender">Recomm. Systems</span>
+  </div>
   <div class="book-item">
     <img src="https://m.media-amazon.com/images/I/71MCzRvsraL._SY650_.jpg" alt="The Phoenix Project">
     <div class="book-title">The Phoenix Project</div>
