@@ -1027,6 +1027,12 @@ It is difficult to establish causality statistically; for this, well-designed ra
 ## Recommender Systems
 
 ### What is a Recommender System?
+> Recommender Systems (RS) are a type of information filtering system designed to predict and suggest items or content — such as products, movies, music, or articles — that a user might be interested in. These predictions are based on the user’s past behavior, preferences, or the behavior of similar users. The main goal of any RS is to enhance user experience, increase engagement, and facilitate decision-making processes. This is applicable across various domains, including e-commerce, entertainment, and social media. RS hold significant roles in both theoretical research (academics) and practical applications (industry).
+
+> At its core, an RS combines user and item profiles with a filtering mechanism to align user preferences with suitable items. User profiles gather data such as demographics and browsing history, while item profiles detail features like genres. Both explicit feedback (e.g. ratings) and implicit feedback (e.g. browsing actions) refine these recommendations.
+
+*[Raza, S., Rahman, M., Kamawal, S., Toroghi, A., Raval, A., Navah, F., & Kazemeini, A. (2025). A comprehensive review of recommender systems: Transitioning from theory to practice. arXiv preprint arXiv:2407.13699.](https://arxiv.org/abs/2407.13699)*
+
 > A recommender system calculates and provides relevant content to the user based on knowledge of the user, content, and interactions between the user and the item.
 
 *Pratical Recommenders Systems; Kim Falk (2019)*
@@ -1051,6 +1057,15 @@ It is difficult to establish causality statistically; for this, well-designed ra
 > Two kinds of recommendations are commonly used: (1) Homepage recommendations, which are personalized to a user based on their known interests. Every user sees different recommendations; (2) Related item recommendations, which are recommendations similar to a particular item.
 
 *[Recommendation Systems - Google Machine Learning](https://developers.google.com/machine-learning/recommendation/overview)*
+
+### What are Memory-based and Model-based Recommenders?
+> Normally you split recommender algorithms into memory-based and model-based recommender algorithms. Memory-based means that the recommender accesses the log data in real time, while model-based signifies that the algorithm aggregates the data beforehand to make it more responsive. Experience shows that memory-based algorithms only work up to a certain point because they don't require many views per minute before it becomes difficult for servers to keep up.
+
+*Pratical Recommenders Systems; Kim Falk (2019)*
+
+> Memory-based use the entire user-item database to generate a prediction. It envolves usage of statistical techniques to find the neighbors - e.g. nearest-neighbor. In model-based, we develop a model of user (such as probabilistic, clustering, rule based approaches, classification, regression, LDA, etc)
+
+*[Xavier Amatriain and Bamshad Mobasher. 2014. The recommender problem revisited: morning tutorial. In Proceedings of the 20th ACM SIGKDD international conference on Knowledge discovery and data mining (KDD '14). Association for Computing Machinery.](https://doi.org/10.1145/2623330.2630807)*
 
 ### What are Items and Queries in Recommendation Systems?
 > Items (also known as documents) are the entities a system recommends. For the Google Play store, the items are apps to install. For YouTube, the items are videos. Query (also known as context) is the information a system uses to make recommendations. Queries can be a combination of user information (the id of the user, items that users previously interacted with) and additional context (time of day, the user's device).
@@ -1097,7 +1112,7 @@ It is difficult to establish causality statistically; for this, well-designed ra
 
 *[Recommendation Systems - Google Machine Learning](https://developers.google.com/machine-learning/recommendation/overview)*
 
-### What are the two main approaches to Candidate Generation?
+### What are the main approaches to Candidate Generation?
 > Given a query, the system generates a set of relevant candidates using two common approaches: (1) Content-based filtering uses similarity between items to recommend items similar to what the user likes. If user A watches two cute cat videos, then the system can recommend cute animal videos to that user; (2) Collaborative filtering uses similarities between queries and items simultaneously to provide recommendations. If user A is similar to user B, and user B likes video 1, then the system can recommend video 1 to user A (even if user A hasn't seen any videos similar to video 1).
 
 *[Recommendation Systems - Google Machine Learning](https://developers.google.com/machine-learning/recommendation/overview)*
@@ -1105,6 +1120,10 @@ It is difficult to establish causality statistically; for this, well-designed ra
 > The algorithms fall into two groups, and they depend on the type of data you use to make recommendations. Algorithms that employ usage data are called collaborative filtering. Algorithms that use content metadata and user profiles to calculate recommendations are called content-based filtering. A mix of the two types is called hybrid recommenders. [...] Collaborative filtering needs much feedback from the users to work properly, while content-based filtering needs good descriptions of the items.
 
 *Pratical Recommenders Systems; Kim Falk (2019)*
+
+> Collaborative filtering (CF) is based on the idea that users with similar preferences will likely have similar tastes in the future. CF recommends items by finding a neighborhood of similar users or items. CF can recommend items without needing much content analysis, however, it normally faces challenges like cold starts, scalability, and sparsity. Content-based filtering (CBF) recommends items based on a user past preferences and item characteristics, using techniques like Term Frequency - Inverse Document Frequency (TF-IDF), cosine similarity, and neural networks for item representation. However, it may struggle with recommending new or unseen items.
+
+*[Raza, S., Rahman, M., Kamawal, S., Toroghi, A., Raval, A., Navah, F., & Kazemeini, A. (2025). A comprehensive review of recommender systems: Transitioning from theory to practice. arXiv preprint arXiv:2407.13699.](https://arxiv.org/abs/2407.13699)*
 
 ### What are common Similarity Measures in Recommendation Systems?
 > A similarity measure is a function $s : E \times E \rightarrow \mathbb{R}$ that takes a pair of embeddings and returns a scalar measuring their similarity. To determine the degree of similarity, most recommendation systems rely on one or more of the following: (1) Cosine: the cosine of the angle between the two vectors, $s(q,x) = \cos(q,x)$; (2) Dot product: given by $s(q,x) = \langle q, x \rangle = \|q\| \|x\| \cos(q,x)$. If the embeddings are normalized, then dot-product and cosine coincide; (3) Euclidean distance: the usual distance in Euclidean space, $s(q,x) = \|q-x\|$. A smaller distance means higher similarity. Note that when the embeddings are normalized, the squared Euclidean distance coincides with dot-product (and cosine) up to a constant.
@@ -1116,7 +1135,12 @@ It is difficult to establish causality statistically; for this, well-designed ra
 
 *[Recommendation Systems - Google Machine Learning](https://developers.google.com/machine-learning/recommendation/overview)*
 
-### What is Content-Based Filtering?
+### What are Seeded Recommendations?
+> One thing that many sites take advantage of is you looking at a specific item, which can be used to create recommenders for associated items. These items could be said to be seeds. Seeded recommendations; isn't that search? It is, but the idea is that seeded recommendations can be either an item, a product, or an article that you then use as input to find other relevant content. You use items bought together to figure out how to make suggestions. [...] A way to create these associations between items is called an affinity analysis or, in more familiar terms, shopping basket analysis.
+
+*Pratical Recommenders Systems; Kim Falk (2019)*
+
+### What is Content-based Filtering?
 > Content-based filtering uses item features to recommend other items similar to what the user likes, based on their previous actions or explicit feedback. The model should recommend items relevant to this user. To do so, you must first pick a similarity metric (for example, dot product). Then, you must set up the system to score each candidate item according to this similarity metric. Note that the recommendations are specific to this user, as the model did not use any information about other users.
 
 *[Recommendation Systems - Google Machine Learning](https://developers.google.com/machine-learning/recommendation/content-based/basics)*
@@ -1240,7 +1264,14 @@ It is difficult to establish causality statistically; for this, well-designed ra
 
 *[Jaime Teevan, Susan T. Dumais, and Eric Horvitz. 2010. Potential for personalization. ACM Trans. Comput.-Hum. Interact. 17, 1, Article 4 (March 2010), 31 pages.](https://doi.org/10.1145/1721831.1721835)*
 
-### How do content-based and behavior-based measures differ in capturing variation?
+### How does TF-IDF relate to Recommender Systems?
+> Everybody buys bananas, so knowing that the user buys bananas doesn't have much value, as compared to the imported sardines in chili oil, which is a unique product that says something about the buyer. Why am I mentioning this? Well, you could put a filter on the ratings that you're calculating and boost the items that are special while the normal ones wouldn't rate so highly. Implementing this can be a bit tricky, so let's take a quick stab at it.
+
+> This problem is closely related to the well-known term frequency-inverse document frequency problem (TF-IDF). [...] To understand what content items you'll consider special, you'll look for the IDF. The thinking is that if a user buys an item that's popular, it doesn't provide much information about the user's taste. If the same user likes something only few people like, then it could be a better indication of the personal taste of the consumer. [...] To find the special items, you can calculate the inverse user frequency.
+
+*Pratical Recommenders Systems; Kim Falk (2019)*
+
+### How do Content-based and Behavior-based measures differ in capturing variation?
 > Implicit measures that are behavior-based (e.g., related to the similarity of a result to previously visited URLs) appear to hold potential for capturing relevance, while measures that are content-based (e.g., related to the similarity of a result to other electronic content the individual has viewed) appear to hold potential for capturing variation across individuals. Behavior-based measures are strongly influenced by presentation order, with much higher relevance for results ranked first or second than expected. In contrast, content-based measures show very flat distributions across ranks, capturing more variation between individuals than explicit relevance judgments.
 
 *[Jaime Teevan, Susan T. Dumais, and Eric Horvitz. 2010. Potential for personalization. ACM Trans. Comput.-Hum. Interact. 17, 1, Article 4 (March 2010), 31 pages.](https://doi.org/10.1145/1721831.1721835)*
@@ -1254,6 +1285,13 @@ It is difficult to establish causality statistically; for this, well-designed ra
 > A well-known text-based probabilistic weighting scheme for information retrieval. BM25 assigns weights to individual terms in a document based on their frequency of occurrence in the document and the corpus, and uses these weights to estimate the probability that the document is relevant to a query. When relevance information is available, term weights can be modified by giving additional weight to terms that discriminate relevant documents from irrelevant documents, a technique known as relevance feedback. For personalized search, instead of relying on explicit relevance judgments, implicit long-term feedback using content-based profiles can be incorporated.
 
 *[Jaime Teevan, Susan T. Dumais, and Eric Horvitz. 2010. Potential for personalization. ACM Trans. Comput.-Hum. Interact. 17, 1, Article 4 (March 2010), 31 pages.](https://doi.org/10.1145/1721831.1721835)*
+
+### What are the relevant Clustering methods in Recommender Systems?
+> Locality-sensitive Hashing (LSH), a method for grouping similar items in highly dimensional spaces. It finds a hasing function so that similar items are grouped in the same buckets. Main application is nearest-neighbors, adressing its performance concerns.
+
+> K-means and all its variations; Affinity Propagation; Spectral Clustering; Non-parametric Bayesian Clustering (e.g. HDPs).
+
+*[Xavier Amatriain and Bamshad Mobasher. 2014. The recommender problem revisited: morning tutorial. In Proceedings of the 20th ACM SIGKDD international conference on Knowledge discovery and data mining (KDD '14). Association for Computing Machinery.](https://doi.org/10.1145/2623330.2630807)*
 
 ### What are Bandits in Recommender Systems?
 > A bandit algorithm is a strategy for choosing what to try next when you're unsure. Example: Slot machines. Each machine gives random rewards. You don't known which is best. You must decide: try new machines (explore) or keep using the best-known one (exploit). In recommendations, slot machines are items to recommend (videos, songs, ads); rewards are clicks, watches, purchases; and goal is to maximize total reward over time. Every recommender must balance between exploration ("let's try this item to learn more about it") and exploitation ("we already know this item works - show it again").

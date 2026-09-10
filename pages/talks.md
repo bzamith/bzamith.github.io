@@ -5,6 +5,13 @@ title: Talks
 
 Here is a list of my talks and presentations:
 
+### 2026
+### 2026
+- **Second Brain for Agile Teams: The Augmented Enterprise** (from Portuguese: *Second Brain para Times Ágeis: A Empresa Aumentada*)  
+  [Agile Trends](https://agiletrendsbr.com/agile-trends-2026/)  
+  São Paulo, Brazil  
+  September 01, 2026
+
 ### 2025
 - **Getting Started in a Data Career: Tips and Possible Paths** (from Portuguese: *Começando na Carreira de Dados: Dicas e Caminhos Possíveis*)  
   GIRLs - UFLA  
