@@ -1,316 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!-- Beautiful Jekyll | MIT license | Copyright Dean Attali 2016 -->
   <head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Bruna Zamith">
+  <meta name="description" content="Staff Data Scientist and PhD Candidate in Artificial Intelligence">
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-  <link rel="alternate icon" href="/favicon.ico">
+  <title>Publications · Bruna Zamith</title>
+  <link rel="canonical" href="http://0.0.0.0:4000/pages/publications/">
+  <link rel="icon" type="image/svg+xml" href="/static/favicon.svg">
 
-  <!-- Apply theme immediately to prevent flash of white content -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Publications">
+  <meta property="og:description" content="Staff Data Scientist and PhD Candidate in Artificial Intelligence">
+  <meta property="og:url" content="http://0.0.0.0:4000/pages/publications/">
+  <meta property="og:image" content="http://0.0.0.0:4000/static/img/profile.png">
+
   <script>
-    (function() {
-      'use strict';
-      // Get theme from localStorage or default to light
-      const storedTheme = localStorage.getItem('theme');
-      const preferredTheme = storedTheme || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-      
-      // Apply theme immediately before page renders
-      if (preferredTheme === 'dark') {
-        document.documentElement.setAttribute('data-theme', 'dark');
-      } else {
-        document.documentElement.setAttribute('data-theme', 'light');
-      }
-    })();
+    (function () {
+      var saved = localStorage.getItem('theme');
+      var theme = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', theme);
+    }());
   </script>
-  <style>
-    /* Prevent flash of white background - apply immediately */
-    html[data-theme="dark"] {
-      background-color: #1A1A1A;
-    }
-    html[data-theme="light"] {
-      background-color: #FFFFFF;
-    }
-    body {
-      transition: background-color 0.3s ease, color 0.3s ease;
-    }
-  </style>
-
-  <title>Publications</title>
-
-  <meta name="author" content="" />
+  <link rel="stylesheet" href="/css/main.css">
 
   
-
-  <link rel="alternate" type="application/rss+xml"
-    title="Bruna Zamith - Portfolio" href="/feed.xml" />
-
-  
-
-  
-  
-  
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css" />
-
-  
-  
-
-  
-  
-  <link rel="stylesheet" href="/css/bootstrap.min.css" />
-  
-  <link rel="stylesheet" href="/css/bootstrap-social.css" />
-  
-  <link rel="stylesheet" href="/css/main.css" />
-  
-  
-
-  
-  
-  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
-  
-  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
-  
-  
-
-  
-
-  
-
-  
-
-  <!-- Facebook OpenGraph tags -->
-  
-
-  
-  <meta property="og:title" content="Publications" />
-  
-
-  
-  <meta property="og:description" content="1. [A New Time Series Framework for Forest Fire Risk Forecasting and Classification](https://ieeexplore.ieee.org/document/10191502/) - *Zamith B., Soriano, B., Narciso, M., Furtado, D., Cerri R. (2023). International Joint Conference on Neural Networks (IJCNN).* 2. [Predictive Bi-Clustering Trees for Hierarchical Multi-label Classification](https://limo.libis.be/primo-explore/fulldisplay?docid=LIRIAS3055838&amp;context=L&amp;vid=Lirias&amp;search_scope=Lirias&amp;tab=default_tab&amp;lang=en_US) - *Zamith B., Nakano, K. F., Cerri R., Vens C....">
-  
-
-
-  <meta property="og:type" content="website" />
-
-  
-  <meta property="og:url" content="http://0.0.0.0:4000/pages/publications/" />
-  <link rel="canonical" href="http://0.0.0.0:4000/pages/publications/" />
-  
-
-  
-  <meta property="og:image" content="http://0.0.0.0:4000/static/img/profile.png" />
-  
-
-
-  <!-- Twitter summary cards -->
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:site" content="@" />
-  <meta name="twitter:creator" content="@" />
-
-  
-  <meta name="twitter:title" content="Publications" />
-  
-
-  
-  <meta name="twitter:description" content="1. [A New Time Series Framework for Forest Fire Risk Forecasting and Classification](https://ieeexplore.ieee.org/document/10191502/) - *Zamith B., Soriano, B., Narciso, M., Furtado, D., Cerri R. (2023). International Joint Conference on Neural Networks (IJCNN).* 2. [Predictive Bi-Clustering Trees for Hierarchical Multi-label Classification](https://limo.libis.be/primo-explore/fulldisplay?docid=LIRIAS3055838&amp;context=L&amp;vid=Lirias&amp;search_scope=Lirias&amp;tab=default_tab&amp;lang=en_US) - *Zamith B., Nakano, K. F., Cerri R., Vens C....">
-  
-
-  
-  <meta name="twitter:image" content="http://0.0.0.0:4000/static/img/profile.png" />
-  
-
-  <script
-    type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "all" } } }); </script>
-  <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-      tex2jax: {
-        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-        processEscapes: true
-      }
-    });
-  </script>
-  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
-    type="text/javascript"></script>
-
 </head>
 
-  <body>
+  <body class="page-publications">
+    <header class="site-header">
+  <div class="nav-shell">
+    <a class="site-brand" href="/">
+      <strong>Bruna</strong> Zamith
+    </a>
 
-    
-  
-    <!-- Mobile menu toggle button -->
-<button type="button" class="sidebar-toggle" id="sidebar-toggle" aria-label="Toggle sidebar">
-  <span class="icon-bar"></span>
-  <span class="icon-bar"></span>
-  <span class="icon-bar"></span>
-</button>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-navigation">
+      <span class="sr-only">Toggle navigation</span>
+      <span></span><span></span><span></span>
+    </button>
 
-<!-- Mobile overlay -->
-<div class="sidebar-overlay" id="sidebar-overlay"></div>
-
-<!-- Left Sidebar Navigation -->
-<aside class="sidebar" id="sidebar">
-  <div class="sidebar-content">
-    <!-- Sidebar Header (Name only, no avatar) -->
-    <div class="sidebar-header">
+    <nav id="site-navigation" class="site-navigation" aria-label="Main navigation">
       
-        <a class="sidebar-brand" href="http://0.0.0.0:4000">Bruna Zamith</a>
+        
+        <a href="/">Home</a>
       
-    </div>
-
-    <!-- Navigation Links -->
-    <nav class="sidebar-nav">
-      <ul class="nav sidebar-nav-list">
         
-          
-            <li>
-              
-            
-
-
-
-
-
-<a href="/">Home</a>
-
-            </li>
-          
+        <a href="/[{"Publications"=>"pages/publications"}, {"Talks"=>"pages/talks"}]/">Research</a>
+      
         
-          
-            
-              
-                <li>
-                  
-            
-
-
-
-
-
-<a href="/pages/publications">Publications</a>
-
-                </li>
-              
-            
-              
-                <li>
-                  
-            
-
-
-
-
-
-<a href="/pages/talks">Talks</a>
-
-                </li>
-              
-            
-          
+        <a href="/[{"Concepts"=>"pages/concepts"}, {"Books"=>"pages/books"}]/">Studies</a>
+      
         
-          
-            
-              
-                <li>
-                  
-            
-
-
-
-
-
-<a href="/pages/concepts">Concepts</a>
-
-                </li>
-              
-            
-              
-                <li>
-                  
-            
-
-
-
-
-
-<a href="/pages/books">Books</a>
-
-                </li>
-              
-            
-          
-        
-          
-            <li>
-              
-            
-
-
-
-
-
-<a href="/pages/resume">Resume</a>
-
-            </li>
-          
-        
-      </ul>
+        <a href="/pages/resume/">Resume</a>
+      
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <span aria-hidden="true">◐</span>
+      </button>
     </nav>
-
-    <!-- Theme Toggle -->
-    <div class="sidebar-footer">
-      <a href="javascript:void(0)" id="theme-toggle" class="theme-toggle" title="Toggle dark mode">
-        <i class="fa fa-moon-o" id="theme-icon"></i>
-        <span>Toggle Theme</span>
-      </a>
-    </div>
   </div>
-</aside>
-
-
-    <!-- TODO this file has become a mess, refactor it -->
-
-
-
-
-
-<header class="header-section ">
-
-<div class="intro-header no-img">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        <div class="page-heading">
-          <h1>Publications</h1>
-		  
-		  
-		  
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 </header>
 
-
-
-
-<div class="container" role="main">
-  <div class="row">
-    <div class="col-lg-12 col-md-12">
-      <article class="newspaper-content">
-        <ol>
-  <li><a href="https://ieeexplore.ieee.org/document/10191502/">A New Time Series Framework for Forest Fire Risk Forecasting and Classification</a> -  <em>Zamith B., Soriano, B., Narciso, M., Furtado, D., Cerri R. (2023). International Joint Conference on Neural Networks (IJCNN).</em></li>
-  <li><a href="https://limo.libis.be/primo-explore/fulldisplay?docid=LIRIAS3055838&amp;context=L&amp;vid=Lirias&amp;search_scope=Lirias&amp;tab=default_tab&amp;lang=en_US">Predictive Bi-Clustering Trees for Hierarchical Multi-label Classification</a> - <em>Zamith B., Nakano, K. F., Cerri R., Vens C. (2020). 
-European Conference on Machine Learning (ECML-PKDD)</em>.</li>
-  <li><a href="https://ieeexplore.ieee.org/document/8575650">Strategies for Selection of Positive and Negative Instances in the Hierarchical Classification of Transposable Elements</a> - <em>Zamith B., Pereira, T. G., Nakano, K. F., Cerri R. (2018). Brazilian Conference on Intelligent Systems (BRACIS)</em>.</li>
-  <li><a href="https://ieeexplore.ieee.org/document/8477642">A Genetic Algorithm for Transposable Elements Hierarchical Classification Rule Induction</a> - <em>Pereira, T. G., Zamith B., Cerri R. (2018). IEEE Congress on Evolutionary Computation (IEEE CEC)</em>.</li>
-  <li><a href="https://www.cin.ufpe.br/~rbcp/bracis-papers/ENIAC/Sessao%20de%20Posters/A%20New%20Machine%20Learning%20Dataset%20for%20Hierarchical%20Classification%20of%20Transposable%20Elements.pdf">A New Machine Learning Dataset for Hierarchical Classification of Transposable Elements</a> - <em>Zamith B., Cerri R. (2016). National Meeting of Artificial and Computational Intelligence (ENIAC)</em>.</li>
-  <li><a href="https://www.kuleuven-kulak.be/benelearn/papers/Benelearn_2016_paper_57.pdf">Decisions Trees for Hierarchical Classification of Transposable Elements</a> - <em>Zamith B., Gomes Mantovani R., Schietgat L., Vens C., Cerri R. (2016). Proceedings of the 25th Belgian-Dutch Machine Learning Conference (Benelearn)</em>.</li>
+    <main class="site-main">
+      <div class="content-shell">
+  <header class="page-header">
+    <h1>Publications</h1>
+    
+  </header>
+  <article class="page-content">
+    <ol>
+  <li><a href="https://tscf-eval.readthedocs.io/en/latest/">TSCFEval: A Model-Agnostic Framework for Evaluating Time Series Classification Counterfactuals</a> - <em>Zamith B., Andrade Lira, M. F., Cerri R. (2026). Explainable Artificial Intelligence (XAI World Conference).</em></li>
+  <li><a href="https://ieeexplore.ieee.org/document/10191502/">A New Time Series Framework for Forest Fire Risk Forecasting and Classification</a> - <em>Zamith B., Soriano, B., Narciso, M., Furtado, D., Cerri R. (2023). International Joint Conference on Neural Networks (IJCNN).</em></li>
+  <li><a href="https://limo.libis.be/primo-explore/fulldisplay?docid=LIRIAS3055838&amp;context=L&amp;vid=Lirias&amp;search_scope=Lirias&amp;tab=default_tab&amp;lang=en_US">Predictive Bi-Clustering Trees for Hierarchical Multi-Label Classification</a> - <em>Zamith B., Nakano, K. F., Cerri R., Vens C. (2020). European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases (ECML-PKDD).</em></li>
+  <li><a href="https://ieeexplore.ieee.org/document/8575650">Strategies for Selection of Positive and Negative Instances in the Hierarchical Classification of Transposable Elements</a> - <em>Zamith B., Pereira, T. G., Nakano, K. F., Cerri R. (2018). Brazilian Conference on Intelligent Systems (BRACIS).</em></li>
+  <li><a href="https://ieeexplore.ieee.org/document/8477642">A Genetic Algorithm for Transposable Elements Hierarchical Classification Rule Induction</a> - <em>Pereira, T. G., Zamith B., Cerri R. (2018). IEEE Congress on Evolutionary Computation (IEEE CEC).</em></li>
+  <li><a href="https://www.cin.ufpe.br/~rbcp/bracis-papers/ENIAC/Sessao%20de%20Posters/A%20New%20Machine%20Learning%20Dataset%20for%20Hierarchical%20Classification%20of%20Transposable%20Elements.pdf">A New Machine Learning Dataset for Hierarchical Classification of Transposable Elements</a> - <em>Zamith B., Cerri R. (2016). National Meeting on Artificial and Computational Intelligence (ENIAC).</em></li>
+  <li><a href="https://www.kuleuven-kulak.be/benelearn/papers/Benelearn_2016_paper_57.pdf">Decision Trees for Hierarchical Classification of Transposable Elements</a> - <em>Zamith B., Gomes Mantovani R., Schietgat L., Vens C., Cerri R. (2016). Proceedings of the 25th Belgian-Dutch Machine Learning Conference (Benelearn).</em></li>
 </ol>
 
 <h4 id="others">Others</h4>
@@ -320,127 +85,21 @@ European Conference on Machine Learning (ECML-PKDD)</em>.</li>
   <li><strong>Master’s Thesis</strong>: <a href="https://repositorio.ufscar.br/handle/ufscar/19084">Climate Variables Forecasting and Forest Fire Risk Rate Classification in the Brazilian Pantanal</a> - <em>Zamith B. (2020)</em>.</li>
 </ol>
 
-      </article>
-	    
-    </div>
-  </div>
+  </article>
 </div>
 
-
-
-    <footer>
-  <div class="container beautiful-jekyll-footer">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        <ul class="list-inline text-center footer-links">
-          
-          
-          <li>
-            <a href="https://github.com/bzamith" title="GitHub">
-              <span class="fa-stack fa-lg" aria-hidden="true">
-                <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-              </span>
-              <span class="sr-only">GitHub</span>
-            </a>
-          </li>
-          
-		  
-	  
-      
-		  
-          <li>
-            <a href="mailto:bruna.zamith@hotmail.com" title="Email me">
-              <span class="fa-stack fa-lg" aria-hidden="true">
-                <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
-              </span>
-              <span class="sr-only">Email me</span>
-            </a>
-          </li>
-          
-		  
-          <li>
-            <a href="https://linkedin.com/in/bruna-zamith" title="LinkedIn">
-              <span class="fa-stack fa-lg" aria-hidden="true">
-                <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
-              </span>
-              <span class="sr-only">LinkedIn</span>
-            </a>
-          </li>
-          
-		  
-		  
-      
-      
-      
-      
-      
-		  
-        </ul>
-        <p class="copyright text-muted">
-		  
-		  &nbsp;&bull;&nbsp;
-		  2026
-
-		  
-		  &nbsp;&bull;&nbsp;
-		  <a href="http://0.0.0.0:4000">bzamith.github.io</a>
-		  
-	    </p>
-	        <!-- Please don't remove this, keep my open source work credited :) -->
-		<p class="theme-by text-muted">
-		  Theme by
-		  <a href="http://deanattali.com/beautiful-jekyll/" target="_blank" rel="noopener noreferrer">beautiful-jekyll</a>, and inspired by
-          <a href="https://desh2608.github.io/" target="_blank" rel="noopener noreferrer">@desh2608's portfolio</a>
-		</p>
-      </div>
-    </div>
+    </main>
+    <footer class="site-footer">
+  <div class="footer-shell">
+    <span>© 2026 Bruna Zamith</span>
+    <span class="footer-links">
+      <a href="mailto:bruna.zamith@hotmail.com" target="_blank" rel="noopener noreferrer">email</a>
+      <a href="https://github.com/bzamith" target="_blank" rel="noopener noreferrer">github</a>
+      <a href="https://linkedin.com/in/bruna-zamith" target="_blank" rel="noopener noreferrer">linkedin</a>
+    </span>
   </div>
 </footer>
 
-  
-    
-
-
-
-
-
-
-  
-    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
-    
-      <script>
-      	if (typeof jQuery == 'undefined') {
-      	  document.write('<script src="/js/jquery-1.11.2.min.js"></scr' + 'ipt>');
-      	}
-      </script>
-    
-  
-    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
-    
-	<script src="/js/bootstrap.min.js"></script>
-    
-  
-    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
-    
-	<script src="/js/main.js"></script>
-    
-  
-
-
-
-	<!-- Google Analytics -->
-	<script>
-		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-		ga('create', '', 'auto');
-		ga('send', 'pageview');
-	</script>
-	<!-- End Google Analytics -->
-
-
+    <script src="/js/main.js"></script>
+  </body>
 </html>

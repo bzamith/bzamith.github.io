@@ -1,9 +1,11 @@
 ---
 layout: page
-title: Talks
+title: Talks & Media
+body_class: talks
+subtitle: Talks, lectures, interviews, and press features.
 ---
 
-Here is a list of my talks and presentations:
+## Talks & presentations
 
 ### 2026
 - **Second Brain for Agile Teams: The Augmented Enterprise** (from Portuguese: *Second Brain para Times Ágeis: A Empresa Aumentada*)  
@@ -67,3 +69,23 @@ Here is a list of my talks and presentations:
   [Brazilian Conference on Intelligent Systems (BRACIS)](https://secot.com.br/)  
   Virtual ([slides](https://drive.google.com/file/d/1uru3riPI-nHZEwZ0xM3gdVcgCHExe8bL/view?usp=sharing))  
   October 24, 2018
+
+## Interviews & features
+
+<p class="media-note"><span aria-hidden="true">PT</span> These articles are available in Portuguese.</p>
+
+<div class="media-features">
+  <a class="media-feature" href="https://itforum.com.br/noticias/bruna-zamith-cientista-de-dados-amazon/" target="_blank" rel="noopener noreferrer">
+    <span class="media-outlet">IT Forum</span>
+    <span class="media-title">Bruna Zamith, Data Scientist at Amazon</span>
+    <span class="media-description">Interview and career profile</span>
+    <span class="media-link">Read in Portuguese <span aria-hidden="true">↗</span></span>
+  </a>
+
+  <a class="media-feature" href="https://tech.ifood.com.br/cultura-e-carreiras/mulheres-que-constroem-tecnologia-duas-trajetorias-de-crescimento-e-protagonismo-no-ifood/" target="_blank" rel="noopener noreferrer">
+    <span class="media-outlet">iFood Tech</span>
+    <span class="media-title">Women Building Technology: Two Journeys of Growth and Leadership at iFood</span>
+    <span class="media-description">Career feature with Bruna Zamith and Nicoli Araújo</span>
+    <span class="media-link">Read in Portuguese <span aria-hidden="true">↗</span></span>
+  </a>
+</div>

@@ -1,9 +1,10 @@
 ---
 layout: page
+mathjax: true
 title: Data Science Concepts
 ---
 
-## Summary
+## Topics
 
 * [Science and Data](#science-and-data)
 * [Key Terms and Areas](#key-terms-and-areas)

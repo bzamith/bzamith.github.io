@@ -1,309 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!-- Beautiful Jekyll | MIT license | Copyright Dean Attali 2016 -->
   <head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Bruna Zamith">
+  <meta name="description" content="Staff Data Scientist and PhD Candidate in Artificial Intelligence">
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-  <link rel="alternate icon" href="/favicon.ico">
+  <title>Data Science Concepts · Bruna Zamith</title>
+  <link rel="canonical" href="http://0.0.0.0:4000/pages/concepts/ds_concepts/">
+  <link rel="icon" type="image/svg+xml" href="/static/favicon.svg">
 
-  <!-- Apply theme immediately to prevent flash of white content -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Data Science Concepts">
+  <meta property="og:description" content="Staff Data Scientist and PhD Candidate in Artificial Intelligence">
+  <meta property="og:url" content="http://0.0.0.0:4000/pages/concepts/ds_concepts/">
+  <meta property="og:image" content="http://0.0.0.0:4000/static/img/profile.png">
+
   <script>
-    (function() {
-      'use strict';
-      // Get theme from localStorage or default to light
-      const storedTheme = localStorage.getItem('theme');
-      const preferredTheme = storedTheme || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-      
-      // Apply theme immediately before page renders
-      if (preferredTheme === 'dark') {
-        document.documentElement.setAttribute('data-theme', 'dark');
-      } else {
-        document.documentElement.setAttribute('data-theme', 'light');
-      }
-    })();
+    (function () {
+      var saved = localStorage.getItem('theme');
+      var theme = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', theme);
+    }());
   </script>
-  <style>
-    /* Prevent flash of white background - apply immediately */
-    html[data-theme="dark"] {
-      background-color: #1A1A1A;
-    }
-    html[data-theme="light"] {
-      background-color: #FFFFFF;
-    }
-    body {
-      transition: background-color 0.3s ease, color 0.3s ease;
-    }
-  </style>
-
-  <title>Data Science Concepts</title>
-
-  <meta name="author" content="" />
+  <link rel="stylesheet" href="/css/main.css">
 
   
-
-  <link rel="alternate" type="application/rss+xml"
-    title="Bruna Zamith - Portfolio" href="/feed.xml" />
-
+    <script>
+      window.MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] } };
+    </script>
+    <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   
-
-  
-  
-  
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css" />
-
-  
-  
-
-  
-  
-  <link rel="stylesheet" href="/css/bootstrap.min.css" />
-  
-  <link rel="stylesheet" href="/css/bootstrap-social.css" />
-  
-  <link rel="stylesheet" href="/css/main.css" />
-  
-  
-
-  
-  
-  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
-  
-  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
-  
-  
-
-  
-
-  
-
-  
-
-  <!-- Facebook OpenGraph tags -->
-  
-
-  
-  <meta property="og:title" content="Data Science Concepts" />
-  
-
-  
-  <meta property="og:description" content="## Summary * [Science and Data](#science-and-data) * [Key Terms and Areas](#key-terms-and-areas) * [Data Storage](#data-storage) * [Statistics and Data Analysis](#statistics-and-data-analysis) * [Causal Inference](#causal-inference) * [Feature Engineering](#feature-engineering) * [Machine Learning](#machine-learning) * [Time Series](#time-series) * [Generative AI](#generative-ai) * [Recommender Systems](#recommender-systems) * [Miscellaneous](#miscellaneous) ## Science and Data ### What is the difference between Art...">
-  
-
-
-  <meta property="og:type" content="website" />
-
-  
-  <meta property="og:url" content="http://0.0.0.0:4000/pages/concepts/ds_concepts/" />
-  <link rel="canonical" href="http://0.0.0.0:4000/pages/concepts/ds_concepts/" />
-  
-
-  
-  <meta property="og:image" content="http://0.0.0.0:4000/static/img/profile.png" />
-  
-
-
-  <!-- Twitter summary cards -->
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:site" content="@" />
-  <meta name="twitter:creator" content="@" />
-
-  
-  <meta name="twitter:title" content="Data Science Concepts" />
-  
-
-  
-  <meta name="twitter:description" content="## Summary * [Science and Data](#science-and-data) * [Key Terms and Areas](#key-terms-and-areas) * [Data Storage](#data-storage) * [Statistics and Data Analysis](#statistics-and-data-analysis) * [Causal Inference](#causal-inference) * [Feature Engineering](#feature-engineering) * [Machine Learning](#machine-learning) * [Time Series](#time-series) * [Generative AI](#generative-ai) * [Recommender Systems](#recommender-systems) * [Miscellaneous](#miscellaneous) ## Science and Data ### What is the difference between Art...">
-  
-
-  
-  <meta name="twitter:image" content="http://0.0.0.0:4000/static/img/profile.png" />
-  
-
-  <script
-    type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "all" } } }); </script>
-  <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-      tex2jax: {
-        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-        processEscapes: true
-      }
-    });
-  </script>
-  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
-    type="text/javascript"></script>
-
 </head>
 
-  <body>
+  <body class="page-data-science-concepts">
+    <header class="site-header">
+  <div class="nav-shell">
+    <a class="site-brand" href="/">
+      <strong>Bruna</strong> Zamith
+    </a>
 
-    
-  
-    <!-- Mobile menu toggle button -->
-<button type="button" class="sidebar-toggle" id="sidebar-toggle" aria-label="Toggle sidebar">
-  <span class="icon-bar"></span>
-  <span class="icon-bar"></span>
-  <span class="icon-bar"></span>
-</button>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-navigation">
+      <span class="sr-only">Toggle navigation</span>
+      <span></span><span></span><span></span>
+    </button>
 
-<!-- Mobile overlay -->
-<div class="sidebar-overlay" id="sidebar-overlay"></div>
-
-<!-- Left Sidebar Navigation -->
-<aside class="sidebar" id="sidebar">
-  <div class="sidebar-content">
-    <!-- Sidebar Header (Name only, no avatar) -->
-    <div class="sidebar-header">
+    <nav id="site-navigation" class="site-navigation" aria-label="Main navigation">
       
-        <a class="sidebar-brand" href="http://0.0.0.0:4000">Bruna Zamith</a>
+        
+        <a href="/">Home</a>
       
-    </div>
-
-    <!-- Navigation Links -->
-    <nav class="sidebar-nav">
-      <ul class="nav sidebar-nav-list">
         
-          
-            <li>
-              
-            
-
-
-
-
-
-<a href="/">Home</a>
-
-            </li>
-          
+        <a href="/[{"Publications"=>"pages/publications"}, {"Talks"=>"pages/talks"}]/">Research</a>
+      
         
-          
-            
-              
-                <li>
-                  
-            
-
-
-
-
-
-<a href="/pages/publications">Publications</a>
-
-                </li>
-              
-            
-              
-                <li>
-                  
-            
-
-
-
-
-
-<a href="/pages/talks">Talks</a>
-
-                </li>
-              
-            
-          
+        <a href="/[{"Concepts"=>"pages/concepts"}, {"Books"=>"pages/books"}]/">Studies</a>
+      
         
-          
-            
-              
-                <li>
-                  
-            
-
-
-
-
-
-<a href="/pages/concepts">Concepts</a>
-
-                </li>
-              
-            
-              
-                <li>
-                  
-            
-
-
-
-
-
-<a href="/pages/books">Books</a>
-
-                </li>
-              
-            
-          
-        
-          
-            <li>
-              
-            
-
-
-
-
-
-<a href="/pages/resume">Resume</a>
-
-            </li>
-          
-        
-      </ul>
+        <a href="/pages/resume/">Resume</a>
+      
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <span aria-hidden="true">◐</span>
+      </button>
     </nav>
-
-    <!-- Theme Toggle -->
-    <div class="sidebar-footer">
-      <a href="javascript:void(0)" id="theme-toggle" class="theme-toggle" title="Toggle dark mode">
-        <i class="fa fa-moon-o" id="theme-icon"></i>
-        <span>Toggle Theme</span>
-      </a>
-    </div>
   </div>
-</aside>
-
-
-    <!-- TODO this file has become a mess, refactor it -->
-
-
-
-
-
-<header class="header-section ">
-
-<div class="intro-header no-img">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        <div class="page-heading">
-          <h1>Data Science Concepts</h1>
-		  
-		  
-		  
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 </header>
 
-
-
-
-<div class="container" role="main">
-  <div class="row">
-    <div class="col-lg-12 col-md-12">
-      <article class="newspaper-content">
-        <h2 id="summary">Summary</h2>
+    <main class="site-main">
+      <div class="content-shell">
+  <header class="page-header">
+    <h1>Data Science Concepts</h1>
+    
+  </header>
+  <article class="page-content">
+    <h2 id="topics">Topics</h2>
 
 <ul>
   <li><a href="#science-and-data">Science and Data</a></li>
@@ -1884,6 +1654,16 @@ where $\phi$ is a fixed non-linear function (activation). Common activations inc
 
 <h3 id="what-is-a-recommender-system">What is a Recommender System?</h3>
 <blockquote>
+  <p>Recommender Systems (RS) are a type of information filtering system designed to predict and suggest items or content — such as products, movies, music, or articles — that a user might be interested in. These predictions are based on the user’s past behavior, preferences, or the behavior of similar users. The main goal of any RS is to enhance user experience, increase engagement, and facilitate decision-making processes. This is applicable across various domains, including e-commerce, entertainment, and social media. RS hold significant roles in both theoretical research (academics) and practical applications (industry).</p>
+</blockquote>
+
+<blockquote>
+  <p>At its core, an RS combines user and item profiles with a filtering mechanism to align user preferences with suitable items. User profiles gather data such as demographics and browsing history, while item profiles detail features like genres. Both explicit feedback (e.g. ratings) and implicit feedback (e.g. browsing actions) refine these recommendations.</p>
+</blockquote>
+
+<p><em><a href="https://arxiv.org/abs/2407.13699">Raza, S., Rahman, M., Kamawal, S., Toroghi, A., Raval, A., Navah, F., &amp; Kazemeini, A. (2025). A comprehensive review of recommender systems: Transitioning from theory to practice. arXiv preprint arXiv:2407.13699.</a></em></p>
+
+<blockquote>
   <p>A recommender system calculates and provides relevant content to the user based on knowledge of the user, content, and interactions between the user and the item.</p>
 </blockquote>
 
@@ -1919,6 +1699,19 @@ where $\phi$ is a fixed non-linear function (activation). Common activations inc
 </blockquote>
 
 <p><em><a href="https://developers.google.com/machine-learning/recommendation/overview">Recommendation Systems - Google Machine Learning</a></em></p>
+
+<h3 id="what-are-memory-based-and-model-based-recommenders">What are Memory-based and Model-based Recommenders?</h3>
+<blockquote>
+  <p>Normally you split recommender algorithms into memory-based and model-based recommender algorithms. Memory-based means that the recommender accesses the log data in real time, while model-based signifies that the algorithm aggregates the data beforehand to make it more responsive. Experience shows that memory-based algorithms only work up to a certain point because they don’t require many views per minute before it becomes difficult for servers to keep up.</p>
+</blockquote>
+
+<p><em>Pratical Recommenders Systems; Kim Falk (2019)</em></p>
+
+<blockquote>
+  <p>Memory-based use the entire user-item database to generate a prediction. It envolves usage of statistical techniques to find the neighbors - e.g. nearest-neighbor. In model-based, we develop a model of user (such as probabilistic, clustering, rule based approaches, classification, regression, LDA, etc)</p>
+</blockquote>
+
+<p><em><a href="https://doi.org/10.1145/2623330.2630807">Xavier Amatriain and Bamshad Mobasher. 2014. The recommender problem revisited: morning tutorial. In Proceedings of the 20th ACM SIGKDD international conference on Knowledge discovery and data mining (KDD ‘14). Association for Computing Machinery.</a></em></p>
 
 <h3 id="what-are-items-and-queries-in-recommendation-systems">What are Items and Queries in Recommendation Systems?</h3>
 <blockquote>
@@ -1985,7 +1778,7 @@ where $\phi$ is a fixed non-linear function (activation). Common activations inc
 
 <p><em><a href="https://developers.google.com/machine-learning/recommendation/overview">Recommendation Systems - Google Machine Learning</a></em></p>
 
-<h3 id="what-are-the-two-main-approaches-to-candidate-generation">What are the two main approaches to Candidate Generation?</h3>
+<h3 id="what-are-the-main-approaches-to-candidate-generation">What are the main approaches to Candidate Generation?</h3>
 <blockquote>
   <p>Given a query, the system generates a set of relevant candidates using two common approaches: (1) Content-based filtering uses similarity between items to recommend items similar to what the user likes. If user A watches two cute cat videos, then the system can recommend cute animal videos to that user; (2) Collaborative filtering uses similarities between queries and items simultaneously to provide recommendations. If user A is similar to user B, and user B likes video 1, then the system can recommend video 1 to user A (even if user A hasn’t seen any videos similar to video 1).</p>
 </blockquote>
@@ -1997,6 +1790,12 @@ where $\phi$ is a fixed non-linear function (activation). Common activations inc
 </blockquote>
 
 <p><em>Pratical Recommenders Systems; Kim Falk (2019)</em></p>
+
+<blockquote>
+  <p>Collaborative filtering (CF) is based on the idea that users with similar preferences will likely have similar tastes in the future. CF recommends items by finding a neighborhood of similar users or items. CF can recommend items without needing much content analysis, however, it normally faces challenges like cold starts, scalability, and sparsity. Content-based filtering (CBF) recommends items based on a user past preferences and item characteristics, using techniques like Term Frequency - Inverse Document Frequency (TF-IDF), cosine similarity, and neural networks for item representation. However, it may struggle with recommending new or unseen items.</p>
+</blockquote>
+
+<p><em><a href="https://arxiv.org/abs/2407.13699">Raza, S., Rahman, M., Kamawal, S., Toroghi, A., Raval, A., Navah, F., &amp; Kazemeini, A. (2025). A comprehensive review of recommender systems: Transitioning from theory to practice. arXiv preprint arXiv:2407.13699.</a></em></p>
 
 <h3 id="what-are-common-similarity-measures-in-recommendation-systems">What are common Similarity Measures in Recommendation Systems?</h3>
 <blockquote>
@@ -2012,7 +1811,14 @@ where $\phi$ is a fixed non-linear function (activation). Common activations inc
 
 <p><em><a href="https://developers.google.com/machine-learning/recommendation/overview">Recommendation Systems - Google Machine Learning</a></em></p>
 
-<h3 id="what-is-content-based-filtering">What is Content-Based Filtering?</h3>
+<h3 id="what-are-seeded-recommendations">What are Seeded Recommendations?</h3>
+<blockquote>
+  <p>One thing that many sites take advantage of is you looking at a specific item, which can be used to create recommenders for associated items. These items could be said to be seeds. Seeded recommendations; isn’t that search? It is, but the idea is that seeded recommendations can be either an item, a product, or an article that you then use as input to find other relevant content. You use items bought together to figure out how to make suggestions. […] A way to create these associations between items is called an affinity analysis or, in more familiar terms, shopping basket analysis.</p>
+</blockquote>
+
+<p><em>Pratical Recommenders Systems; Kim Falk (2019)</em></p>
+
+<h3 id="what-is-content-based-filtering">What is Content-based Filtering?</h3>
 <blockquote>
   <p>Content-based filtering uses item features to recommend other items similar to what the user likes, based on their previous actions or explicit feedback. The model should recommend items relevant to this user. To do so, you must first pick a similarity metric (for example, dot product). Then, you must set up the system to score each candidate item according to this similarity metric. Note that the recommendations are specific to this user, as the model did not use any information about other users.</p>
 </blockquote>
@@ -2188,7 +1994,18 @@ where $\phi$ is a fixed non-linear function (activation). Common activations inc
 
 <p><em><a href="https://doi.org/10.1145/1721831.1721835">Jaime Teevan, Susan T. Dumais, and Eric Horvitz. 2010. Potential for personalization. ACM Trans. Comput.-Hum. Interact. 17, 1, Article 4 (March 2010), 31 pages.</a></em></p>
 
-<h3 id="how-do-content-based-and-behavior-based-measures-differ-in-capturing-variation">How do content-based and behavior-based measures differ in capturing variation?</h3>
+<h3 id="how-does-tf-idf-relate-to-recommender-systems">How does TF-IDF relate to Recommender Systems?</h3>
+<blockquote>
+  <p>Everybody buys bananas, so knowing that the user buys bananas doesn’t have much value, as compared to the imported sardines in chili oil, which is a unique product that says something about the buyer. Why am I mentioning this? Well, you could put a filter on the ratings that you’re calculating and boost the items that are special while the normal ones wouldn’t rate so highly. Implementing this can be a bit tricky, so let’s take a quick stab at it.</p>
+</blockquote>
+
+<blockquote>
+  <p>This problem is closely related to the well-known term frequency-inverse document frequency problem (TF-IDF). […] To understand what content items you’ll consider special, you’ll look for the IDF. The thinking is that if a user buys an item that’s popular, it doesn’t provide much information about the user’s taste. If the same user likes something only few people like, then it could be a better indication of the personal taste of the consumer. […] To find the special items, you can calculate the inverse user frequency.</p>
+</blockquote>
+
+<p><em>Pratical Recommenders Systems; Kim Falk (2019)</em></p>
+
+<h3 id="how-do-content-based-and-behavior-based-measures-differ-in-capturing-variation">How do Content-based and Behavior-based measures differ in capturing variation?</h3>
 <blockquote>
   <p>Implicit measures that are behavior-based (e.g., related to the similarity of a result to previously visited URLs) appear to hold potential for capturing relevance, while measures that are content-based (e.g., related to the similarity of a result to other electronic content the individual has viewed) appear to hold potential for capturing variation across individuals. Behavior-based measures are strongly influenced by presentation order, with much higher relevance for results ranked first or second than expected. In contrast, content-based measures show very flat distributions across ranks, capturing more variation between individuals than explicit relevance judgments.</p>
 </blockquote>
@@ -2208,6 +2025,17 @@ where $\phi$ is a fixed non-linear function (activation). Common activations inc
 </blockquote>
 
 <p><em><a href="https://doi.org/10.1145/1721831.1721835">Jaime Teevan, Susan T. Dumais, and Eric Horvitz. 2010. Potential for personalization. ACM Trans. Comput.-Hum. Interact. 17, 1, Article 4 (March 2010), 31 pages.</a></em></p>
+
+<h3 id="what-are-the-relevant-clustering-methods-in-recommender-systems">What are the relevant Clustering methods in Recommender Systems?</h3>
+<blockquote>
+  <p>Locality-sensitive Hashing (LSH), a method for grouping similar items in highly dimensional spaces. It finds a hasing function so that similar items are grouped in the same buckets. Main application is nearest-neighbors, adressing its performance concerns.</p>
+</blockquote>
+
+<blockquote>
+  <p>K-means and all its variations; Affinity Propagation; Spectral Clustering; Non-parametric Bayesian Clustering (e.g. HDPs).</p>
+</blockquote>
+
+<p><em><a href="https://doi.org/10.1145/2623330.2630807">Xavier Amatriain and Bamshad Mobasher. 2014. The recommender problem revisited: morning tutorial. In Proceedings of the 20th ACM SIGKDD international conference on Knowledge discovery and data mining (KDD ‘14). Association for Computing Machinery.</a></em></p>
 
 <h3 id="what-are-bandits-in-recommender-systems">What are Bandits in Recommender Systems?</h3>
 <blockquote>
@@ -2343,127 +2171,21 @@ where $\phi$ is a fixed non-linear function (activation). Common activations inc
 
 <p><a href="https://bzamith.github.io/"><strong>Back to Home Page</strong></a></p>
 
-      </article>
-	    
-    </div>
-  </div>
+  </article>
 </div>
 
-
-
-    <footer>
-  <div class="container beautiful-jekyll-footer">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        <ul class="list-inline text-center footer-links">
-          
-          
-          <li>
-            <a href="https://github.com/bzamith" title="GitHub">
-              <span class="fa-stack fa-lg" aria-hidden="true">
-                <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-              </span>
-              <span class="sr-only">GitHub</span>
-            </a>
-          </li>
-          
-		  
-	  
-      
-		  
-          <li>
-            <a href="mailto:bruna.zamith@hotmail.com" title="Email me">
-              <span class="fa-stack fa-lg" aria-hidden="true">
-                <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
-              </span>
-              <span class="sr-only">Email me</span>
-            </a>
-          </li>
-          
-		  
-          <li>
-            <a href="https://linkedin.com/in/bruna-zamith" title="LinkedIn">
-              <span class="fa-stack fa-lg" aria-hidden="true">
-                <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
-              </span>
-              <span class="sr-only">LinkedIn</span>
-            </a>
-          </li>
-          
-		  
-		  
-      
-      
-      
-      
-      
-		  
-        </ul>
-        <p class="copyright text-muted">
-		  
-		  &nbsp;&bull;&nbsp;
-		  2026
-
-		  
-		  &nbsp;&bull;&nbsp;
-		  <a href="http://0.0.0.0:4000">bzamith.github.io</a>
-		  
-	    </p>
-	        <!-- Please don't remove this, keep my open source work credited :) -->
-		<p class="theme-by text-muted">
-		  Theme by
-		  <a href="http://deanattali.com/beautiful-jekyll/" target="_blank" rel="noopener noreferrer">beautiful-jekyll</a>, and inspired by
-          <a href="https://desh2608.github.io/" target="_blank" rel="noopener noreferrer">@desh2608's portfolio</a>
-		</p>
-      </div>
-    </div>
+    </main>
+    <footer class="site-footer">
+  <div class="footer-shell">
+    <span>© 2026 Bruna Zamith</span>
+    <span class="footer-links">
+      <a href="mailto:bruna.zamith@hotmail.com" target="_blank" rel="noopener noreferrer">email</a>
+      <a href="https://github.com/bzamith" target="_blank" rel="noopener noreferrer">github</a>
+      <a href="https://linkedin.com/in/bruna-zamith" target="_blank" rel="noopener noreferrer">linkedin</a>
+    </span>
   </div>
 </footer>
 
-  
-    
-
-
-
-
-
-
-  
-    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
-    
-      <script>
-      	if (typeof jQuery == 'undefined') {
-      	  document.write('<script src="/js/jquery-1.11.2.min.js"></scr' + 'ipt>');
-      	}
-      </script>
-    
-  
-    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
-    
-	<script src="/js/bootstrap.min.js"></script>
-    
-  
-    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
-    
-	<script src="/js/main.js"></script>
-    
-  
-
-
-
-	<!-- Google Analytics -->
-	<script>
-		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-		ga('create', '', 'auto');
-		ga('send', 'pageview');
-	</script>
-	<!-- End Google Analytics -->
-
-
+    <script src="/js/main.js"></script>
+  </body>
 </html>

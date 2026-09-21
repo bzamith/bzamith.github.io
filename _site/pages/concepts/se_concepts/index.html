@@ -1,309 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!-- Beautiful Jekyll | MIT license | Copyright Dean Attali 2016 -->
   <head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Bruna Zamith">
+  <meta name="description" content="Staff Data Scientist and PhD Candidate in Artificial Intelligence">
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-  <link rel="alternate icon" href="/favicon.ico">
+  <title>Software Engineering Concepts · Bruna Zamith</title>
+  <link rel="canonical" href="http://0.0.0.0:4000/pages/concepts/se_concepts/">
+  <link rel="icon" type="image/svg+xml" href="/static/favicon.svg">
 
-  <!-- Apply theme immediately to prevent flash of white content -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Software Engineering Concepts">
+  <meta property="og:description" content="Staff Data Scientist and PhD Candidate in Artificial Intelligence">
+  <meta property="og:url" content="http://0.0.0.0:4000/pages/concepts/se_concepts/">
+  <meta property="og:image" content="http://0.0.0.0:4000/static/img/profile.png">
+
   <script>
-    (function() {
-      'use strict';
-      // Get theme from localStorage or default to light
-      const storedTheme = localStorage.getItem('theme');
-      const preferredTheme = storedTheme || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-      
-      // Apply theme immediately before page renders
-      if (preferredTheme === 'dark') {
-        document.documentElement.setAttribute('data-theme', 'dark');
-      } else {
-        document.documentElement.setAttribute('data-theme', 'light');
-      }
-    })();
+    (function () {
+      var saved = localStorage.getItem('theme');
+      var theme = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', theme);
+    }());
   </script>
-  <style>
-    /* Prevent flash of white background - apply immediately */
-    html[data-theme="dark"] {
-      background-color: #1A1A1A;
-    }
-    html[data-theme="light"] {
-      background-color: #FFFFFF;
-    }
-    body {
-      transition: background-color 0.3s ease, color 0.3s ease;
-    }
-  </style>
-
-  <title>Software Engineering Concepts</title>
-
-  <meta name="author" content="" />
+  <link rel="stylesheet" href="/css/main.css">
 
   
-
-  <link rel="alternate" type="application/rss+xml"
-    title="Bruna Zamith - Portfolio" href="/feed.xml" />
-
-  
-
-  
-  
-  
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css" />
-
-  
-  
-
-  
-  
-  <link rel="stylesheet" href="/css/bootstrap.min.css" />
-  
-  <link rel="stylesheet" href="/css/bootstrap-social.css" />
-  
-  <link rel="stylesheet" href="/css/main.css" />
-  
-  
-
-  
-  
-  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
-  
-  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
-  
-  
-
-  
-
-  
-
-  
-
-  <!-- Facebook OpenGraph tags -->
-  
-
-  
-  <meta property="og:title" content="Software Engineering Concepts" />
-  
-
-  
-  <meta property="og:description" content="## Summary * [Data Structures](#data-structures) * [Dynamic Programming](#dynamic-programming) * [Software Architecture](#software-architecture) * [Software Development Processes](#software-development-processes) * [Coding Practices](#coding-practices) * [Code Quality and Testing](#code-quality-and-testing) * [Aspect Oriented Programming](#aspect-oriented-programming) * [Git](#git) * [Java](#java) * [Miscellaneous](#miscellaneous) ## Data Structures ### What is the difference between Objects and Data Structures? &gt; Objects hide their...">
-  
-
-
-  <meta property="og:type" content="website" />
-
-  
-  <meta property="og:url" content="http://0.0.0.0:4000/pages/concepts/se_concepts/" />
-  <link rel="canonical" href="http://0.0.0.0:4000/pages/concepts/se_concepts/" />
-  
-
-  
-  <meta property="og:image" content="http://0.0.0.0:4000/static/img/profile.png" />
-  
-
-
-  <!-- Twitter summary cards -->
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:site" content="@" />
-  <meta name="twitter:creator" content="@" />
-
-  
-  <meta name="twitter:title" content="Software Engineering Concepts" />
-  
-
-  
-  <meta name="twitter:description" content="## Summary * [Data Structures](#data-structures) * [Dynamic Programming](#dynamic-programming) * [Software Architecture](#software-architecture) * [Software Development Processes](#software-development-processes) * [Coding Practices](#coding-practices) * [Code Quality and Testing](#code-quality-and-testing) * [Aspect Oriented Programming](#aspect-oriented-programming) * [Git](#git) * [Java](#java) * [Miscellaneous](#miscellaneous) ## Data Structures ### What is the difference between Objects and Data Structures? &gt; Objects hide their...">
-  
-
-  
-  <meta name="twitter:image" content="http://0.0.0.0:4000/static/img/profile.png" />
-  
-
-  <script
-    type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "all" } } }); </script>
-  <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-      tex2jax: {
-        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-        processEscapes: true
-      }
-    });
-  </script>
-  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
-    type="text/javascript"></script>
-
 </head>
 
-  <body>
+  <body class="page-software-engineering-concepts">
+    <header class="site-header">
+  <div class="nav-shell">
+    <a class="site-brand" href="/">
+      <strong>Bruna</strong> Zamith
+    </a>
 
-    
-  
-    <!-- Mobile menu toggle button -->
-<button type="button" class="sidebar-toggle" id="sidebar-toggle" aria-label="Toggle sidebar">
-  <span class="icon-bar"></span>
-  <span class="icon-bar"></span>
-  <span class="icon-bar"></span>
-</button>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-navigation">
+      <span class="sr-only">Toggle navigation</span>
+      <span></span><span></span><span></span>
+    </button>
 
-<!-- Mobile overlay -->
-<div class="sidebar-overlay" id="sidebar-overlay"></div>
-
-<!-- Left Sidebar Navigation -->
-<aside class="sidebar" id="sidebar">
-  <div class="sidebar-content">
-    <!-- Sidebar Header (Name only, no avatar) -->
-    <div class="sidebar-header">
+    <nav id="site-navigation" class="site-navigation" aria-label="Main navigation">
       
-        <a class="sidebar-brand" href="http://0.0.0.0:4000">Bruna Zamith</a>
+        
+        <a href="/">Home</a>
       
-    </div>
-
-    <!-- Navigation Links -->
-    <nav class="sidebar-nav">
-      <ul class="nav sidebar-nav-list">
         
-          
-            <li>
-              
-            
-
-
-
-
-
-<a href="/">Home</a>
-
-            </li>
-          
+        <a href="/[{"Publications"=>"pages/publications"}, {"Talks"=>"pages/talks"}]/">Research</a>
+      
         
-          
-            
-              
-                <li>
-                  
-            
-
-
-
-
-
-<a href="/pages/publications">Publications</a>
-
-                </li>
-              
-            
-              
-                <li>
-                  
-            
-
-
-
-
-
-<a href="/pages/talks">Talks</a>
-
-                </li>
-              
-            
-          
+        <a href="/[{"Concepts"=>"pages/concepts"}, {"Books"=>"pages/books"}]/">Studies</a>
+      
         
-          
-            
-              
-                <li>
-                  
-            
-
-
-
-
-
-<a href="/pages/concepts">Concepts</a>
-
-                </li>
-              
-            
-              
-                <li>
-                  
-            
-
-
-
-
-
-<a href="/pages/books">Books</a>
-
-                </li>
-              
-            
-          
-        
-          
-            <li>
-              
-            
-
-
-
-
-
-<a href="/pages/resume">Resume</a>
-
-            </li>
-          
-        
-      </ul>
+        <a href="/pages/resume/">Resume</a>
+      
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <span aria-hidden="true">◐</span>
+      </button>
     </nav>
-
-    <!-- Theme Toggle -->
-    <div class="sidebar-footer">
-      <a href="javascript:void(0)" id="theme-toggle" class="theme-toggle" title="Toggle dark mode">
-        <i class="fa fa-moon-o" id="theme-icon"></i>
-        <span>Toggle Theme</span>
-      </a>
-    </div>
   </div>
-</aside>
-
-
-    <!-- TODO this file has become a mess, refactor it -->
-
-
-
-
-
-<header class="header-section ">
-
-<div class="intro-header no-img">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        <div class="page-heading">
-          <h1>Software Engineering Concepts</h1>
-		  
-		  
-		  
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 </header>
 
-
-
-
-<div class="container" role="main">
-  <div class="row">
-    <div class="col-lg-12 col-md-12">
-      <article class="newspaper-content">
-        <h2 id="summary">Summary</h2>
+    <main class="site-main">
+      <div class="content-shell">
+  <header class="page-header">
+    <h1>Software Engineering Concepts</h1>
+    
+  </header>
+  <article class="page-content">
+    <h2 id="topics">Topics</h2>
 
 <ul>
   <li><a href="#data-structures">Data Structures</a></li>
@@ -1049,127 +814,21 @@ of modules not actual working modules usually, that’s why it’s a Stub. Templ
 
 <p><a href="https://bzamith.github.io/">Back to Home Page</a></p>
 
-      </article>
-	    
-    </div>
-  </div>
+  </article>
 </div>
 
-
-
-    <footer>
-  <div class="container beautiful-jekyll-footer">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        <ul class="list-inline text-center footer-links">
-          
-          
-          <li>
-            <a href="https://github.com/bzamith" title="GitHub">
-              <span class="fa-stack fa-lg" aria-hidden="true">
-                <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-              </span>
-              <span class="sr-only">GitHub</span>
-            </a>
-          </li>
-          
-		  
-	  
-      
-		  
-          <li>
-            <a href="mailto:bruna.zamith@hotmail.com" title="Email me">
-              <span class="fa-stack fa-lg" aria-hidden="true">
-                <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
-              </span>
-              <span class="sr-only">Email me</span>
-            </a>
-          </li>
-          
-		  
-          <li>
-            <a href="https://linkedin.com/in/bruna-zamith" title="LinkedIn">
-              <span class="fa-stack fa-lg" aria-hidden="true">
-                <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
-              </span>
-              <span class="sr-only">LinkedIn</span>
-            </a>
-          </li>
-          
-		  
-		  
-      
-      
-      
-      
-      
-		  
-        </ul>
-        <p class="copyright text-muted">
-		  
-		  &nbsp;&bull;&nbsp;
-		  2026
-
-		  
-		  &nbsp;&bull;&nbsp;
-		  <a href="http://0.0.0.0:4000">bzamith.github.io</a>
-		  
-	    </p>
-	        <!-- Please don't remove this, keep my open source work credited :) -->
-		<p class="theme-by text-muted">
-		  Theme by
-		  <a href="http://deanattali.com/beautiful-jekyll/" target="_blank" rel="noopener noreferrer">beautiful-jekyll</a>, and inspired by
-          <a href="https://desh2608.github.io/" target="_blank" rel="noopener noreferrer">@desh2608's portfolio</a>
-		</p>
-      </div>
-    </div>
+    </main>
+    <footer class="site-footer">
+  <div class="footer-shell">
+    <span>© 2026 Bruna Zamith</span>
+    <span class="footer-links">
+      <a href="mailto:bruna.zamith@hotmail.com" target="_blank" rel="noopener noreferrer">email</a>
+      <a href="https://github.com/bzamith" target="_blank" rel="noopener noreferrer">github</a>
+      <a href="https://linkedin.com/in/bruna-zamith" target="_blank" rel="noopener noreferrer">linkedin</a>
+    </span>
   </div>
 </footer>
 
-  
-    
-
-
-
-
-
-
-  
-    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
-    
-      <script>
-      	if (typeof jQuery == 'undefined') {
-      	  document.write('<script src="/js/jquery-1.11.2.min.js"></scr' + 'ipt>');
-      	}
-      </script>
-    
-  
-    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
-    
-	<script src="/js/bootstrap.min.js"></script>
-    
-  
-    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
-    
-	<script src="/js/main.js"></script>
-    
-  
-
-
-
-	<!-- Google Analytics -->
-	<script>
-		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-		ga('create', '', 'auto');
-		ga('send', 'pageview');
-	</script>
-	<!-- End Google Analytics -->
-
-
+    <script src="/js/main.js"></script>
+  </body>
 </html>

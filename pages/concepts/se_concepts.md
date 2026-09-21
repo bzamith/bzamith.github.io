@@ -3,7 +3,7 @@ layout: page
 title: Software Engineering Concepts
 ---
 
-## Summary
+## Topics
 
 * [Data Structures](#data-structures)
 * [Dynamic Programming](#dynamic-programming)

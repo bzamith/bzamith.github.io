@@ -1,54 +1,26 @@
-<!-- Mobile menu toggle button -->
-<button type="button" class="sidebar-toggle" id="sidebar-toggle" aria-label="Toggle sidebar">
-  <span class="icon-bar"></span>
-  <span class="icon-bar"></span>
-  <span class="icon-bar"></span>
-</button>
+<header class="site-header">
+  <div class="nav-shell">
+    <a class="site-brand" href="{{ '/' | prepend: site.baseurl }}">
+      <strong>Bruna</strong> Zamith
+    </a>
 
-<!-- Mobile overlay -->
-<div class="sidebar-overlay" id="sidebar-overlay"></div>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-navigation">
+      <span class="sr-only">Toggle navigation</span>
+      <span></span><span></span><span></span>
+    </button>
 
-<!-- Left Sidebar Navigation -->
-<aside class="sidebar" id="sidebar">
-  <div class="sidebar-content">
-    <!-- Sidebar Header (Name only, no avatar) -->
-    <div class="sidebar-header">
-      {% if site.title-img %}
-        <a class="sidebar-brand" href="{{ site.url }}">
-          <img src="{{ site.title-img }}" alt="{{ site.title }}" />
-        </a>
-      {% else %}
-        <a class="sidebar-brand" href="{{ site.url }}">{{ site.title }}</a>
-      {% endif %}
-    </div>
-
-    <!-- Navigation Links -->
-    <nav class="sidebar-nav">
-      <ul class="nav sidebar-nav-list">
-        {% for link in site.navbar-links %}
-          {% if link[1].first %}
-            {% for childlink in link[1] %}
-              {% for linkparts in childlink %}
-                <li>
-                  {% include navbarlink.html link=linkparts %}
-                </li>
-              {% endfor %}
-            {% endfor %}
-          {% else %}
-            <li>
-              {% include navbarlink.html link=link %}
-            </li>
-          {% endif %}
-        {% endfor %}
-      </ul>
+    <nav id="site-navigation" class="site-navigation" aria-label="Main navigation">
+      {% for link in site.navbar-links %}
+        {% if link[1] == '' %}
+          {% assign link_url = '/' %}
+        {% else %}
+          {% assign link_url = '/' | append: link[1] | append: '/' %}
+        {% endif %}
+        <a href="{{ link_url | prepend: site.baseurl }}"{% if page.url == link_url %} class="active"{% endif %}>{{ link[0] }}</a>
+      {% endfor %}
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <span aria-hidden="true">◐</span>
+      </button>
     </nav>
-
-    <!-- Theme Toggle -->
-    <div class="sidebar-footer">
-      <a href="javascript:void(0)" id="theme-toggle" class="theme-toggle" title="Toggle dark mode">
-        <i class="fa fa-moon-o" id="theme-icon"></i>
-        <span>Toggle Theme</span>
-      </a>
-    </div>
   </div>
-</aside>
+</header>

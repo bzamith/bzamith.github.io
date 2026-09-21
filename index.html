@@ -1,27 +1,34 @@
 ---
 layout: page
-title: Hi, I'm Bruna
-subtitle: Staff Data Scientist @ iFood; PhD Candidate in AI.
+title: Bruna Zamith
+subtitle: Staff Data Scientist · PhD Candidate in Artificial Intelligence
 use-site-title: true
 ---
 
 <div class="homepage-content">
-  <div class="homepage-first-paragraph">
+  <div class="homepage-profile">
+    <div class="homepage-copy">
+      <p>
+        Computer Engineer and PhD candidate working as a <strong>Staff Data Scientist</strong> on the Data Ads team at <a href="https://ifood.com.br/" target="_blank" rel="noopener noreferrer">iFood</a>.
+      </p>
+      <p>
+        My research focuses on applying <strong>Machine Learning</strong> to the <strong>Natural Sciences</strong>. I am also interested in software engineering, distributed systems, and natural computing.
+      </p>
+      <p>
+        In my spare time, you can find me <a href="https://www.goodreads.com/user/show/93100732-bruna-zamith" target="_blank" rel="noopener noreferrer"><strong>reading a good book</strong></a>, riding my bicycle, enjoying a cup of coffee or (hopefully!) traveling.
+      </p>
+      <div class="homepage-links" aria-label="Profile links">
+        <a href="mailto:{{ site.author.email }}">email</a>
+        <a href="https://github.com/{{ site.author.github }}" target="_blank" rel="noopener noreferrer">github</a>
+        <a href="https://linkedin.com/in/{{ site.author.linkedin }}" target="_blank" rel="noopener noreferrer">linkedin</a>
+        <a href="{{ '/static/pdf/cvBZ.pdf' | prepend: site.baseurl }}">cv</a>
+      </div>
+    </div>
     {% if site.avatar %}
       <div class="homepage-avatar">
         <img src="{{ site.avatar | prepend: site.baseurl | replace: '//', '/' }}" alt="{{ site.title }}" />
       </div>
     {% endif %}
-    <p class="article-paragraphIn">
-      BSc. in Computer Engineering, PhD Candidate in Artificial Intelligence, and working as a <strong>Staff Data Scientist</strong> at <a href="https://ifood.com.br/" target="_blank" rel="noopener noreferrer">iFood</a>, in the Data Ads team.
-    </p>
   </div>
 
-  <p class="article-paragraph">
-    My research interests lie in the application of <strong>Machine Learning</strong> in <strong>Natural Sciences</strong>. Besides that, I'm passionate and continuously learning about <u>Software Engineering</u>, <u>Distributed Systems</u> and <u>Natural Computing</u>.
-  </p>
-
-  <p class="article-paragraph">
-    In my spare time, you can find me <a href="https://www.goodreads.com/user/show/93100732-bruna-zamith" target="_blank" rel="noopener noreferrer">reading a good book</a>, riding my bicycle, enjoying a cup of coffee or (hopefully!) traveling.
-  </p>
 </div>
