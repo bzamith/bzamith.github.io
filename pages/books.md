@@ -49,6 +49,13 @@ title: Books
     <span class="book-tag book-tag-library">In Library</span>
     <span class="book-tag book-tag-genai">GenAI</span>
   </div>
+  <div class="book-item">
+    <img src="https://m.media-amazon.com/images/I/512YjnR0hNL._SY650_.jpg" alt="Introduction to GraphQL">
+    <div class="book-title">Introduction to GraphQL</div>
+    <div class="book-author">Eve Porcello, Alex Banks</div>
+    <span class="book-tag book-tag-library">In Library</span>
+    <span class="book-tag book-tag-engineering">Engineering</span>
+  </div>
 </div>
 
 ### Books I've Read and Recommend
@@ -331,6 +338,20 @@ title: Books
     <div class="book-author">Caroline Criado Perez</div>
     <span class="book-tag book-tag-kindle">Kindle</span>
     <span class="book-tag book-tag-others">Others</span>
+  </div>
+  <div class="book-item">
+    <img src="https://m.media-amazon.com/images/I/61UW7iHH9CL._SY650_.jpg" alt="Spring Start Here: Learn What You Need and Learn It Well">
+    <div class="book-title">Spring Start Here: Learn What You Need and Learn It Well</div>
+    <div class="book-author">Laurențiu Spilcă</div>
+    <span class="book-tag book-tag-library">In Library</span>
+    <span class="book-tag book-tag-engineering">Engineering</span>
+  </div>
+  <div class="book-item">
+    <img src="https://m.media-amazon.com/images/I/91YlBt-bCHL._SY650_.jpg" alt="JavaScript: The Good Parts">
+    <div class="book-title">JavaScript: The Good Parts</div>
+    <div class="book-author">Douglas Crockford</div>
+    <span class="book-tag book-tag-library">In Library</span>
+    <span class="book-tag book-tag-engineering">Engineering</span>
   </div>
 </div>
 
