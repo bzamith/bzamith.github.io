@@ -36,13 +36,6 @@ title: Books
 
 <div class="book-belt" data-status="reading">
   <div class="book-item">
-    <img src="https://m.media-amazon.com/images/I/815KH9GjFTL._SY650_.jpg" alt="AI Engineering">
-    <div class="book-title">AI Engineering</div>
-    <div class="book-author">Chip Huyen</div>
-    <span class="book-tag book-tag-library">In Library</span>
-    <span class="book-tag book-tag-genai">GenAI</span>
-  </div>
-  <div class="book-item">
     <img src="https://m.media-amazon.com/images/I/51mJGPfhoSL._SY650_.jpg" alt="The Hundred-Page Language Models Book">
     <div class="book-title">The Hundred-Page Language Models Book</div>
     <div class="book-author">Andriy Burkov</div>
@@ -360,6 +353,13 @@ title: Books
     <span class="book-tag book-tag-kindle">Kindle</span>
     <span class="book-tag book-tag-engineering">Engineering</span>
   </div>
+  <div class="book-item">
+    <img src="https://m.media-amazon.com/images/I/815KH9GjFTL._SY650_.jpg" alt="AI Engineering">
+    <div class="book-title">AI Engineering</div>
+    <div class="book-author">Chip Huyen</div>
+    <span class="book-tag book-tag-library">In Library</span>
+    <span class="book-tag book-tag-genai">GenAI</span>
+  </div>
 </div>
 
 ### Wish List
@@ -375,7 +375,7 @@ title: Books
     <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1620715594i/51763086._SY650_.jpg" alt="Essential Math for Data Science">
     <div class="book-title">Essential Math for Data Science</div>
     <div class="book-author">Thomas Nield</div>
-    <span class="book-tag book-tag-others">Others</span>
+    <span class="book-tag book-tag-statistics">Statistics</span>
   </div>
   <div class="book-item">
     <img src="https://m.media-amazon.com/images/I/81Gw--pXkzL._SY650_.jpg" alt="Machine Learning Design Patterns">
