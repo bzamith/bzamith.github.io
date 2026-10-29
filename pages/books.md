@@ -56,6 +56,13 @@ title: Books
     <span class="book-tag book-tag-library">In Library</span>
     <span class="book-tag book-tag-engineering">Engineering</span>
   </div>
+  <div class="book-item">
+    <img src="https://m.media-amazon.com/images/I/71SnjgK1YSL._SY650_.jpg" alt="The Scientist and the Executive">
+    <div class="book-title">The Scientist and the Executive</div>
+    <div class="book-author">Diego Barreto</div>
+    <span class="book-tag book-tag-kindle">Kindle</span>
+    <span class="book-tag book-tag-career">Career</span>
+  </div>
 </div>
 
 ### Books I've Read and Recommend
@@ -298,13 +305,6 @@ title: Books
     <span class="book-tag book-tag-career">Career</span>
   </div>
   <div class="book-item">
-    <img src="https://m.media-amazon.com/images/I/71SnjgK1YSL._SY650_.jpg" alt="The Scientist and the Executive">
-    <div class="book-title">The Scientist and the Executive</div>
-    <div class="book-author">Diego Barreto</div>
-    <span class="book-tag book-tag-kindle">Kindle</span>
-    <span class="book-tag book-tag-career">Career</span>
-  </div>
-  <div class="book-item">
     <img src="https://m.media-amazon.com/images/I/71tET8K-+yL._SY650_.jpg" alt="Range">
     <div class="book-title">Range: Why Generalists Triumph in a Specialized World</div>
     <div class="book-author">David J. Epstein</div>
@@ -421,8 +421,8 @@ title: Books
     <span class="book-tag book-tag-others">Others</span>
   </div>
   <div class="book-item">
-    <img src="https://m.media-amazon.com/images/I/81Z2tYKiGtL._SY650_.jpg" alt="Big Tech: A ascensão dos dados e a morte da política">
-    <div class="book-title">Big Tech: A ascensão dos dados e a morte da política</div>
+    <img src="https://m.media-amazon.com/images/I/81Z2tYKiGtL._SY650_.jpg" alt="Big Tech: The Rise of Data and the Death of Politics">
+    <div class="book-title">Big Tech: The Rise of Data and the Death of Politics</div>
     <div class="book-author">Evgeny Morozov</div>
     <span class="book-tag book-tag-others">Others</span>
   </div>
