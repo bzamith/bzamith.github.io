@@ -432,10 +432,4 @@ title: Books
     <div class="book-author">Annie Duke</div>
     <span class="book-tag book-tag-career">Career</span>
   </div>
-  <div class="book-item">
-    <img src="https://m.media-amazon.com/images/I/7162Hl2w0VL._SY650_.jpg" alt="Algorithms of Oppression">
-    <div class="book-title">Algorithms of Oppression</div>
-    <div class="book-author">Safiya Umoja Noble</div>
-    <span class="book-tag book-tag-others">Others</span>
-  </div>
 </div>
