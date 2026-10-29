@@ -50,9 +50,16 @@ title: Books
     <span class="book-tag book-tag-genai">GenAI</span>
   </div>
   <div class="book-item">
-    <img src="https://m.media-amazon.com/images/I/512YjnR0hNL._SY650_.jpg" alt="Introduction to GraphQL">
-    <div class="book-title">Introduction to GraphQL</div>
-    <div class="book-author">Eve Porcello, Alex Banks</div>
+    <img src="https://m.media-amazon.com/images/I/61Es4WdvYmL._SY650_.jpg" alt="The Unwritten Laws of Engineering">
+    <div class="book-title">The Unwritten Laws of Engineering</div>
+    <div class="book-author">W. J. King</div>
+    <span class="book-tag book-tag-library">In Library</span>
+    <span class="book-tag book-tag-engineering">Engineering</span>
+  </div>
+  <div class="book-item">
+    <img src="https://m.media-amazon.com/images/I/71fUfkzePEL._SY650_.jpg" alt="Spring Start Here: Learn What You Need and Learn It Well">
+    <div class="book-title">Spring Start Here: Learn What You Need and Learn It Well</div>
+    <div class="book-author">Laurențiu Spilcă</div>
     <span class="book-tag book-tag-library">In Library</span>
     <span class="book-tag book-tag-engineering">Engineering</span>
   </div>
@@ -156,6 +163,13 @@ title: Books
     <img src="https://m.media-amazon.com/images/I/61Pgdn8Ys-L._SY650_.jpg" alt="Introduction to Algorithms">
     <div class="book-title">Introduction to Algorithms</div>
     <div class="book-author">Thomas H. Cormen</div>
+    <span class="book-tag book-tag-library">In Library</span>
+    <span class="book-tag book-tag-engineering">Engineering</span>
+  </div>
+  <div class="book-item">
+    <img src="https://m.media-amazon.com/images/I/512YjnR0hNL._SY650_.jpg" alt="Introduction to GraphQL">
+    <div class="book-title">Introduction to GraphQL</div>
+    <div class="book-author">Eve Porcello, Alex Banks</div>
     <span class="book-tag book-tag-library">In Library</span>
     <span class="book-tag book-tag-engineering">Engineering</span>
   </div>
@@ -340,17 +354,10 @@ title: Books
     <span class="book-tag book-tag-others">Others</span>
   </div>
   <div class="book-item">
-    <img src="https://m.media-amazon.com/images/I/61UW7iHH9CL._SY650_.jpg" alt="Spring Start Here: Learn What You Need and Learn It Well">
-    <div class="book-title">Spring Start Here: Learn What You Need and Learn It Well</div>
-    <div class="book-author">Laurențiu Spilcă</div>
-    <span class="book-tag book-tag-library">In Library</span>
-    <span class="book-tag book-tag-engineering">Engineering</span>
-  </div>
-  <div class="book-item">
     <img src="https://m.media-amazon.com/images/I/91YlBt-bCHL._SY650_.jpg" alt="JavaScript: The Good Parts">
     <div class="book-title">JavaScript: The Good Parts</div>
     <div class="book-author">Douglas Crockford</div>
-    <span class="book-tag book-tag-library">In Library</span>
+    <span class="book-tag book-tag-kindle">Kindle</span>
     <span class="book-tag book-tag-engineering">Engineering</span>
   </div>
 </div>
@@ -399,5 +406,36 @@ title: Books
     <div class="book-title">The Leadership Pipeline</div>
     <div class="book-author">Ram Charan</div>
     <span class="book-tag book-tag-career">Career</span>
+  </div>
+  <div class="book-item">
+    <img src="https://m.media-amazon.com/images/I/71FCVWZ7y6L._SY650_.jpg" alt="Careless People">
+    <div class="book-title">Careless People</div>
+    <div class="book-author">Sarah Wynn-Williams</div>
+    <span class="book-tag book-tag-others">Others</span>
+  </div>
+  <div class="book-item">
+    <img src="https://m.media-amazon.com/images/I/71m3kHtnssL._SY650_.jpg" alt="Empire of AI">
+    <div class="book-title">Empire of AI</div>
+    <div class="book-author">Karen Hao</div>
+    <span class="book-tag book-tag-career">Career</span>
+    <span class="book-tag book-tag-others">Others</span>
+  </div>
+  <div class="book-item">
+    <img src="https://m.media-amazon.com/images/I/81Z2tYKiGtL._SY650_.jpg" alt="Big Tech: A ascensão dos dados e a morte da política">
+    <div class="book-title">Big Tech: A ascensão dos dados e a morte da política</div>
+    <div class="book-author">Evgeny Morozov</div>
+    <span class="book-tag book-tag-others">Others</span>
+  </div>
+  <div class="book-item">
+    <img src="https://m.media-amazon.com/images/I/81mG9-knGiL._SY650_.jpg" alt="Thinking in Bets">
+    <div class="book-title">Thinking in Bets</div>
+    <div class="book-author">Annie Duke</div>
+    <span class="book-tag book-tag-career">Career</span>
+  </div>
+  <div class="book-item">
+    <img src="https://m.media-amazon.com/images/I/7162Hl2w0VL._SY650_.jpg" alt="Algorithms of Oppression">
+    <div class="book-title">Algorithms of Oppression</div>
+    <div class="book-author">Safiya Umoja Noble</div>
+    <span class="book-tag book-tag-others">Others</span>
   </div>
 </div>
