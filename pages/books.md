@@ -68,6 +68,13 @@ title: Books
 ### Books I've Read and Recommend
 
 <div class="book-belt" data-status="read">
+  <div class="book-item">
+    <img src="https://m.media-amazon.com/images/I/512YjnR0hNL._SY650_.jpg" alt="Introduction to GraphQL">
+    <div class="book-title">Introduction to GraphQL</div>
+    <div class="book-author">Eve Porcello, Alex Banks</div>
+    <span class="book-tag book-tag-library">In Library</span>
+    <span class="book-tag book-tag-engineering">Engineering</span>
+  </div>
   <div class="book-item" data-type="library" data-topics="recommender">
     <img src="https://m.media-amazon.com/images/I/41hn8xdlqcL._SY650_.jpg" alt="Recommender Systems, The Textbook">
     <div class="book-title">Recommender Systems, The Textbook</div>
@@ -163,13 +170,6 @@ title: Books
     <img src="https://m.media-amazon.com/images/I/61Pgdn8Ys-L._SY650_.jpg" alt="Introduction to Algorithms">
     <div class="book-title">Introduction to Algorithms</div>
     <div class="book-author">Thomas H. Cormen</div>
-    <span class="book-tag book-tag-library">In Library</span>
-    <span class="book-tag book-tag-engineering">Engineering</span>
-  </div>
-  <div class="book-item">
-    <img src="https://m.media-amazon.com/images/I/512YjnR0hNL._SY650_.jpg" alt="Introduction to GraphQL">
-    <div class="book-title">Introduction to GraphQL</div>
-    <div class="book-author">Eve Porcello, Alex Banks</div>
     <span class="book-tag book-tag-library">In Library</span>
     <span class="book-tag book-tag-engineering">Engineering</span>
   </div>
