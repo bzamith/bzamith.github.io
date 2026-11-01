@@ -43,13 +43,6 @@ title: Books
     <span class="book-tag book-tag-genai">GenAI</span>
   </div>
   <div class="book-item">
-    <img src="https://m.media-amazon.com/images/I/61Es4WdvYmL._SY650_.jpg" alt="The Unwritten Laws of Engineering">
-    <div class="book-title">The Unwritten Laws of Engineering</div>
-    <div class="book-author">W. J. King</div>
-    <span class="book-tag book-tag-library">In Library</span>
-    <span class="book-tag book-tag-engineering">Engineering</span>
-  </div>
-  <div class="book-item">
     <img src="https://m.media-amazon.com/images/I/71fUfkzePEL._SY650_.jpg" alt="Spring Start Here: Learn What You Need and Learn It Well">
     <div class="book-title">Spring Start Here: Learn What You Need and Learn It Well</div>
     <div class="book-author">Laurențiu Spilcă</div>
@@ -68,6 +61,13 @@ title: Books
 ### Books I've Read and Recommend
 
 <div class="book-belt" data-status="read">
+  <div class="book-item">
+    <img src="https://m.media-amazon.com/images/I/61Es4WdvYmL._SY650_.jpg" alt="The Unwritten Laws of Engineering">
+    <div class="book-title">The Unwritten Laws of Engineering</div>
+    <div class="book-author">W. J. King</div>
+    <span class="book-tag book-tag-library">In Library</span>
+    <span class="book-tag book-tag-engineering">Engineering</span>
+  </div>
   <div class="book-item">
     <img src="https://m.media-amazon.com/images/I/512YjnR0hNL._SY650_.jpg" alt="Introduction to GraphQL">
     <div class="book-title">Introduction to GraphQL</div>
