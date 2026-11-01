@@ -788,15 +788,21 @@ img {
   margin: 0 0 44px;
 }
 
+.book-belt[hidden],
+.book-item[hidden] {
+  display: none;
+}
+
 .book-item {
   min-width: 0;
+  text-align: center;
 }
 
 .book-item img {
   width: 100%;
   height: 175px;
   object-fit: contain;
-  object-position: bottom left;
+  object-position: bottom center;
   margin-bottom: 9px;
 }
 
