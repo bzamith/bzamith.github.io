@@ -49,6 +49,11 @@ title: Books
     <span class="book-tag book-tag-library">In Library</span>
     <span class="book-tag book-tag-engineering">Engineering</span>
   </div>
+</div>
+
+### Books I've Read and Recommend
+
+<div class="book-belt" data-status="read">
   <div class="book-item">
     <img src="https://m.media-amazon.com/images/I/71SnjgK1YSL._SY650_.jpg" alt="The Scientist and the Executive">
     <div class="book-title">The Scientist and the Executive</div>
@@ -56,11 +61,6 @@ title: Books
     <span class="book-tag book-tag-kindle">Kindle</span>
     <span class="book-tag book-tag-career">Career</span>
   </div>
-</div>
-
-### Books I've Read and Recommend
-
-<div class="book-belt" data-status="read">
   <div class="book-item">
     <img src="https://m.media-amazon.com/images/I/61Es4WdvYmL._SY650_.jpg" alt="The Unwritten Laws of Engineering">
     <div class="book-title">The Unwritten Laws of Engineering</div>
