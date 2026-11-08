@@ -14,6 +14,7 @@ title: Software Engineering Concepts
 * [Aspect Oriented Programming](#aspect-oriented-programming)
 * [Git](#git)
 * [Java](#java)
+* [Spring](#spring)
 * [Miscellaneous](#miscellaneous)
 
 ## Data Structures
@@ -503,6 +504,20 @@ of modules not actual working modules usually, that's why it's a Stub. Templates
 > A servlet is a Java programming language class that is used to extend the capabilities of servers that host applications accessed by means of a request-response programming model. Although servlets can respond to any type of request, they are commonly used to extend the applications hosted by web servers. For such applications, Java Servlet technology defines HTTP-specific servlet classes.
 
 *[What is a Servlet?; The Java™ Tutorials (2021)](https://docs.oracle.com/javaee/5/tutorial/doc/bnafe.html){:target="_blank" rel="noopener noreferrer"}*
+
+## Spring
+
+### What is the Inversion of Control (IoC) principle in Spring?
+> Spring works based on the principle of inversion of control (IoC). When using this principle, instead of allowing the app to control the execution, we give control to some other piece of software - in our case, the Spring framework. Here's where the "inversion" in IoC comes from: you don't let the app control the execution by its own code and use dependencies. Instead, we allow the framework (the dependency) to control the app and its code. In this context the term "controls" refers to actions like "creating an instance" or "calling a method". A framework can create objects of the classes you define in your app. Based on the configurations that you write, Spring intercepts the method to augment it with various features. For example, Spring can intercept a specific method to log any error that might appear during the method's execution.
+
+> Using the IoC container, to which you often refer as the Spring context, you make certain objects known to Spring, which enables the framework to use them in the way you configured.
+
+*Spring Start Here: Learn What You Need and Learn It Well; Laurențiu Spilcă (2021)*
+
+### What is the Spring Boot project?
+> Spring Boot is a project part of the Spring ecosystem that introduces the concept of "convention over configuration". The main idea of this concept is that instead of setting up all the configurations of a framework yourself, Spring Boot offers you a default configuration that you can customize as needed. The result, in general, is that you write less code because you follow known conventions and your app differs from others in few or small ways.
+
+*Spring Start Here: Learn What You Need and Learn It Well; Laurențiu Spilcă (2021)*
 
 ## Miscellaneous
 
