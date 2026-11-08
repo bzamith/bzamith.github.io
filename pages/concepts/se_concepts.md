@@ -519,6 +519,57 @@ of modules not actual working modules usually, that's why it's a Stub. Templates
 
 *Spring Start Here: Learn What You Need and Learn It Well; Laurențiu Spilcă (2021)*
 
+### How to add a bean (object instance) to the Spring context?
+> Adding beans to the Spring context is essential because it's how you make Spring aware of the object instances of your application, which need to be managed by the framework.
+
+> The steps you need to follow to add a bean to the Spring context using the `@Bean` annotation are as follows:
+> 1) Define a configuration class (annotated with `@Configuration`) for your project;
+> 2) Add a method to the configuration class that returns the object instance you want to add to the context and annotate the method with the `@Bean` annotation;
+> 3) Make Spring use the configuration class defined in step 1.
+
+> By adding the `@Bean` annotation, we instruct Spring to call this method when at context initialization and add the returned value to the context.
+
+> the main reason to add an object to the Spring context is to allow Spring to control it and further augment it with functionalities the framework provides.
+
+*Spring Start Here: Learn What You Need and Learn It Well; Laurențiu Spilcă (2021)*
+
+### What to do when we have multiple beans of the same kind?
+> When you have multiple beans of the same kind in the Spring context you can make one of them primary. You mark the bean you want to be primary using the `@Primary` annotation. A primary bean is simply Spring's default choice.
+
+> 1) Using the `@Primary` annotation to mark one of the beans for implementation as the default
+> 2) Using the `@Qualifier` annotation to name a bean and then refer to it by its name for DI 
+
+*Spring Start Here: Learn What You Need and Learn It Well; Laurențiu Spilcă (2021)*
+
+### How to use stereotype annotations to add beans to the Spring context?
+> With stereotype annotations, you add the annotation above the class for which you need to have an instance in the Spring context. When doing so, we say that you've marked the class as a component. When the app creates the Spring context, Spring creates an instance of the class you marked as a component and adds that instance to its context.
+
+> The steps we need to follow are:
+> 1) Using the `@Component` annotation, mark the classes for which you want Spring to add an instance to its context.
+> 2) Using `@ComponentScan` annotation over the configuration class, instruct Spring on where to find the classes you marked.
+
+*Spring Start Here: Learn What You Need and Learn It Well; Laurențiu Spilcă (2021)*
+
+### What if we want to execute some instructions right after Spring creates the bean?
+> We can use the `@PostConstruct` annotation. You just need to define a method in the component class and annotate that method with `@PostConstruct`, which instructs Spring to call that method after the constructor finishes its execution.
+
+*Spring Start Here: Learn What You Need and Learn It Well; Laurențiu Spilcă (2021)*
+
+### How can we establish relationships among beans?
+> 1) Link the beans by directly calling the methods that create them (which we'll call wiring);
+> 2) Enable Spring to provide us a value using a method parameter (which we'll call auto-wiring);
+> 3) Dependency Injection (DI).
+
+*Spring Start Here: Learn What You Need and Learn It Well; Laurențiu Spilcă (2021)*
+
+### How do we use `@Autowired` annotation to inject beans?
+> Using the `@Autowired` annotation, we mark an object's property where we want Spring to inject a value from the context. There are three ways we can use the `@Autowired` annotation:
+> 1) Injecting the value in the field of the class, which you usually find in examples and proofs of concept;
+> 2) Injecting the value through the constructor parameters of the class, approach that you'll use most often in real-world scenarios;
+> 3) Injecting the value through the setter, which you'll rarely use in production-ready code.
+
+*Spring Start Here: Learn What You Need and Learn It Well; Laurențiu Spilcă (2021)*
+
 ## Miscellaneous
 
 ### What is DevOps?
