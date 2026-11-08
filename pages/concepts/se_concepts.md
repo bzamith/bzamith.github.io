@@ -429,10 +429,12 @@ of modules not actual working modules usually, that's why it's a Stub. Templates
 
 ## Aspect Oriented Programming
 
-### What are Concerns and Cross Cutting Concerns?
-> A concern is a part of a system divided on the basis of functionality. It can be as general as the details of the database interaction or as specific as performing a primitive calculation. Usually, code can be separated into logical sections, each addressing separate concerns. [...] Cross cutting concerns are concerns shared across multiple application modules. They represent functionalities for secondary requirements. for example logging, security, and data transfer are concerns that are needed in almost every module of an application, hence also called system-wide concerns. 
+### What are aspects?
+> Aspects are a way the framework intercepts method calls and possibly alters the execution of methods. You can affect the execution of specific method calls you select. This technique helps you extract part of the logic belonging to the executing method. In certain scenarios, decoupling a part of the code helps make that method easier to understand. It allows the developer to focus only on the relevant details discussed when reading the method logic.
 
-*[Cross-cutting Concern; Deepanshu Mishra (2020)](https://medium.com/anatta-design/cross-cutting-concern-aadf4f51a5c1){:target="_blank" rel="noopener noreferrer"}*
+> Aspects can alter the execution of the intercepted method by: (i) Changing the value of the parameters sent to the method; (ii) Changing the returned value received by the caller; (iii) Throwing an exception to the caller or catching and treating an exception thrown by the intercepted method. 
+
+*Spring Start Here: Learn What You Need and Learn It Well; Laurențiu Spilcă (2021)*
 
 ### What is Aspect Oriented Programming?
 > An aspect is a common feature that's typically scattered across methods, classes, object hierarchies, or even entire object models. It is behavior that looks and smells like it should have structure, but you can't find a way to express this structure in code with traditional object-oriented techniques. For example, metrics is one common aspect. To generate useful logs from your application, you have to (often liberally) sprinkle informative messages throughout your code. However, metrics is something that your class or object model really shouldn't be concerned about. After all, metrics is irrelevant to your actual application: it doesn't represent a customer or an account, and it doesn't realize a business rule. It's simply orthogonal. In AOP, a feature like metrics is called a crosscutting concern, as it's a behavior that "cuts" across multiple points in your object models, yet is distinctly different. As a development methodology, AOP recommends that you abstract and encapsulate crosscutting concerns.
@@ -451,6 +453,19 @@ of modules not actual working modules usually, that's why it's a Stub. Templates
 > 1. Aspect: a modularization of a concern that cuts across multiple classes. Transaction management is a good example of a crosscutting concern in J2EE applications. 2. Join point: a point during the execution of a program, such as the execution of a method or the handling of an exception. In Spring AOP, a join point always represents a method execution. 3. Advice: action taken by an aspect at a particular join point. Different types of advice include "around," "before" and "after" advice. (Advice types are discussed below.) Many AOP frameworks, including Spring, model an advice as an interceptor, maintaining a chain of interceptors around the join point. 4. Pointcut: a predicate that matches join points. Advice is associated with a pointcut expression and runs at any join point matched by the pointcut (for example, the execution of a method with a certain name). The concept of join points as matched by pointcut expressions is central to AOP, and Spring uses the AspectJ pointcut expression language by default.
 
 *[Chapter 6. Aspect Oriented Programming with Spring; Spring 2.5.5 Doc (2020)](https://docs.spring.io/spring-framework/docs/2.5.5/reference/aop.html){:target="_blank" rel="noopener noreferrer"}*
+
+> An aspect is simply a piece of logic the framework executes when you call specific methods of your choice. When designing an aspect, you define the following:
+> 1) What code you want the framework to execute when you call specific methods. This is named an aspect.
+> 2) When the app should execute this logic of the aspect (e.g., before or after the method call, instead of the method call). This is named the advice.
+> 3) Which methods the framework needs to intercept and execute the aspect for them. This is named a pointcut.
+> With aspects terminology, you'll also find the concept of a join point, which defines the event that triggers the execution of an aspect.
+
+*Spring Start Here: Learn What You Need and Learn It Well; Laurențiu Spilcă (2021)*
+
+### What are Concerns and Cross Cutting Concerns?
+> A concern is a part of a system divided on the basis of functionality. It can be as general as the details of the database interaction or as specific as performing a primitive calculation. Usually, code can be separated into logical sections, each addressing separate concerns. [...] Cross cutting concerns are concerns shared across multiple application modules. They represent functionalities for secondary requirements. for example logging, security, and data transfer are concerns that are needed in almost every module of an application, hence also called system-wide concerns. 
+
+*[Cross-cutting Concern; Deepanshu Mishra (2020)](https://medium.com/anatta-design/cross-cutting-concern-aadf4f51a5c1){:target="_blank" rel="noopener noreferrer"}*
 
 ### What are the types of Advice in AOP?
 > 1. Before advice: Advice that executes before a join point, but which does not have the ability to prevent execution flow proceeding to the join point (unless it throws an exception). 2. After returning advice: Advice to be executed after a join point completes normally: for example, if a method returns without throwing an exception. 3. After throwing advice: Advice to be executed if a method exits by throwing an exception. 4. After (finally) advice: Advice to be executed regardless of the means by which a join point exits (normal or exceptional return). 5. Around advice: Advice that surrounds a join point such as a method invocation. This is the most powerful kind of advice. Around advice can perform custom behavior before and after the method invocation. It is also responsible for choosing whether to proceed to the join point or to shortcut the advised method execution by returning its own return value or throwing an exception.
@@ -504,6 +519,10 @@ of modules not actual working modules usually, that's why it's a Stub. Templates
 > A servlet is a Java programming language class that is used to extend the capabilities of servers that host applications accessed by means of a request-response programming model. Although servlets can respond to any type of request, they are commonly used to extend the applications hosted by web servers. For such applications, Java Servlet technology defines HTTP-specific servlet classes.
 
 *[What is a Servlet?; The Java™ Tutorials (2021)](https://docs.oracle.com/javaee/5/tutorial/doc/bnafe.html){:target="_blank" rel="noopener noreferrer"}*
+
+> For web apps, you'll use a component already designed to understand HTTP. In fact, what you need is not only something that understands HTTP, but something that can translate the HTTP request and response to a Java app. This something is a servlet container (sometimes referred to as a web server): a translator of the HTTP messages for your Java app. This way, your Java app doesn't need to take care of implementing the communication layer. One of the most appreciated servlet container implementations is Tomcat. [...] A servlet is nothing more than a Java object that directly interacts with the servlet container. When the servlet container gets an HTTP request, it calls a servlet object's method and provides the request as a parameter. The same method also gets a parameter representing the HTTP response used by the servlet to set the response sent back to the client that made the request.
+
+*Spring Start Here: Learn What You Need and Learn It Well; Laurențiu Spilcă (2021)*
 
 ## Spring
 
@@ -567,6 +586,39 @@ of modules not actual working modules usually, that's why it's a Stub. Templates
 > 1) Injecting the value in the field of the class, which you usually find in examples and proofs of concept;
 > 2) Injecting the value through the constructor parameters of the class, approach that you'll use most often in real-world scenarios;
 > 3) Injecting the value through the setter, which you'll rarely use in production-ready code.
+
+*Spring Start Here: Learn What You Need and Learn It Well; Laurențiu Spilcă (2021)*
+
+### How does Spring bean initialization work?
+> In most cases, Spring creates all singleton beans when it initializes the context - this is Spring's default behavior, also called eager instantiation.
+> With lazy instantiation, Spring doesn't create the singleton instances when it creates the context. Instead, it creates each instance the first time someone refers to the bean.
+
+> The `@Lazy` annotation tells Spring that it needs to create the bean only when someone refers to the bean for the first time.
+
+> [...] Another advantage of eager instantiation is when something is wrong and the framework cannot create a bean; we can observe this issue only when the app is already executing and it reaches the point that the bean needs to be created. 
+
+*Spring Start Here: Learn What You Need and Learn It Well; Laurențiu Spilcă (2021)*
+
+### How does prototype beans work?
+> Every time you request a reference to a prototype-scoped bean, Spring creates a new object instance. For prototype beans, Spring doesn't create and manage an object instance directly. The framework manages the object's type and creates a new instance every time someone requests a reference to the bean.
+
+> With prototype beans, we no longer have concurrency problems because each thread that requests the bean gets a different instance, so defining mutable prototype beans is not a problem.
+
+> We use the `@Scope(BeanDefinition.SCOPE_PROTOTYPE)` annotation to change the bean scope in prototype.
+
+*Spring Start Here: Learn What You Need and Learn It Well; Laurențiu Spilcă (2021)*
+
+### How to create an aspect in Spring?
+> To create an aspect, you follow these steps:
+> 1) Enable the aspect mechanism in your Spring app by annotating the configuration class with the `@EnableAspectJAutoProxy` annotation
+> 2) Create a new class, and annotate it with the `@Aspect` annotation. Using either `@Bean` or stereotype annotations, add a bean for this class in the Spring context
+> 3) Define a method that will implement the aspect logic and tell Spring when and which methods to intercept using an advice annotation
+> 4) Implement the aspect logic
+
+*Spring Start Here: Learn What You Need and Learn It Well; Laurențiu Spilcă (2021)*
+
+### What is a controller in Spring Boot?
+> The controller is a component of the web app that contains methods (often named actions) executed for a specific HTTP request. In the end, the controller's action returns a reference to the web page the app returns in response. To mark a class as a controller, you just need to use the `@Controller` annotation, a stereotype annotation. Inside this class, you can define controller actions, which are methods associated with specific HTTP requests.
 
 *Spring Start Here: Learn What You Need and Learn It Well; Laurențiu Spilcă (2021)*
 
